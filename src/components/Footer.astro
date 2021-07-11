@@ -1,0 +1,68 @@
+---
+---
+
+<footer class="container">
+  <section class="columns">
+    <div class="column">
+      <h4>Socials</h4>
+      <ul>
+        <li>Twitter</li>
+        <li>Github</li>
+      </ul>
+    </div>
+    <div class="column">
+      <h4>Projects</h4>
+      <ul>
+        <li>Tinybox Software</li>
+        <li>Socialcard.app (TBA)</li>
+      </ul>
+    </div>
+  </section>
+  <section class="footnote">
+    <span>Mykal Machon {new Date().getFullYear()} </span>
+    <span>Built with <a href="https://astro.build">Astro.build</a></span>
+  </section>
+</footer>
+
+<style lang="scss">
+  footer {
+    margin: 1em 0px;
+    padding: 1em 0px;
+    border-top: 1px solid var(--color-light);
+  }
+
+  section.columns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5em;
+    padding: 0px 0px 1em 0px;
+    margin: 0px 0px 1em 0px;
+    border-bottom: 1px solid var(--color-light);
+    h4   {
+      font-family: var(--font-mono);
+      text-decoration: underline;
+      font-size: 1em;
+    }
+    div.column{ 
+      ul{
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+      }
+    }
+    @media screen and (max-width: 465px){
+      grid-template-columns: 1fr;
+    }
+  }
+
+  section.footnote{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5em;
+    font-family: var(--font-mono);
+    @media screen and (max-width: 465px){
+      grid-template-columns: 1fr;
+      justify-items: start;
+    }
+  }
+</style>

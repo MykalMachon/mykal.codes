@@ -1,0 +1,18 @@
+---
+import PostCard from './PostCard.astro'
+
+const { posts } = Astro.props
+---
+
+<section class="container">
+  {posts.map(p => 
+    <PostCard post={p} />
+  )}
+</section>
+
+<style lang="scss">
+  article{
+    margin: 0px 0px 1em 0px; 
+    width: 100%;
+  }
+</style>
