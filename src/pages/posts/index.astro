@@ -8,8 +8,8 @@ import MainHead from '../../components/MainHead.astro'
 import { Markdown } from 'astro/components';
 
 // Data Fetching: List all Markdown posts in the repo.
-let allPosts = Astro.fetchContent('./*.md');
-allPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+const allPosts = Astro.fetchContent('./*.md');
+const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 ---
 <html lang="en">
 <head>
@@ -18,7 +18,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 <body>
     <Navigation />
     <Header title="Posts" description="These are all my posts!" />
-    <PostList posts={allPosts} />
+    <PostList posts={sortedPosts} />
     <Footer />
 </body>
 </html>

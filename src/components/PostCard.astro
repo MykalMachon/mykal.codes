@@ -4,7 +4,7 @@ const { post } = Astro.props;
 
 <article>
   <h3>{post.title}</h3>
-  <p>{post.publishDate}</p>
+  <p>{post.date}</p>
   <p>{post.description}</p>
   <a href={`${post.url}`}>read more</a>
 </article>

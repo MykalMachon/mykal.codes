@@ -1,7 +1,7 @@
 ---
 title: "New Job at UFV!"
 description: "Moving from web developer, to systems analyst"
-publishDate: "Monday, May 10 2021"
+date: "Monday, May 10 2021"
 heroImage: "https://unsplash.com/photos/bJhT_8nbUA0/download?force=true&w=1920"
 layout: "../../layouts/BlogPost.astro"
 ---
