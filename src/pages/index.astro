@@ -1,21 +1,29 @@
 ---
 // Component Imports
+import Navigation from '../components/Navigation.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import PostList from '../components/PostList.astro'
 import MainHead from '../components/MainHead.astro'
 
-// Data Fetching: List all Markdown posts in the repo.
-let allPosts = Astro.fetchContent('./posts/*.md');
+// Data Fetching: fetch recent posts
+const allPosts = Astro.fetchContent('./posts/*.md');
 allPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+const recentPosts = allPosts.slice(0, 3)
 ---
 <html lang="en">
 <head>
-  <MainHead title='Mykal.codes' description={'Hey I\'m Mykal- this is my website'} />
+  <MainHead title='Home' description={'Hey I\'m Mykal- this is my website'} />
 </head>
 <body>
-    <Header />
-    <PostList posts={allPosts} />
+    <Navigation />
+    <Header title="Mykal Machon" description={`
+      I'm a Systems Analyst at <a href="https://ufv.ca">UFV</a>, and the only guy at <a href="https://tinybox.dev">Tinybox</a> <br /> Welcome to my website 👋🏻!
+    `} />
+    <PostList posts={recentPosts} />
+    <div class="container">
+      <a href="/posts/">read more posts...</a>
+    </div>
     <Footer />
 </body>
 </html>

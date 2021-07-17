@@ -6,20 +6,19 @@
     <div class="column">
       <h4>Socials</h4>
       <ul>
-        <li>Twitter</li>
-        <li>Github</li>
+        <li><a href="https://twitter.com/MykalMachon">Twitter</a></li>
+        <li><a href="https://github.com/MykalMachon">Github</a></li>
       </ul>
     </div>
     <div class="column">
       <h4>Projects</h4>
       <ul>
-        <li>Tinybox Software</li>
-        <li>Socialcard.app (TBA)</li>
+        <li><a href="">Tinybox Software</a></li>
       </ul>
     </div>
   </section>
   <section class="footnote">
-    <span>Mykal Machon {new Date().getFullYear()} </span>
+    <span>{new Date().getFullYear()} Mykal Machon</span>
     <span>Built with <a href="https://astro.build">Astro.build</a></span>
   </section>
 </footer>
@@ -27,21 +26,21 @@
 <style lang="scss">
   footer {
     margin: 1em 0px;
-    padding: 1em 0px;
     border-top: 1px solid var(--color-light);
+    padding: 0px;
   }
 
   section.columns{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0.5em;
-    padding: 0px 0px 1em 0px;
+    padding: 1rem var(--pad) 1.25rem var(--pad);
     margin: 0px 0px 1em 0px;
     border-bottom: 1px solid var(--color-light);
     h4   {
       font-family: var(--font-mono);
-      text-decoration: underline;
       font-size: 1em;
+      margin: 0px 0px 0.6em 0px;
     }
     div.column{ 
       ul{
@@ -57,6 +56,7 @@
 
   section.footnote{
     display: grid;
+    padding: 0px var(--pad);
     grid-template-columns: 1fr 1fr;
     grid-gap: 0.5em;
     font-family: var(--font-mono);

@@ -9,7 +9,7 @@ const { title, description } = Astro.props;
       </>
     ) : (
       <>
-        <a href="/"><h1>Mykal.codes</h1></a>
+        <h1>Mykal.Codes</h1>
         <p>Hey, I'm Mykal- this is my website! 👋🏻</p>
         <p>I blog about what I'm doing- feel free to check it out.</p>
       </>
@@ -17,17 +17,16 @@ const { title, description } = Astro.props;
 
 </header>
 
-<style>
+<style lang="scss">
   h1 {
     font-family: var(--font-mono);
     font-size: 2em;
-    text-decoration: underline;
+    color: var(--color-highlight-one);
     margin-bottom: 1rem;
   }
 
   header{
-    padding: 1em 0px;
-    margin: 1em 0px;
     border-bottom: 1px solid var(--color-light);
+    
   }
 </style>

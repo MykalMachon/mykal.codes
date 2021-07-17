@@ -1,5 +1,6 @@
 ---
 import { Markdown } from 'astro/components';
+import Navigation from '../components/Navigation.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import MainHead from '../components/MainHead.astro'
@@ -12,6 +13,7 @@ const {title, description, publishDate, heroImage, permalink} = content;
     <MainHead title={title} description={description} />
   </head>
   <body>
+    <Navigation />
     <Header title={title} description={description} />
     <main class="container blog-post">
     {heroImage && <img src={heroImage || ''} alt={`decorative image for ${title}`}> }
