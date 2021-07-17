@@ -10,7 +10,7 @@
   
   /* COLORS */
   --color-light: #F3F4F6;
-  --color-highlight-one: #b4da55;
+  --color-highlight-one: #FF9F1C;
   --color-highlight-two: #FF9F1C;
 
   /* MISC VARIABLES */
@@ -28,10 +28,10 @@
 }
 
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
       --color-light: #1F2937;
-      --color-highlight-one: #FF9F1C;
+      --color-highlight-one: #b4da55;
   }
 }
 
