@@ -1,0 +1,68 @@
+---
+// Component Imports
+import Navigation from '../components/Navigation.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import PostList from '../components/PostList.astro'
+import MainHead from '../components/MainHead.astro'
+import { Markdown } from 'astro/components';
+
+// Data Fetching: List all Markdown posts in the repo.
+let allPosts = Astro.fetchContent('./posts/*.md');
+allPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+---
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <MainHead title='About Me' description={"Here's a quick summary..."} />
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const carouselEl = document.querySelector('.about-carousel');
+      const carousel = new Flickity( carouselEl, {
+        autoPlay: true,
+        imagesLoaded: true, 
+        percentPosition: false,
+        wrapAround: true,
+        resize: true,
+      });
+    })
+  </script>
+</head>
+<body>
+    <Navigation />
+    <Header title="About Me" description="Here's a quick summary..." />
+    <div class="container about-carousel">
+      <img src="https://assets.codepen.io/1490503/mykal-6.jpg"  alt="">
+      <img src="https://assets.codepen.io/1490503/mykal_and_dad.jpg" alt="Mykal and Dad">
+      <img src="https://assets.codepen.io/1490503/mykal_alt.jpg" alt="">
+      <img src="https://assets.codepen.io/1490503/mykal_4.jpg"  alt="">
+      <img src="https://assets.codepen.io/1490503/mykal_5.jpg"  alt="">
+      <img src="https://assets.codepen.io/1490503/mykal_3.jpg"  alt="">
+    </div>
+    <i style="font-size: 0.9em;">pictured above: goofy of pictures of me, cats, and my Fiancée Kiya</i>
+    <div class="container blog-post">
+      <Markdown>
+        ### Professional
+        Professionally, I write software. mostly web, besides that, idk- still figuring it out.
+        I have a weird laundry list of technical skills including "modern" web, Shopify theme, and Backend dev. I'll also be picking up some general IT and Enterprise systems knowledge [soon](/posts/starting-at-ufv).
+        
+        I like learning and solving technical problems, and just sort of follow whatever road that leads me down! _It's worked so far!_
+
+        I also run a small consulting co all by lonesome, so if you have a problem you want to solve, [check it out!](https://tinybox.dev) 
+
+        ### Personal
+        Just another white dude in tech.
+        I like spending time with friends, and family (including my 2 cats), and doing general nerd things including: 
+        1. Video Games
+        2. Building side projects
+        3. Touching grass (I like biking!)
+
+        ### Education
+        I'm one class away from completing a Bachelor in Computer Information Systems with a major in Software Development; I should graduate in December 2021! 
+      </Markdown>
+    </div>
+    <Footer />
+</body>
+</html>
+
