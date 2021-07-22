@@ -15,7 +15,6 @@ allPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      console.log('dom content was loaded...')
       const carouselEl = document.querySelector('.about-carousel');
       const carousel = new Flickity( carouselEl, {
         autoPlay: true,
@@ -29,12 +28,30 @@ allPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
   </>
 }>
     <div class="about-carousel">
-      <img src="https://assets.codepen.io/1490503/mykal-6.jpg"  alt="">
-      <img src="https://assets.codepen.io/1490503/mykal_and_dad.jpg" alt="Mykal and Dad">
-      <img src="https://assets.codepen.io/1490503/mykal_alt.jpg" alt="">
-      <img src="https://assets.codepen.io/1490503/mykal_4.jpg"  alt="">
-      <img src="https://assets.codepen.io/1490503/mykal_5.jpg"  alt="">
-      <img src="https://assets.codepen.io/1490503/mykal_3.jpg"  alt="">
+      <img class="lazy" 
+        src="https://assets.codepen.io/1490503/mykal-6.jpg?width=16&height=18&format=auto" 
+        data-src="https://assets.codepen.io/1490503/mykal-6.jpg?format=auto" 
+        alt="Mykal drinking a coffee in Vancouver" />
+      <img class="lazy" 
+        src="https://assets.codepen.io/1490503/mykal_and_dad.jpg?width=118&height=88&format=auto" 
+        data-src="https://assets.codepen.io/1490503/mykal_and_dad.jpg?width=709&height=531&format=auto" 
+        alt="Mykal and his dad biking in Vancouver on the sea wall" />
+      <img class="lazy" 
+        src="https://assets.codepen.io/1490503/mykal_alt.jpg?width=151&height=201&format=auto"
+        data-src="https://assets.codepen.io/1490503/mykal_alt.jpg?width=756&height=1008&format=auto" 
+        alt="Mykal drinking coffee in on the White Rock sea wall" />
+      <img class="lazy" 
+        src="https://assets.codepen.io/1490503/mykal_4.jpg?width=163&height=122&format=auto" 
+        data-src="https://assets.codepen.io/1490503/mykal_4.jpg?width=816&height=612&format=auto" 
+        alt="Kiya and Mykal posing for a selfie in Penticton" />
+      <img class="lazy"
+        src="https://assets.codepen.io/1490503/mykal_5.jpg?width=120&height=90&format=auto"
+        data-src="https://assets.codepen.io/1490503/mykal_5.jpg?width=720&height=540&format=auto"
+        alt="Kiya and Mykal posing in front of a mural" />
+      <img class="lazy"
+        src="https://assets.codepen.io/1490503/mykal_3.jpg?width=59&height=110&format=auto"
+        data-src="https://assets.codepen.io/1490503/mykal_3.jpg?width=712&height=1324&format=auto" 
+        alt="Kiya and Mykal pose with their mouths open- there's a snapchat filter that puts turtles on their cheeks">
     </div>
     <i class="caption">pictured above: goofy of pictures of me, cats, and my Fiancée Kiya</i>
     <div class="blog-post">
