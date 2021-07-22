@@ -107,6 +107,11 @@ code {
 .about-carousel {
   min-height: 400px;
   margin-bottom: 2em;
+  visibility: hidden;
+}
+
+.about-carousel.flickity-enabled {
+  visibility: visible;
 }
 
 .about-carousel img {

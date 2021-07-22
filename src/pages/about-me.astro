@@ -13,6 +13,18 @@ allPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
   <>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const carouselEl = document.querySelector('.about-carousel');
+        const carousel = new Flickity( carouselEl, {
+          autoPlay: true,
+          percentPosition: false,
+          wrapAround: true,
+          resize: true,
+          lazyLoad: 2,
+        });
+      })
+    </script>
   </>
 }>
     <div class="about-carousel">
@@ -63,16 +75,6 @@ allPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
         I'm one class away from completing a Bachelor in Computer Information Systems with a major in Software Development; I should graduate in December 2021! 
       </Markdown>
     </div>
-    <script>
-      const carouselEl = document.querySelector('.about-carousel');
-        const carousel = new Flickity( carouselEl, {
-          autoPlay: true,
-          percentPosition: false,
-          wrapAround: true,
-          resize: true,
-          lazyLoad: 2,
-        });
-    </script>
 </MainLayout>  
 
 <style lang="scss">
