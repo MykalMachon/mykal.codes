@@ -13,7 +13,9 @@ const allPosts = Astro.fetchContent('./posts/*.md');
 allPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 const recentPosts = allPosts.slice(0, 3)
 ---
-<MainLayout title="Home" description="Hey! I'm Mykal Machon- and this is my website. I'm a web developer, currently working at UFV">
+<MainLayout 
+  title="Home" 
+  description={`Hey! I'm Mykal Machon- and this is my website. I'm a Systems Analyst at UFV, and the only guy at Tinybox`}>
     <PostList posts={recentPosts} />
     <a href="/posts/">read more posts...</a>
 </MainLayout>
