@@ -5,13 +5,17 @@
 
 :root {
   /* FONT VARIABLES */
-  --font-mono: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-  --font-sans-serif: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  
+  --font-mono: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+    'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+    'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+    monospace;
+  --font-sans-serif: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
+    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+
   /* COLORS */
-  --color-light: #F3F4F6;
-  --color-highlight-one: #FF9F1C;
-  --color-highlight-two: #FF9F1C;
+  --color-light: #f3f4f6;
+  --color-highlight-one: #ff9f1c;
+  --color-highlight-two: #ff9f1c;
 
   /* MISC VARIABLES */
   --user-font-scale: 1rem - 16px;
@@ -27,11 +31,10 @@
   );
 }
 
-
 @media (prefers-color-scheme: dark) {
   :root {
-      --color-light: #1F2937;
-      --color-highlight-one: #b4da55;
+    --color-light: #1f2937;
+    --color-highlight-one: #b4da55;
   }
 }
 
@@ -69,8 +72,8 @@ a:active {
   color: var(--color-light);
 }
 
-a:after{
-  content: "";
+a:after {
+  content: '';
   position: absolute;
   bottom: -2px;
   left: 0px;
@@ -79,19 +82,24 @@ a:after{
   background: var(--color-highlight-two);
 }
 
-a:hover:after, a:focus:after {
+a:hover:after,
+a:focus:after {
   outline: none;
   height: 3px;
 }
 
 /* blog content specific styles */
 
-.blog-post  img, pre, code {
+.blog-post img,
+pre,
+code {
   max-width: 100%;
 }
 
-.blog-post p, .blog-post ul, .blog-post ol {
-    margin: 0.7em 0px;
+.blog-post p,
+.blog-post ul,
+.blog-post ol {
+  margin: 0.7em 0px;
 }
 
 /* about pages */
@@ -106,11 +114,11 @@ a:hover:after, a:focus:after {
   object-fit: cover;
 }
 
-.flickity-page-dots {
+.about-carousel .flickity-page-dots {
   bottom: -22px;
 }
 
-.flickity-page-dots .dot {
+.about-carousel .flickity-page-dots .dot {
   height: 4px;
   width: 40px;
   margin: 0;
@@ -118,7 +126,7 @@ a:hover:after, a:focus:after {
   border-radius: 0;
 }
 
-.flickity-button {
+.about-carousel .flickity-button {
   display: none;
 }
 

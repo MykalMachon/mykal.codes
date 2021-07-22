@@ -1,25 +1,15 @@
 ---
+// Layout Import
+import MainLayout from '../../layouts/MainLayout.astro';
 // Component Imports
-import Navigation from '../../components/Navigation.astro'
-import Header from '../../components/Header.astro'
-import Footer from '../../components/Footer.astro'
 import PostList from '../../components/PostList.astro'
-import MainHead from '../../components/MainHead.astro'
-import { Markdown } from 'astro/components';
 
 // Data Fetching: List all Markdown posts in the repo.
 const allPosts = Astro.fetchContent('./*.md');
 const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 ---
-<html lang="en">
-<head>
-  <MainHead title='Posts' description={'Mykal.codes posts'} />
-</head>
-<body>
-    <Navigation />
-    <Header title="Posts" description="These are all my posts!" />
-    <PostList posts={sortedPosts} />
-    <Footer />
-</body>
-</html>
+<MainLayout title="Posts" description="Mykal Machon's blog posts, musings, and other goodies">
+  <PostList posts={sortedPosts} />
+  <p><i>page 1 of 1 (I don't have pagination yet 🤷🏻‍♂️)</i></p>
+</MainLayout>
 
