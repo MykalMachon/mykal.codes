@@ -14,6 +14,8 @@
 
   /* COLORS */
   --color-light: #f3f4f6;
+  --color-dark: #1f2937;
+  --color-dark-two: #111827;
   --color-highlight-one: #ff9f1c;
   --color-highlight-two: #ff9f1c;
 
@@ -31,12 +33,6 @@
   );
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-light: #1f2937;
-    --color-highlight-one: #b4da55;
-  }
-}
 
 body {
   width: 100%;
@@ -88,6 +84,63 @@ a:focus:after {
   height: 3px;
 }
 
+button.btn {
+  padding: 0.6em var(--pad);
+  font-family: var(--font-mono);
+  font-size: 1rem; 
+  border: 2px solid var(--color-highlight-two);
+  background: var(--color-highlight-two);
+  color: var(--color-light);
+}
+
+button.btn:active, button.btn:focus{
+  padding: 0.6em var(--pad);
+  font-family: var(--font-mono);
+  font-size: 1rem; 
+  border: 2px solid var(--color-highlight-two);
+  background: var(--color-dark-two);
+  color: var(--color-highlight-two);
+  outline: none;
+  border-style: dotted;
+}
+
+button.btn__secondary {
+  padding: 0.6em var(--pad);
+  font-family: var(--font-mono);
+  font-size: 1rem; 
+  border: 2px solid var(--color-highlight-two);
+  background: var(--color-dark-two);
+  color: var(--color-highlight-two);
+}
+
+/* form styles */
+.form-control{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: var(--pad) 0px;
+}
+
+.form-control label {
+  margin-bottom: 0.4em;
+}
+
+input, textarea {
+  padding: 0.6em 0.4em;
+  border: none;
+  border: 2px solid var(--color-dark);
+  border-bottom-color: var(--color-highlight-one);
+  background: var(--color-dark);
+  font-family: var(--font-sans-serif);
+  font-size: 1em;
+}
+
+input:focus, textarea:focus{
+  outline: none;
+  border-color: var(--color-highlight-one);
+  border-style: dotted;
+}
+
 /* blog content specific styles */
 
 .blog-post img,
@@ -136,7 +189,15 @@ code {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: #111827;
-    color: #fff;
+    background: var(--color-dark-two);
+    color: white;
+  }
+  input, textarea {
+    color: white;
+  }
+
+  :root {
+    --color-light: var(--color-dark);
+    --color-highlight-one: #b4da55;
   }
 }
