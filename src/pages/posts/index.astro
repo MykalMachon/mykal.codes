@@ -2,7 +2,8 @@
 // Layout Import
 import MainLayout from '../../layouts/MainLayout.astro';
 // Component Imports
-import PostList from '../../components/PostList.astro'
+import PostList from '../../components/posts/PostList.astro'
+import { Prism } from 'astro/components';
 
 // Data Fetching: List all Markdown posts in the repo.
 const allPosts = Astro.fetchContent('./*.md');

@@ -1,0 +1,32 @@
+---
+const { title, description } = Astro.props;
+---
+<header class="container">
+    {(title != null && description != null) ? (
+      <>
+        <h1>{title}</h1>
+        <p>{description}</p>
+      </>
+    ) : (
+      <>
+        <h1>Mykal.Codes</h1>
+        <p>Hey, I'm Mykal- this is my website! 👋🏻</p>
+        <p>I blog about what I'm doing- feel free to check it out.</p>
+      </>
+    )}
+
+</header>
+
+<style lang="scss">
+  h1 {
+    font-family: var(--font-mono);
+    font-size: 2em;
+    color: var(--color-highlight-one);
+    margin-bottom: 1rem;
+  }
+
+  header{
+    border-bottom: 1px solid var(--color-light);
+    
+  }
+</style>
