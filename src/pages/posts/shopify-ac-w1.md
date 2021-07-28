@@ -11,13 +11,15 @@ Topic of the Week: [App Ideation "Imagine what you can build"](https://shopify.d
 **🚨 PLEASE NOTE: THIS POST IS STILL WIP 🚨**
 
 ## What is the Shopify app challenge?
-The easiest way to explain what the Shopify app challenge is, is to have Shopify explain it themselves:
+The easiest way to explain is to share Shopify's explanation:
 
 > Inspired by #BuildinPublic, this year’s challenge features eight weekly challenges related to building apps to help support merchants businesses through the Black Friday/Cyber Monday season. 
 >
 > ...Apps created during the Shopify App Challenge may also be featured in an exclusive Black Friday/Cyber Monday collection on the Shopify App Store.
 >
 > -- <cite>[Shopify App Challenge](https://shopify.dev/app-challenge)</cite>
+
+So basically an 8-week-long hack along for building Shopify apps!
 
 ## Why participate? and why blog about it?
 

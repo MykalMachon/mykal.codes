@@ -18,6 +18,11 @@ const {title, description, publishDate, heroImage, permalink} = content;
     <main class="container blog-post">
     {heroImage && <img src={heroImage || ''} alt={`decorative image for ${title}`}> }
       <slot />
+      <!-- <section>
+        <h2>About the author</h2>
+        <p>Hey! I'm Mykal, I work at UFV as a Systems Analyst, build apps, and do general nerd stuff</p>
+        <p>If you like my work you can support me below!</p>
+      </section> -->
     </main>
     <Footer />
   </body>
