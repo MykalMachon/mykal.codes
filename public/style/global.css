@@ -107,6 +107,8 @@ button:hover{
   cursor: pointer;
 }
 
+/* buttons */
+
 button.btn {
   padding: 0.6em var(--pad);
   font-family: var(--font-mono);
@@ -174,21 +176,33 @@ input:focus, textarea:focus{
 }
 
 /* blog content specific styles */
-
 .blog-post img,
 pre,
 code {
   max-width: 100%;
 }
 
+.blog-post h2,
+.blog-post h3,
+.blog-post h4 {
+  margin-top: 1.4em;
+}
+
 .blog-post p,
 .blog-post ul,
-.blog-post ol {
+.blog-post ol,
+.blog-post li,
+.blog-post blockquote {
   margin: 0.7em 0px;
 }
 
-/* about pages */
+.blog-post blockquote {
+  padding: 0.75em 3em;
+  background: var(--color-dark);
+  border-left: 2px solid var(--color-highlight-two);
+}
 
+/* about pages */
 .about-carousel {
   min-height: calc(400px + 2em);
   visibility: hidden;
