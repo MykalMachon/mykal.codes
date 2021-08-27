@@ -2,19 +2,8 @@
 const { title, description } = Astro.props;
 ---
 <header class="container">
-    {(title != null && description != null) ? (
-      <>
-        <h1>{title}</h1>
-        <p>{description}</p>
-      </>
-    ) : (
-      <>
-        <h1>Mykal.Codes</h1>
-        <p>Hey, I'm Mykal- this is my website! 👋🏻</p>
-        <p>I blog about what I'm doing- feel free to check it out.</p>
-      </>
-    )}
-
+  <h1>{title}</h1>
+  <p>{description}</p>
 </header>
 
 <style lang="scss">
@@ -27,6 +16,5 @@ const { title, description } = Astro.props;
 
   header{
     border-bottom: 1px solid var(--color-light);
-    
   }
 </style>
