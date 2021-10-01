@@ -6,7 +6,7 @@ import PostList from '../../components/posts/PostList.astro'
 import { Prism } from 'astro/components';
 
 // Data Fetching: List all Markdown posts in the repo.
-const allPosts = Astro.fetchContent('./*.md');
+const allPosts = Astro.fetchContent('../../posts/*.md');
 const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 ---
 <MainLayout title="Posts" description="This a big ol' list of my blog posts- I blog about web dev, dev-ops, my life, and a bunch of other stuff.">
