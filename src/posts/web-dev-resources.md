@@ -1,9 +1,9 @@
 ---
 title: "Web Dev Resources 🏫"
+slug: 'web-dev-resources'
 description: "What I used, and am still using, to learn web dev"
 date: "Thursday, August 26 2021"
 heroImage: "https://images.unsplash.com/photo-1588618319407-948d4424befd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=80"
-layout: "../../layouts/BlogPost.astro"
 ---
 
 I was talking with a friend yesterday about how I learned web dev.
