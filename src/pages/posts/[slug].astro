@@ -1,0 +1,21 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+
+export async function getStaticPaths() {
+  let allPosts = Astro.fetchContent('../../posts/*.md');
+  return allPosts.map((post) => {
+    return {
+      params: {slug: post.slug},
+      props: {...post}
+    }
+  })
+}
+
+const { slug } = Astro.request.params;
+const content = Astro.props;
+---
+
+<BlogPost content={content}>
+  {content.astro.html}
+</BlogPost>
+<p>Post: {slug}</p>
