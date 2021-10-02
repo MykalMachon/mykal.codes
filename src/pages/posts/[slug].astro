@@ -1,8 +1,24 @@
 ---
 import BlogPost from '../../layouts/BlogPost.astro';
 
-export async function getStaticPaths() {
+export async function getStaticPaths({rss}) {
   let allPosts = Astro.fetchContent('../../posts/*.md');
+
+  rss({
+    // The RSS Feed title, description, and custom metadata.
+    title: 'Don’s Blog',
+    description: 'An example blog on Astro',
+    customData: `<language>en-us</language>`,
+    // The list of items for your RSS feed, sorted.
+    items: allPosts.map(post => ({
+      title: post.title,
+      description: post.description,
+      link: post.url,
+      pubDate: post.date,
+    })),
+    dest: "/feed/posts.xml",
+  });
+
   return allPosts.map((post) => {
     return {
       params: {slug: post.slug},
