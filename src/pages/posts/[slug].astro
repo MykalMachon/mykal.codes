@@ -13,7 +13,7 @@ export async function getStaticPaths({rss}) {
     items: allPosts.map(post => ({
       title: post.title,
       description: post.description,
-      link: post.url,
+      link: `/posts/${post.slug}`,
       pubDate: post.date,
     })),
     dest: "/feed/posts.xml",
