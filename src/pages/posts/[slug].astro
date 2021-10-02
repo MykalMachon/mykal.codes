@@ -3,14 +3,15 @@ import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths({rss}) {
   let allPosts = Astro.fetchContent('../../posts/*.md');
+  let allSortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   rss({
     // The RSS Feed title, description, and custom metadata.
-    title: 'Don’s Blog',
-    description: 'An example blog on Astro',
+    title: 'Mykal.Codes',
+    description: 'Mykal Machon\'s blog; for random writing',
     customData: `<language>en-us</language>`,
     // The list of items for your RSS feed, sorted.
-    items: allPosts.map(post => ({
+    items: allSortedPosts.map(post => ({
       title: post.title,
       description: post.description,
       link: `/posts/${post.slug}`,
@@ -19,7 +20,7 @@ export async function getStaticPaths({rss}) {
     dest: "/feed/posts.xml",
   });
 
-  return allPosts.map((post) => {
+  return allSortedPosts.map((post) => {
     return {
       params: {slug: post.slug},
       props: {...post}
