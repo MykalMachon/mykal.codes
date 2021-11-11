@@ -208,7 +208,9 @@ code {
 
 /* about pages */
 .about-carousel {
-  min-height: calc(400px + 2em);
+  position: relative;
+  height: 400px;
+  margin-bottom: 2em;
   visibility: hidden;
 }
 
@@ -235,7 +237,7 @@ code {
 }
 
 .about-carousel .flickity-page-dots {
-  bottom: calc(1em - 4px);
+  bottom: calc(-1.5em);
 }
 
 .about-carousel .flickity-page-dots .dot {
