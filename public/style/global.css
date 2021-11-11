@@ -26,16 +26,16 @@
   );
 }
 
-.theme__light{
-    /* COLORS */
-    --color-light: #f3f4f6;
-    --color-dark: #f3f4f6;
-    --color-dark-two: #f3f4f6;
-    --color-highlight-one: #ff9f1c;
-    --color-highlight-two: #ff9f1c;
+.theme__light {
+  /* COLORS */
+  --color-light: #f3f4f6;
+  --color-dark: #f3f4f6;
+  --color-dark-two: #f3f4f6;
+  --color-highlight-one: #ff9f1c;
+  --color-highlight-two: #ff9f1c;
 }
 
-.theme__dark{
+.theme__dark {
   --color-light: var(--color-dark);
   --color-dark: #1f2937;
   --color-dark-two: #111827;
@@ -48,10 +48,10 @@
   color: white;
 }
 
-.theme__dark input, .theme__dark textarea {
+.theme__dark input,
+.theme__dark textarea {
   color: white;
 }
-
 
 body {
   width: 100%;
@@ -103,7 +103,7 @@ a:focus:after {
   height: 3px;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
 }
 
@@ -112,13 +112,14 @@ button:hover{
 button.btn {
   padding: 0.6em var(--pad);
   font-family: var(--font-mono);
-  font-size: 1rem; 
+  font-size: 1rem;
   border: 2px solid var(--color-highlight-two);
   background: var(--color-highlight-two);
   color: var(--color-light);
 }
 
-button.btn:active, button.btn:focus{
+button.btn:active,
+button.btn:focus {
   border: 2px solid var(--color-highlight-two);
   background: var(--color-dark-two);
   color: var(--color-highlight-two);
@@ -135,7 +136,8 @@ button.btn--small {
   color: var(--color-highlight-two);
 }
 
-button.btn--small:active, button.btn--small:focus{
+button.btn--small:active,
+button.btn--small:focus {
   border: 2px solid var(--color-highlight-two);
   background: var(--color-dark-two);
   color: var(--color-highlight-two);
@@ -143,12 +145,12 @@ button.btn--small:active, button.btn--small:focus{
   border-style: dotted;
 }
 
-button:disabled{
-  filter: grayscale(1.0)
+button:disabled {
+  filter: grayscale(1);
 }
 
 /* form styles */
-.form-control{
+.form-control {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -159,7 +161,8 @@ button:disabled{
   margin-bottom: 0.4em;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 0.6em 0.4em;
   border: none;
   border: 2px solid var(--color-dark);
@@ -169,7 +172,8 @@ input, textarea {
   font-size: 1em;
 }
 
-input:focus, textarea:focus{
+input:focus,
+textarea:focus {
   outline: none;
   border-color: var(--color-highlight-one);
   border-style: dotted;
@@ -208,6 +212,19 @@ code {
   visibility: hidden;
 }
 
+.about-carousel::after {
+  content: '';
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  background: hsla(34.6, 100%, 55%, 0);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
 .about-carousel.flickity-enabled {
   visibility: visible;
 }
@@ -231,4 +248,11 @@ code {
 
 .about-carousel .flickity-button {
   display: none;
+}
+
+.about-carousel--loading::after {
+  visibility: visible;
+  opacity: 1;
+  background: hsla(34.6, 100%, 55%, 0.45);
+  backdrop-filter: saturate(80%) blur(12px);
 }

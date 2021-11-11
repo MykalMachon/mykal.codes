@@ -20,13 +20,28 @@ allPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
           percentPosition: false,
           wrapAround: true,
           resize: true,
-          lazyLoad: 2,
+          lazyLoad: 5
         });
+
+        const images = document.querySelectorAll('.about-carousel img');
+        const numImages = images.length;
+        let loadedImages = 0;
+
+        images.forEach((image) => {
+          image.addEventListener('load', () => {
+            console.log('image loaded');
+            loadedImages++;
+            if(loadedImages == numImages){
+              carouselEl.classList.remove('about-carousel--loading');
+            }
+          })
+        })
       })
+
     </script>
   </>
 }>
-    <div class="about-carousel">
+    <div class="about-carousel about-carousel--loading">
       <img 
         src="https://assets.codepen.io/1490503/mykal-6.jpg?width=16&height=18&format=auto" 
         data-flickity-lazyload="https://assets.codepen.io/1490503/mykal-6.jpg?format=auto" 
