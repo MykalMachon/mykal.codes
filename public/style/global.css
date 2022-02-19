@@ -116,6 +116,7 @@ button.btn {
   border: 2px solid var(--color-highlight-two);
   background: var(--color-highlight-two);
   color: var(--color-light);
+  transition: filter 0.3s ease-in-out;
 }
 
 button.btn:active,
@@ -134,6 +135,7 @@ button.btn--small {
   border: 2px solid var(--color-highlight-two);
   background: var(--color-dark-two);
   color: var(--color-highlight-two);
+  transition: filter 0.3s ease-in-out;
 }
 
 button.btn--small:active,

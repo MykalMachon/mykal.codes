@@ -9,10 +9,13 @@ const CongratsButton = ({ children }) => {
   const doCongrats = async () => {
     if (!playing) {
       setPlaying(true);
+      button.current.disabled = true;
       // do some confetti math
       const buttonBox = button.current.getBoundingClientRect();
-      const confettiX = (buttonBox.left + buttonBox.width / 2) / window.innerWidth;
-      const confettiY = (buttonBox.top + buttonBox.height / 2) / window.innerHeight;
+      const confettiX =
+        (buttonBox.left + buttonBox.width / 2) / window.innerWidth;
+      const confettiY =
+        (buttonBox.top + buttonBox.height / 2) / window.innerHeight;
       // play the kazoo
       await new Audio('/congrats.mp3').play();
       // throw some confetti
@@ -27,6 +30,7 @@ const CongratsButton = ({ children }) => {
       });
       setTimeout(() => {
         setPlaying(false);
+        button.current.disabled = false;
       }, 3000);
     }
   };
