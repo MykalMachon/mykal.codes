@@ -31,16 +31,16 @@
   --color-light: #f3f4f6;
   --color-dark: #f3f4f6;
   --color-dark-two: #f3f4f6;
-  --color-highlight-one: #ff9f1c;
-  --color-highlight-two: #ff9f1c;
+  --color-highlight-one: #ca8a04;
+  --color-highlight-two: #ca8a04;
 }
 
 .theme__dark {
   --color-light: var(--color-dark);
   --color-dark: #1f2937;
   --color-dark-two: #111827;
-  --color-highlight-one: #b4da55;
-  --color-highlight-two: #ff9f1c;
+  --color-highlight-one: #facc15;
+  --color-highlight-two: #ca8a04;
 }
 
 .theme__dark body {
