@@ -3,6 +3,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 // Component Imports
 import { Markdown } from 'astro/components';
+import CongratsButton from '../components/CongratsButton.jsx';
 
 // Data Fetching: List all Markdown posts in the repo.
 let allPosts = Astro.fetchContent('./posts/*.md');
@@ -88,12 +89,16 @@ allPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
         4. Spending time with family and friends
 
         ## Education
-        I graduated from the University of the Fraser Valley (UFV) with a Bachelor in Computer Information Systems in 2021. 
-
+        I graduated from the University of the Fraser Valley (UFV) with a Bachelor in Computer Information Systems December 2021.
+      </Markdown>
+        <CongratsButton client:idle >
+          Press to say congrats 🎉
+        </CongratsButton>
+      <Markdown>
         [UFV's BCIS degree](https://www.ufv.ca/calendar/current/ProgramsC-E/CIS_BCIS.htm) is basically a mix of the traditional Computer Science Degree,
         with a number of other technical fields (Networking, IT, and Project Management) with a focus on projects and practical work experience.
 
-        I also did a bit of AI research work while I was a student at UFV.
+        I also did a bit of AI research work while I was a student at UFV. 
       </Markdown>
     </div>
 </MainLayout>  
