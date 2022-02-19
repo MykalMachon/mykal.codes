@@ -1,5 +1,5 @@
 ---
-title: "Web Dev Resources 🏫"
+title: "Web Dev Resources"
 slug: 'web-dev-resources'
 description: "What I used, and am still using, to learn web dev"
 date: "Thursday, August 26 2021"

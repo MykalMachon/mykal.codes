@@ -45,12 +45,12 @@
 
 .theme__dark body {
   background: var(--color-dark-two);
-  color: white;
+  color: #e9ecef;
 }
 
 .theme__dark input,
 .theme__dark textarea {
-  color: white;
+  color: #e9ecef;
 }
 
 body {
