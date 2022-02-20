@@ -8,6 +8,8 @@ const handler: Handler = async (event, context) => {
     
     // get the discord webhook url
     const webhookUrl = process.env.WEBHOOK_URL;
+    console.log('new form submission, attempting to send discord ping')
+    console.log(webhookUrl);
 
     // send contact to my discord
     fetch(webhookUrl, {
