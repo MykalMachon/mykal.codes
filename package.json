@@ -7,9 +7,11 @@
     "build": "astro build"
   },
   "devDependencies": {
-    "astro": "^0.20.9"
+    "astro": "^0.20.9",
+    "node-fetch": "^3.2.0"
   },
   "dependencies": {
+    "@netlify/functions": "^1.0.0",
     "canvas-confetti": "^1.5.1"
   }
 }
