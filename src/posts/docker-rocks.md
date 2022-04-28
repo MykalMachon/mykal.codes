@@ -13,17 +13,22 @@ I’ve been doing a bunch with it at work lately and once things “click” (do
 You can have a local "dev" environment (DB, App, Redis, etc) that mirrors your production environment up and running with one command. 
 you can make all your changes, and test them in an environment that is extremely close to production, in *one command*.
 
-From there, all you need to deploy is commit your code, merge a pull request, pull things down on your production server, and restart!  
+From there, deploying your app is as simple as commiting your code, merging a pull request, pulling things down on your production server, and restarting the app!  
 
 > If you're in a cloud environment that supports git-based CI/CD, this is probably automated for you already! 🎉
 
-We've even started to "containerize" off-the-shelf apps to simplify deployment. Docker-compose is so useful for composing services that it can take deployments down from multi-hour efforts to a few commands. It can literally be as simple as:
+We've even started to "containerize" off-the-shelf apps we use at work to simplify deployment. docker-compose is so useful for "composing" services that it can take deployments down from multi-hour efforts to a few commands. Previously monolothic all-day-long deploys can literally be as simple as:
 
 ```
 docker-compose build && docker-compose up
 ```
 
 The next logical step for me in all of this is Kubernetes, which seems infinitely more daunting somehow. 
+
+### What does this look like?
+Here's [an, admittedly extremely abstracted, example](https://github.com/MykalMachon/Caeser) based on one of my recent work projects. 
+
+Despite the code being a lot simpler, the basic "docker" structure we use is on full display here, and could pretty easily be forked out to fit other projects. 
 
 ### Wanna Talk About This?
 
