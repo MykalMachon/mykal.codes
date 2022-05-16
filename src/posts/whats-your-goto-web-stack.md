@@ -13,7 +13,7 @@ The Web Stack I'd use for a website is a little different than what I'd use for 
 ## Go-To Website Stack
 If I'm working on a site for myself or a client, the set of tools in my belt has been pretty well defined for awhile. 
 
-The main piece of the stack here is the Static Site Generator (SSG) / "meta framework" used to build the site; Up until recently my go-to was [Next.js](https://nextjs.org/), but in the last ~6 months I've moved most of my stuff over to [Astro](https://astro.build/). Next.js is [technically more "feature rich"](https://nextjs.org/docs/getting-started), but I really like Astro's [zero-js-by-default approach](https://docs.astro.build/en/core-concepts/partial-hydration/) and it gives me a bit more room to experiment with JS / CSS.
+The main piece of the stack here is the Static Site Generator (SSG) / "meta framework" used to build the site. Up until recently my go-to was [Next.js](https://nextjs.org/), but in the last ~6 months I've moved most of my stuff over to [Astro](https://astro.build/). Next.js is [technically more "feature rich"](https://nextjs.org/docs/getting-started), but I really like Astro's [zero-js-by-default approach](https://docs.astro.build/en/core-concepts/partial-hydration/) and it gives me a bit more room to experiment with JS / CSS.
 
 I've also been messing around with [Netlify's Edge and Serverless Functions](https://www.netlify.com/products/functions/). While I've been using Netlify for years now, I've only really started digging into their serverless functions to help supplement the lack of Astro's server-side capabilities.
 
