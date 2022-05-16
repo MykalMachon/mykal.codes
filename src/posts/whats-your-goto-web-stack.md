@@ -6,9 +6,9 @@ date: 'Monday, May 16 2022'
 heroImage: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=80'
 ---
 
-This post was inspired by [Andrew Walpole's "What's Your Go-To Web Stack" post](https://andrewwalpole.com/blog/whats-your-go-to-web-stack/). It seemed like a fun exercise to go through so I thought I'd give it a shot.
+This post was inspired by [Andrew Walpole's "What's Your Go-To Web Stack" post](https://andrewwalpole.com/blog/whats-your-go-to-web-stack/). It seemed like a fun exercise, so I thought I’d give it a shot.
 
-The Web Stack I'd use for a website is a little different than what I'd use for a webapp, **so I figured I'd answer this question in two ways: what's my webapp stack, and what's my website stack.**
+The stack I'd use for a website is a little different than what I'd use for a webapp, **so I figured I'd answer this question in two ways: what's my webapp stack, and what's my website stack.**
 
 ## Go-To Website Stack
 If I’m working on a site for myself or a client, the tools in my belt are pretty well defined.
