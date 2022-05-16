@@ -15,7 +15,7 @@ If I’m working on a site for myself or a client, the tools in my belt are pret
 
 The main piece of the stack here is the Static Site Generator (SSG) / "meta-framework" used to build the site. Until recently, my go-to was [Next.js](https://nextjs.org/), but in the last ~6 months, I've moved most of my stuff over to [Astro](https://astro.build/). Next.js is [technically more "feature rich"](https://nextjs.org/docs/getting-started), but I really like Astro's [zero-js-by-default approach](https://docs.astro.build/en/core-concepts/partial-hydration/). Astro also gives me more room to experiment with JS / CSS.
 
-I've also been messing around with [Netlify's Edge and Serverless Functions](https://www.netlify.com/products/functions/). While I've been using Netlify for years now, I've only really started digging into their serverless functions to help supplement the lack of Astro's server-side capabilities.
+I've been using [Netlify's Edge and Serverless Functions](https://www.netlify.com/products/functions/) quite a lot as well. While I've been using Netlify for years now, I've only really started digging into their serverless functions to help supplement the lack of Astro's server-side capabilities.
 
 For content management, I'll typically stick to markdown files, but if the site needs to be edited by business users, I'll use [Sanity.io](https://www.sanity.io/). Their free plan is super generous and the level of customization makes it easy enough to tweak the CMS to fit the level of control and visibility needed.
 
@@ -31,7 +31,7 @@ My go-to webapp stack is a bit more up-in-the-air than my website stack. Dependi
 
 The main piece of the pie here is, again, the "Framework". I've been using [Flask](https://flask.palletsprojects.com/en/2.1.x/) *a lot* at work lately and have been really loving the back-to-basics web server approach it takes. There are tonnes of resources out there about integrating it with modern tech and practices, plus Python is just a dream to write. In cases where I need something that has a reactive frontend though, I'll still reach for the tried and true [Next.js](https://nextjs.org/). 
 
-We use mostly MS SQL for databases at work, but that is definitely not my DB of choice. I'll reach for [PostgresSQL](https://www.postgresql.org/) whenever I can; it seems to work with almost everything you'd need it to, and benefits from being one of the "popular" databases with lots of available tooling and educational content available.
+We use mostly MS SQL for databases at work, but that is definitely not my DB of choice. I'll reach for [PostgresSQL](https://www.postgresql.org/) whenever I can; it seems to work with almost everything you'd need it to, and benefits from being one of the "popular" databases with lots of tooling and educational content available.
 
 For hosting, [I've really been digging "dockerized" setups lately](https://mykal.codes/posts/docker-rocks/), which by design sort of means you can kind of host anywhere. I host some stuff of a server in my house, and use cloud services like [Railway](https://railway.app/) to host most production environments for clients. 
 
