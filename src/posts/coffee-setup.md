@@ -53,13 +53,13 @@ I can only brew two ways at home with the gear I have now, Pour Over, and AeroPr
 
 I started out with Pour Over ~2 months ago, and have kept with it since. That said, I'm pretty meticulous in the steps I take, and I'm sure there are much simpler ways to do things.
 
-#### My pour over setup includes:
+#### Equipment
 
 1.  HARIO V60 - 02 Acrylic Dripper
 2.  HARIO V60 - 02 Filter Papers
 3.  HARIO V60 - 01 Glass Range Server
 
-#### My typical brew follows the following steps:
+#### Brew Instructions
 
 1.  measure out 28g of coffee
 2.  measure out 550g of water into your kettle
