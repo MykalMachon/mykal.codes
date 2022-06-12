@@ -2,18 +2,23 @@
 title: 'My Coffee Setup'
 slug: 'coffee-setup'
 description: "I've gotten into Coffee lately (cliché, I know) and wanted to summarize my coffee setup."
-date: 'Tuesday, May 10 2022'
+pubDate: 'Tuesday, May 10 2022'
 heroImage: 'https://images.unsplash.com/photo-1513530176992-0cf39c4cbed4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
 ---
 
 ## Legend
 
-1.  [Coffee Beans](#coffee-beans)
-    1.  [Where I Get My Beans](#where-i-get-my-beans)
-    2.  [How I Grind My Beans](#how-i-grind-my-beans)
-2.  [Brewing Methods](#brewing-methods)
-    1.  [Pour Over](#pour-over)
-    2.  [AeroPress](#aeropress)
+- [Legend](#legend)
+- [Coffee Beans](#coffee-beans)
+  - [Where I Get My Beans](#where-i-get-my-beans)
+  - [How I Grind My Beans](#how-i-grind-my-beans)
+- [Brewing Methods](#brewing-methods)
+  - [Pour Over](#pour-over)
+    - [Equipment](#equipment)
+    - [Brew Instructions](#brew-instructions)
+  - [AeroPress](#aeropress)
+    - [Equipment](#equipment-1)
+    - [Brew Instructions](#brew-instructions-1)
 
 I've really gotten into Coffee lately (cliché, I know) and I wanted to summarize my setup in a post.  
 

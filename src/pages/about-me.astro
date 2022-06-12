@@ -4,44 +4,8 @@ import MainLayout from '../layouts/MainLayout.astro';
 // Component Imports
 import { Markdown } from 'astro/components';
 import CongratsButton from '../components/CongratsButton.jsx';
-
-// Data Fetching: List all Markdown posts in the repo.
-let allPosts = Astro.fetchContent('./posts/*.md');
-allPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 ---
-<MainLayout title="About Me" description="Here's a quick summary..." head={
-  <>
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const carouselEl = document.querySelector('.about-carousel');
-        const carousel = new Flickity( carouselEl, {
-          autoPlay: true,
-          percentPosition: false,
-          wrapAround: true,
-          resize: true,
-          lazyLoad: 5
-        });
-
-        const images = document.querySelectorAll('.about-carousel img');
-        const numImages = images.length;
-        let loadedImages = 0;
-
-        images.forEach((image) => {
-          image.addEventListener('load', () => {
-            console.log('image loaded');
-            loadedImages++;
-            if(loadedImages == numImages){
-              carouselEl.classList.remove('about-carousel--loading');
-            }
-          })
-        })
-      })
-
-    </script>
-  </>
-}>
+<MainLayout title="About Me" description="Here's a quick summary...">
     <div class="about-carousel about-carousel--loading">
       <img 
         src="https://res.cloudinary.com/tinbyox/image/upload/c_scale,q_auto:low,w_16/v1645245801/mykal.codes/PXL_20211125_004415427.PORTRAIT_svcgil.jpg"

@@ -2,7 +2,7 @@
 title: "New Job at UFV!"
 slug: 'new-job-at-ufv'
 description: "Moving from web developer, to systems analyst"
-date: "Monday, May 10 2021"
+pubDate: "Monday, May 10 2021"
 heroImage: "https://unsplash.com/photos/bJhT_8nbUA0/download?force=true&w=1920"
 ---
 I'm starting as a Systems Analyst at the [University of the Fraser Valley (UFV)!](https://ufv.ca) 🎉

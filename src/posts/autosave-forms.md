@@ -2,7 +2,7 @@
 title: 'Autosave on the Web'
 slug: 'autosave-on-the-web'
 description: 'Using native browser APIs to autosave HTML forms'
-date: 'Friday, February 18 2022'
+pubDate: 'Friday, February 18 2022'
 heroImage: 'https://images.unsplash.com/photo-1517490232338-06b912a786b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80'
 ---
 

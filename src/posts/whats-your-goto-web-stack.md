@@ -2,7 +2,7 @@
 title: "What's Your Go-To Web Stack"
 slug: 'whats-your-goto-web-stack'
 description: "An exercise in exploring the stack I'm currently comfy with."
-date: 'Monday, May 16 2022'
+pubDate: 'Monday, May 16 2022'
 heroImage: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=80'
 ---
 
