@@ -2,21 +2,21 @@
 import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths({rss}) {
-  let allPosts = await Astro.glob('../../posts/*.md');
+  let allPosts = await Astro.glob('../../posts/**/*.md');
   let allSortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate));
 
   return allSortedPosts.map((post) => {
     return {
-      params: {id: post.frontmatter.slug},
-      props: {...post}
+      params: {slug: post.frontmatter.slug},
+      props: {post}
     }
   })
 }
 
-const { id } = Astro.params;
-const content = Astro.props;
+const {post} = Astro.props;
 ---
 
-<BlogPost content={content}>
-  {content.astro.html}
-</BlogPost>
+<h1>{post.frontmatter.title}</h1>
+<main>
+  <post.Content />
+</main>

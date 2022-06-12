@@ -3,10 +3,10 @@ const { post } = Astro.props;
 ---
 
 <article>
-  <h3>{post.title}</h3>
-  <p>{post.date}</p>
-  <p>{post.description}</p>
-  <a href={`/posts/${post.slug}`}>read more</a>
+  <h3>{post.frontmatter.title}</h3>
+  <p>{post.frontmatter.pubDate}</p>
+  <p>{post.frontmatter.description}</p>
+  <a href={`/posts/${post.frontmatter.slug}`}>read more</a>
 </article>
 
 <style lang="scss">

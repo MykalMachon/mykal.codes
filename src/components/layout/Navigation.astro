@@ -2,38 +2,14 @@
 
 ---
 
-<nav role="navigation">
-  <div class="container">
-    <a class="home" href="/">Mykal Machon</a> // 
-    <a href="/about-me">About Me</a> //
-    <a href="/posts">Posts</a> //
-    <a href="/contact">Contact</a>
-    
-  </div>
+<nav role="navigation container">
+    <ul>
+      <li><a class="home" href="/">Mykal Machon</a></li>
+      <li><a href="/about-me">About Me</a></li>
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
 </nav>
 
 <style lang="scss">
-  nav {
-    background: var(--color-highlight-two);
-    width: 100%;
-    min-height: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--color-light);
-    a{
-      font-family: var(--font-mono);
-      color: var(--color-light);
-    }
-    a:after{
-      background: var(--color-light);
-    }
-    a:focus{
-      border-color: var(--color-light);
-    }
-    a:active{
-      background: var(--color-light);
-      color: var(--color-highlight-two);
-    }
-  }
 </style>
