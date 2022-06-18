@@ -16,7 +16,10 @@ export async function getStaticPaths({rss}) {
 const {post} = Astro.props;
 ---
 
-<h1>{post.frontmatter.title}</h1>
-<main>
+<BlogPost 
+  title={post.frontmatter.title} 
+  description={post.frontmatter.description}
+  heroImage={post.frontmatter.heroImage}
+  >
   <post.Content />
-</main>
+</BlogPost>

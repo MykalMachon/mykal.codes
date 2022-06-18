@@ -4,14 +4,14 @@ import Header from '../components/layout/Header.astro'
 import Footer from '../components/layout/Footer.astro'
 import MainHead from '../components/MainHead.astro'
 
-const { title, description, head } = Astro.props;
+const { title, description } = Astro.props;
 ---
-<html class="theme__dark" lang="en">
+<html class="" lang="en">
   <head>
-    {head}
+    <slot name="head-content" />
     <MainHead title={title} description={description} />
   </head>
-  <body>
+  <body class="site-container">
     <Navigation />
     <Header title={title} description={description} />
     <main class="container">
