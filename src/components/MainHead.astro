@@ -27,8 +27,8 @@ const { title, description } = Astro.props;
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const observer = lozad('.lazy', {}); // lazy loads elements with default selector as '.lozad'
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = lozad(".lazy", {}); // lazy loads elements with default selector as '.lozad'
     observer.observe();
   });
 </script>

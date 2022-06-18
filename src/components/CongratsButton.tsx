@@ -1,6 +1,6 @@
-import { h, RefObject } from 'preact';
-import { useState, useRef } from 'preact/hooks';
-import confetti from 'canvas-confetti';
+import { h, RefObject } from "preact";
+import { useState, useRef } from "preact/hooks";
+import confetti from "canvas-confetti";
 
 const CongratsButton = ({ children }) => {
   const [playing, setPlaying] = useState(false);
@@ -17,7 +17,7 @@ const CongratsButton = ({ children }) => {
       const confettiY =
         (buttonBox.top + buttonBox.height / 2) / window.innerHeight;
       // play the kazoo
-      await new Audio('/congrats.mp3').play();
+      await new Audio("/congrats.mp3").play();
       // throw some confetti
       confetti({
         particleCount: 140,

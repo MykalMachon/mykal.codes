@@ -1,6 +1,6 @@
 ---
 title: "Web Dev Resources"
-slug: 'web-dev-resources'
+slug: "web-dev-resources"
 description: "What I used, and am still using, to learn web dev"
 pubDate: "Thursday, August 26 2021"
 heroImage: "https://images.unsplash.com/photo-1588618319407-948d4424befd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=80"
@@ -14,6 +14,7 @@ So I made them a quick list of the web-dev resources I used to learn, and that I
 > ℹ I'm still working on this one- it'll be updated over time.
 
 ## Video Courses 📺
+
 This is honestly where I've learned most of what I know in a "traditional" sense.
 
 - [Wes Bos's Learn Node](https://learnnode.com): Comprehensive course that goes over what Node is, how it works, HTML templating, basic JS bundling, etc.
@@ -21,14 +22,16 @@ This is honestly where I've learned most of what I know in a "traditional" sense
 - [Level Up Tutorials](https://leveluptutorials.com): React, Svelte, etc: All of Scott's content on Level Up Tuts is great!
 
 ## Podcasts 🎤
+
 I listen to podcasts to keep up on what's new & upcoming in web dev, as well as a way to nerd out about existing tech I haven't used:
 
-- [Shop Talk Show](https://shoptalkshow.com/): Just! build! WEBSITES! 
-- [Syntax FM](https://syntax.fm): A relatively beginner oriented podcast hosted by Scott Tolinski, and Wes Bos! 
+- [Shop Talk Show](https://shoptalkshow.com/): Just! build! WEBSITES!
+- [Syntax FM](https://syntax.fm): A relatively beginner oriented podcast hosted by Scott Tolinski, and Wes Bos!
 - [JS Party](https://changelog.com/jsparty): Talking about Javascript and the web with a "party" of rotating hosts.
-- [Remotely Interesting](https://www.netlify.com/blog/2020/09/01/announcing-a-remotely-interesting-podcast/): The Netlify dev rel team's podcast 
+- [Remotely Interesting](https://www.netlify.com/blog/2020/09/01/announcing-a-remotely-interesting-podcast/): The Netlify dev rel team's podcast
 
 ## Projects 👩🏻‍💻
+
 This is where most of my practical knowledge came from- and where I recommend people spend most of their time!
 
 - [Supastack](https://github.com/MykalMachon/Supastack): A mix between substack + tumblr. It's definitely not complete but gave me time to learn SupaBase & Postgres.
@@ -36,12 +39,14 @@ This is where most of my practical knowledge came from- and where I recommend pe
 - [Mykal.codes](https://github.com/MykalMachon/Mykal.Codes): This website! a blog- it's been rebuilt 4-5 times in different frameworks (Next.js, Gatsby, 11ty, now Astro)
 
 ## Books 📚
+
 I use books more as a reference, than anything.
 
 - [Flask Web Development](https://www.oreilly.com/library/view/flask-web-development/9781491991725/): I recently read this to learn about flask for work- it's great! Walks you through creating a modern-ish web app with Flask.
 - [Increment Magazine](https://increment.com): A _very_ high quality magazine about software development. Lots of varied, and well done articles from different disciplines of software.
 
 ## Misc ⚙
+
 Other stuff I use on a regular basis
 
 - [Mozilla Developer Network](https://mdn.org): have you ever wanted docs for like every web api ever? this is it!

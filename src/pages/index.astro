@@ -1,11 +1,11 @@
 ---
 // Layout Import
-import HomeLayout from '../layouts/HomeLayout.astro';
+import HomeLayout from "../layouts/HomeLayout.astro";
 // Component Imports
-import PostList from '../components/posts/PostList.astro';
+import PostList from "../components/posts/PostList.astro";
 
 // Data Fetching: fetch recent posts
-let allPosts = await Astro.glob('../posts/**/*.md');
+let allPosts = await Astro.glob("../posts/**/*.md");
 allPosts = allPosts.sort(
   // @ts-ignore
   (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)

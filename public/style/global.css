@@ -1,5 +1,5 @@
-@import 'https://unpkg.com/open-props';
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&family=Eczar:wght@600&display=swap');
+@import "https://unpkg.com/open-props";
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&family=Eczar:wght@600&display=swap");
 
 * {
   box-sizing: border-box;
@@ -15,8 +15,8 @@
   --color-highlight-two: var(--teal-9);
 
   /* FONT FAMILY */
-  --font-heading: 'Eczar', serif;
-  --font-body: 'Cabin', sans-serif;
+  --font-heading: "Eczar", serif;
+  --font-body: "Cabin", sans-serif;
 
   /* FONT SIZES */
   --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);

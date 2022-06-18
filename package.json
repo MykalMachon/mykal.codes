@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "astro dev",
-    "build": "astro build"
+    "build": "astro build",
+    "test": "npm run test:lint",
+    "test:lint": "prettier -w ."
   },
   "devDependencies": {
     "@astrojs/preact": "^0.1.3",
