@@ -1,25 +1,28 @@
 ---
 import BlogPost from '../../layouts/BlogPost.astro';
 
-export async function getStaticPaths({rss}) {
+export async function getStaticPaths({ rss }) {
   let allPosts = await Astro.glob('../../posts/**/*.md');
-  let allSortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate));
+  let allSortedPosts = allPosts.sort(
+    // @ts-ignore
+    (a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate)
+  );
 
   return allSortedPosts.map((post) => {
     return {
-      params: {slug: post.frontmatter.slug},
-      props: {post}
-    }
-  })
+      params: { slug: post.frontmatter.slug },
+      props: { post },
+    };
+  });
 }
 
-const {post} = Astro.props;
+const { post } = Astro.props;
 ---
 
-<BlogPost 
-  title={post.frontmatter.title} 
+<BlogPost
+  title={post.frontmatter.title}
   description={post.frontmatter.description}
   heroImage={post.frontmatter.heroImage}
-  >
-  <post.Content />
+>
+  <post.Content></post.Content>
 </BlogPost>

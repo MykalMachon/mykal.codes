@@ -1,19 +1,20 @@
 ---
-import Navigation from '../components/layout/Navigation.astro'
-import Header from '../components/layout/Header.astro'
-import Footer from '../components/layout/Footer.astro'
-import MainHead from '../components/MainHead.astro'
+import Navigation from '../components/layout/Navigation.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import MainHead from '../components/MainHead.astro';
 
 const { title, description } = Astro.props;
 ---
+
 <html class="" lang="en">
   <head>
     <slot name="head-content" />
-    <MainHead title={title} description={description} />
+    <MainHead {title} {description} />
   </head>
   <body class="site-container">
     <Navigation />
-    <Header title={title} description={description} />
+    <Header {title} {description} />
     <main class="container">
       <slot />
     </main>

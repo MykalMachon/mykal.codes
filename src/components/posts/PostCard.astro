@@ -5,13 +5,13 @@ const { post } = Astro.props;
 <article>
   <div class="postcard__photo">
     <a href={`/posts/${post.frontmatter.slug}`}>
-      <img 
-        src={post.frontmatter.heroImage} 
+      <img
+        src={post.frontmatter.heroImage}
         alt={`decorative photo for ${post.frontmatter.title} post`}
         loading="lazy"
         width="224"
         height="149"
-        />
+      />
     </a>
   </div>
   <div class="postcard__content">
@@ -25,7 +25,7 @@ const { post } = Astro.props;
 </article>
 
 <style lang="scss">
-  article{
+  article {
     margin: 0px 0px var(--size-3) 0px;
     display: grid;
     grid-template-columns: 248px 1fr;
@@ -42,7 +42,7 @@ const { post } = Astro.props;
       h3 {
         font-size: var(--font-size-md);
       }
-      .postcard__content__date{
+      .postcard__content__date {
         font-style: italic;
         color: var(--font-color-ink2);
       }

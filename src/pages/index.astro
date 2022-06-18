@@ -2,16 +2,21 @@
 // Layout Import
 import HomeLayout from '../layouts/HomeLayout.astro';
 // Component Imports
-import PostList from '../components/posts/PostList.astro'
+import PostList from '../components/posts/PostList.astro';
 
 // Data Fetching: fetch recent posts
 let allPosts = await Astro.glob('../posts/**/*.md');
-allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
-const recentPosts = allPosts.slice(0, 3)
+allPosts = allPosts.sort(
+  // @ts-ignore
+  (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+);
+const recentPosts = allPosts.slice(0, 3);
 ---
-<HomeLayout 
-  title="Home" 
-  description={`Hey! I'm Mykal Machon- and this is my website. I'm a Systems Analyst at UFV, and the only guy at Tinybox`}>
-    <PostList posts={recentPosts} />
-    <a href="/posts/">read older posts</a>
+
+<HomeLayout
+  title="Home"
+  description={`Hey! I'm Mykal Machon- and this is my website. I'm a Systems Analyst at UFV, and the only guy at Tinybox`}
+>
+  <PostList posts={recentPosts} />
+  <a href="/posts/">read older posts</a>
 </HomeLayout>
