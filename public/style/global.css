@@ -29,8 +29,8 @@
 
   /* FONT COLORS */
   --font-color-paper: var(--color-light);
-  --font-color-ink: var(--gray-8);
-  --font-color-ink2: var(--gray-7);
+  --font-color-ink: var(--gray-7);
+  --font-color-ink2: var(--gray-6);
 }
 
 /* Basic Resets */
@@ -43,6 +43,18 @@ h4 {
   color: var(--gray-8);
 }
 
+h1 {
+  font-size: var(--font-size-xl);
+}
+
+h2 {
+  font-size: var(--font-size-lg);
+}
+
+h3 {
+  font-size: var(--font-size-md);
+}
+
 p,
 a,
 ul,
@@ -53,7 +65,24 @@ textarea,
 small {
   font-family: var(--font-body);
   color: var(--font-color-ink);
+  font-size: var(--font-size-base);
+  line-height: var(--size-6);
 }
+
+small {
+  font-size: var(--font-size-small);
+}
+
+p {
+  margin: var(--size-3) 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* SITE FLOWS */
 
 .site-container {
   width: 100%;

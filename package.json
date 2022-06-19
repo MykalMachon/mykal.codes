@@ -13,12 +13,12 @@
     "astro": "^1.0.0-beta.44",
     "node-fetch": "^3.2.0",
     "prettier-plugin-astro": "^0.0.12",
-    "sass": "^1.52.3"
-  },
-  "dependencies": {
+    "sass": "^1.52.3",
     "@astrojs/rss": "^0.2.0",
     "@netlify/functions": "^1.0.0",
-    "@types/node": "^14.18.12",
+    "@types/node": "^14.18.12"
+  },
+  "dependencies": {
     "canvas-confetti": "^1.5.1",
     "preact": "^10.7.3",
     "typescript": "^4.5.5"

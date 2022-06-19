@@ -1,46 +1,52 @@
 ---
-const { post } = Astro.props;
+const { post, type="large" } = Astro.props;
 ---
 
-<article>
+{type === "large" ? (
+<article class="postcard">
   <div class="postcard__photo">
     <a href={`/posts/${post.frontmatter.slug}`}>
       <img
         src={post.frontmatter.heroImage}
         alt={`decorative photo for ${post.frontmatter.title} post`}
         loading="lazy"
-        width="224"
-        height="149"
+        width="202"
+        height="166"
       />
     </a>
   </div>
   <div class="postcard__content">
-    <p class="postcard__content__date">{post.frontmatter.pubDate}</p>
-    <h3>{post.frontmatter.title}</h3>
+    <small class="postcard__content__date">{post.frontmatter.pubDate}</small>
+    <h3> <a href={`/posts/${post.frontmatter.slug}`}>{post.frontmatter.title}</a></h3>
     <p>{post.frontmatter.description}</p>
-    <p>
-      <a href={`/posts/${post.frontmatter.slug}`}>read more</a>
-    </p>
   </div>
 </article>
+) : (
+  <article class="postcard--small">
+    <p><a href={`/posts/${post.frontmatter.slug}`}>{post.frontmatter.title}</a> - <span class="postcard__date">{post.frontmatter.pubDate}</span></p>
+  </article>
+)}
+
 
 <style lang="scss">
-  article {
+  article.postcard {
     margin: 0px 0px var(--size-3) 0px;
     display: grid;
-    grid-template-columns: 248px 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: var(--size-3);
     .postcard__photo {
       img {
-        max-width: 100%;
+        border-radius: var(--size-2);
         width: 100%;
-        height: auto;
-        border-radius: var(--radius-2);
+        height: 100%;
+        object-fit: cover;
       }
     }
     .postcard__content {
       h3 {
         font-size: var(--font-size-md);
+        margin-bottom: none;
+        line-height: 1.25em;
       }
       .postcard__content__date {
         font-style: italic;
@@ -48,7 +54,27 @@ const { post } = Astro.props;
       }
       p {
         margin: var(--size-2) 0;
+        line-height: 1.25em;
       }
+    }
+    @media screen and (max-width: 80ch){
+      display: grid;
+      gap: var(--size-1);
+      margin: 0 0 var(--size-5) 0;
+      grid-template-columns: 1fr;
+      .postcard__photo {
+        img {
+          display: none;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  article.postcard--small {
+    margin: var(--size-3) 0px var(--size-3) 0px;
+    .postcard__date {
+      font-style: italic;
+      color: var(--font-color-ink2);
     }
   }
 </style>
