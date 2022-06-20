@@ -1,5 +1,5 @@
-@import "https://unpkg.com/open-props";
-@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&family=Eczar:wght@600&display=swap");
+@import 'https://unpkg.com/open-props';
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&family=Eczar:wght@600&display=swap');
 
 * {
   box-sizing: border-box;
@@ -16,8 +16,8 @@
   --color-highlight-two: var(--teal-9);
 
   /* FONT FAMILY */
-  --font-heading: "Eczar", serif;
-  --font-body: "Cabin", sans-serif;
+  --font-heading: 'Eczar', serif;
+  --font-body: 'Cabin', sans-serif;
 
   /* FONT SIZES */
   --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
@@ -67,7 +67,8 @@ ol,
 input,
 select,
 textarea,
-small {
+small,
+label {
   font-family: var(--font-body);
   color: var(--font-color-ink);
   font-size: var(--font-size-base);
@@ -145,7 +146,7 @@ button:disabled {
 }
 
 .about-carousel::after {
-  content: "";
+  content: '';
   visibility: hidden;
   position: absolute;
   opacity: 0;
@@ -188,4 +189,23 @@ button:disabled {
   opacity: 1;
   background: hsla(162, 0.82, 0.4, 0.45);
   backdrop-filter: saturate(80%) blur(12px);
+}
+
+/* forms */
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+  margin-bottom: var(--size-3);
+}
+
+input,
+select,
+textarea {
+  padding: var(--size-2);
+  border-radius: var(--radius-2);
+  border: 1px solid var(--teal-6);
+  outline-color: var(--teal-5);
+  outline-width: 2px;
+  outline-offset: var(--size-1);
 }
