@@ -3,7 +3,7 @@ title: "My Coffee Setup"
 slug: "coffee-setup"
 description: "I've gotten into Coffee lately (cliché, I know) and wanted to summarize my coffee setup."
 pubDate: "Tuesday, May 10 2022"
-heroImage: "https://images.unsplash.com/photo-1513530176992-0cf39c4cbed4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/coffee-setup.webp"
 ---
 
 ## Legend

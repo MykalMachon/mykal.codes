@@ -3,7 +3,7 @@ title: "What's Your Go-To Web Stack"
 slug: "whats-your-goto-web-stack"
 description: "An exercise in exploring the stack I'm currently comfy with."
 pubDate: "Monday, May 16 2022"
-heroImage: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=80"
+heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/goto-web-stack.webp"
 ---
 
 This post was inspired by [Andrew Walpole's "What's Your Go-To Web Stack" post](https://andrewwalpole.com/blog/whats-your-go-to-web-stack/). It seemed like a fun exercise, so I thought I’d give it a shot.
