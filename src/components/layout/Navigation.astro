@@ -9,9 +9,16 @@
     <li><a href="/about-me">About</a></li>
     <li><a href="/contact">Contact</a></li>
   </ul>
+  <span class="border"></span>
 </nav>
 
 <style lang="scss">
+  span.border {
+    display: block;
+    border-bottom: 1px solid var(--color-dark-two);
+    width: 100%;
+  }
+
   h1.title {
     font-size: var(--font-size-xl);
     line-height: 1em;
@@ -23,15 +30,21 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 1em;
+    gap: var(--size-1);
     padding: 0;
-    margin: var(--size-3) 0 0 0;
+    margin: var(--size-3) 0 0 calc(-1 * var(--size-3));
     padding: 0 0 var(--size-3) 0;
-    border-bottom: 1px solid var(--color-dark-two);
   }
 
   ul a {
     text-decoration: none;
-    color: var(--font-color-ink);
+    color: var(--teal-9);
+    padding: var(--size-2) var(--size-3);
+    border-radius: var(--radius-2);
+  }
+
+  ul a:hover {
+    background: var(--teal-1);
+    text-decoration: underline;
   }
 </style>

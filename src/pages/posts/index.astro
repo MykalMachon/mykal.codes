@@ -1,11 +1,11 @@
 ---
 // Layout Import
-import MainLayout from '../../layouts/MainLayout.astro';
+import MainLayout from "../../layouts/MainLayout.astro";
 // Component Imports
-import PostList from '../../components/posts/PostList.astro';
+import PostList from "../../components/posts/PostList.astro";
 
 // Data Fetching: List all Markdown posts in the repo.
-const allPosts = await Astro.glob('../../posts/*.md');
+const allPosts = await Astro.glob("../../posts/*.md");
 const sortedPosts = allPosts.sort(
   // @ts-ignore
   (a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate)
