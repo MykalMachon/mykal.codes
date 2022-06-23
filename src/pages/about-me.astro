@@ -1,9 +1,9 @@
 ---
 // Layout Import
-import MainLayout from "../layouts/MainLayout.astro";
+import MainLayout from '../layouts/MainLayout.astro';
 // Component Imports
-import { Markdown } from "astro/components";
-import CongratsButton from "../components/CongratsButton";
+import { Markdown } from 'astro/components';
+import CongratsButton from '../components/CongratsButton';
 ---
 
 <MainLayout title="About Me" description="Here's a quick summary...">
@@ -15,8 +15,8 @@ import CongratsButton from "../components/CongratsButton";
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"
     ></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const carouselEl = document.querySelector(".about-carousel");
+      document.addEventListener('DOMContentLoaded', () => {
+        const carouselEl = document.querySelector('.about-carousel');
         const carousel = new Flickity(carouselEl, {
           autoPlay: true,
           percentPosition: false,
@@ -24,15 +24,14 @@ import CongratsButton from "../components/CongratsButton";
           resize: true,
           lazyLoad: 5,
         });
-        const images = document.querySelectorAll(".about-carousel img");
+        const images = document.querySelectorAll('.about-carousel img');
         const numImages = images.length;
         let loadedImages = 0;
         images.forEach((image) => {
-          image.addEventListener("load", () => {
-            console.log("image loaded");
+          image.addEventListener('load', () => {
             loadedImages++;
             if (loadedImages == numImages) {
-              carouselEl.classList.remove("about-carousel--loading");
+              carouselEl.classList.remove('about-carousel--loading');
             }
           });
         });
@@ -41,39 +40,45 @@ import CongratsButton from "../components/CongratsButton";
   </Fragment>
   <div class="about-carousel about-carousel--loading">
     <img
-      src="https://res.cloudinary.com/tinbyox/image/upload/c_scale,q_auto:low,w_16/v1645245801/mykal.codes/PXL_20211125_004415427.PORTRAIT_svcgil.jpg"
-      data-flickity-lazyload="https://res.cloudinary.com/tinbyox/image/upload//c_scale,f_auto,q_auto,w_1000/v1645245801/mykal.codes/PXL_20211125_004415427.PORTRAIT_svcgil.jpg"
-      alt="Mykal taking a picture on a walk home"
+      src="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,q_auto:low,w_16/v1655961322/Mykal%20Codes/about-me/IMG_1502.heic"
+      data-flickity-lazyload="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,f_auto,q_auto,w_1000/v1655961322/Mykal%20Codes/about-me/IMG_1502.heic"
+      alt="Mykal eating sushi in a park on a blanket"
     />
     <img
-      src="https://assets.codepen.io/1490503/mykal-6.jpg?width=16&height=18&format=auto"
-      data-flickity-lazyload="https://assets.codepen.io/1490503/mykal-6.jpg?format=auto"
-      alt="Mykal drinking a coffee in Vancouver"
-    />
-    <img
-      src="https://assets.codepen.io/1490503/mykal_and_dad.jpg?width=118&height=88&format=auto"
-      data-flickity-lazyload="https://assets.codepen.io/1490503/mykal_and_dad.jpg?width=709&height=531&format=auto"
-      alt="Mykal and his dad biking in Vancouver on the sea wall"
-    />
-    <img
-      src="https://res.cloudinary.com/tinbyox/image/upload/c_scale,q_auto:low,w_16/v1645245801/mykal.codes/PXL_20211218_034602331.PORTRAIT_a07ij4.jpg"
-      data-flickity-lazyload="https://res.cloudinary.com/tinbyox/image/upload/c_scale,f_auto,q_auto,w_1000/v1645245801/mykal.codes/PXL_20211218_034602331.PORTRAIT_a07ij4.jpg"
-      alt="Kiya and Mykal posing for a selfie in Penticton"
+      src="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,q_auto:low,w_16/v1655960678/Mykal%20Codes/about-me/20220615_163839.jpg"
+      data-flickity-lazyload="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,f_auto,q_auto,w_1000/v1655960678/Mykal%20Codes/about-me/20220615_163839.jpg"
+      alt="Mykal standing with his wife, Kiya, at her graduation ceremony"
     />
     <img
       src="https://assets.codepen.io/1490503/mykal_5.jpg?width=120&height=90&format=auto"
       data-flickity-lazyload="https://assets.codepen.io/1490503/mykal_5.jpg?width=720&height=540&format=auto"
       alt="Kiya and Mykal posing in front of a mural"
     />
+
     <img
-      src="https://res.cloudinary.com/tinbyox/image/upload/c_scale,q_auto:low,w_16/v1645245801/mykal.codes/IMG_0550_ete45r.jpg"
-      data-flickity-lazyload="https://res.cloudinary.com/tinbyox/image/upload/c_scale,f_auto,q_auto,w_1000/v1645245801/mykal.codes/IMG_0550_ete45r.jpg"
-      alt="Kiya and Mykal pose with their mouths open- there's a snapchat filter that puts turtles on their cheeks"
+      src="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,q_auto:low,w_16/v1655961290/Mykal%20Codes/about-me/kiya-and-i.jpg"
+      data-flickity-lazyload="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,f_auto,q_auto,w_1000/v1655961290/Mykal%20Codes/about-me/kiya-and-i.jpg"
+      alt="Kiya and Mykal pose for a selfie in front of a fireplace on their wedding day"
+    />
+    <img
+      src="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,q_auto:low,w_16/v1655961290/Mykal%20Codes/about-me/me-and-ash.jpg"
+      data-flickity-lazyload="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,f_auto,q_auto,w_1000/v1655961290/Mykal%20Codes/about-me/me-and-ash.jpg"
+      alt="Mykal with his cat, Ash, sitting on his chest"
+    />
+    <img
+      src="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,q_auto:low,w_16/v1655962509/Mykal%20Codes/about-me/machon-fam-1.jpg"
+      data-flickity-lazyload="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,f_auto,q_auto,w_1000/v1655962509/Mykal%20Codes/about-me/machon-fam-1.jpg"
+      alt="From left to right, Duanne Machon, Kiya Machon, Mykal Machon, Jackie Machon at my Wedding"
+    />
+    <img
+      src="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,q_auto:low,w_16/v1655961231/Mykal%20Codes/about-me/family.jpg"
+      data-flickity-lazyload="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,f_auto,q_auto,w_1000/v1655961231/Mykal%20Codes/about-me/family.jpg"
+      alt="Mykal and the fam getting ice cream"
     />
   </div>
-  <i class="caption"
-    >pictured above: goofy pictures of me, my wife, family, and friends</i
-  >
+  <p>
+    <i class="caption">pictured above: goofy pictures of me, my wife, family, and friends</i>
+  </p>
   <div class="blog-post">
     <Markdown>
       ## Professional
@@ -91,7 +96,7 @@ import CongratsButton from "../components/CongratsButton";
 
       1. Video Games
       2. Reading Sci-Fi, Horror, [and more](https://www.goodreads.com/user/show/141327631-mykal-machon)
-      3. Building fun > profit side projects (webapps, writing, etc.)
+      3. Building fun side projects (webapps, writing, etc.)
       4. Spending time with family and friends
 
       ## Education

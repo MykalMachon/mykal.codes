@@ -23,6 +23,7 @@ const { post } = Astro.props;
   title={post.frontmatter.title}
   description={post.frontmatter.description}
   heroImage={post.frontmatter.heroImage}
+  fileName={post.file.slice(post.file.lastIndexOf('/'))}
 >
   <post.Content></post.Content>
 </BlogPost>

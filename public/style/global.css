@@ -50,6 +50,8 @@ h4 {
 
 h1 {
   font-size: var(--font-size-xl);
+  margin: var(--size-5) 0 var(--size-3) 0;
+  line-height: 0.9em;
 }
 
 h2 {
@@ -192,6 +194,10 @@ blockquote {
   margin: 0;
   background: var(--teal-6);
   border-radius: 0;
+}
+
+.about-carousel .flickity-viewport {
+  border-radius: var(--radius-2);
 }
 
 .about-carousel .flickity-button {

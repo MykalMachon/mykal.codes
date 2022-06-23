@@ -3,10 +3,11 @@ import Navigation from '../components/layout/Navigation.astro'
 import Header from '../components/layout/Header.astro'
 import Footer from '../components/layout/Footer.astro'
 import MainHead from '../components/MainHead.astro'
+import PostEditCard from '../components/posts/PostEditCard.astro';
 
 import {getHighQualityUrl, getLowQualityUrl} from '../utils/cloudinary';
 
-const { title, description, heroImage } = Astro.props;
+const { title, description, heroImage, fileName } = Astro.props;
 ---
 <html class="" lang="en">
   <head>
@@ -34,6 +35,9 @@ const { title, description, heroImage } = Astro.props;
                     alt={`decorative image for ${title}`}> }
       <slot />
     </main>
+    <section class="container">
+      <PostEditCard fileName={`posts${fileName}`} />
+    </section>
     <Footer />
   </body>
 </html>

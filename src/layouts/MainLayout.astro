@@ -14,7 +14,7 @@ const { title, description } = Astro.props;
   </head>
   <body class="site-container">
     <Navigation />
-    <Header {title} {description} />
+    {(title && description) ? <Header {title} {description} /> : <></> }
     <main class="container">
       <slot />
     </main>
