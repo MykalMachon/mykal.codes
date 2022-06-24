@@ -3,6 +3,7 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 // Component Imports
 import PostList from '../../components/posts/PostList.astro';
+import TagList from '../../components/tags/TagList.astro';
 
 // Data Fetching: List all Markdown posts in the repo.
 const allPosts = await Astro.glob('../../posts/*.md');
@@ -10,6 +11,8 @@ const sortedPosts = allPosts.sort(
   // @ts-ignore
   (a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate)
 );
+
+// get all tags from posts
 ---
 
 <MainLayout
@@ -19,8 +22,8 @@ const sortedPosts = allPosts.sort(
   <section class="divider">
     <h1>Posts</h1>
     <p>
-      This is an archive of all the posts on my blog. I typically write about
-      web development, coffee, devops, tech, and my personal life.
+      This is an archive of all the posts on my blog. I typically write about:
+      <TagList tags={['personal', 'webdev', 'coffee']} />
     </p>
     <p>
       If you'd like, you can also <a href="/rss.xml"

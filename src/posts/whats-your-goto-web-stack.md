@@ -1,9 +1,10 @@
 ---
 title: "What's Your Go-To Web Stack"
-slug: "whats-your-goto-web-stack"
+slug: 'whats-your-goto-web-stack'
 description: "An exercise in exploring the stack I'm currently comfy with."
-pubDate: "Monday, May 16 2022"
-heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/goto-web-stack.webp"
+pubDate: 'Monday, May 16 2022'
+heroImage: 'https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/goto-web-stack.webp'
+tags: ['webdev']
 ---
 
 This post was inspired by [Andrew Walpole's "What's Your Go-To Web Stack" post](https://andrewwalpole.com/blog/whats-your-go-to-web-stack/). It seemed like a fun exercise, so I thought I’d give it a shot.

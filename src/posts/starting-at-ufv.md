@@ -1,9 +1,10 @@
 ---
-title: "New Job at UFV!"
-slug: "new-job-at-ufv"
-description: "Moving from web developer, to systems analyst"
-pubDate: "Monday, May 10 2021"
-heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/new-job-at-ufv.jpg"
+title: 'New Job at UFV!'
+slug: 'new-job-at-ufv'
+description: 'Moving from web developer, to systems analyst'
+pubDate: 'Monday, May 10 2021'
+heroImage: 'https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/new-job-at-ufv.jpg'
+tags: ['personal']
 ---
 
 I'm starting as a Systems Analyst at the [University of the Fraser Valley (UFV)!](https://ufv.ca) 🎉

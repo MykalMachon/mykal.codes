@@ -1,9 +1,10 @@
 ---
-title: "Autosave on the Web"
-slug: "autosave-on-the-web"
-description: "Using native browser APIs to autosave HTML forms"
-pubDate: "Friday, February 18 2022"
-heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1655763097/Mykal%20Codes/autosave-on-the-web.webp"
+title: 'Autosave on the Web'
+slug: 'autosave-on-the-web'
+description: 'Using native browser APIs to autosave HTML forms'
+pubDate: 'Friday, February 18 2022'
+heroImage: 'https://res.cloudinary.com/mykalcodes/image/upload/v1655763097/Mykal%20Codes/autosave-on-the-web.webp'
+tags: ['webdev']
 ---
 
 Forms on the web are awesome:
