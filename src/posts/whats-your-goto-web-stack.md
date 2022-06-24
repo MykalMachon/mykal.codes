@@ -2,7 +2,7 @@
 title: "What's Your Go-To Web Stack"
 slug: 'whats-your-goto-web-stack'
 description: "An exercise in exploring the stack I'm currently comfy with."
-pubDate: 'Monday, May 16 2022'
+pubDate: '2022-05-16'
 heroImage: 'https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/goto-web-stack.webp'
 tags: ['webdev']
 ---

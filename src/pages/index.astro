@@ -3,13 +3,11 @@
 import HomeLayout from "../layouts/HomeLayout.astro";
 // Component Imports
 import PostList from "../components/posts/PostList.astro";
+import { getSortedPosts } from "../utils/posts";
 
 // Data Fetching: fetch recent posts
 let allPosts = await Astro.glob("../posts/**/*.md");
-allPosts = allPosts.sort(
-  // @ts-ignore
-  (a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate)
-);
+allPosts = getSortedPosts(allPosts)
 const recentPosts = allPosts.slice(0, 3);
 ---
 

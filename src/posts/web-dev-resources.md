@@ -2,7 +2,7 @@
 title: 'Web Dev Resources'
 slug: 'web-dev-resources'
 description: 'What I used, and am still using, to learn web dev'
-pubDate: 'Thursday, August 26 2021'
+pubDate: '2021-08-26'
 heroImage: 'https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/web-dev-resources.webp'
 tags: ['webdev']
 ---

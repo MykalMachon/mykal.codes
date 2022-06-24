@@ -2,7 +2,7 @@
 title: 'Docker Rocks 🐳'
 slug: 'docker-rocks'
 description: 'Once Docker and Docker-compose clicks, it makes dev ➡️ launch so much easier'
-pubDate: 'Thursday, April 27 2022'
+pubDate: '2022-04-27'
 heroImage: 'https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/docker-rocks.webp'
 tags: ['devops', 'webdev']
 setup: |
