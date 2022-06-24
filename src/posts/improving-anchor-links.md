@@ -32,7 +32,7 @@ these anchor links go by a bunch of other names as well, you may know them as:
 - Inline links
 - On-Page links
 
-(shouout to the [d-d-d-discord](https://www.patreon.com/shoptalkshow) for this list)
+Shoutout to the [d-d-d-discord](https://www.patreon.com/shoptalkshow) for this list.
 
 ## Scroll margin on top of the element
 
