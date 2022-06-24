@@ -12,7 +12,10 @@ const sortedPosts = allPosts.sort(
 );
 ---
 
-<MainLayout>
+<MainLayout
+  title="Posts"
+  description="This is an archive of all the posts on my blog. I typically write about web development, coffee, devops, tech, and my personal life."
+>
   <section class="divider">
     <h1>Posts</h1>
     <p>
@@ -21,7 +24,8 @@ const sortedPosts = allPosts.sort(
     </p>
     <p>
       If you'd like, you can also <a href="/rss.xml"
-        >subscribe to my blog via RSS</a>
+        >subscribe to my blog via RSS</a
+      >
     </p>
   </section>
   <PostList posts={sortedPosts} type="small" />

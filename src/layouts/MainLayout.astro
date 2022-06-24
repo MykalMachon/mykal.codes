@@ -4,17 +4,20 @@ import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 import MainHead from "../components/MainHead.astro";
 
-const { title, description } = Astro.props;
+const { title, description, content } = Astro.props;
+
+// if the page is markdown, use the content title instead of the provided props
+const pageTitle = title ? title : content.title;
+const pageDescription = description ? description : content.description
 ---
 
 <html class="" lang="en">
   <head>
     <slot name="head-content" />
-    <MainHead {title} {description} />
+    <MainHead title={pageTitle} description={pageDescription} />
   </head>
   <body class="site-container">
     <Navigation />
-    {(title && description) ? <Header {title} {description} /> : <></> }
     <main class="container">
       <slot />
     </main>

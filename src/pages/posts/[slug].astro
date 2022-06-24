@@ -1,6 +1,6 @@
 ---
 import readingTime from 'reading-time';
-import BlogPost from '../../layouts/BlogPost.astro';
+import PostLayout from '../../layouts/PostLayout.astro';
 
 export async function getStaticPaths({}) {
   let allPosts = await Astro.glob('../../posts/**/*.md');
@@ -20,7 +20,7 @@ export async function getStaticPaths({}) {
 const { post } = Astro.props;
 ---
 
-<BlogPost
+<PostLayout
   title={post.frontmatter.title}
   description={post.frontmatter.description}
   heroImage={post.frontmatter.heroImage}
@@ -29,4 +29,4 @@ const { post } = Astro.props;
   readTime={readingTime(post.rawContent()).text}
 >
   <post.Content></post.Content>
-</BlogPost>
+</PostLayout>

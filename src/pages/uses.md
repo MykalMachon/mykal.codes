@@ -1,4 +1,6 @@
 ---
+title: 'Uses'
+description: 'A living document of the gear and tech I use day-to-day.'
 layout: ../layouts/MainLayout.astro
 setup: |
   import PostEditCard from '../components/posts/PostEditCard.astro'
