@@ -1,13 +1,11 @@
 ---
 import readingTime from 'reading-time';
 import PostLayout from '../../layouts/PostLayout.astro';
+import { getSortedPosts } from '../../utils/posts';
 
 export async function getStaticPaths({}) {
   let allPosts = await Astro.glob('../../posts/**/*.md');
-  let allSortedPosts = allPosts.sort(
-    // @ts-ignore
-    (a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate)
-  );
+  let allSortedPosts = getSortedPosts(allPosts);
 
   return allSortedPosts.map((post) => {
     return {
