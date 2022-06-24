@@ -25,7 +25,7 @@ const { tag, posts } = Astro.props;
 
 <MainLayout title={`#${tag}`} description={`a collection of ${posts.length} posts tagged as ${tag}`}>
   <section class="divider">
-    <h1>{tag}</h1>
+    <h1>#{tag}</h1>
     <p>this tag has {posts.length} posts</p>
   </section>
   <PostList posts={posts} />
