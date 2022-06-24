@@ -1,20 +1,28 @@
 ---
 // Layout Import
-import MainLayout from "../../layouts/MainLayout.astro";
+import MainLayout from '../../layouts/MainLayout.astro';
 // Component Imports
-import PostList from "../../components/posts/PostList.astro";
+import PostList from '../../components/posts/PostList.astro';
 
 // Data Fetching: List all Markdown posts in the repo.
-const allPosts = await Astro.glob("../../posts/*.md");
+const allPosts = await Astro.glob('../../posts/*.md');
 const sortedPosts = allPosts.sort(
   // @ts-ignore
   (a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate)
 );
 ---
 
-<MainLayout
-  title="Posts"
-  description="This a big ol' list of my blog posts- I blog about web dev, dev-ops, my life, and a bunch of other stuff."
->
+<MainLayout>
+  <section class="divider">
+    <h1>Posts</h1>
+    <p>
+      This is an archive of all the posts on my blog. I typically write about
+      web development, coffee, devops, tech, and my personal life.
+    </p>
+    <p>
+      If you'd like, you can also <a href="/rss.xml"
+        >subscribe to my blog via RSS</a>
+    </p>
+  </section>
   <PostList posts={sortedPosts} type="small" />
 </MainLayout>

@@ -6,6 +6,30 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    scroll-behavior: unset;
+  }
+}
+
+:target{
+  animation: var(--animation-blink);
+  animation-timing-function: var(--ease-3);
+  animation-duration: 0.5s;
+  animation-iteration-count: 5;
+}
+
+:target:before {
+  content: "";
+  display: block;
+  height: var(--size-3);
+  margin: var(--size-3) 0 0;
+}
+
 :root {
   /* COLORS */
   --color-light: #fffcf5;
@@ -46,6 +70,15 @@ h3,
 h4 {
   font-family: var(--font-heading);
   color: var(--gray-8);
+  margin: var(--size-6) 0 var(--size-3) 0;
+  line-height: 0.9em;
+}
+
+h1:target,
+h2:target,
+h3:target,
+h4:target {
+  top: -2.4em;
 }
 
 h1 {
@@ -92,13 +125,17 @@ blockquote {
   margin: var(--size-3) 0;
 }
 
+ul ul {
+  margin: 0;
+}
+
 img {
   width: 100%;
   height: auto;
 }
 
 img.loading::after {
-  content: "";
+  content: '';
   visibility: visible;
   opacity: 1;
   background: hsla(162, 0.82, 0.4, 0.45);
@@ -237,4 +274,9 @@ textarea {
 pre {
   padding: var(--size-3);
   font-size: var(--font-size-base);
+}
+
+.divider {
+  border-bottom: 1px solid var(--color-dark-two);
+  margin: var(--size-5) 0 var(--size-3) 0;
 }

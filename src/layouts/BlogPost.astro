@@ -38,6 +38,17 @@ const { title, description, heroImage, fileName } = Astro.props;
     <section class="container">
       <PostEditCard fileName={`posts${fileName}`} />
     </section>
+    <section class="container">
+      <script
+        src="https://utteranc.es/client.js"
+        repo="MykalMachon/Mykal.Codes"
+        issue-term="pathname"
+        label="Comments 💬"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+      </script>  
+    </section>
     <Footer />
   </body>
 </html>
