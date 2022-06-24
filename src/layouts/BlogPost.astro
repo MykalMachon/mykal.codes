@@ -1,13 +1,13 @@
 ---
 import Navigation from '../components/layout/Navigation.astro'
-import Header from '../components/layout/Header.astro'
 import Footer from '../components/layout/Footer.astro'
 import MainHead from '../components/MainHead.astro'
+
+import PostHeader from '../components/posts/PostHeader.astro';
 import PostEditCard from '../components/posts/PostEditCard.astro';
+import PostComments from '../components/posts/PostComments.astro';
 
-import {getHighQualityUrl, getLowQualityUrl} from '../utils/cloudinary';
-
-const { title, description, heroImage, fileName } = Astro.props;
+const { title, description, heroImage, fileName, pubDate, readTime } = Astro.props;
 ---
 <html class="" lang="en">
   <head>
@@ -24,30 +24,13 @@ const { title, description, heroImage, fileName } = Astro.props;
   </head>
   <body class="site-container">
     <Navigation />
-    <Header title={title} description={description} />
+    <PostHeader {title} {description} {heroImage} {pubDate} {readTime} />
     <main class="container blog-post">
-    {heroImage && <img 
-                    src={getLowQualityUrl(heroImage) || ''} 
-                    class="lazy loading"
-                    width="608"
-                    height="405"
-                    data-lazy={getHighQualityUrl(heroImage) || ''}
-                    alt={`decorative image for ${title}`}> }
       <slot />
     </main>
     <section class="container">
       <PostEditCard fileName={`posts${fileName}`} />
-    </section>
-    <section class="container">
-      <script
-        src="https://utteranc.es/client.js"
-        repo="MykalMachon/Mykal.Codes"
-        issue-term="pathname"
-        label="Comments 💬"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-      </script>  
+      <PostComments />
     </section>
     <Footer />
   </body>
