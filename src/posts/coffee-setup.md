@@ -33,24 +33,24 @@ I have a pretty standard set of practices for buying and preparing my coffee bea
 
 ### Where I Get My Beans
 
-I typically use either:
+I typically get beans from one of the following roasters:
 
 1.  [Smoking Gun Coffee](https://smokingguncoffee.com/)
 2.  [Monogram Coffee Co](https://monogramcoffee.com/)
 
-They both list where their beans are purchased from (even listing the farms at times), and generally support sustainable coffee growing which is a plus!
+They list where their beans are purchased from (even listing the farms at times), and generally support sustainable coffee growing which is a plus!
 
 ### How I Grind My Beans
 
 I ended up buying [a budget-priced Bodum burr grinder](https://www.bodum.com/ca/en/11750-01us-bistro). I chose it because it had metal burrs, and decent reviews.
 
-According to the internet, porcelain burrs tend to get dull and chip; meaning you'll have to replace them relatively frequently. Metal burrs tend to last a bit longer, and be more maintainable over time.
+Based on what I've read so far, porcelain burrs tend to get dull and chip; meaning you'll have to replace them relatively frequently. Metal burrs tend to last a bit longer, and be more maintainable over time.
 
-I share the exact grind settings I use in the Pour Over and AeroPress Sections below.
+I have the exact grind settings I use in the [Pour Over](#pour-over) and [AeroPress](#aeropress) Sections below.
 
 ## Brewing Methods
 
-I can only brew two ways at home with the gear I have now, Pour Over, and AeroPress. That said, I have some gear that you'll need regardless of what type of brewing you're going to do.
+With the gear I have at home right now, I can brew either pour over, or aerorpess coffee. That said, I've picked up some things that you'll need regardless of brewing method.
 
 1.  [Digital Scale with timer](https://www.amazon.ca/gp/product/B07L2KV94G/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1): any scale with .1g accuracy, and a tare feature should work (a timer is a plus).
 2.  [POLIVIAR Electric Gooseneck Kettle](https://www.amazon.ca/POLIVIAR-Electric-Gooseneck-Kettle-JX2020-EKG/dp/B08XGN42YT/?th=1): if you're not doing pour over, you can stick with a cheaper standard kettle
@@ -96,7 +96,7 @@ I just got my AeroPress last week, and oh boy! I think it might replace my Pour 
 1.  measure out 11g of coffee
 2.  measure out at least 275g of water
 3.  start boiling water (90 C for light/medium roasts, 95 C for dark roasts)
-4.  grid coffee to 2 settings past pour over on my grinder
+4.  grind coffee to 2 settings past pour over on my grinder
 5.  place a filter in your AeroPress, pour your coffee in, place your AeroPress on your digital scale, and tare it.
 6.  once your water is to temperature, start the timer, and pour in 200g of water in a circular motion.
 7.  place the plunger on top of the AeroPress (just enough to get a seal) and take it off the scale
