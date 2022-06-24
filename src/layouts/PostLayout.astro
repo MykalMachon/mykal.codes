@@ -1,0 +1,37 @@
+---
+import Navigation from '../components/layout/Navigation.astro'
+import Footer from '../components/layout/Footer.astro'
+import MainHead from '../components/MainHead.astro'
+
+import PostHeader from '../components/posts/PostHeader.astro';
+import PostEditCard from '../components/posts/PostEditCard.astro';
+import PostComments from '../components/posts/PostComments.astro';
+
+const { title, description, heroImage, fileName, pubDate, readTime } = Astro.props;
+---
+<html class="" lang="en">
+  <head>
+    <MainHead title={title} description={description} />
+    <script>
+    // image dynamic loading 
+    const loadingImages = document.querySelectorAll('img.loading');
+    loadingImages.forEach((loadingImageEl) => {
+      const hqImageUrl = loadingImageEl.dataset.lazy;
+      if(hqImageUrl) loadingImageEl.src = hqImageUrl;
+      loadingImageEl.classList.remove('loading')
+    })
+    </script>
+  </head>
+  <body class="site-container">
+    <Navigation />
+    <PostHeader {title} {description} {heroImage} {pubDate} {readTime} />
+    <main class="container blog-post">
+      <slot />
+    </main>
+    <section class="container">
+      <PostEditCard fileName={`posts${fileName}`} />
+      <PostComments />
+    </section>
+    <Footer />
+  </body>
+</html>

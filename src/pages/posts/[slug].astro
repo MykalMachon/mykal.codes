@@ -1,38 +1,32 @@
 ---
-import BlogPost from '../../layouts/BlogPost.astro';
+import readingTime from 'reading-time';
+import PostLayout from '../../layouts/PostLayout.astro';
 
-export async function getStaticPaths({rss}) {
-  let allPosts = Astro.fetchContent('../../posts/*.md');
-  let allSortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-  rss({
-    // The RSS Feed title, description, and custom metadata.
-    title: 'Mykal.Codes',
-    description: 'Mykal Machon\'s blog; for random writing',
-    customData: `<language>en-us</language>`,
-    // The list of items for your RSS feed, sorted.
-    items: allSortedPosts.map(post => ({
-      title: post.title,
-      description: post.astro.html,
-      link: `/posts/${post.slug}`,
-      creator: 'Mykal Machon',
-      pubDate: post.date,
-    })),
-    dest: "/feed/posts.xml",
-  });
+export async function getStaticPaths({}) {
+  let allPosts = await Astro.glob('../../posts/**/*.md');
+  let allSortedPosts = allPosts.sort(
+    // @ts-ignore
+    (a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate)
+  );
 
   return allSortedPosts.map((post) => {
     return {
-      params: {slug: post.slug},
-      props: {...post}
-    }
-  })
+      params: { slug: post.frontmatter.slug },
+      props: { post },
+    };
+  });
 }
 
-const { slug } = Astro.request.params;
-const content = Astro.props;
+const { post } = Astro.props;
 ---
 
-<BlogPost content={content}>
-  {content.astro.html}
-</BlogPost>
+<PostLayout
+  title={post.frontmatter.title}
+  description={post.frontmatter.description}
+  heroImage={post.frontmatter.heroImage}
+  fileName={post.file.slice(post.file.lastIndexOf('/'))}
+  pubDate={post.frontmatter.pubDate}
+  readTime={readingTime(post.rawContent()).text}
+>
+  <post.Content></post.Content>
+</PostLayout>

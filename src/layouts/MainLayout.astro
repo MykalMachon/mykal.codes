@@ -1,19 +1,23 @@
 ---
-import Navigation from '../components/layout/Navigation.astro'
-import Header from '../components/layout/Header.astro'
-import Footer from '../components/layout/Footer.astro'
-import MainHead from '../components/MainHead.astro'
+import Navigation from "../components/layout/Navigation.astro";
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
+import MainHead from "../components/MainHead.astro";
 
-const { title, description, head } = Astro.props;
+const { title, description, content } = Astro.props;
+
+// if the page is markdown, use the content title instead of the provided props
+const pageTitle = title ? title : content.title;
+const pageDescription = description ? description : content.description
 ---
-<html class="theme__dark" lang="en">
+
+<html class="" lang="en">
   <head>
-    {head}
-    <MainHead title={title} description={description} />
+    <slot name="head-content" />
+    <MainHead title={pageTitle} description={pageDescription} />
   </head>
-  <body>
+  <body class="site-container">
     <Navigation />
-    <Header title={title} description={description} />
     <main class="container">
       <slot />
     </main>

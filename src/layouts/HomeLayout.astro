@@ -1,0 +1,48 @@
+---
+import Navigation from "../components/layout/Navigation.astro";
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
+import MainHead from "../components/MainHead.astro";
+
+const { title, description } = Astro.props;
+---
+
+<html class="" lang="en">
+  <head>
+    <slot name="head-content" />
+    <MainHead {title} {description} />
+  </head>
+  <body class="site-container">
+    <Navigation />
+    <section class="container">
+      <h2 class="homepage__hero">
+        Hi, I'm Mykal. <br />
+        This is my website!
+      </h2>
+      <p>
+        I'm a Systems Analyst at <a href="https://ufv.ca">UFV</a>, and work on a
+        bunch of <a href="https://github.com/MykalMachon"
+          >open source projects</a
+        > in my free time. I also blog on this site, and run <a
+          href="https://buttondown.email/mykalcodes">a newsletter</a
+        >
+      </p>
+      <p>For more info checkout my <a href="/about-me">about page</a>.</p>
+    </section>
+    <main class="container">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style lang="scss">
+  .homepage__hero {
+    padding: var(--size-8) 0;
+    font-weight: bold;
+    font-size: var(--font-size-xxl);
+    line-height: 1.25em;
+    border-bottom: 1px solid var(--color-dark-two);
+    margin-bottom: var(--size-3);
+  }
+</style>

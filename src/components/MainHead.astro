@@ -2,29 +2,37 @@
 export interface Props {
   title: string;
   description: string;
-  permalink: string;
 }
 
-const { title, description, permalink } = Astro.props
+const { title, description } = Astro.props;
 ---
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{title} | Mykal.Codes</title>
-<meta name="description" content={description}>
-<link rel="icon" type="image/png" href="/favicon.png">
-<link rel="stylesheet" href="/style/global.css">
-  
+<meta name="description" content={description} />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="stylesheet" href="/style/global.css" />
+<link rel="alternate" type="application/rss+xml" 
+  title="RSS Feed for mykal.codes" 
+  href="/rss.xml" />
+
 <!-- Umami - self hosted analytics -->
-<script async defer data-website-id="7441f889-ec14-4413-a8ff-4e5c2261fc21" src="https://analytics.tbx.sh/umami.js"></script>
+<script
+  async
+  defer
+  data-website-id="7441f889-ec14-4413-a8ff-4e5c2261fc21"
+  src="https://analytics.tbx.sh/umami.js"></script>
 <!-- / Umami -->
 
 <!-- Lozad.js - lazy loading and progressive enhancement -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const observer = lozad('.lazy', {}); // lazy loads elements with default selector as '.lozad'
-  observer.observe(); 
-})
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = lozad(".lazy", {}); // lazy loads elements with default selector as '.lozad'
+    observer.observe();
+  });
 </script>
 <!-- / Lozad.js -->

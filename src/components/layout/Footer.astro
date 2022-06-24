@@ -1,71 +1,14 @@
----
-import ThemeSelect from './ThemeSelect.tsx'
----
-
 <footer class="container">
-  <section class="columns">
-    <div class="column">
-      <h4>Socials</h4>
-      <ul>
-        <li><a href="https://twitter.com/MykalMachon">Twitter</a></li>
-        <li><a href="https://github.com/MykalMachon">Github</a></li>
-        <li><a href="https://timeline.mykal.codes">Polywork</a></li>
-      </ul>
-    </div>
-    <div class="column">
-      <h4>Projects</h4>
-      <ul>
-        <li><a href="https://tinybox.dev">Tinybox Software</a></li>
-      </ul>
-    </div>
-  </section>
   <section class="footnote">
-    <span>{new Date().getFullYear()} Mykal Machon</span>
-    <span>Built with <a href="https://astro.build">Astro.build</a></span>
-    <ThemeSelect client:idle />
+    <p>
+      <span>Built with 💖 by Mykal Machon</span>
+      <span>{new Date().getFullYear()}</span>
+    </p>
   </section>
 </footer>
 
 <style lang="scss">
   footer {
-    margin: 1em 0px;
-    border-top: 1px solid var(--color-light);
-    padding: 0px;
-  }
-
-  section.columns{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5em;
-    padding: 1rem var(--pad) 1.25rem var(--pad);
-    margin: 0px 0px 1em 0px;
-    border-bottom: 1px solid var(--color-light);
-    h4   {
-      font-family: var(--font-mono);
-      font-size: 1em;
-      margin: 0px 0px 0.6em 0px;
-    }
-    div.column{ 
-      ul{
-        list-style: none;
-        margin: 0px;
-        padding: 0px;
-      }
-    }
-    @media screen and (max-width: 465px){
-      grid-template-columns: 1fr;
-    }
-  }
-
-  section.footnote{
-    display: grid;
-    padding: 0px var(--pad);
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5em;
-    font-family: var(--font-mono);
-    @media screen and (max-width: 465px){
-      grid-template-columns: 1fr;
-      justify-items: start;
-    }
+    margin: var(--size-3) 0 var(--size-5) 0;
   }
 </style>

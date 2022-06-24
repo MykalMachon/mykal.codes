@@ -1,211 +1,197 @@
+@import 'https://unpkg.com/open-props';
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&family=Eczar:wght@600&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    scroll-behavior: unset;
+  }
+}
+
+:target{
+  animation: var(--animation-blink);
+  animation-timing-function: var(--ease-3);
+  animation-duration: 0.5s;
+  animation-iteration-count: 5;
+}
+
+:target:before {
+  content: "";
+  display: block;
+  height: var(--size-3);
+  margin: var(--size-3) 0 0;
+}
+
 :root {
-  /* FONT VARIABLES */
-  --font-mono: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
-    'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
-    'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
-    monospace;
-  --font-sans-serif: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
-    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-
-  /* MISC VARIABLES */
-  --user-font-scale: 1rem - 16px;
-  --pad: 1.2rem;
-
-  font-family: var(--font-sans-serif);
-  font-size: 1rem;
-  line-height: 1.65em;
-  font-size: clamp(
-    0.875rem,
-    0.4626rem + 1.0309vw + var(--user-font-scale),
-    1.125rem
-  );
-}
-
-.theme__light {
   /* COLORS */
-  --color-light: #f3f4f6;
-  --color-dark: #f3f4f6;
-  --color-dark-two: #f3f4f6;
-  --color-highlight-one: #ca8a04;
-  --color-highlight-two: #ca8a04;
+  --color-light: #fffcf5;
+  /* --color-light: var(--teal-1); */
+  --color-dark: var(--gray-9);
+  --color-dark-two: var(--gray-5);
+  --color-highlight-one: var(--teal-7);
+  --color-highlight-two: var(--teal-9);
+
+  /* FONT FAMILY */
+  --font-heading: 'Eczar', serif;
+  --font-body: 'Cabin', sans-serif;
+
+  /* FONT SIZES */
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+
+  /* FONT COLORS */
+  --font-color-paper: var(--color-light);
+  --font-color-ink: var(--gray-7);
+  --font-color-ink2: var(--gray-7);
 }
 
-.theme__dark {
-  --color-light: var(--color-dark);
-  --color-dark: #1f2937;
-  --color-dark-two: #111827;
-  --color-highlight-one: #facc15;
-  --color-highlight-two: #ca8a04;
-}
-
-.theme__dark body {
-  background: var(--color-dark-two);
-  color: #e9ecef;
-}
-
-.theme__dark input,
-.theme__dark textarea {
-  color: #e9ecef;
-}
+/* Basic Resets */
 
 body {
+  background: var(--font-color-paper);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: var(--gray-8);
+  margin: var(--size-6) 0 var(--size-3) 0;
+  line-height: 0.9em;
+}
+
+h1:target,
+h2:target,
+h3:target,
+h4:target {
+  top: -2.4em;
+}
+
+h1 {
+  font-size: var(--font-size-xl);
+  margin: var(--size-5) 0 var(--size-3) 0;
+  line-height: 0.9em;
+}
+
+h2 {
+  font-size: var(--font-size-lg);
+}
+
+h3 {
+  font-size: var(--font-size-md);
+}
+
+h4 {
+  font-size: var(--font-size-base);
+}
+
+p,
+a,
+ul,
+ol,
+input,
+select,
+textarea,
+small,
+label {
+  font-family: var(--font-body);
+  color: var(--font-color-ink);
+  font-size: var(--font-size-base);
+  line-height: var(--size-6);
+}
+
+small {
+  font-size: var(--font-size-small);
+}
+
+p,
+ul,
+ol,
+blockquote {
+  margin: var(--size-3) 0;
+}
+
+ul ul {
+  margin: 0;
+}
+
+img {
   width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background: #f9fafb;
-  color: #111827;
+  height: auto;
 }
 
-.container {
-  max-width: 720px;
-  width: 100%;
-  padding: var(--pad);
-}
-
-/* links */
-a {
-  color: var(--color-highlight-one);
-  position: relative;
-  text-decoration: none;
-}
-
-a:focus {
-  outline: none;
-  border: 2px dotted var(--color-highlight-two);
-}
-
-a:active {
-  background: var(--color-highlight-two);
-  color: var(--color-light);
-}
-
-a:after {
+img.loading::after {
   content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0px;
-  width: 100%;
-  height: 1px;
-  background: var(--color-highlight-two);
+  visibility: visible;
+  opacity: 1;
+  background: hsla(162, 0.82, 0.4, 0.45);
+  backdrop-filter: saturate(80%) blur(12px);
 }
 
-a:hover:after,
-a:focus:after {
-  outline: none;
-  height: 3px;
+a {
+  color: var(--teal-9);
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  background: var(--teal-1);
+}
+
+button {
+  padding: var(--size-3) var(--size-5);
+  background: var(--teal-6);
+  color: var(--teal-1);
+  font-size: var(--font-size-base);
+  border-radius: var(--radius-2);
+  border: none;
+  transition: all 0.3s var(--ease-3);
 }
 
 button:hover {
+  background: var(--teal-7);
   cursor: pointer;
 }
 
-/* buttons */
-
-button.btn {
-  padding: 0.6em var(--pad);
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  border: 2px solid var(--color-highlight-two);
-  background: var(--color-highlight-two);
-  color: var(--color-light);
-  transition: filter 0.3s ease-in-out;
-}
-
-button.btn:active,
-button.btn:focus {
-  border: 2px solid var(--color-highlight-two);
-  background: var(--color-dark-two);
-  color: var(--color-highlight-two);
-  outline: none;
-  border-style: dotted;
-}
-
-button.btn--small {
-  font-size: 1em;
-  padding: 0.4em 0.6em;
-  font-family: var(--font-mono);
-  border: 2px solid var(--color-highlight-two);
-  background: var(--color-dark-two);
-  color: var(--color-highlight-two);
-  transition: filter 0.3s ease-in-out;
-}
-
-button.btn--small:active,
-button.btn--small:focus {
-  border: 2px solid var(--color-highlight-two);
-  background: var(--color-dark-two);
-  color: var(--color-highlight-two);
-  outline: none;
-  border-style: dotted;
-}
-
 button:disabled {
-  filter: grayscale(1);
+  background: var(--teal-3);
+  color: var(--teal-1);
 }
 
-/* form styles */
-.form-control {
+blockquote {
+  padding: var(--size-3) var(--size-3) var(--size-3) var(--size-5);
+  border-left: 5px solid var(--teal-6);
+  background: var(--teal-2);
+}
+
+/* SITE FLOWS */
+
+.site-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
-  margin: var(--pad) 0px;
 }
 
-.form-control label {
-  margin-bottom: 0.4em;
-}
-
-input,
-textarea {
-  padding: 0.6em 0.4em;
-  border: none;
-  border: 2px solid var(--color-dark);
-  border-bottom-color: var(--color-highlight-one);
-  background: var(--color-dark);
-  font-family: var(--font-sans-serif);
-  font-size: 1em;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--color-highlight-one);
-  border-style: dotted;
-}
-
-/* blog content specific styles */
-.blog-post img,
-pre,
-code {
-  max-width: 100%;
-}
-
-.blog-post h2,
-.blog-post h3,
-.blog-post h4 {
-  margin-top: 1.4em;
-}
-
-.blog-post p,
-.blog-post ul,
-.blog-post ol,
-.blog-post li,
-.blog-post blockquote {
-  margin: 0.7em 0px;
-}
-
-.blog-post blockquote {
-  padding: 0.75em 3em;
-  background: var(--color-dark);
-  border-left: 2px solid var(--color-highlight-two);
+.container {
+  width: 100%;
+  max-width: 80ch;
+  padding: 0 var(--size-3);
 }
 
 /* about pages */
@@ -234,6 +220,7 @@ code {
 }
 
 .about-carousel img {
+  width: auto;
   height: 400px;
   object-fit: cover;
 }
@@ -246,8 +233,12 @@ code {
   height: 4px;
   width: 40px;
   margin: 0;
-  background: white;
+  background: var(--teal-6);
   border-radius: 0;
+}
+
+.about-carousel .flickity-viewport {
+  border-radius: var(--radius-2);
 }
 
 .about-carousel .flickity-button {
@@ -257,6 +248,35 @@ code {
 .about-carousel--loading::after {
   visibility: visible;
   opacity: 1;
-  background: hsla(34.6, 100%, 55%, 0.45);
+  background: hsla(162, 0.82, 0.4, 0.45);
   backdrop-filter: saturate(80%) blur(12px);
+}
+
+/* forms */
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+  margin-bottom: var(--size-3);
+}
+
+input,
+select,
+textarea {
+  padding: var(--size-2);
+  border-radius: var(--radius-2);
+  border: 1px solid var(--teal-6);
+  outline-color: var(--teal-5);
+  outline-width: 2px;
+  outline-offset: var(--size-1);
+}
+
+pre {
+  padding: var(--size-3);
+  font-size: var(--font-size-base);
+}
+
+.divider {
+  border-bottom: 1px solid var(--color-dark-two);
+  margin: var(--size-5) 0 var(--size-3) 0;
 }

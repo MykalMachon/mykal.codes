@@ -1,39 +1,51 @@
 ---
-
 ---
 
-<nav role="navigation">
-  <div class="container">
-    <a class="home" href="/">Mykal Machon</a> // 
-    <a href="/about-me">About Me</a> //
-    <a href="/posts">Posts</a> //
-    <a href="/contact">Contact</a>
-    
-  </div>
+<nav role="navigation" class="container">
+  <h1 class="title">Mykal Machon</h1>
+  <ul>
+    <li><a class="home" href="/">Home</a></li>
+    <li><a href="/posts">Posts</a></li>
+    <li><a href="/about-me">About</a></li>
+    <li><a href="/uses">Uses</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+  <span class="border"></span>
 </nav>
 
 <style lang="scss">
-  nav {
-    background: var(--color-highlight-two);
+  span.border {
+    display: block;
+    border-bottom: 1px solid var(--color-dark-two);
     width: 100%;
-    min-height: 2em;
+  }
+
+  h1.title {
+    font-size: var(--font-size-xl);
+    line-height: 1em;
+    margin: var(--size-8) 0 var(--size-3) 0;
+  }
+
+  ul {
+    list-style: none;
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: var(--color-light);
-    a{
-      font-family: var(--font-mono);
-      color: var(--color-light);
-    }
-    a:after{
-      background: var(--color-light);
-    }
-    a:focus{
-      border-color: var(--color-light);
-    }
-    a:active{
-      background: var(--color-light);
-      color: var(--color-highlight-two);
-    }
+    justify-content: flex-start;
+    gap: var(--size-1);
+    padding: 0;
+    margin: var(--size-3) 0 0 calc(-1 * var(--size-3));
+    padding: 0 0 var(--size-3) 0;
+  }
+
+  ul a {
+    text-decoration: none;
+    color: var(--teal-9);
+    padding: var(--size-2) var(--size-3);
+    border-radius: var(--radius-2);
+  }
+
+  ul a:hover {
+    background: var(--teal-1);
+    text-decoration: underline;
   }
 </style>
