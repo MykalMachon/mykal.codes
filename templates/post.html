@@ -5,14 +5,147 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    @import 'https://unpkg.com/open-props';
+    @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&family=Eczar:wght@600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    :root {
+      /* COLORS */
+      --color-light: #fffcf5;
+      /* --color-light: var(--teal-1); */
+      --color-dark: var(--gray-9);
+      --color-dark-two: var(--gray-5);
+      --color-highlight-one: var(--teal-7);
+      --color-highlight-two: var(--teal-9);
+
+      /* FONT FAMILY */
+      --font-heading: 'Eczar', serif;
+      --font-body: 'Cabin', sans-serif;
+
+      /* FONT SIZES */
+      --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+      --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+      --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+      --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+      --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+      --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+      --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+
+      /* FONT COLORS */
+      --font-color-paper: var(--color-light);
+      --font-color-ink: var(--gray-7);
+      --font-color-ink2: var(--gray-7);
+    }
+
+    /* Basic Resets */
+
+    body {
+      background: var(--font-color-paper);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: var(--font-heading);
+      color: var(--gray-8);
+    }
+
+    h1 {
+      font-size: var(--font-size-xl);
+      margin: var(--size-5) 0 var(--size-3) 0;
+      line-height: 0.9em;
+    }
+
+    h2 {
+      font-size: var(--font-size-lg);
+    }
+
+    h3 {
+      font-size: var(--font-size-md);
+    }
+
+    h4 {
+      font-size: var(--font-size-base);
+    }
+
+    p,
+    a,
+    ul,
+    ol,
+    input,
+    select,
+    textarea,
+    small,
+    label {
+      font-family: var(--font-body);
+      color: var(--font-color-ink);
+      font-size: var(--font-size-base);
+      line-height: var(--size-6);
+    }
+
+    small {
+      font-size: var(--font-size-small);
+    }
+
+    .card {
+      aspect-ratio: 2 / 1;
+      border: 5px solid red;
+      padding: var(--size-5);
+    }
+
+    h1 {
+      font-size: var(--font-size-xxl);
+    }
+
+    small {
+      font-size: var(--font-size-base);
+    }
+
+    p {
+      font-size: var(--font-size-md);
+    }
+
+    .page-title {
+      margin: var(--size-12) 0 var(--size-7);
+    }
+
+    .page-info {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--size-3);
+    }
+  </style>
 </head>
 
 <body>
-  <small>Mykal.Codes</small>
-  <h1>{{title}}</h1>
-  {% if description %}
-  <p>{{ description }}</p>
-  {% endif %}
+  <div class="card">
+    <div class="page-title">
+      <small>Mykal Machon | mykal.codes</small>
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </div>
+    <section class="page-info">
+      {% if readTime %}
+      <div>
+        <small>Read time</small>
+        <p>{readTime}</p>
+      </div>
+      {% endif %}
+      {% if pubDate %}
+      <div>
+        <small>Last updated</small>
+        <p>{pubDate}</p>
+      </div>
+      {% endif %}
+    </section>
+  </div>
 </body>
 
 </html>
