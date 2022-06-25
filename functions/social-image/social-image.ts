@@ -3,7 +3,7 @@ import fs from 'fs/promises';
 
 import chromium from 'chrome-aws-lambda';
 import puppeteer from 'puppeteer-core';
-import nunjucks, { render } from 'nunjucks';
+import nunjucks from 'nunjucks';
 
 type HTMLType = 'post' | 'page';
 type HTMLContent = {
@@ -12,11 +12,11 @@ type HTMLContent = {
   image?: string;
 };
 
-const generateHTML = async (
+const renderNunjucksTemplate = async (
   type: HTMLType,
   content: HTMLContent
 ): Promise<string> => {
-  nunjucks.configure({ autoescape: true });
+  nunjucks.configure({});
   // get file needed
   const fileText = await fs.readFile(`./templates/${type}.html`, {
     encoding: 'utf-8',
@@ -39,6 +39,7 @@ const renderHTML = async (htmlCode: string): Promise<any> => {
 };
 
 export const handler: Handler = async (event, context) => {
+  // decipher passed in props
   const {
     title = 'mykal.codes',
     description = 'no description provided',
@@ -46,11 +47,16 @@ export const handler: Handler = async (event, context) => {
   } = event.queryStringParameters;
 
   // generate html
-  const html = await generateHTML(type, { title, description });
+  const html = await renderNunjucksTemplate(type, { title, description });
+  // take screenshot
   const screenshot = await renderHTML(html);
 
   return {
     statusCode: 200,
-    body: screenshot,
+    headers: {
+      'Content-Type': 'image/png',
+    },
+    body: screenshot.toString('base64'),
+    isBase64Encoded: true,
   };
 };
