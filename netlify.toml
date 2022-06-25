@@ -2,6 +2,9 @@
   command = "npm run build"
   publish = "dist"
 
+[functions]
+  external_node_modules = ["chrome-aws-lambda"]
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
