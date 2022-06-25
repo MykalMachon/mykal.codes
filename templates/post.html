@@ -94,8 +94,9 @@
     }
 
     .card {
+      width: 1200px;
+      height: 630px;
       aspect-ratio: 2 / 1;
-      border: 5px solid red;
       padding: var(--size-5);
     }
 
@@ -112,7 +113,7 @@
     }
 
     .page-title {
-      margin: var(--size-12) 0 var(--size-7);
+      margin: var(--size-13) 0 var(--size-7);
     }
 
     .page-info {
@@ -128,20 +129,20 @@
   <div class="card">
     <div class="page-title">
       <small>Mykal Machon | mykal.codes</small>
-      <h1>{title}</h1>
-      <p>{description}</p>
+      <h1>{{title}}</h1>
+      <p>{{description}}</p>
     </div>
     <section class="page-info">
       {% if readTime %}
       <div>
         <small>Read time</small>
-        <p>{readTime}</p>
+        <p>{{readTime}}</p>
       </div>
       {% endif %}
       {% if pubDate %}
       <div>
         <small>Last updated</small>
-        <p>{pubDate}</p>
+        <p>{{pubDate}}</p>
       </div>
       {% endif %}
     </section>

@@ -10,12 +10,14 @@ type HTMLContent = {
   title: string;
   description?: string;
   image?: string;
+  pubDate?: Date | string;
+  readTime?: string;
 };
 
 /**
  * renders a nunjucks template using the passed in template type,
  * and the variables / html content.
- * 
+ *
  * @param type template name
  * @param content content for the template
  * @returns {Promise<string>} an html string
@@ -37,9 +39,9 @@ const renderNunjucksTemplate = async (
 /**
  * renders an html document in the browser and returns
  * the screenshot as a buffer
- * 
+ *
  * @param htmlCode the html string to render in browser
- * @returns {Promise<Buffer | void | undefined>} 
+ * @returns {Promise<Buffer | void | undefined>}
  */
 const renderHTML = async (htmlCode: string): Promise<any> => {
   const browser = await puppeteer.launch({
@@ -58,10 +60,17 @@ export const handler: Handler = async (event, context) => {
     title = 'mykal.codes',
     description = 'no description provided',
     type = 'page',
+    pubDate = new Date(),
+    readTime = 'about 3 minutes',
   } = event.queryStringParameters;
 
   // generate html and take screenshot
-  const html = await renderNunjucksTemplate(type, { title, description });
+  const html = await renderNunjucksTemplate(type, {
+    title,
+    description,
+    pubDate: new Date(pubDate),
+    readTime,
+  });
   const screenshot = await renderHTML(html);
 
   // return screenshot as png
