@@ -5,6 +5,9 @@
 [functions]
   external_node_modules = ["chrome-aws-lambda"]
 
+[functions."social-image"]
+  included_files = ["templates/**.html"]
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
