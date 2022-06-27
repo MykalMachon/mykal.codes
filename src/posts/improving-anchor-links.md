@@ -9,7 +9,7 @@ setup: |
   import { Code } from 'astro/components';
 ---
 
-This post outlines a few tricks that I've been re-discovering over and over again. In the sake of saving time, I thought I would do a quick writeup documenting them so I know where to look next time I need them.
+This post outlines a few tricks that I've been re-discovering over and over again. To save time, I thought I would do a quick write-up documenting them so I know where to look next time I need them.
 
 ## What is an anchor link?
 
@@ -20,13 +20,13 @@ Let's start off by defining what an "anchor link" is. I would define an anchor l
 
 When someone navigates to that URL, it will scroll to the position of the corresponding HTML element on the page.
 
-I'm sure you've seen these used in a table of contents for a large blog post, or to jump to a specific section on a restaurants menu page. **This post is going to summarize some of the cool things you can do with those id based links.** I use them in [my coffee post](/posts/coffee-setup) for a table of contents.
+I'm sure you've seen these used in a table of contents for an extensive blog post, or to jump to a specific section on a restaurant's menu page.  **This post is going to summarize some of the cool things you can do with those anchor links.** I use them in [my coffee post](/posts/coffee-setup) for a table of contents.
 
 ### Alternate names
 
 these anchor links go by a bunch of other names as well, you may know them as:
 
-- ID based links
+- ID-based links
 - Tagged links
 - Jump links
 - Inline links
@@ -36,7 +36,7 @@ Shoutout to the [d-d-d-discord](https://www.patreon.com/shoptalkshow) for this l
 
 ## Scroll margin on top of the element
 
-If you want to use these links on a site that has a sticky header element at the top of the viewport, you'll probably notice thigns won't go to plan. Typically these links are hidden underneath the sticky header.
+If you want to use these links on a site that has a sticky header element at the top of the viewport, you'll probably notice things won't go to plan. Typically these links are hidden underneath the sticky header.
 
 <p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="RwQXYrj" data-user="mykalmachon" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/mykalmachon/pen/RwQXYrj">
@@ -59,7 +59,7 @@ See an example of this fixed here:
 
 ## Temporary animations on arrival at element
 
-Another thing you can do to improve the user experience of these anchor links is adding an animation / style to emphasize the part of the document you've linked to.
+Another thing you can do to improve the user experience of these anchor links is adding an animation/style to emphasize the part of the document you've linked to.
 
 I tend to do this by adding a quick "blink" animation to the heading in question:
 
@@ -74,7 +74,7 @@ I tend to do this by adding a quick "blink" animation to the heading in question
 }
 ```
 
-But you can also add a background to the element, a border, or anything else you can think to do in CSS.
+But you can also add a background to the element, a border, or anything else you can think of doing in CSS.
 
 ```css
 @import 'https://unpkg.com/open-props';
