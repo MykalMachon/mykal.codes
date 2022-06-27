@@ -13,7 +13,7 @@ This post outlines a few tricks that I've been re-discovering over and over agai
 
 ## What is an anchor link?
 
-Let's start of by defining what an "anchor link" is. I would define an anchor link as a fundamental browser feature, that requires a few things to work:
+Let's start off by defining what an "anchor link" is. I would define an anchor link as a fundamental browser feature, that requires a few things to work:
 
 - an HTML element with a unique id: `<h2 id="go-to-website-stack">Go To Website Stack</h2>`
 - a URL that references that unique id: `https://mykal.codes/posts/whats-your-goto-web-stack/#go-to-website-stack`
