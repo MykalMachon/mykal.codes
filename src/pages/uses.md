@@ -39,7 +39,7 @@ This is where the large majority of my day-to-day gear lives.
 
 ## Servers & Hardware
 
-I have an ever-growing homelab in my office as well, that has a few servers. 
+I have an ever-growing homelab in my office as well. The lab has a few servers, but not much else. 
 
 ### NAS Server (a.k.a MoonTurtle)
 
