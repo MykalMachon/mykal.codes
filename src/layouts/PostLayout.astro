@@ -10,7 +10,7 @@ import PostComments from '../components/posts/PostComments.astro';
 const { title, description, heroImage, fileName, pubDate, readTime } = Astro.props;
 
 // og image generation
-const ogImageUrl = `https://mykal.codes/api/social-image?title=${title}&description=${description}&image=${heroImage}&pubDate=${pubDate}&readTime=${readTime}`;
+const ogImageUrl = `https://mykal.codes/api/social-image?title=${title}&description=${description}&image=${heroImage}&pubDate=${pubDate}&readTime=${readTime}&type=post`;
 const encodedOgImageUrl = encodeURI(ogImageUrl);
 ---
 <html class="" lang="en">
