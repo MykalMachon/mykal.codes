@@ -5,12 +5,19 @@ import Footer from "../components/layout/Footer.astro";
 import MainHead from "../components/MainHead.astro";
 
 const { title, description } = Astro.props;
+
+// TODO: get rid of this template, there's 0 reason for it.
+
+// og image generation 
+const ogImageUrl = `https://mykal.codes/api/social-image?title=${title}&description=${description}&type=page`;
+const encodedOgImageUrl = encodeURI(ogImageUrl);
 ---
 
 <html class="" lang="en">
   <head>
     <slot name="head-content" />
     <MainHead {title} {description} />
+    <meta property="og:image" content={encodedOgImageUrl} />
   </head>
   <body class="site-container">
     <Navigation />
