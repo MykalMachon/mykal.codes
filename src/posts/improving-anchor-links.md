@@ -1,5 +1,5 @@
 ---
-title: 'Guide: Improving Anchor Links'
+title: 'Improving Anchor Links'
 description: 'This post outlines a few little tricks you can use with your anchor links'
 slug: 'improving-anchor-links'
 pubDate: '2022-06-24'
