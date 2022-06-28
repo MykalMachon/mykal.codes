@@ -8,7 +8,10 @@ import PostEditCard from '../components/posts/PostEditCard.astro';
 import PostComments from '../components/posts/PostComments.astro';
 
 const { title, description, heroImage, fileName, pubDate, readTime } = Astro.props;
+
+// og image generation
 const ogImageUrl = `https://mykal.codes/api/social-image?title=${title}&description=${description}&image=${heroImage}&pubDate=${pubDate}&readTime=${readTime}`;
+const encodedOgImageUrl = encodeURI(ogImageUrl);
 ---
 <html class="" lang="en">
   <head>
@@ -23,7 +26,7 @@ const ogImageUrl = `https://mykal.codes/api/social-image?title=${title}&descript
     })
     </script>
     <!-- add url escaper somewhere in here -->
-    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image" content={encodedOgImageUrl} />
   </head>
   <body class="site-container">
     <Navigation />

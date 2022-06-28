@@ -54,17 +54,24 @@ const renderHTML = async (htmlCode: string): Promise<any> => {
   });
   const page = await browser.newPage();
   await page.setViewport({ width: 1200, height: 630 });
-  await page.setContent(htmlCode, { waitUntil: 'networkidle2' });
+  await page.setContent(htmlCode, { waitUntil: 'networkidle0' });
+  await page.waitForSelector('img', { visible: true });
   return await page.screenshot({});
 };
 
 export const handler: Handler = async (event, context) => {
   const {
+    //@ts-ignore
     title,
+    //@ts-ignore
     description,
+    //@ts-ignore
     type = 'page',
+    //@ts-ignore
     image,
+    //@ts-ignore
     pubDate = new Date(),
+    //@ts-ignore
     readTime,
   } = event.queryStringParameters;
 
