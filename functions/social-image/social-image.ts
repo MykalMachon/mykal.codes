@@ -27,12 +27,15 @@ const renderNunjucksTemplate = async (
   content: HTMLContent
 ): Promise<string> => {
   // get nunjucks template as text
-  const fileText = await fs.readFile(`./templates/${type}.html`, {
-    encoding: 'utf-8',
-  });
+  const fileText = await fs.readFile(
+    `./functions/social-image/templates/${type}.html`,
+    {
+      encoding: 'utf-8',
+    }
+  );
 
   // render nunjucks template to string
-  nunjucks.configure({});
+  nunjucks.configure({ autoescape: true, trimBlocks: true });
   return nunjucks.renderString(fileText, content);
 };
 
@@ -50,26 +53,28 @@ const renderHTML = async (htmlCode: string): Promise<any> => {
     headless: true,
   });
   const page = await browser.newPage();
-  await page.setContent(htmlCode);
   await page.setViewport({ width: 1200, height: 630 });
+  await page.setContent(htmlCode, { waitUntil: 'networkidle2' });
   return await page.screenshot({});
 };
 
 export const handler: Handler = async (event, context) => {
   const {
-    title = 'mykal.codes',
-    description = 'no description provided',
+    title,
+    description,
     type = 'page',
+    image,
     pubDate = new Date(),
-    readTime = 'about 3 minutes',
+    readTime,
   } = event.queryStringParameters;
 
   // generate html and take screenshot
   const html = await renderNunjucksTemplate(type, {
     title,
     description,
-    pubDate: new Date(pubDate),
+    pubDate: new Date(pubDate).toDateString(),
     readTime,
+    image,
   });
   const screenshot = await renderHTML(html);
 
