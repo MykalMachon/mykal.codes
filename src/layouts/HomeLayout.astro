@@ -9,7 +9,7 @@ const { title, description } = Astro.props;
 // TODO: get rid of this template, there's 0 reason for it.
 
 // og image generation 
-const ogImageUrl = `https://mykal.codes/api/social-image?title=${title}&description=${description}&type=page`;
+const ogImageUrl = `https://mykal.codes/api/social-image?title=${title}&type=page`;
 const encodedOgImageUrl = encodeURI(ogImageUrl);
 ---
 

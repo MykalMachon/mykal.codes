@@ -69,7 +69,7 @@ export const handler: Handler = async (event, context) => {
     //@ts-ignore
     image,
     //@ts-ignore
-    pubDate = new Date(),
+    pubDate,
     //@ts-ignore
     readTime,
   } = event.queryStringParameters;
@@ -78,7 +78,7 @@ export const handler: Handler = async (event, context) => {
   const html = await renderNunjucksTemplate(type, {
     title,
     description,
-    pubDate: new Date(pubDate).toDateString(),
+    pubDate: pubDate ? new Date(pubDate).toDateString() : undefined,
     readTime,
     image,
   });
