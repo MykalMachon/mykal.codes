@@ -55,7 +55,9 @@ const renderHTML = async (htmlCode: string): Promise<any> => {
   const page = await browser.newPage();
   await page.setViewport({ width: 1200, height: 630 });
   await page.setContent(htmlCode, { waitUntil: 'networkidle0' });
-  return await page.screenshot({});
+  const screenshot = await page.screenshot({});
+  await browser.close();
+  return screenshot;
 };
 
 export const handler: Handler = async (event, context) => {
