@@ -39,8 +39,8 @@ const encodedOgImageUrl = encodeURI(ogImageUrl);
   </head>
   <body class="site-container">
     <Navigation />
-    <PostHeader {title} {description} {heroImage} {pubDate} {readTime} />
     <main class="container blog-post">
+      <PostHeader {title} {description} {heroImage} {pubDate} {readTime} />
       <slot />
     </main>
     <section class="container">

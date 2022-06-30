@@ -4,7 +4,7 @@ import { getLowQualityUrl, getHighQualityUrl } from "../../utils/cloudinary";
 const {title, description, heroImage, pubDate, readTime} = Astro.props;
 ---
 
-<header class="container">
+<header class="">
   {pubDate && (
     <small>
       {pubDate && (<>Published on {pubDate.toLocaleString('en-GB', {timezone: 'UTC'})} - </>)}
