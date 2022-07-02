@@ -25,6 +25,7 @@ const { post } = Astro.props;
   fileName={post.file.slice(post.file.lastIndexOf('/'))}
   pubDate={post.frontmatter.pubDate}
   readTime={readingTime(post.rawContent()).text}
+  draft={post.frontmatter.draft}
 >
   <post.Content></post.Content>
 </PostLayout>

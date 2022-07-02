@@ -1,5 +1,8 @@
+import { getNonDraftPosts } from "./posts";
+
 export const getPostsByTags = (tag: string, posts: Array<any>) => {
-  const postList = posts.reduce((accPosts, currPost) => {
+  const publishedPosts = getNonDraftPosts(posts);
+  const postList = publishedPosts.reduce((accPosts, currPost) => {
     const postTags = currPost.frontmatter.tags;
     const newPostList = [...accPosts];
     if(postTags.includes(tag)) newPostList.push(currPost);
@@ -12,7 +15,8 @@ export const getPostsByTags = (tag: string, posts: Array<any>) => {
 };
 
 export const getAllTags = (posts: Array<any>) => {
-  return posts.reduce((accTags: Array<string>, currPost: any) => {
+  const publishedPosts = getNonDraftPosts(posts);
+  return publishedPosts.reduce((accTags: Array<string>, currPost: any) => {
     const tags = currPost.frontmatter.tags;
     // find all the new tags in the array
     const newTagList = [...accTags];

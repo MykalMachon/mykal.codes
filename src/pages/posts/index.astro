@@ -4,14 +4,15 @@ import MainLayout from '../../layouts/MainLayout.astro';
 // Component Imports
 import PostList from '../../components/posts/PostList.astro';
 import TagList from '../../components/tags/TagList.astro';
-import { getSortedPosts } from '../../utils/posts';
+import { getNonDraftPosts, getSortedPosts } from '../../utils/posts';
 import { getAllTags } from '../../utils/tags';
 
 // Data Fetching: List all Markdown posts in the repo.
 const allPosts = await Astro.glob('../../posts/*.md');
 
 // sort all the posts
-const sortedPosts = getSortedPosts(allPosts);
+let sortedPosts = getSortedPosts(allPosts);
+sortedPosts = getNonDraftPosts(sortedPosts); 
 
 // get all tags from posts
 const tags = getAllTags(allPosts);

@@ -7,7 +7,7 @@ import PostHeader from '../components/posts/PostHeader.astro';
 import PostEditCard from '../components/posts/PostEditCard.astro';
 import PostComments from '../components/posts/PostComments.astro';
 
-const { title, description, heroImage, fileName, pubDate, readTime } = Astro.props;
+const { title, description, heroImage, fileName, pubDate, readTime, draft } = Astro.props;
 
 // og image generation
 const ogImageUrl = `https://mykal.codes/api/social-image?title=${title}&description=${description}&image=${heroImage}&pubDate=${pubDate}&readTime=${readTime}&type=post`;
@@ -40,6 +40,7 @@ const encodedOgImageUrl = encodeURI(ogImageUrl);
   <body class="site-container">
     <Navigation />
     <main class="container blog-post">
+      {draft === true && <blockquote><p><b>This post is a draft</b> <br />If you have feedback please reach out!</p></blockquote>}
       <PostHeader {title} {description} {heroImage} {pubDate} {readTime} />
       <slot />
     </main>
