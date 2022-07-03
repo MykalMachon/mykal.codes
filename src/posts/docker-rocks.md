@@ -31,7 +31,3 @@ The next logical step for me in all of this is Kubernetes, which seems infinitel
 Here's [an, admittedly extremely abstracted, example](https://github.com/MykalMachon/Caeser) based on one of my recent work projects.
 
 Despite the code being a lot simpler, the basic "docker" structure we use is on full display here, and could pretty easily be forked out to fit other projects.
-
-### Wanna Talk About This?
-
-Contact me on [twitter](https://twitter.com/mykalmachon), or [on this site](https://mykal.codes/contact/)

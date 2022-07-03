@@ -7,25 +7,25 @@ export async function getStaticPaths({}) {
   let allPosts = await Astro.glob('../../posts/**/*.md');
   let allSortedPosts = getSortedPosts(allPosts);
 
-  return allSortedPosts.map((post) => {
+  return allSortedPosts.map((post, idx) => {
+    const prevPost = allSortedPosts[idx+1] || null;
+    const nextPost = allSortedPosts[idx-1] || null;
     return {
       params: { slug: post.frontmatter.slug },
-      props: { post },
+      props: { post, nextPost, prevPost },
     };
   });
 }
 
-const { post } = Astro.props;
+const { post, nextPost, prevPost } = Astro.props;
 ---
 
 <PostLayout
-  title={post.frontmatter.title}
-  description={post.frontmatter.description}
-  heroImage={post.frontmatter.heroImage}
   fileName={post.file.slice(post.file.lastIndexOf('/'))}
-  pubDate={post.frontmatter.pubDate}
   readTime={readingTime(post.rawContent()).text}
-  draft={post.frontmatter.draft}
+  post={post}
+  nextPost={nextPost}
+  prevPost={prevPost}
 >
   <post.Content></post.Content>
 </PostLayout>

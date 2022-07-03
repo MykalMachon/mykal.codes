@@ -1,13 +1,14 @@
 ---
 import { getLowQualityUrl, getHighQualityUrl } from "../../utils/cloudinary";
 
-const {title, description, heroImage, pubDate, readTime} = Astro.props;
+const {title, description, heroImage, pubDate, readTime, draft} = Astro.props;
 ---
 
 <header class="">
+  {draft === true && <blockquote><p><b>This post is a draft</b> <br />If you have feedback please reach out!</p></blockquote>}
   {pubDate && (
     <small>
-      {pubDate && (<>Published on {pubDate.toLocaleString('en-GB', {timezone: 'UTC'})} - </>)}
+      {pubDate && (<>Published on {pubDate.toLocaleString('en-GB', {timezone: 'UTC'})} <span>&#8212;</span> </>)}
       {readTime}
     </small>
   )}
@@ -29,4 +30,7 @@ const {title, description, heroImage, pubDate, readTime} = Astro.props;
     display: block;
     margin: var(--size-6) 0 0 0;
   }  
+  span {
+    margin: 0 var(--size-2);
+  }
 </style>
