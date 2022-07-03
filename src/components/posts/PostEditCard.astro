@@ -1,20 +1,7 @@
 ---
-const { fileName } = Astro.props;
+const { fileName, text='edit this post on github' } = Astro.props;
 ---
 
-<blockquote>
-  <p>
-    <i
-      >Did you find a typo or issue in this post? something you'd like to
-      clarify? Is the info out of date?</i>
-  </p>
-  <p>
-    All of my posts are available as markdown on GitHub. Any fix you can submit
-    would be appreciated!
-  </p>
-  <p>
-    <a
-      href={`https://github.com/MykalMachon/Mykal.Codes/tree/main/src/${fileName}`}
-      >Edit this post on GitHub</a>
-  </p>
-</blockquote>
+<a href={`https://github.com/MykalMachon/Mykal.Codes/tree/main/src/${fileName}`}
+  >{text}</a
+>

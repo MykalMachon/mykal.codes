@@ -4,10 +4,10 @@ import Footer from '../components/layout/Footer.astro'
 import MainHead from '../components/MainHead.astro'
 
 import PostHeader from '../components/posts/PostHeader.astro';
-import PostEditCard from '../components/posts/PostEditCard.astro';
-import PostComments from '../components/posts/PostComments.astro';
+import PostFooter from '../components/posts/PostFooter.astro';
 
-const { title, description, heroImage, fileName, pubDate, readTime, draft } = Astro.props;
+const { post, nextPost, prevPost, fileName, readTime } = Astro.props;
+const { title, description, pubDate, heroImage, draft, tags } = post.frontmatter;
 
 // og image generation
 const ogImageUrl = `https://mykal.codes/api/social-image?title=${title}&description=${description}&image=${heroImage}&pubDate=${pubDate}&readTime=${readTime}&type=post`;
@@ -15,12 +15,14 @@ const encodedOgImageUrl = encodeURI(ogImageUrl);
 ---
 <html class="" lang="en">
   <head>
-    <MainHead title={title} description={description} />
+    <MainHead {title} {description} />
     <script>
     // image dynamic loading 
     const loadingImages = document.querySelectorAll('img.loading');
     loadingImages.forEach((loadingImageEl) => {
+      // @ts-ignore
       const hqImageUrl = loadingImageEl.dataset.lazy;
+      // @ts-ignore
       if(hqImageUrl) loadingImageEl.src = hqImageUrl;
       loadingImageEl.classList.remove('loading')
     })
@@ -40,14 +42,10 @@ const encodedOgImageUrl = encodeURI(ogImageUrl);
   <body class="site-container">
     <Navigation />
     <main class="container blog-post">
-      {draft === true && <blockquote><p><b>This post is a draft</b> <br />If you have feedback please reach out!</p></blockquote>}
-      <PostHeader {title} {description} {heroImage} {pubDate} {readTime} />
+      <PostHeader {title} {description} {heroImage} {pubDate} {readTime} {draft} />
       <slot />
     </main>
-    <section class="container">
-      <PostEditCard fileName={`posts${fileName}`} />
-      <PostComments />
-    </section>
+    <PostFooter {fileName} {nextPost} {prevPost} {tags} />
     <Footer />
   </body>
 </html>

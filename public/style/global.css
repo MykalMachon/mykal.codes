@@ -16,7 +16,7 @@ html {
   }
 }
 
-:target{
+:target {
   animation: var(--animation-blink);
   animation-timing-function: var(--ease-3);
   animation-duration: 0.5s;
@@ -24,7 +24,7 @@ html {
 }
 
 :target:before {
-  content: "";
+  content: '';
   display: block;
   height: var(--size-3);
   margin: var(--size-3) 0 0;
@@ -156,6 +156,7 @@ button {
   padding: var(--size-3) var(--size-5);
   background: var(--teal-6);
   color: var(--teal-1);
+  font-family: var(--font-body);
   font-size: var(--font-size-base);
   border-radius: var(--radius-2);
   border: none;
@@ -248,7 +249,7 @@ blockquote {
 .about-carousel--loading::after {
   visibility: visible;
   opacity: 1;
-  background: hsla(162, 0.82, 0.4, 0.45);
+  background: hsla(162, 0.82, 0.4, 0.7);
   backdrop-filter: saturate(80%) blur(12px);
 }
 
@@ -280,3 +281,8 @@ pre {
   border-bottom: 1px solid var(--color-dark-two);
   margin: var(--size-5) 0 var(--size-3) 0;
 }
+
+.divider--top {
+    border-top: 1px solid var(--color-dark-two);
+    margin: var(--size-3) 0;
+  }

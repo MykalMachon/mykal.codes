@@ -1,15 +1,45 @@
 ---
 import PostCard from './PostCard.astro'
 
-const { posts, type='large' } = Astro.props
+const { posts, type='large', showYears = false } = Astro.props
+
+// get a map where the key is the year, and the value is all posts for that year
+const postYearMap = posts.reduce((postList, currPost) => {
+  const postYear = new Date(currPost.frontmatter.pubDate).getFullYear();
+  const newPostList = postList;
+  newPostList[postYear] = [...postList[postYear] || [], currPost]
+  return newPostList;
+}, {});
+
+// get an array of objects containing {year: '<year>', posts: [...posts]}
+const postYearArr =  Object.keys(postYearMap).map((year) => {
+  return {
+    year: year,
+    posts: postYearMap[year]
+  }
+}).sort((a, b) => parseInt(b.year) - parseInt(a.year));
+
 ---
 
 <section>
-  {posts.map(p => 
-    <PostCard type={type} post={p} />
+  {showYears ? (
+    <>
+    {postYearArr.map((postYear) => (
+      <>
+      <h2>{postYear.year}</h2>
+      <div>
+        {postYear.posts.map((p) => (
+          <PostCard type={type} post={p} />
+        ))}
+      </div>
+      </>
+    ))}
+    </>
+  ) : (
+    <> 
+    {posts.map(p => 
+      <PostCard type={type} post={p} />
+    )}
+    </>
   )}
 </section>
-
-<style lang="scss">
-
-</style>

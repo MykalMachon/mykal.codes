@@ -1,0 +1,65 @@
+---
+import PostEditCard from "./PostEditCard.astro";
+import PostComments from "./PostComments.astro";
+import TagList from "../tags/TagList.astro";
+
+const { fileName, nextPost, prevPost, tags } = Astro.props;
+---
+
+<section class="container divider--top">
+  <article class="tags">
+    <p>tags: <TagList tags={tags} /></p>
+    <p>source: <PostEditCard fileName={`posts${fileName}`} />
+    </p> 
+  </article>
+  <article class="otherPosts">
+    {prevPost && (
+      <a href={`/posts/${prevPost.frontmatter.slug}`} class="otherPosts__link">
+        <small><span>&#171;</span> previous post</small>
+        <p>{prevPost.frontmatter.title}</p>
+      </a>
+    )}
+    {nextPost && (
+      <a href={`/posts/${nextPost.frontmatter.slug}`} class="otherPosts__link">
+        <small>next post <span>&#187;</span></small>
+        <p>{nextPost.frontmatter.title}</p>
+      </a>
+    )}
+  </article>
+  <PostComments />
+</section>
+
+<style lang="scss">
+  .otherPosts {
+    width: 100%;
+    margin: var(--size-3) 0;
+    display: flex;
+    flex-direction: row;
+    a.otherPosts__link {
+      width: 100%;
+      background: var(--teal-1);
+      padding: var(--size-3);
+      border: 1px solid var(--teal-6);
+      
+      color: var(--ink);
+      text-decoration: none;
+      small {
+        font-style: italic;
+      }
+      p{
+        margin-bottom: 0px;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      &:nth-of-type(2){
+        text-align: end;
+        border-left: 0px;
+      }
+      &:hover{
+        background: var(--teal-2);
+        color: var(--teal-9);
+      }
+    }
+  }
+</style>
