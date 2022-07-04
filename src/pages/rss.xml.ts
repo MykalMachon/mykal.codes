@@ -8,7 +8,7 @@ const sortedPosts = postObjects.sort(
 );
 
 const compiledPosts = sortedPosts.map(async (post) => ({
-  link: post.frontmatter.slug,
+  link: `posts/${post.frontmatter.slug}`,
   title: post.frontmatter.title,
   pubDate: post.frontmatter.pubDate,
   description: `${await post.compiledContent()} <br /> <br /> <a href="${
