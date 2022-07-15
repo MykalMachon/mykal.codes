@@ -9,7 +9,7 @@ tags: ['coffee']
 
 A week or so ago I was scrolling around on twitter and came across [a tweet mentioning an "AeroPress Latte"](https://twitter.com/TheCodePixi/status/1545476517202894851). I *love* lattes, but only really have the equipment for pour over or immersion brew coffee at home... or so I thought! 
 
-After 20-30 minutes of Googling and watching Youtube videos on an AeroPress lattes, I was overjoyed to find that they are indeed a thing. You can't actually make espresso with the AeroPress, but you can make a *pseudo espresso* (concentrated coffee) by using more ground coffee, less water, and a shorter brew time. The rest is just steamed milk + any other goodies you like in your latte. 
+After 20-30 minutes of Googling and watching Youtube videos on AeroPress lattes, I was overjoyed to find that they are indeed a thing. You can't actually make espresso with the AeroPress, but you can make a *pseudo espresso* (concentrated coffee) by using more ground coffee, less water, and a shorter brew time. The rest is just steamed milk + any other goodies you like in your latte. 
 
 I've spent the week since this monumental discovery experimenting and I think I've come up with a half-decent recipe.
 
@@ -18,7 +18,7 @@ I've spent the week since this monumental discovery experimenting and I think I'
 Before we get into the recipe, here's what you'll need: 
 
 1. AeroPress: I use the AeroPress GO! but any AeroPress should do.
-2. scale with timer + tare functions: this is for weighing ingredients, and 
+2. scale with timer + tare functions: this is for weighing ingredients, and keeping track of your brew-time. 
 3. kettle: for hot water. I use filtered water heated to ~95c.
 4. milk frother: preferably a steamer, but all I have is a frother 😅
 5. medium-fine ground coffee: I use some local beans ground between a pour-over medium and espresso fine.
@@ -28,7 +28,7 @@ for more info on what I use, check out [my coffee setup post](https://mykal.code
 
 ## Recipe
 
-The most involved part of the recipe is the 
+The most involved part of the recipe is the "espresso" everything else is pretty easy! 
 
 ### The "espresso"
 1. put your paper filter into your AeroPress.
