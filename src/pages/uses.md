@@ -26,7 +26,7 @@ This is where the large majority of my day-to-day gear lives.
   - [Nuphy Air60](https://nuphy.com/products/air60) + [NuFolio](https://nuphy.com/collections/accessories/products/nufolio-v2-for-air60): a 60% wireless board, Gateron low-profile browns with a fancy carrying case. I use this on the go and at the office. 
 - **Mouse**: Logitech G502 gaming mouse
 - **Monitors**: some older Dell monitors I got for free from my last job. I'm not sure what the model is but they're 1080p and good enough!
-- **Google Home Display**: I use the display as a photo display, and for smart home automation. 
+- **Google Home Display**: I use the display to show photos, and as a convenient way to use my smart home controls. 
 
 ### 🖥 Desktop Computer
 
@@ -51,8 +51,8 @@ I have an ever-growing homelab in my office as well. The lab has a few servers, 
 
 ### 🐢 NAS Server (a.k.a MoonTurtle)
 
-My NAS is used for data storage and a bunch of dockerized applications (like NextCloud and some DataBases). 
-It's mostly just a frankenstein of my first PC build from 2012, specs are:
+My NAS is used for data storage and a bunch of dockerized applications (like NextCloud, Trillium notes, some dev environments, and databases). 
+It's mostly just a frankenstein of my first PC build from 2012. The specs are:
 
 - **CPU**: Intel I7 3770 @ 3.2GHz.
 - **CPU Cooler**: Stock Intel cooler.
