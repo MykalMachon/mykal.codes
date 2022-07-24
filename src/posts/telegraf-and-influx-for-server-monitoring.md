@@ -1,23 +1,22 @@
 ---
-title: 'Making System Monitoring Easy'
-slug: 'making-system-monitoring-easy'
+title: 'Telegraf and InfluxDB for server monitoring'
+slug: 'telegraf-and-influxdb-for-server-monitoring'
 description: 'A quick guide on system monitoring with Telegraf, and Influx DB.'
 pubDate: '2022-07-21'
 heroImage: 'https://res.cloudinary.com/mykalcodes/image/upload/v1658642824/Mykal%20Codes/making-systems-monitoring-easy.jpg'
 tags: ['self-hosting', 'docker']
-draft: true
 ---
 
-I've been looking into how to be more pro-active about monitoring [my HomeLab](http://mykal.codes/uses#-servers--hardware) lately. One of the first suggestions you hear on how to do this is installing some sort of monitoring tool on your servers. With that in mind, I went on a bit of a monitoring dive and setup some basic tools on my raspberry pi's. I obviously wanted to keep track of what I did, so I decided to write it up in a blog post.
+I've been looking into how to be more pro-active about monitoring [my HomeLab](http://mykal.codes/uses#-servers--hardware) lately. With that in mind, I went on a bit of a monitoring dive and setup some basic tools on my raspberry pi's. I wanted to keep track of what I did, so why not write it up in a blog post.
 
-More specifically, This post will give you a quick overview of how I got up and running with InfluxDB and Telegraf for monitoring my servers.
+More specifically, this post will give you a quick overview of how I got up and running with InfluxDB and Telegraf for monitoring my servers.
 
 ## Why InfluxDB and Telegraf?
 
 I've already used [Grafana](https://grafana.com/) (a dashboarding tool) at work and like how it works; I also know that [Grafana is commonly used for system monitoring](https://grafana.com/grafana/) so I started my search there. After some Googling, I kept seeing a few other tools used alongside Grafana:
 
 - [InfluxDB](https://www.influxdata.com/): a database for efficiently storing and accessing time series data (perfect for sensors, system data, etc.). Grafana has a first party integration with InfluxDB as well.
-- [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/): a server agent that allows you to collect sensor info from your servers and send it back to InfluxDB and other timeseries databases like [Prometheus.](https://prometheus.io/)
+- [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/): a server agent that allows you to collect sensor info from your servers and send it back to InfluxDB and other time-series databases like [Prometheus.](https://prometheus.io/)
 
 Sweet! I have a few tools to start experimenting with.
 
@@ -71,12 +70,14 @@ Once I got that done I knew that telegraf _should_ be writing back to my InfluxD
 To confirm that InfluxDB was actually getting that data, I logged back into the InfluxDB web app and clicked the "dashboards" link on the sidebar.
 Thankfully, InfluxDB comes with a default "Systems" dashboard that you can use for reviewing your data, I hopped in there and saw that data was getting into InfluxDB, sweet 🎉
 
+![photo of the dashboard](https://res.cloudinary.com/mykalcodes/image/upload/v1658693116/Mykal%20Codes/making-system-monitoring-easy-2.png)
+
 ## Next steps
 
 There's a whole lot more I can do to expand the monitoring capabilities, here are some ideas:
 
-1. **📊 Grafana dashboards:** in my opinion, Grafana dashboards are just a little bit nicer to use, and easier to read.
-2. **⏰ Usage alerting:** InfluxDB lets you create alerts on specific criteria. For example, if your server goes over 80% usage, or goes down, you can get a slack message.
+1. **📊 Grafana dashboards:** I brought Grafana up at the beginning of the post, but I haven't actually implemented it yet. Their dashboards are awesome and it would be a good next step.
+2. **⏰ Usage alerting:** InfluxDB (and Grafana actually) lets you create alerts on specific criteria. For example, if your server goes over 80% usage, or goes down, you can get a slack message.
 3. **📚 Keep learning:** There's a whole job around monitoring and reliability of services, so logically there's a whole lot you can learn in the field.
 
 Thanks for reading!
