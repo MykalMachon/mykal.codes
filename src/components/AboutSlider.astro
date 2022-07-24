@@ -1,0 +1,63 @@
+---
+// this is bad, I know.
+---
+
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const carouselEl = document.querySelector('.about-carousel');
+    // @ts-ignore
+    new Flickity(carouselEl, {
+      autoPlay: true,
+      percentPosition: false,
+      wrapAround: true,
+      resize: true,
+      lazyLoad: 5,
+    });
+    const images = document.querySelectorAll('.about-carousel img');
+    const numImages = images.length;
+    let loadedImages = 0;
+    images.forEach((image) => {
+      image.addEventListener('load', () => {
+        loadedImages++;
+        if (loadedImages == numImages) {
+          carouselEl.classList.remove('about-carousel--loading');
+        }
+      });
+    });
+  });
+</script>
+<div class="about-carousel about-carousel--loading">
+  <img
+    src="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,q_auto:low,w_16/v1655961322/Mykal%20Codes/about-me/IMG_1502.heic"
+    data-flickity-lazyload="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,f_auto,q_auto,w_1000/v1655961322/Mykal%20Codes/about-me/IMG_1502.heic"
+    alt="Mykal eating sushi in a park on a blanket" />
+  <img
+    src="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,q_auto:low,w_16/v1655960678/Mykal%20Codes/about-me/20220615_163839.jpg"
+    data-flickity-lazyload="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,f_auto,q_auto,w_1000/v1655960678/Mykal%20Codes/about-me/20220615_163839.jpg"
+    alt="Mykal standing with his wife, Kiya, at her graduation ceremony" />
+  <img src="https://assets.codepen.io/1490503/mykal_5.jpg?width=120&height=90&format=auto"
+    data-flickity-lazyload="https://assets.codepen.io/1490503/mykal_5.jpg?width=720&height=540&format=auto"
+    alt="Kiya and Mykal posing in front of a mural" />
+
+  <img
+    src="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,q_auto:low,w_16/v1655961290/Mykal%20Codes/about-me/kiya-and-i.jpg"
+    data-flickity-lazyload="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,f_auto,q_auto,w_1000/v1655961290/Mykal%20Codes/about-me/kiya-and-i.jpg"
+    alt="Kiya and Mykal pose for a selfie in front of a fireplace on their wedding day" />
+  <img
+    src="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,q_auto:low,w_16/v1655961290/Mykal%20Codes/about-me/me-and-ash.jpg"
+    data-flickity-lazyload="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,f_auto,q_auto,w_1000/v1655961290/Mykal%20Codes/about-me/me-and-ash.jpg"
+    alt="Mykal with his cat, Ash, sitting on his chest" />
+  <img
+    src="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,q_auto:low,w_16/v1655962509/Mykal%20Codes/about-me/machon-fam-1.jpg"
+    data-flickity-lazyload="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,f_auto,q_auto,w_1000/v1655962509/Mykal%20Codes/about-me/machon-fam-1.jpg"
+    alt="From left to right, Duanne Machon, Kiya Machon, Mykal Machon, Jackie Machon at my Wedding" />
+  <img
+    src="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,q_auto:low,w_16/v1655961231/Mykal%20Codes/about-me/family.jpg"
+    data-flickity-lazyload="https://res.cloudinary.com/mykalcodes/image/upload/c_scale,f_auto,q_auto,w_1000/v1655961231/Mykal%20Codes/about-me/family.jpg"
+    alt="Mykal and the fam getting ice cream" />
+</div>
+<p>
+  <i class="caption">pictured above: goofy pictures of me, my wife Kiya, family, and friends</i>
+</p>
