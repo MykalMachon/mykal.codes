@@ -3,8 +3,8 @@ title: About Me
 description: Here's a quick summary of who I am.
 layout: ../layouts/MainLayout.astro
 setup: |
-  import AboutSlider from '../components/AboutSlider.astro';
-  import CongratsButton from '../components/CongratsButton';
+  import AboutSlider from '../components/about/AboutSlider.astro';
+  import CongratsButton from '../components/about/CongratsButton';
 ---
 
 # About Me
