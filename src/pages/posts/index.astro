@@ -12,26 +12,22 @@ const allPosts = await Astro.glob('../../posts/*.md');
 
 // sort all the posts
 let sortedPosts = getSortedPosts(allPosts);
-sortedPosts = getNonDraftPosts(sortedPosts); 
+sortedPosts = getNonDraftPosts(sortedPosts);
 
 // get all tags from posts
 const tags = getAllTags(allPosts);
 ---
 
-<MainLayout
-  title="Posts"
-  description="This is an archive of all the posts on my blog. I typically write about web development, coffee, devops, tech, and my personal life."
->
+<MainLayout title="Posts"
+  description="This is an archive of all the posts on my blog. I typically write about web development, coffee, devops, tech, and my personal life.">
   <section class="divider">
     <h1>Posts</h1>
     <p>
       This is an archive of all the posts on my blog. I typically write about:
-      <TagList tags={tags} />
+      <TagList type='list' tags={tags} />
     </p>
     <p>
-      If you'd like, you can also <a href="/rss.xml"
-        >subscribe to my blog via RSS</a
-      >
+      If you'd like, you can also <a href="/rss.xml">subscribe to my blog via RSS</a>
     </p>
   </section>
   <PostList posts={sortedPosts} showYears={true} type="small" />

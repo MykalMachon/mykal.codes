@@ -1,15 +1,50 @@
 ---
 export interface Props {
+  type: 'list' | 'button'
   tags: Array<string>
 }
-const { tags } = Astro.props;
+const { type = 'button', tags } = Astro.props;
 ---
 
-<span class="taglist">
-  {tags.map((tag:string, idx: number) => (
-    <> 
-    <a href={`/tags/${tag}`}>#{tag}</a>
-    {(idx+1) !== tags.length && (<>, </>) }
+<>
+  {type === 'list' && (
+  <span class="taglist">
+    {tags.map((tag:string, idx: number) => (
+    <>
+      <a href={`/tags/${tag}`}>#{tag}</a>
+      {(idx+1) !== tags.length && (<>, </>) }
     </>
-  ))}
-</span>
+    ))}
+  </span>
+  )}
+
+  {type === 'button' && (
+  <div class="taglist--btn">
+    {tags.map((tag:string, idx: number) => (
+    <a class="tag" href={`/tags/${tag}`}>#{tag}</a>
+    ))}
+  </div>
+  )}
+</>
+
+
+
+<style lang="scss">
+  .taglist--btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-3);
+  }
+
+  .tag {
+    padding: var(--size-1) var(--size-2);
+    background: var(--teal-1);
+    border: 1px solid var(--teal-6);
+    color: var(--teal-9);
+    border-radius: var(--radius-1);
+
+    &:hover {
+      background: var(--teal-2);
+    }
+  }
+</style>

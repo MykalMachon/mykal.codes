@@ -13,39 +13,43 @@ const { title, description, pubDate, heroImage, draft, tags } = post.frontmatter
 const ogImageUrl = `https://mykal.codes/api/social-image?title=${title}&description=${description}&image=${heroImage}&pubDate=${pubDate}&readTime=${readTime}&type=post`;
 const encodedOgImageUrl = encodeURI(ogImageUrl);
 ---
+
 <html class="" lang="en">
-  <head>
-    <MainHead {title} {description} />
-    <script>
-    // image dynamic loading 
-    const loadingImages = document.querySelectorAll('img.loading');
-    loadingImages.forEach((loadingImageEl) => {
-      // @ts-ignore
-      const hqImageUrl = loadingImageEl.dataset.lazy;
-      // @ts-ignore
-      if(hqImageUrl) loadingImageEl.src = hqImageUrl;
-      loadingImageEl.classList.remove('loading')
-    })
+
+<head>
+  <MainHead {title} {description} />
+  <script>
+      // image dynamic loading 
+      const loadingImages = document.querySelectorAll('img.loading');
+      loadingImages.forEach((loadingImageEl) => {
+        // @ts-ignore
+        const hqImageUrl = loadingImageEl.dataset.lazy;
+        // @ts-ignore
+        if (hqImageUrl) loadingImageEl.src = hqImageUrl;
+        loadingImageEl.classList.remove('loading')
+      })
     </script>
 
-    <!-- OG Image Stuff -->
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content='https://mykal.codes' />
-    <meta property="og:image" content={encodedOgImageUrl} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+  <!-- OG Image Stuff -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content='https://mykal.codes' />
+  <meta property="og:image" content={encodedOgImageUrl} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
-    <!-- Twitter specific OG -->
-    <meta name="twitter:card" content="summary_large_image">
-  </head>
-  <body class="site-container">
-    <Navigation />
-    <main class="container blog-post">
-      <PostHeader {title} {description} {heroImage} {pubDate} {readTime} {draft} />
-      <slot />
-    </main>
-    <PostFooter {fileName} {nextPost} {prevPost} {tags} />
-    <Footer />
-  </body>
+  <!-- Twitter specific OG -->
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="site-container">
+  <Navigation />
+  <main class="container blog-post">
+    <PostHeader {title} {description} {heroImage} {pubDate} {readTime} {draft} {tags} />
+    <slot />
+  </main>
+  <PostFooter {fileName} {nextPost} {prevPost} {tags} />
+  <Footer />
+</body>
+
 </html>
