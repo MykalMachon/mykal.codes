@@ -17,7 +17,7 @@ Most of my software related projects are [on GitHub](https://github.com/MykalMac
 
 The site you're on right now! this is my main personal website. It has a bunch of info about, well, me! I post personal and tech updates here, and keep a [/uses](https://mykal.codes/uses) and [/about-me](https://mykal.codes/about-me) page up to date.
 
-#### [mykal.cofee](https://mykal.coffee)
+#### [mykal.coffee](https://mykal.coffee)
 
 A coffee blog! This is a relatively new project that I started to centralize all of my coffee knowledge. Coffee has been a new-ish hobby of mine, and I have a few recipes, and software tools that are on the site.
 
