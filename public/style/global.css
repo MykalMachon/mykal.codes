@@ -191,7 +191,7 @@ blockquote {
 
 .container {
   width: 100%;
-  max-width: 80ch;
+  max-width: 90ch;
   padding: 0 var(--size-3);
 }
 
