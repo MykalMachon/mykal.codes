@@ -9,6 +9,8 @@ sections:
   label: Posts
   create: all
   match: "**/*"
+  templates:
+  - blog-post
 upload_dir: Mykal Codes
 public_path: https://res.cloudinary.com/mykalcodes/image/upload
 front_matter_path: ''
