@@ -26,6 +26,8 @@ This is honestly where I've learned most of what I know in a "traditional" sense
 * [Wes Bos's Advanced React & GraphQL](https://advancedreact.com/): If you have some basic React knowledge, this tutorial takes it to the next level with Next.js, GraphQL, and friends!
 * [Level Up Tutorials](https://leveluptutorials.com): React, Svelte, etc: All of Scott's content on Level Up Tuts is great!
 * [Free Code Camp](https://freecodecamp.org): lots of really great courses (mostly on their YouTube channel) and even certificate programs!
+* [Kent C. Dodd's Epic React](https://epicreact.dev/): an extremely comprehensive course on react.js that takes you all the way up from fundamentals to advanced concepts. 
+* [Kent C. Dodd's Testing JavaScript](https://testingjavascript.com/): a practical guide on how to test JavaScript applications that takes you all the way from static analysis, to unit and integration tests. 
 
 ## Podcasts 🎤
 
