@@ -1,5 +1,6 @@
 ---
 const { post, type="large" } = Astro.props;
+const dateFormatter = Intl.DateTimeFormat('en-GB', {dateStyle: 'short'});
 ---
 
 {type === "large" ? (
@@ -16,14 +17,17 @@ const { post, type="large" } = Astro.props;
     </a>
   </div>
   <div class="postcard__content">
-    <small class="postcard__content__date">{post.frontmatter.pubDate}</small>
+    <small class="postcard__content__date">{dateFormatter.format(new Date(post.frontmatter.pubDate))}</small>
     <h3> <a href={`/posts/${post.frontmatter.slug}`}>{post.frontmatter.title}</a></h3>
     <p>{post.frontmatter.description}</p>
   </div>
 </article>
 ) : (
   <article class="postcard--small">
-    <p><a href={`/posts/${post.frontmatter.slug}`}>{post.frontmatter.title}</a> - <span class="postcard__date">{post.frontmatter.pubDate}</span></p>
+    <p>
+      <a href={`/posts/${post.frontmatter.slug}`}>{post.frontmatter.title}</a> 
+      - <small class="postcard__date">{dateFormatter.format(new Date(post.frontmatter.pubDate))}</small>
+    </p>
   </article>
 )}
 
