@@ -91,6 +91,7 @@ export const handler: Handler = async (event, context) => {
     statusCode: 200,
     headers: {
       'Content-Type': 'image/png',
+      'Cache-Control': 'max-age=7776000, must-revalidate'
     },
     body: screenshot.toString('base64'),
     isBase64Encoded: true,
