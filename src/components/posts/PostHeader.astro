@@ -3,18 +3,17 @@ import { getLowQualityUrl, getHighQualityUrl } from "../../utils/cloudinary";
 import TagList from "../tags/TagList.astro";
 
 const { title, description, heroImage, pubDate, readTime, draft, tags } = Astro.props;
+const dateFormatter = Intl.DateTimeFormat('en-GB', {dateStyle: 'medium'});
 ---
 
 <header class="">
   {draft === true && <blockquote>
     <p><b>This post is a draft</b> <br />If you have feedback please reach out!</p>
   </blockquote>}
-  {pubDate && (
   <small>
-    {pubDate && (<>Published on {pubDate.toLocaleString('en-GB', {timezone: 'UTC'})} <span>&#8212;</span> </>)}
+    {pubDate && (<>Published on {dateFormatter.format(new Date(pubDate))} <span>&#8212;</span> </>)}
     {readTime}
   </small>
-  )}
   <section>
     <h1>{title}</h1>
     <p>{description}</p>
