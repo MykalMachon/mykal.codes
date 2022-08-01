@@ -26,3 +26,4 @@ fields:
   description: 'if checked, this post is a draft and is not visible publicly. '
 pages:
 - src/posts/optimizing-docker-containers.md
+- src/posts/the-adventures-of-ash.md
