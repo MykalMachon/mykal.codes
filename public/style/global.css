@@ -187,7 +187,7 @@ blockquote {
 .site-container {
   width: 100%;
   display: grid;
-  grid-template-columns: 90ch;
+  grid-template-columns: minmax(250px, 90ch);
   justify-content: center;
 }
 
