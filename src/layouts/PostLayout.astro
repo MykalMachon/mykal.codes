@@ -19,16 +19,16 @@ const encodedOgImageUrl = encodeURI(ogImageUrl);
 <head>
   <MainHead {title} {description} />
   <script>
-      // image dynamic loading 
-      const loadingImages = document.querySelectorAll('img.loading');
-      loadingImages.forEach((loadingImageEl) => {
-        // @ts-ignore
-        const hqImageUrl = loadingImageEl.dataset.lazy;
-        // @ts-ignore
-        if (hqImageUrl) loadingImageEl.src = hqImageUrl;
-        loadingImageEl.classList.remove('loading')
-      })
-    </script>
+    // image dynamic loading 
+    const loadingImages = document.querySelectorAll('img.loading');
+    loadingImages.forEach((loadingImageEl) => {
+      // @ts-ignore
+      const hqImageUrl = loadingImageEl.dataset.lazy;
+      // @ts-ignore
+      if (hqImageUrl) loadingImageEl.src = hqImageUrl;
+      loadingImageEl.classList.remove('loading')
+    })
+  </script>
 
   <!-- OG Image Stuff -->
   <meta property="og:title" content={title} />
@@ -44,7 +44,7 @@ const encodedOgImageUrl = encodeURI(ogImageUrl);
 
 <body class="site-container">
   <Navigation />
-  <main class="container blog-post">
+  <main class="container main-content">
     <PostHeader {title} {description} {heroImage} {pubDate} {readTime} {draft} {tags} />
     <slot />
   </main>

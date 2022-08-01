@@ -83,8 +83,6 @@ h4:target {
 
 h1 {
   font-size: var(--font-size-xl);
-  margin: var(--size-5) 0 var(--size-3) 0;
-  line-height: 0.9em;
 }
 
 h2 {
@@ -123,6 +121,11 @@ ul,
 ol,
 blockquote {
   margin: var(--size-3) 0;
+}
+
+ul li,
+ol li {
+  margin: var(--size-2) 0;
 }
 
 ul ul {
@@ -257,6 +260,11 @@ blockquote {
   backdrop-filter: saturate(80%) blur(12px);
 }
 
+.about-carousel img.about-carousel__image {
+  border-radius: 0px;
+  margin: 0px;
+}
+
 /* forms */
 .form-control {
   display: flex;
@@ -289,4 +297,36 @@ pre {
 .divider--top {
   border-top: 1px solid var(--color-dark-two);
   margin: var(--size-3) 0;
+}
+
+/* blog post specific stuff */
+
+.main-content img {
+  border-radius: var(--radius-2);
+  margin: var(--size-3) 0;
+}
+
+.main-content h2,
+.main-content h3 {
+  margin: var(--size-8) 0 var(--size-3) 0;
+}
+
+.main-content h4,
+.main-content h5,
+.main-content h6 {
+  margin: var(--size-5) 0 var(--size-3) 0;
+}
+
+.main-content p,
+.main-content blockquote,
+.main-content p,
+.main-content a,
+.main-content ul,
+.main-content ol,
+.main-content input,
+.main-content select,
+.main-content textarea,
+.main-content small,
+.main-content label {
+  line-height: var(--font-lineheight-4);
 }

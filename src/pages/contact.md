@@ -1,28 +1,18 @@
 ---
 title: Contact
 description: If you want to get in touch- you can do it from this page!
-layout: "../layouts/MainLayout.astro"
-
+layout: '../layouts/MainLayout.astro'
 ---
+
 # Contact
 
-Hey! If you want to get in touch- you can do it from this page!
+Hey! If you want to get in touch- you can do it from this page! If you want to see other places I'm active on the internet here are my social links:
 
-## Say Hello!
+- [Twitter](https://twitter.com/MykalMachon)
+- [GitHub](https://GitHub.com/MykalMachon)
+- [Linkedin](https://www.linkedin.com/in/mykalmachon/)
 
-There are a few ways you can reach out to me...
-
-### Social Accounts
-
-If you want to see other places I'm active on the internet here are my social links: 
-
-* [Twitter](https://twitter.com/MykalMachon)
-* [GitHub](https://GitHub.com/MykalMachon)
-* [Linkedin](https://www.linkedin.com/in/mykalmachon/)
-
-### Form Below 👇🏻
-
-Use the form below to reach out directly to my email- I'll try and get back to you ASAP!
+If you'd prefer to email me directly, use the form below
 
 <form
 class="form__contact"
