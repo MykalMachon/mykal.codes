@@ -21,9 +21,18 @@ const decomposeCloudinaryUrl = (cloudinaryUrl) => {
  */
 export const getLowQualityUrl = (cloudinaryUrl) => {
   const urlIsValid = isCloudinaryUrl(cloudinaryUrl);
+  if (!urlIsValid) return cloudinaryUrl;
   const decomposedCloudinaryUrl = decomposeCloudinaryUrl(cloudinaryUrl);
   const { baseUrl, imageUrl } = decomposedCloudinaryUrl;
-  return `${baseUrl}c_scale,e_blur:100,f_auto,q_80,w_100${imageUrl}`;
+  return `${baseUrl}c_scale,e_blur:100,f_auto,q_50,w_100${imageUrl}`;
+};
+
+export const getCustomQualityUrl = (cloudinaryUrl: string, width: number) => {
+  const urlIsValid = isCloudinaryUrl(cloudinaryUrl);
+  if (!urlIsValid) return cloudinaryUrl;
+  const decomposedCloudinaryUrl = decomposeCloudinaryUrl(cloudinaryUrl);
+  const { baseUrl, imageUrl } = decomposedCloudinaryUrl;
+  return `${baseUrl}c_scale,f_auto,q_100,w_${width}${imageUrl}`;
 };
 
 /**
@@ -34,7 +43,7 @@ export const getLowQualityUrl = (cloudinaryUrl) => {
  */
 export const getHighQualityUrl = (cloudinaryUrl) => {
   const urlIsValid = isCloudinaryUrl(cloudinaryUrl);
-  if(!urlIsValid) return cloudinaryUrl
+  if (!urlIsValid) return cloudinaryUrl;
   const decomposedCloudinaryUrl = decomposeCloudinaryUrl(cloudinaryUrl);
   const { baseUrl, imageUrl } = decomposedCloudinaryUrl;
   return `${baseUrl}c_scale,f_auto,w_1200${imageUrl}`;
