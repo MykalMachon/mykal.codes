@@ -14,33 +14,34 @@ const encodedOgImageUrl = encodeURI(ogImageUrl);
 ---
 
 <html class="" lang="en">
-  <head>
-    <slot name="head-content" />
-    <MainHead {title} {description} />
-    <meta property="og:image" content={encodedOgImageUrl} />
-  </head>
-  <body class="site-container">
-    <Navigation />
-    <section class="container">
-      <h2 class="homepage__hero">
-        Hi, I'm Mykal. <br />
-        This is my website!
-      </h2>
-      <p>
-        I'm a Systems Analyst at <a href="https://ufv.ca">UFV</a>, and work on a
-        bunch of <a href="https://github.com/MykalMachon"
-          >open source projects</a
-        > in my free time. I also blog on this site, and run <a
-          href="https://buttondown.email/mykalcodes">a newsletter</a
-        >
-      </p>
-      <p>For more info checkout my <a href="/about-me">about page</a>.</p>
-    </section>
-    <main class="container">
-      <slot />
-    </main>
-    <Footer />
-  </body>
+
+<head>
+  <slot name="head-content" />
+  <MainHead {title} {description} />
+  <meta property="og:image" content={encodedOgImageUrl} />
+</head>
+
+<body class="site-container">
+  <Navigation />
+  <section class="container">
+    <h2 class="homepage__hero">
+      Hi, I'm Mykal. <br />
+      This is my website!
+    </h2>
+    <p>
+      I work as a Systems Analyst at <a href="https://ufv.ca">UFV</a>, run a <a href="https://tinybox.dev">software
+        consulting
+        business</a>, and work on a
+      bunch of <a href="https://github.com/MykalMachon">open source</a> stuff in my spare time.
+    </p>
+    <p>For more info check out my <a href="/about-me">about page</a>.</p>
+  </section>
+  <main class="container">
+    <slot />
+  </main>
+  <Footer />
+</body>
+
 </html>
 
 <style lang="scss">
