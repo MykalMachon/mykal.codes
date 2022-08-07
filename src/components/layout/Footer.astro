@@ -1,13 +1,21 @@
 <footer class="container">
+  <span class="border"></span>
   <section class="footnote">
     <p>
       <span>Built with 💖 by Mykal Machon</span>
+      -
       <span>{new Date().getFullYear()}</span>
     </p>
   </section>
 </footer>
 
 <style lang="scss">
+  span.border {
+    display: block;
+    border-bottom: 1px solid var(--color-dark-two);
+    width: 100%;
+  }
+
   footer {
     margin: var(--size-3) 0 var(--size-5) 0;
   }
