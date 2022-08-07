@@ -1,10 +1,10 @@
 ---
-title: 'Scaling Down'
-slug: 'scaling-down'
+title: "Scaling Down"
+slug: "scaling-down"
 description: "Why I'm scaling down my freelancing business, Tinybox"
-pubDate: '2021-05-01'
-heroImage: 'https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/scaling-down.webp'
-tags: ['personal']
+pubDate: "2021-05-01"
+heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/scaling-down.webp"
+tags: ["personal"]
 ---
 
 In May of 2019, during the first few months of the Coronavirus pandemic I made the decision to start an e-commerce / web development freelancing business, Tinybox Software Development.

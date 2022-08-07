@@ -1,30 +1,31 @@
 ---
 title: Optimizing Docker Containers
 slug: optimizing-docker-containers
-description: 'docker containers are relatively easy to get up and going, but can often
-  be heavily optimized. '
+description:
+  "docker containers are relatively easy to get up and going, but can often
+  be heavily optimized. "
 pubDate: 2022-07-25T23:00:00Z
 heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1656430048/Mykal%20Codes/better-docker-containers.webp
 tags:
-- devops
-- docker
+  - devops
+  - docker
 draft: true
-
 ---
+
 As I've been building and shipping more and more docker images, I've realized that while it's easy to get up and going, it can require quite a bit of work to get a "good" docker container setup.
 
 Things you can do for a better docker container can include:
 
-* Create a docker image for production, and development
-  * production image: slimmed down version of dev, don't volume mount unless necessary
-  * dev image: full-fat version of dev that runs any development/live-reload services.
-* Experiment with different base images
-  * just, don't use the `:latest` tag in your base image, ever.
-  * experiment with Debian alternatives like `alpine`, `buster`, and `slim`
-* Limit access by running the app as a non-root user
-* Multistage builds to save build time
-* Use docker-compose as a default
-  * run commands via the docker-compose config to save time.
+- Create a docker image for production, and development
+  - production image: slimmed down version of dev, don't volume mount unless necessary
+  - dev image: full-fat version of dev that runs any development/live-reload services.
+- Experiment with different base images
+  - just, don't use the `:latest` tag in your base image, ever.
+  - experiment with Debian alternatives like `alpine`, `buster`, and `slim`
+- Limit access by running the app as a non-root user
+- Multistage builds to save build time
+- Use docker-compose as a default
+  - run commands via the docker-compose config to save time.
 
 ## A starting point...
 

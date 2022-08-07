@@ -8,7 +8,7 @@ const { title, description, content } = Astro.props;
 
 // if the page is markdown, use the content title instead of the provided props
 const pageTitle = title ? title : content.title;
-const pageDescription = description ? description : content.description
+const pageDescription = description ? description : content.description;
 
 // og image generation
 const ogImageUrl = `https://mykal.codes/api/social-image?title=${title}&description=${description}&type=page`;
@@ -16,29 +16,27 @@ const encodedOgImageUrl = encodeURI(ogImageUrl);
 ---
 
 <html class="" lang="en">
+  <head>
+    <slot name="head-content" />
+    <MainHead title={pageTitle} description={pageDescription} />
 
-<head>
-  <slot name="head-content" />
-  <MainHead title={pageTitle} description={pageDescription} />
+    <!-- OG Image Stuff -->
+    <meta property="og:title" content={`${pageTitle} | mykal.codes`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://mykal.codes" />
+    <meta property="og:image" content="/images/og-page.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-  <!-- OG Image Stuff -->
-  <meta property="og:title" content={`${title} | mykal.codes`} />
-  <meta property="og:description" content={description} />
-  <meta property="og:url" content='https://mykal.codes' />
-  <meta property="og:image" content="/images/og-page.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+    <!-- Twitter specific OG -->
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
 
-  <!-- Twitter specific OG -->
-  <meta name="twitter:card" content="summary_large_image">
-</head>
-
-<body class="site-container">
-  <Navigation />
-  <main class="container main-content">
-    <slot />
-  </main>
-  <Footer />
-</body>
-
+  <body class="site-container">
+    <Navigation />
+    <main class="container main-content">
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>

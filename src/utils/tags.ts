@@ -5,13 +5,13 @@ export const getPostsByTags = (tag: string, posts: Array<any>) => {
   const postList = publishedPosts.reduce((accPosts, currPost) => {
     const postTags = currPost.frontmatter.tags;
     const newPostList = [...accPosts];
-    if(postTags.includes(tag)) newPostList.push(currPost);
+    if (postTags.includes(tag)) newPostList.push(currPost);
     return newPostList;
-  }, [])
+  }, []);
   return {
     tag: tag,
-    posts: postList
-  }
+    posts: postList,
+  };
 };
 
 export const getAllTags = (posts: Array<any>) => {

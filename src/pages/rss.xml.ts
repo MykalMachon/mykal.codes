@@ -1,8 +1,8 @@
-import rss from '@astrojs/rss';
-import { getNonDraftPosts } from '../utils/posts';
+import rss from "@astrojs/rss";
+import { getNonDraftPosts } from "../utils/posts";
 
 // @ts-ignore
-const postImportResult = import.meta.globEager('../posts/**/*.md');
+const postImportResult = import.meta.globEager("../posts/**/*.md");
 const postObjects = Object.values(postImportResult);
 const nonDraftPosts = getNonDraftPosts(postObjects);
 const sortedPosts = nonDraftPosts.sort(
@@ -22,7 +22,7 @@ const compiledPosts = sortedPosts.map(async (post) => ({
 
 export const get = async () =>
   rss({
-    title: 'Mykal Machon (mykal.codes)',
+    title: "Mykal Machon (mykal.codes)",
     description:
       "Welcome to my site's RSS feed! I use this is a blog / place to put stuff I want to share.",
     // @ts-ignore

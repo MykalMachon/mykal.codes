@@ -25,11 +25,11 @@ export const getSortedPosts = (posts: Array<any>) => {
 export const getSiblingPost = (
   postIdx: number,
   posts: Array<any>,
-  relation: 'prev' | 'next'
+  relation: "prev" | "next"
 ) => {
   try {
     // get the index of the sibling post, and select it out of the posts array
-    const siblingPostIdx = relation === 'prev' ? postIdx + 1 : postIdx - 1;
+    const siblingPostIdx = relation === "prev" ? postIdx + 1 : postIdx - 1;
     const siblingPost = posts[siblingPostIdx];
 
     // if this post is a draft, recurse on this function until a non-draft sibling is found

@@ -12,7 +12,10 @@ allPosts = getNonDraftPosts(allPosts);
 const recentPosts = allPosts.slice(0, 3);
 ---
 
-<HomeLayout title="Home" description="Mykal Machon's website, blog, and digital garden.">
+<HomeLayout
+  title="Home"
+  description="Mykal Machon's website, blog, and digital garden."
+>
   <h2>Recent Posts</h2>
   <PostList posts={recentPosts} />
   <p>

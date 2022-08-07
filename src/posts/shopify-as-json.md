@@ -1,11 +1,12 @@
 ---
-title: 'Get any Shopify product as JSON'
-slug: 'shopify-as-json'
+title: "Get any Shopify product as JSON"
+slug: "shopify-as-json"
 description: "If you ever need to pull Shopify product info, this tip will be a huge help."
-pubDate: '2022-07-19'
-heroImage: 'https://res.cloudinary.com/mykalcodes/image/upload/v1658259211/Mykal%20Codes/shopify-as-json.jpg'
-tags: ['webdev', 'shopify']
+pubDate: "2022-07-19"
+heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1658259211/Mykal%20Codes/shopify-as-json.jpg"
+tags: ["webdev", "shopify"]
 ---
+
 I found out that you could get any Shopify product as JSON/XML way too late in my Shopify development game. If there is a public URL for the Shopify product, and the store is using the standard Shopify theme engine, you can grab all the public details as JSON at any time with a quick URL trick.
 
 All you have to do is add `.json` to the end of the product URL, and it will return the JSON file representation of the object; for XML just add the `.xml` to the end.
@@ -17,16 +18,17 @@ Here's a quick demo of how you'd grab a product's info as JSON in Javascript. Al
 Let's use a product from the Allbirds store:
 
 ```js
-// product url 
-const productUrl = 'https://www.allbirds.com/products/mens-tree-flyers-blizzard'
+// product url
+const productUrl =
+  "https://www.allbirds.com/products/mens-tree-flyers-blizzard";
 
 // function to grab the data and return a promise
 const getProductData = async (productUrl) => {
-  const productUrlJSON = `${productUrl}.json`
+  const productUrlJSON = `${productUrl}.json`;
   const response = await fetch(productUrlJSON);
   const data = await response.json();
-  return data; 
-}
+  return data;
+};
 
 // get the data and then log it, or do whatever!
 getProductData(productUrl).then((data) => {

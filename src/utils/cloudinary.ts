@@ -1,10 +1,10 @@
 const isCloudinaryUrl = (cloudinaryUrl) => {
-  return cloudinaryUrl.includes('res.cloudinary.com');
+  return cloudinaryUrl.includes("res.cloudinary.com");
 };
 
 const decomposeCloudinaryUrl = (cloudinaryUrl) => {
-  const slicePointOne = cloudinaryUrl.indexOf('upload/') + 'upload/'.length;
-  const slicePointTwo = cloudinaryUrl.indexOf('/v');
+  const slicePointOne = cloudinaryUrl.indexOf("upload/") + "upload/".length;
+  const slicePointTwo = cloudinaryUrl.indexOf("/v");
 
   return {
     baseUrl: cloudinaryUrl.slice(0, slicePointOne),

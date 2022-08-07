@@ -1,13 +1,14 @@
 ---
-import Navigation from '../components/layout/Navigation.astro'
-import Footer from '../components/layout/Footer.astro'
-import MainHead from '../components/MainHead.astro'
+import Navigation from "../components/layout/Navigation.astro";
+import Footer from "../components/layout/Footer.astro";
+import MainHead from "../components/MainHead.astro";
 
-import PostHeader from '../components/posts/PostHeader.astro';
-import PostFooter from '../components/posts/PostFooter.astro';
+import PostHeader from "../components/posts/PostHeader.astro";
+import PostFooter from "../components/posts/PostFooter.astro";
 
 const { post, nextPost, prevPost, fileName, readTime } = Astro.props;
-const { title, description, pubDate, heroImage, draft, tags } = post.frontmatter;
+const { title, description, pubDate, heroImage, draft, tags } =
+  post.frontmatter;
 
 // og image generation
 const ogImageUrl = `https://mykal.codes/api/social-image?title=${title}&description=${description}&image=${heroImage}&pubDate=${pubDate}&readTime=${readTime}&type=post`;
@@ -15,41 +16,47 @@ const encodedOgImageUrl = encodeURI(ogImageUrl);
 ---
 
 <html class="" lang="en">
+  <head>
+    <MainHead {title} {description} />
+    <script>
+      // image dynamic loading
+      const loadingImages = document.querySelectorAll("img.loading");
+      loadingImages.forEach((loadingImageEl) => {
+        // @ts-ignore
+        const hqImageUrl = loadingImageEl.dataset.lazy;
+        // @ts-ignore
+        if (hqImageUrl) loadingImageEl.src = hqImageUrl;
+        loadingImageEl.classList.remove("loading");
+      });
+    </script>
 
-<head>
-  <MainHead {title} {description} />
-  <script>
-    // image dynamic loading 
-    const loadingImages = document.querySelectorAll('img.loading');
-    loadingImages.forEach((loadingImageEl) => {
-      // @ts-ignore
-      const hqImageUrl = loadingImageEl.dataset.lazy;
-      // @ts-ignore
-      if (hqImageUrl) loadingImageEl.src = hqImageUrl;
-      loadingImageEl.classList.remove('loading')
-    })
-  </script>
+    <!-- OG Image Stuff -->
+    <meta property="og:title" content={`${title} | mykal.codes`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://mykal.codes" />
+    <meta property="og:image" content="/images/og-posts-page.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-  <!-- OG Image Stuff -->
-  <meta property="og:title" content={`${title} | mykal.codes`} />
-  <meta property="og:description" content={description} />
-  <meta property="og:url" content='https://mykal.codes' />
-  <meta property="og:image" content='/images/og-posts-page.png' />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+    <!-- Twitter specific OG -->
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
 
-  <!-- Twitter specific OG -->
-  <meta name="twitter:card" content="summary_large_image">
-</head>
-
-<body class="site-container">
-  <Navigation />
-  <main class="container main-content">
-    <PostHeader {title} {description} {heroImage} {pubDate} {readTime} {draft} {tags} />
-    <slot />
-  </main>
-  <PostFooter {fileName} {nextPost} {prevPost} {tags} />
-  <Footer />
-</body>
-
+  <body class="site-container">
+    <Navigation />
+    <main class="container main-content">
+      <PostHeader
+        {title}
+        {description}
+        {heroImage}
+        {pubDate}
+        {readTime}
+        {draft}
+        {tags}
+      />
+      <slot />
+    </main>
+    <PostFooter {fileName} {nextPost} {prevPost} {tags} />
+    <Footer />
+  </body>
 </html>

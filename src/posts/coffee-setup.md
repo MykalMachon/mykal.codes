@@ -1,10 +1,10 @@
 ---
-title: 'My Coffee Setup'
-slug: 'coffee-setup'
+title: "My Coffee Setup"
+slug: "coffee-setup"
 description: "I've gotten into Coffee lately (cliché, I know) and wanted to summarize my coffee setup."
-pubDate: '2022-05-10'
-heroImage: 'https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/coffee-setup.webp'
-tags: ['coffee']
+pubDate: "2022-05-10"
+heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/coffee-setup.webp"
+tags: ["coffee"]
 ---
 
 ## Legend

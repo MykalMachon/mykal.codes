@@ -1,11 +1,11 @@
 ---
-import PostList from '../../components/posts/PostList.astro';
-import MainLayout from '../../layouts/MainLayout.astro';
-import { getSortedPosts } from '../../utils/posts';
-import { getAllTags, getPostsByTags } from '../../utils/tags';
+import PostList from "../../components/posts/PostList.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getSortedPosts } from "../../utils/posts";
+import { getAllTags, getPostsByTags } from "../../utils/tags";
 
-export async function getStaticPaths({ }) {
-  const allPosts = await Astro.glob('../../posts/**/*.md');
+export async function getStaticPaths({}) {
+  const allPosts = await Astro.glob("../../posts/**/*.md");
   const allSortedPosts = getSortedPosts(allPosts);
   const allTags = getAllTags(allSortedPosts);
   const allTagPosts = allTags.map((tag: string) =>
@@ -23,10 +23,13 @@ export async function getStaticPaths({ }) {
 const { tag, posts } = Astro.props;
 ---
 
-<MainLayout title={`#${tag}`} description={`a collection of ${posts.length} posts tagged as ${tag}`}>
+<MainLayout
+  title={`#${tag}`}
+  description={`a collection of ${posts.length} posts tagged as ${tag}`}
+>
   <section class="divider">
     <h1>#{tag}</h1>
     <p>this tag has {posts.length} posts</p>
   </section>
-  <PostList posts={posts} />
+  <PostList {posts} />
 </MainLayout>

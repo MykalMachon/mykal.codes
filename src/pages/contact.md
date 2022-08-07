@@ -1,7 +1,7 @@
 ---
 title: Contact
 description: If you want to get in touch- you can do it from this page!
-layout: '../layouts/MainLayout.astro'
+layout: "../layouts/MainLayout.astro"
 ---
 
 # Contact

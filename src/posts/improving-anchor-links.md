@@ -1,10 +1,10 @@
 ---
-title: 'Improving Anchor Links'
-description: 'This post outlines a few little tricks you can use with your anchor links'
-slug: 'improving-anchor-links'
-pubDate: '2022-06-24'
+title: "Improving Anchor Links"
+description: "This post outlines a few little tricks you can use with your anchor links"
+slug: "improving-anchor-links"
+pubDate: "2022-06-24"
 heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1656107583/Mykal%20Codes/rick-rothenberg-Nqx3SaMp4kQ-unsplash.jpg
-tags: ['webdev']
+tags: ["webdev"]
 setup: |
   import { Code } from 'astro/components';
 ---
@@ -20,7 +20,7 @@ Let's start off by defining what an "anchor link" is. I would define an anchor l
 
 When someone navigates to that URL, it will scroll to the position of the corresponding HTML element on the page.
 
-I'm sure you've seen these used in a table of contents for an extensive blog post, or to jump to a specific section on a restaurant's menu page.  **This post is going to summarize some of the cool things you can do with those anchor links.** I use them in [my coffee post](/posts/coffee-setup) for a table of contents.
+I'm sure you've seen these used in a table of contents for an extensive blog post, or to jump to a specific section on a restaurant's menu page. **This post is going to summarize some of the cool things you can do with those anchor links.** I use them in [my coffee post](/posts/coffee-setup) for a table of contents.
 
 ### Alternate names
 
@@ -64,7 +64,7 @@ Another thing you can do to improve the user experience of these anchor links is
 I tend to do this by adding a quick "blink" animation to the heading in question:
 
 ```css
-@import 'https://unpkg.com/open-props';
+@import "https://unpkg.com/open-props";
 
 :target {
   animation: var(--animation-blink);
@@ -77,7 +77,7 @@ I tend to do this by adding a quick "blink" animation to the heading in question
 But you can also add a background to the element, a border, or anything else you can think of doing in CSS.
 
 ```css
-@import 'https://unpkg.com/open-props';
+@import "https://unpkg.com/open-props";
 
 :target {
   background: var(--yellow-6);

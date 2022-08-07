@@ -1,15 +1,15 @@
 ---
-import readingTime from 'reading-time';
-import PostLayout from '../../layouts/PostLayout.astro';
-import { getSortedPosts, getSiblingPost } from '../../utils/posts';
+import readingTime from "reading-time";
+import PostLayout from "../../layouts/PostLayout.astro";
+import { getSortedPosts, getSiblingPost } from "../../utils/posts";
 
-export async function getStaticPaths({ }) {
-  let allPosts = await Astro.glob('../../posts/**/*.md');
+export async function getStaticPaths({}) {
+  let allPosts = await Astro.glob("../../posts/**/*.md");
   let allSortedPosts = getSortedPosts(allPosts);
 
   return allSortedPosts.map((post, idx) => {
-    const prevPost = getSiblingPost(idx, allSortedPosts, 'prev');
-    const nextPost = getSiblingPost(idx, allSortedPosts, 'next');
+    const prevPost = getSiblingPost(idx, allSortedPosts, "prev");
+    const nextPost = getSiblingPost(idx, allSortedPosts, "next");
     return {
       params: { slug: post.frontmatter.slug },
       props: { post, nextPost, prevPost },
@@ -20,7 +20,12 @@ export async function getStaticPaths({ }) {
 const { post, nextPost, prevPost } = Astro.props;
 ---
 
-<PostLayout fileName={post.file.slice(post.file.lastIndexOf('/'))} readTime={readingTime(post.rawContent()).text}
-  post={post} nextPost={nextPost} prevPost={prevPost}>
+<PostLayout
+  fileName={post.file.slice(post.file.lastIndexOf("/"))}
+  readTime={readingTime(post.rawContent()).text}
+  {post}
+  {nextPost}
+  {prevPost}
+>
   <post.Content></post.Content>
 </PostLayout>
