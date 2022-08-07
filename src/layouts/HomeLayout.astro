@@ -20,7 +20,7 @@ const { title, description } = Astro.props;
   <MainHead {title} {description} />
 
   <!-- OG Image Stuff -->
-  <meta property="og:title" content={title} />
+  <meta property="og:title" content={`${title} | mykal.codes`} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content='https://mykal.codes' />
   <meta property="og:image" content="/images/og-home-page.png" />
