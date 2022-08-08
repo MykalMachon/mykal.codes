@@ -2,22 +2,22 @@
 label: Landing page
 hide_body: false
 fields:
-  - name: title
-    type: text
-    config:
-      required: true
-      max: 128
-    label: Title
-    description: the page's title
-  - name: description
-    type: textarea
-    default: ""
-    config:
-      required: true
-      wysiwyg: false
-      schema:
-        format: markdown
-      min: 24
-      max: 256
-    label: Description
-    description: the page's description
+- name: title
+  type: text
+  config:
+    required: true
+    max: 128
+  label: Title
+  description: the page's title
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+    min: 24
+    max: 256
+  label: Description
+  description: the page's description

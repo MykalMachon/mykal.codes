@@ -2,15 +2,15 @@
 label: Page
 hide_body: false
 fields:
-  - type: text
-    name: title
-    label: title
-  - type: text
-    name: description
-    label: description
-  - type: text
-    name: layout
-    label: layout
-  - type: textarea
-    name: setup
-    label: setup
+- type: text
+  name: title
+  label: title
+- type: text
+  name: description
+  label: description
+- type: text
+  name: layout
+  label: layout
+- type: textarea
+  name: setup
+  label: setup

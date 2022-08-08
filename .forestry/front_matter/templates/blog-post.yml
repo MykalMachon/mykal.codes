@@ -2,28 +2,28 @@
 label: Blog post
 hide_body: false
 fields:
-  - type: text
-    name: title
-    label: title
-  - type: text
-    name: slug
-    label: slug
-  - type: text
-    name: description
-    label: description
-  - type: datetime
-    name: pubDate
-    label: pubDate
-  - type: file
-    name: heroImage
-    label: heroImage
-  - type: list
-    name: tags
-    label: tags
-  - name: draft
-    type: boolean
-    label: draft
-    description: "if checked, this post is a draft and is not visible publicly. "
+- type: text
+  name: title
+  label: title
+- type: text
+  name: slug
+  label: slug
+- type: text
+  name: description
+  label: description
+- type: datetime
+  name: pubDate
+  label: pubDate
+- type: file
+  name: heroImage
+  label: heroImage
+- type: list
+  name: tags
+  label: tags
+- name: draft
+  type: boolean
+  label: draft
+  description: 'if checked, this post is a draft and is not visible publicly. '
 pages:
-  - src/posts/optimizing-docker-containers.md
-  - src/posts/the-adventures-of-ash.md
+- src/posts/optimizing-docker-containers.md
+- src/posts/the-adventures-of-ash.md
