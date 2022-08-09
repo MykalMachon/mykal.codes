@@ -1,7 +1,7 @@
 ---
 title: Embrace scale... realistically
 slug: embrace-scale-realistically
-description: You should scale to your users in a way that
+description: Only provide the scale that your users need. The rest is likely waste.
 pubDate: 2022-08-08T07:00:00Z
 heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1656711520/Mykal%20Codes/database-to-api.jpg
 tags:
