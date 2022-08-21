@@ -30,7 +30,7 @@ Things you can do for a better docker container can include:
 
 To make this a bit easier to discuss, we're going to start with a very basic dockerfile example that is good enough to get you up and going but has lots of room for improvement.
 
-```dockerfile
+```bash
     FROM ubuntu:latest
     
     # install os dependencies
@@ -72,7 +72,7 @@ We can fix these three points by:
 
 Let's see what that looks like in the updated image:
 
-```dockerfile
+```bash
     FROM python:3.8-slim-buster
     
     # update dependencies
