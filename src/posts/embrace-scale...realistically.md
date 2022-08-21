@@ -1,5 +1,5 @@
 ---
-title: Embrace scale... realistically
+title: Scale is a requirement
 slug: embrace-scale-realistically
 description: Only provide the scale that your users need. The rest is likely waste.
 pubDate: 2022-08-08T07:00:00Z
@@ -9,14 +9,19 @@ tags:
 draft: true
 
 ---
-After working in tech for a few years at a medium-sized company, I think "doing things that scale" is a bit overrated. 
+After just over a year in my first "real" tech job, at a large company (1500+ employees) with hundreds of deployed applications, services, and systems I've slowly come to the realization that building for scale is overrated, _most of the time_.
 
-I'm not saying that we should half-ass our solutions, or stop caring about performance. **The quality of a solution and performance are important**. What I mean to say is that **the performance of a solution, and the work that's put in to achieve it, should be proportionate to the scale you actually need.** 
+I'm not saying that we should half-ass our solutions, or stop caring about performance. _The quality of a solution is important_. What I mean to say is that _the performance of a solution, and the work that's put in to achieve it, should be proportionate to the scale you actually need._ 
 
-* Don't scale to solve facebook sized problems: if you're only going to have a couple of hundred users concurrently. 
-* UFV serves tens of thousands of students, admittedly some of our services are slow and need improving, but most of our services are _fast_ at our scale, and realistically won't need to be improved for a _long time, if ever._  
-* Hyper-scale doesn't map to reality. Exponential curves in user bases and other systems cannot always be expected.
+## Scalability is a requirement
 
-The main point of this post is just to say that not everything needs to be scaled from day 1 to meet the planet. I've admittedly foot-gunned so many projects trying to worry about performance or scalability before I even have a working prototype.
+Scalability is a requirement like any other requirement for a project. Not every project needs to be scalable to infinity, and some projects simply don't make sense at a small scale.   Logically then, when we're planning our projects we should probably be planning for the required scale of the project. 
 
-There are better things to be worrying about like making the damn thing work. 
+I know that this likely sounds like common sense. Unfortunately, "building for scale" is something that is so heavily emphasized in post-secondary education, tech blogs, youtube tutorials, and by "thought leaders" that it seemed (to me, at least) like the only acceptable option. 
+
+## What to worry about instead
+
+Admittedly, I've foot-gunned so many projects trying to worry about performance or scalability before I even have a working prototype or a full set of specifications. There are better things to be worrying about like:
+
+1. Properly document your solution's technical decisions, requirements, features, and deployment strategies. You'll thank yourself later, or someone else will.
+2. Plan on how to scale up if you ever get to the point that it's needed, and design with it in mind (this could be vertical scaling, horizontal scaling, or further optimization in your software).  
