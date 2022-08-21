@@ -30,6 +30,7 @@ Things you can do for a better docker container can include:
 
 To make this a bit easier to discuss, we're going to start with a very basic dockerfile example that is good enough to get you up and going but has lots of room for improvement.
 
+```dockerfile
     FROM ubuntu:latest
     
     # install os dependencies
@@ -47,6 +48,7 @@ To make this a bit easier to discuss, we're going to start with a very basic doc
     # run the application
     EXPOSE 8080
     CMD ["python3", "-m", "my-app:start_app()"]
+```
 
 okay, so what are the pain points with the approach above?
 
@@ -70,6 +72,7 @@ We can fix these three points by:
 
 Let's see what that looks like in the updated image:
 
+```dockerfile
     FROM python:3.8-slim-buster
     
     # update dependencies
@@ -86,6 +89,7 @@ Let's see what that looks like in the updated image:
     # run the application
     EXPOSE 8080
     CMD ["python3", "-m", "my-app:start_app()"]
+```
 
 Awesome, this brought the size of our base image down from 450MB -> 45MB! That's a lot of saved space for other important things, like your node_modules folder 😉
 
@@ -105,4 +109,4 @@ This also makes it really easy to spin up "accompanying" containers for dev/test
 
 ### Containers for production and development
 
-This is mostly a developer experience improvement, but it can actually improve your deploy experience, especially if you heavily use volumes for live reloads in development. 
+This is mostly a developer experience improvement, but it can actually improve your deploy experience, especially if you heavily use volumes for live reloads in development.
