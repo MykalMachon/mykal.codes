@@ -1,10 +1,10 @@
 ---
-import Navigation from "../components/layout/Navigation.astro";
-import Footer from "../components/layout/Footer.astro";
-import MainHead from "../components/MainHead.astro";
+import Navigation from '../components/layout/Navigation.astro';
+import Footer from '../components/layout/Footer.astro';
+import MainHead from '../components/MainHead.astro';
 
-import PostHeader from "../components/posts/PostHeader.astro";
-import PostFooter from "../components/posts/PostFooter.astro";
+import PostHeader from '../components/posts/PostHeader.astro';
+import PostFooter from '../components/posts/PostFooter.astro';
 
 const { post, nextPost, prevPost, fileName, readTime } = Astro.props;
 const { title, description, pubDate, heroImage, draft, tags } =
@@ -20,13 +20,13 @@ const encodedOgImageUrl = encodeURI(ogImageUrl);
     <MainHead {title} {description} />
     <script>
       // image dynamic loading
-      const loadingImages = document.querySelectorAll("img.loading");
+      const loadingImages = document.querySelectorAll('img.loading');
       loadingImages.forEach((loadingImageEl) => {
         // @ts-ignore
         const hqImageUrl = loadingImageEl.dataset.lazy;
         // @ts-ignore
         if (hqImageUrl) loadingImageEl.src = hqImageUrl;
-        loadingImageEl.classList.remove("loading");
+        loadingImageEl.classList.remove('loading');
       });
     </script>
 
@@ -44,7 +44,7 @@ const encodedOgImageUrl = encodeURI(ogImageUrl);
 
   <body class="site-container">
     <Navigation />
-    <main class="container main-content">
+    <main class="container main-content" data-pagefind-body>
       <PostHeader
         {title}
         {description}

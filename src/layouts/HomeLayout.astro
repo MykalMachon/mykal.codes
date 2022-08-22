@@ -1,8 +1,8 @@
 ---
-import Navigation from "../components/layout/Navigation.astro";
-import Header from "../components/layout/Header.astro";
-import Footer from "../components/layout/Footer.astro";
-import MainHead from "../components/MainHead.astro";
+import Navigation from '../components/layout/Navigation.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import MainHead from '../components/MainHead.astro';
 
 const { title, description } = Astro.props;
 
@@ -43,7 +43,7 @@ const { title, description } = Astro.props;
       </p>
       <p>For more info check out my <a href="/about-me">about page</a>.</p>
     </section>
-    <main class="container">
+    <main class="container" data-pagefind-body>
       <slot />
     </main>
     <Footer />
