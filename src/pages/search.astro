@@ -1,0 +1,21 @@
+---
+// Layout Import
+import HomeLayout from '../layouts/HomeLayout.astro';
+// Component Imports
+import PostList from '../components/posts/PostList.astro';
+import { getNonDraftPosts, getSortedPosts } from '../utils/posts';
+---
+
+<HomeLayout title="Seach" description="Seach the blog archives on the blog">
+  <h2>Search</h2>
+  <section>
+    <link href="/_pagefind/pagefind-ui.css" rel="stylesheet" />
+    <script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+    <div id="search"></div>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: '#search' });
+      });
+    </script>
+  </section>
+</HomeLayout>

@@ -5,7 +5,7 @@
   "scripts": {
     "start": "astro dev",
     "dev": "netlify dev",
-    "build": "astro build",
+    "build": "astro build && pagefind --source \"dist\"",
     "test": "npm run test:lint",
     "test:lint": "prettier -w ."
   },
@@ -20,6 +20,7 @@
     "html-minifier": "^4.0.0",
     "netlify-cli": "^10.6.2",
     "node-fetch": "^3.2.0",
+    "pagefind": "^0.7.1",
     "prettier-plugin-astro": "^0.0.12",
     "reading-time": "^1.5.0",
     "sass": "^1.52.3"
