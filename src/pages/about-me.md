@@ -32,6 +32,8 @@ I like spending time with friends, and family (including my 2 cats), and doing g
 - 🍻 Spending time with family and friends
 - ☕ Making coffee
 
+To see the gear and technologies I use on a regular basis, checkout [my uses pages](/uses/)
+
 ## Education
 
 I graduated from the University of the Fraser Valley (UFV) with a Bachelor in Computer Information Systems in December of 2021.
