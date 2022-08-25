@@ -1,8 +1,7 @@
 ---
 title: On hydroponic gardens
 slug: on-hydroponic-gardens
-description: We setup a hydroponic "click-and-grow" garden yesterday, here's my first
-  thoughts.
+description: 'I''m going to try growing some herbs and veggies inside with hydroponics. '
 pubDate: 2022-08-24T07:00:00Z
 heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1661442343/Mykal%20Codes/click-grow.jpg
 tags:
