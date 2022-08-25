@@ -69,6 +69,20 @@ const { fileName, nextPost, prevPost, tags } = Astro.props;
         background: var(--teal-2);
         color: var(--teal-9);
       }
+
+      &:first-child {
+        border-top-left-radius: var(--radius-1);
+        border-bottom-left-radius: var(--radius-1);
+      }
+
+      &:last-child {
+        border-top-right-radius: var(--radius-1);
+        border-bottom-right-radius: var(--radius-1);
+      }
+
+      &:only-child {
+        border-radius: var(--radius-1);
+      }
     }
   }
 </style>
