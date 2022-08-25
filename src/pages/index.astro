@@ -1,15 +1,15 @@
 ---
 // Layout Import
-import HomeLayout from "../layouts/HomeLayout.astro";
+import HomeLayout from '../layouts/HomeLayout.astro';
 // Component Imports
-import PostList from "../components/posts/PostList.astro";
-import { getNonDraftPosts, getSortedPosts } from "../utils/posts";
+import PostList from '../components/posts/PostList.astro';
+import { getNonDraftPosts, getSortedPosts } from '../utils/posts';
 
 // Data Fetching: fetch recent posts
-let allPosts = await Astro.glob("../posts/**/*.md");
+let allPosts = await Astro.glob('../posts/**/*.md');
 allPosts = getSortedPosts(allPosts);
 allPosts = getNonDraftPosts(allPosts);
-const recentPosts = allPosts.slice(0, 3);
+const recentPosts = allPosts.slice(0, 5);
 ---
 
 <HomeLayout
@@ -17,7 +17,7 @@ const recentPosts = allPosts.slice(0, 3);
   description="Mykal Machon's website, blog, and digital garden."
 >
   <h2>Recent Posts</h2>
-  <PostList posts={recentPosts} />
+  <PostList posts={recentPosts} type="small" />
   <p>
     <a href="/posts/">read older posts</a>
   </p>

@@ -2,7 +2,7 @@
 import { getCustomQualityUrl } from "../../utils/cloudinary";
 
 const { post, type = "large" } = Astro.props;
-const dateFormatter = Intl.DateTimeFormat('en-GB', { dateStyle: 'short' });
+const dateFormatter = Intl.DateTimeFormat('en-GB', { month: 'short', day: '2-digit' });
 ---
 
 {type === "large" ? (
@@ -22,8 +22,11 @@ const dateFormatter = Intl.DateTimeFormat('en-GB', { dateStyle: 'short' });
 ) : (
 <article class="postcard--small">
   <p>
-    <a href={`/posts/${post.frontmatter.slug}`}>{post.frontmatter.title}</a>
-    - <small class="postcard__date">{dateFormatter.format(new Date(post.frontmatter.pubDate))}</small>
+    <a href={`/posts/${post.frontmatter.slug}`}>
+      <span class="postcard__title">{post.frontmatter.title}</span>
+      <span class="postcard__line"></span>
+      <span class="postcard__date">{dateFormatter.format(new Date(post.frontmatter.pubDate))}</span>
+    </a>
   </p>
 </article>
 )}
@@ -52,7 +55,7 @@ const dateFormatter = Intl.DateTimeFormat('en-GB', { dateStyle: 'short' });
       }
 
       .postcard__content__date {
-        font-style: italic;
+        
         color: var(--font-color-ink2);
       }
 
@@ -79,9 +82,36 @@ const dateFormatter = Intl.DateTimeFormat('en-GB', { dateStyle: 'short' });
   article.postcard--small {
     margin: var(--size-3) 0px var(--size-3) 0px;
 
+    a {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: var(--size-3);
+      text-decoration: none;
+      border-radius: var(--radius-2);
+    }
+
+    .postcard__title {
+      width: auto;
+    }
+
+    .postcard__line {
+      width: 100%;
+      position: relative;
+      &:after{
+        content: "";
+        position: absolute;
+        top: calc(50%);
+        width: 100%;
+        left: 0;
+        border-bottom: 1px dashed var(--color-dark-two);
+      }
+    }
+
     .postcard__date {
-      font-style: italic;
       color: var(--font-color-ink2);
+      font-family: var(--font-mono);
+      font-size: var(--font-size-sm);
     }
   }
 </style>
