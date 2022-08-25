@@ -159,6 +159,7 @@ a:hover,
 a:focus {
   text-decoration: underline;
   background: var(--teal-1);
+  border-radius: var(--radius-1);
 }
 
 button {

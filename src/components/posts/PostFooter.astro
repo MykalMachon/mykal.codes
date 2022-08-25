@@ -54,10 +54,6 @@ const { fileName, nextPost, prevPost, tags } = Astro.props;
 
       p {
         margin-bottom: 0px;
-
-        &:hover {
-          text-decoration: underline;
-        }
       }
 
       &:nth-of-type(2) {
@@ -68,6 +64,9 @@ const { fileName, nextPost, prevPost, tags } = Astro.props;
       &:hover {
         background: var(--teal-2);
         color: var(--teal-9);
+        p {
+          text-decoration: underline;
+        }
       }
 
       &:first-child {

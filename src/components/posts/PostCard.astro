@@ -89,10 +89,15 @@ const dateFormatter = Intl.DateTimeFormat('en-GB', { month: 'short', day: '2-dig
       gap: var(--size-3);
       text-decoration: none;
       border-radius: var(--radius-1);
+      &:hover{
+        .postcard__title {
+          text-decoration: underline;
+        }
+      }
     }
 
     .postcard__title {
-      width: auto;
+      text-decoration: underline;
     }
 
     .postcard__line {

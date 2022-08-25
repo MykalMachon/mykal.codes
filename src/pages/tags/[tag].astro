@@ -27,9 +27,9 @@ const { tag, posts } = Astro.props;
   title={`#${tag}`}
   description={`a collection of ${posts.length} posts tagged as ${tag}`}
 >
-  <section class="divider" data-pagefind-ignore>
+  <section class="" data-pagefind-ignore>
     <h1>#{tag}</h1>
     <p>this tag has {posts.length} posts</p>
   </section>
-  <PostList {posts} />
+  <PostList {posts} type={'small'} />
 </MainLayout>
