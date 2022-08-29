@@ -1,12 +1,14 @@
 ---
-title: "Why I Love Self-Hosting"
-slug: "why-i-love-self-hosting"
-description: "A writeup on why I love self-hosting complete with drawbacks."
-pubDate: "2022-07-04"
-heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1656956437/Mykal%20Codes/why-i-love-selfhosting.jpg"
-tags: ["docker", "self-hosting"]
----
+title: Why I Love Self-Hosting
+slug: why-i-love-self-hosting
+description: A writeup on why I love self-hosting complete with drawbacks.
+pubDate: 2022-07-04
+heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1661799178/Mykal%20Codes/DALL_E_2022-08-29_11.51.07_-_an_expressive_oil_painting_of_a_computer_in_the_middle_of_a_clearing_in_the_woods_bl6kem.png
+tags:
+- docker
+- self-hosting
 
+---
 If you're unfamiliar with the term, I would define self-hosting as the practice of hosting your own server and services either in your home or place of business. People do this for an array of reasons (which we'll get into in this post). It's become increasingly popular over the last few years for enthusiasts, developers, and nerds, in general, to set up “homelabs” in their basements, under their desks and in their TV cabinets.
 
 I started self-hosting around 2 years ago after I got a touch of some FOMO from friends with servers set up at home. To be honest I expected to be “over it” a few months after I started. To my surprise, I'm still self-hosting now, and having more fun with it than ever. It's been a fun way for me to learn in a safe/forgiving environment, experiment with new tech, and save some money on online services like Google Drive.
