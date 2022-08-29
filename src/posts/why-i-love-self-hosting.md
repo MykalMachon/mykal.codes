@@ -25,7 +25,7 @@ I started with a full “desktop-grade” server, but you can start with somethi
 
 When I started self-hosting I had _heard_ of docker but had not used it. Now, I use docker containers at work daily, and they're a big part of how I do development. I would never have learned as much, as fast, unless I was experimenting on the weekend with my self-hosted services.
 
-I've also learned a tone about:
+I've also learned a lot about:
 
 - Network management/structure
 - Proxy software (NGINX in particular)
