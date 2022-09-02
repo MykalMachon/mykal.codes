@@ -41,11 +41,11 @@ I like spending time with friends, and family (including my 2 cats), and doing g
 
 * 🎮 Playing Video Games
 * 📚 Reading Sci-Fi, Horror, [and more](https://www.goodreads.com/user/show/141327631-mykal-machon)
-* 👩🏻‍💻 Building fun side projects (webapps, writing, etc.)
+* 👩🏻‍💻 Building fun side projects (web apps, writing, etc.)
 * 🍻 Spending time with family and friends
 * ☕ Making coffee
 
-To see the gear and technologies I use on a regular basis, checkout [my uses pages](/uses/)
+To see the gear and technologies I use on a regular basis, check out [my uses pages](/uses/)
 
 ## Education
 
