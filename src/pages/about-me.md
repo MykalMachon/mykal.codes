@@ -57,4 +57,4 @@ I graduated from the University of the Fraser Valley (UFV) with a Bachelor in Co
 with a number of other technical fields (Networking, IT, and Project Management) with a focus on projects and
 practical work experience.
 
-I also did some AI research work while I was a student at UFV relating to analyzing the [Teams Corpus](https://sites.google.com/site/teamentrainmentstudy/corpus?authuser=0)
+I also did some AI research as a research assistant while studying at UFV. My research was centred around analyzing the [Teams Corpus](https://sites.google.com/site/teamentrainmentstudy/corpus?authuser=0) to predict group outcomes and building web-based corpora review and annotation software with React, Next.js, and Python via WASM. 
