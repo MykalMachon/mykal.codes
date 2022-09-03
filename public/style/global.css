@@ -1,5 +1,4 @@
 @import 'https://unpkg.com/open-props';
-/* @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&family=Eczar:wght@600&display=swap"); */
 
 * {
   box-sizing: border-box;
@@ -13,6 +12,7 @@ html {
 @media (prefers-reduced-motion) {
   * {
     scroll-behavior: unset;
+    transition: none;
   }
 }
 
@@ -32,12 +32,17 @@ html {
 
 :root {
   /* COLORS */
-  --color-light: #fffcf5;
-  /* --color-light: var(--teal-1); */
-  --color-dark: var(--gray-9);
-  --color-dark-two: var(--gray-5);
-  --color-highlight-one: var(--teal-7);
-  --color-highlight-two: var(--teal-9);
+  --color-light-1: #fffcf5;
+  --color-light-2: var(--teal-1);
+  --color-light-3: var(--teal-2);
+
+  --color-dark-1: var(--gray-5);
+  --color-dark-2: var(--gray-7);
+  --color-dark-3: var(--gray-8);
+
+  --color-acc-1: var(--teal-6);
+  --color-acc-2: var(--teal-7);
+  --color-acc-3: var(--teal-9);
 
   /* FONT FAMILY */
   --font-heading: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -58,16 +63,24 @@ html {
   --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
   --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 
-  /* FONT COLORS */
-  --font-color-paper: var(--color-light);
-  --font-color-ink: var(--gray-7);
-  --font-color-ink2: var(--gray-7);
+  /* COLORS TO BE USED IN UI */
+  --paper-1: var(--color-light-1);
+  --paper-2: var(--color-light-2);
+  --paper-3: var(--color-light-3);
+
+  --ink-1: var(--color-dark-1);
+  --ink-2: var(--color-dark-2);
+  --ink-3: var(--color-dark-3);
+
+  --acc-1: var(--color-acc-1);
+  --acc-2: var(--color-acc-2);
+  --acc-3: var(--color-acc-3);
 }
 
 /* Basic Resets */
 
 body {
-  background: var(--font-color-paper);
+  background: var(--paper-1);
 }
 
 h1,
@@ -75,7 +88,7 @@ h2,
 h3,
 h4 {
   font-family: var(--font-heading);
-  color: var(--gray-8);
+  color: var(--ink-3);
   margin: var(--size-6) 0 var(--size-3) 0;
   line-height: 1em;
 }
@@ -113,9 +126,9 @@ textarea,
 small,
 label {
   font-family: var(--font-body);
-  color: var(--font-color-ink);
   font-size: var(--font-size-base);
   line-height: var(--size-6);
+  color: var(--ink-2);
 }
 
 small {
@@ -152,20 +165,20 @@ img.loading::after {
 }
 
 a {
-  color: var(--teal-9);
+  color: var(--acc-3);
 }
 
 a:hover,
 a:focus {
   text-decoration: underline;
-  background: var(--teal-1);
+  background: var(--paper-2);
   border-radius: var(--radius-1);
 }
 
 button {
   padding: var(--size-3) var(--size-5);
-  background: var(--teal-6);
-  color: var(--teal-1);
+  background: var(--acc-1);
+  color: var(--paper-2);
   font-family: var(--font-body);
   font-size: var(--font-size-base);
   border-radius: var(--radius-2);
@@ -174,23 +187,27 @@ button {
 }
 
 button:hover {
-  background: var(--teal-7);
+  background: var(--acc-2);
   cursor: pointer;
 }
 
 button:disabled {
-  background: var(--teal-3);
-  color: var(--teal-1);
+  background: var(--paper-3);
+  color: var(--acc-2);
+}
+
+a svg {
+  stroke: var(--acc-3);
+  width: var(--font-size-base);
 }
 
 blockquote {
   padding: var(--size-3) var(--size-3) var(--size-3) var(--size-5);
-  border-left: 5px solid var(--teal-6);
-  background: var(--teal-2);
+  border-left: 5px solid var(--acc-1);
+  background: var(--paper-2);
 }
 
-/* SITE FLOWS */
-
+/* compositions */
 .site-container {
   width: 100%;
   display: grid;
@@ -246,7 +263,7 @@ blockquote {
   height: 4px;
   width: 40px;
   margin: 0;
-  background: var(--teal-6);
+  background: var(--acc-1);
   border-radius: 0;
 }
 
@@ -283,29 +300,30 @@ select,
 textarea {
   padding: var(--size-2);
   border-radius: var(--radius-2);
-  border: 1px solid var(--teal-6);
-  outline-color: var(--teal-5);
+  border: 1px solid var(--acc-1);
+  outline-color: var(--paper-3);
   outline-width: 2px;
   outline-offset: var(--size-1);
 }
 
+/* code blocks */
 pre {
   padding: var(--size-3);
   font-size: var(--font-size-base);
 }
 
+/* utility css */
 .divider {
-  border-bottom: 1px solid var(--color-dark-two);
+  border-bottom: 1px solid var(--ink-1);
   margin: var(--size-5) 0 var(--size-3) 0;
 }
 
 .divider--top {
-  border-top: 1px solid var(--color-dark-two);
+  border-top: 1px solid var(--ink-1);
   margin: var(--size-3) 0;
 }
 
-/* blog post specific stuff */
-
+/* blog and main post content stuff */
 .main-content img {
   border-radius: var(--radius-2);
   margin: var(--size-3) 0;
