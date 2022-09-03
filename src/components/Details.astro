@@ -16,22 +16,22 @@ const { summary } = Astro.props;
 <style lang="scss">
   details {
     position: relative;
-    border: 1px solid var(--teal-6);
+    border: 1px solid var(--acc-1);
     transition: border 0.2s var(--ease-2);
     border-radius: var(--radius-1);
     padding: 1em;
-    background: var(--teal-1);
+    background: var(--paper-2);
     margin: var(--size-3) 0;
     &:focus-within {
       outline-style: solid;
-      outline-color: var(--teal-3);
+      outline-color: var(--paper-3);
       outline-width: 2px;
       outline-offset: 2px;
     }
   }
 
   details[open] {
-    border-color: var(--teal-7);
+    border-color: var(--acc-2);
   }
 
   details summary {
