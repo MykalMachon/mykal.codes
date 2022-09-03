@@ -203,8 +203,8 @@ a svg {
 
 blockquote {
   padding: var(--size-3) var(--size-3) var(--size-3) var(--size-5);
-  border-left: 5px solid var(--teal-6);
-  background: var(--teal-2);
+  border-left: 5px solid var(--acc-1);
+  background: var(--paper-2);
 }
 
 /* compositions */
@@ -263,7 +263,7 @@ blockquote {
   height: 4px;
   width: 40px;
   margin: 0;
-  background: var(--teal-6);
+  background: var(--acc-1);
   border-radius: 0;
 }
 
@@ -300,8 +300,8 @@ select,
 textarea {
   padding: var(--size-2);
   border-radius: var(--radius-2);
-  border: 1px solid var(--teal-6);
-  outline-color: var(--teal-5);
+  border: 1px solid var(--acc-1);
+  outline-color: var(--paper-3);
   outline-width: 2px;
   outline-offset: var(--size-1);
 }
