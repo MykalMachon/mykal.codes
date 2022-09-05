@@ -77,6 +77,22 @@ html {
   --acc-3: var(--color-acc-3);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper-1: #191918;
+    --paper-2: var(--gray-9);
+    --paper-3: var(--gray-8);
+
+    --ink-1: var(--gray-2);
+    --ink-2: var(--gray-3);
+    --ink-3: var(--gray-4);
+
+    --acc-1: var(--teal-9);
+    --acc-2: var(--teal-8);
+    --acc-3: var(--teal-7);
+  }
+}
+
 /* Basic Resets */
 
 body {
@@ -301,9 +317,7 @@ textarea {
   padding: var(--size-2);
   border-radius: var(--radius-2);
   border: 1px solid var(--acc-1);
-  outline-color: var(--paper-3);
-  outline-width: 2px;
-  outline-offset: var(--size-1);
+  background: var(--paper-2);
 }
 
 /* code blocks */
