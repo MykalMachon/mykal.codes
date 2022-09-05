@@ -76,4 +76,10 @@ const { summary } = Astro.props;
   details[open] summary:after {
     transform: rotate(-180deg);
   }
+
+  @media (prefers-color-scheme: dark) {
+    details summary::after {
+      filter: invert(100%) hue-rotate(50deg);
+    }
+  }
 </style>
