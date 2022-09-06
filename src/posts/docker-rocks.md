@@ -1,12 +1,10 @@
 ---
-title: "Docker Rocks 🐳"
-slug: "docker-rocks"
-description: "Once Docker and Docker-compose clicks, it makes dev ➡️ launch so much easier"
-pubDate: "2022-04-27"
-heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/docker-rocks.webp"
-tags: ["devops", "docker"]
-setup: |
-  import { Code } from 'astro/components';
+title: 'Docker Rocks 🐳'
+slug: 'docker-rocks'
+description: 'Once Docker and Docker-compose clicks, it makes dev ➡️ launch so much easier'
+pubDate: '2022-04-27'
+heroImage: 'https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/docker-rocks.webp'
+tags: ['devops', 'docker']
 ---
 
 Docker is such an amazing piece of technology.
@@ -22,7 +20,9 @@ From there, deploying your app is as simple as commiting your code, merging a pu
 
 We've even started to "containerize" off-the-shelf apps we use at work to simplify deployment. docker-compose is so useful for "composing" services that it can take deployments down from multi-hour efforts to a few commands. Previously monolothic all-day-long deploys can literally be as simple as:
 
-<Code code={`docker-compose build && docker-compose up`} lang="bash" theme="github-dark" />
+```bash
+docker-compose build && docker-compose up
+```
 
 The next logical step for me in all of this is Kubernetes, which seems infinitely more daunting somehow.
 
