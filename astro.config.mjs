@@ -1,14 +1,15 @@
-import { defineConfig } from "astro/config";
+import { defineConfig } from 'astro/config';
 // integrations
-import preact from "@astrojs/preact";
-import sitemap from "@astrojs/sitemap";
+import mdx from '@astrojs/mdx';
+import preact from '@astrojs/preact';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  srcDir: "./src",
-  publicDir: "./public",
-  site: "https://mykal.codes",
+  srcDir: './src',
+  publicDir: './public',
+  site: 'https://mykal.codes',
   markdown: {
     drafts: true,
   },
-  integrations: [preact(), sitemap()],
+  integrations: [preact(), sitemap(), mdx()],
 });
