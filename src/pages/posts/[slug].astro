@@ -4,7 +4,7 @@ import PostLayout from "../../layouts/PostLayout.astro";
 import { getSortedPosts, getSiblingPost } from "../../utils/posts";
 
 export async function getStaticPaths({}) {
-  let allPosts = await Astro.glob("../../posts/**/*.md*");
+  let allPosts = await Astro.glob("../../posts/**/*.md");
   let allSortedPosts = getSortedPosts(allPosts);
 
   return allSortedPosts.map((post, idx) => {
