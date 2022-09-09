@@ -17,7 +17,7 @@ sections:
   label: Posts
   create: all
   match: "**/*"
-  new_doc_ext: ".mdx"
+  new_doc_ext: mdx
   templates:
   - blog-post
 upload_dir: Mykal Codes
