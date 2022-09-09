@@ -8,7 +8,7 @@ import { getNonDraftPosts, getSortedPosts } from "../../utils/posts";
 import { getAllTags } from "../../utils/tags";
 
 // Data Fetching: List all Markdown posts in the repo.
-const allPosts = await Astro.glob("../../posts/*.md");
+const allPosts = await Astro.glob("../../posts/*.md*");
 
 // sort all the posts
 let sortedPosts = getSortedPosts(allPosts);
