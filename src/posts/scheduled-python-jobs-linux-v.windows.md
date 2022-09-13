@@ -6,6 +6,7 @@ pubDate: 2022-09-13T07:00:00Z
 heroImage: ''
 tags:
 - devops
+- python
 draft: false
 
 ---
