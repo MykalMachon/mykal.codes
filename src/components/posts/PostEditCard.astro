@@ -1,7 +1,9 @@
 ---
-const { fileName, text = "edit this post on github" } = Astro.props;
+const { fileName, text = 'edit this post on github' } = Astro.props;
 ---
 
-<a href={`https://github.com/MykalMachon/Mykal.Codes/tree/main/src/${fileName}`}
-  >{text}</a
+<a
+  href={`https://github.com/MykalMachon/Mykal.Codes/tree/main/src/${fileName}`}
 >
+  {text}
+</a>
