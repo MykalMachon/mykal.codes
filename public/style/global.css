@@ -75,12 +75,6 @@ html {
   --acc-1: var(--color-acc-1);
   --acc-2: var(--color-acc-2);
   --acc-3: var(--color-acc-3);
-
-  /* COLORS FOR PAGEFIND.APP */
-  --pagefind-ui-text: var(--ink-2);
-  --pagefind-ui-background: var(--paper-3);
-  --pagefind-ui-border-width: 1px;
-  --pagefind-ui-border: var(--acc-1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -103,6 +97,12 @@ html {
 
 body {
   background: var(--paper-1);
+
+  /* COLORS FOR PAGEFIND.APP */
+  --pagefind-ui-text: var(--ink-2);
+  --pagefind-ui-background: var(--paper-3);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border: var(--acc-1);
 }
 
 h1,
