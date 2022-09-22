@@ -55,9 +55,11 @@ const { summary } = Astro.props;
       outline: none;
     }
 
-    &::marker {
+    &::marker,
+    &::-webkit-details-marker {
       display: none;
     }
+    
 
     &:after {
       content: '';
