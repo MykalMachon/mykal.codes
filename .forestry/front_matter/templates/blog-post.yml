@@ -26,6 +26,5 @@ fields:
   description: 'if checked, this post is a draft and is not visible publicly. '
 pages:
 - src/posts/on-hydroponic-gardens.md
-- src/posts/on-the-steam-deck.mdx
 - src/posts/optimizing-docker-containers.md
 - src/posts/the-adventures-of-ash.md
