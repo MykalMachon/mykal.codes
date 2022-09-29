@@ -10,7 +10,7 @@ sections:
   create: all
   match: "**/*"
   exclude: "/**/*.{astro,ts}"
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - page
 - type: directory

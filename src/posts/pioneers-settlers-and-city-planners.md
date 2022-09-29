@@ -2,7 +2,7 @@
 title: Pioneers, Settlers, and City planners
 slug: pioneers-settlers-and-city-planners
 description: some notes on archetypes and exceling at work.
-pubDate: 2022-09-28T04:45:00Z
+pubDate: 2022-09-29T04:45:00Z
 heroImage: ''
 tags:
 - devops
@@ -23,4 +23,4 @@ I think I'm a bit of a pioneer at heart (i.e. my freelancing work was mostly gre
 
 In retrospect, I learned a lot of my web development skills through very settler behavior. At my first office job, we had an excel sheet that was used for tracking sales, commission, and other business-y stuff; a tale as old as time. This was before cloud solutions were a given for most businesses as well, so it sat on a shared local drive and inherited all the lovely overwriting issues that come with that as well. It was a headache, but the business needed it.  
 
-After convincing my boss to take a crack at cleaning it up, I ended up migrating the data into firebase and building a hacked-together web app where users could go in and edit the data, view the reports, and download little pieces of the data as a CSV. This is peak settler behavior. I took a hacked together prototype (excel sheet on company hard drive) and made it 90% of the way to optimal (vanilla JS web app with Firebase).     
+After convincing my boss to take a crack at cleaning it up, I ended up migrating the data into firebase and building a hacked-together web app where users could go in and edit the data, view the reports, and download little pieces of the data as a CSV. This is peak settler behavior. I took a hacked together prototype (excel sheet on company hard drive) and made it 90% of the way to optimal (vanilla JS web app with Firebase).
