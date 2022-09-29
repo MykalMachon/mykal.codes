@@ -2,7 +2,7 @@
 title: Pioneers, Settlers, and City planners
 slug: pioneers-settlers-and-city-planners
 description: some notes on archetypes and exceling at work.
-pubDate: 2022-09-02T04:45:00Z
+pubDate: 2022-09-28T04:45:00Z
 heroImage: ''
 tags:
 - devops
