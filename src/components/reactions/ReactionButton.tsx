@@ -7,6 +7,9 @@ const emojiMap = {
   joy: '😂',
   sad: '😢',
   heart: '💖',
+  jazzy: '🎷',
+  rocket: '🚀',
+  party: '🎉',
 };
 
 const ReactionButton = ({ reaction, count, setReactions, slug }) => {
@@ -14,10 +17,10 @@ const ReactionButton = ({ reaction, count, setReactions, slug }) => {
 
   const sendReaction = async (e) => {
     e.preventDefault();
-    
+
     // disable buttons
-    setIsClicked(true)
-    
+    setIsClicked(true);
+
     const response = await fetch(
       `/api/kv-reaction?slug=${slug}&reaction=${reaction}`,
       { method: 'POST' }

@@ -409,3 +409,12 @@ ul.reactions__list button:hover {
 ul.reactions__list button:hover span.emoji {
   transform: rotate(10deg) scale(1.05);
 }
+
+ul.reactions__list button:disabled {
+  filter: grayscale(1);
+  cursor: wait;
+}
+
+ul.reactions__list button:hover:disabled span.emoji {
+  transform: scale(0.9);
+}
