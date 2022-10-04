@@ -10,16 +10,16 @@
     "test:lint": "prettier -w ."
   },
   "devDependencies": {
+    "@astrojs/mdx": "^0.11.1",
     "@astrojs/preact": "^1.0.2",
     "@astrojs/rss": "^1.0.0",
     "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/mdx": "^0.11.1",
     "@netlify/functions": "^1.2.0",
     "@types/node": "^14.18.12",
     "astro": "^1.1.5",
     "netlify-cli": "^11.5.1",
     "node-fetch": "^3.2.0",
-    "pagefind": "^0.7.1",
+    "pagefind": "^0.8.1",
     "prettier-plugin-astro": "^0.5.4",
     "reading-time": "^1.5.0",
     "sass": "^1.52.3"
