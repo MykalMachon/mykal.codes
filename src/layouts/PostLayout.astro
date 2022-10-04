@@ -7,7 +7,7 @@ import PostHeader from '../components/posts/PostHeader.astro';
 import PostFooter from '../components/posts/PostFooter.astro';
 
 const { post, nextPost, prevPost, fileName, readTime } = Astro.props;
-const { title, description, pubDate, heroImage, draft, tags } =
+const { title, description, pubDate, heroImage, draft, tags, slug } =
   post.frontmatter;
 
 // og image generation
@@ -56,7 +56,7 @@ const encodedOgImageUrl = encodeURI(ogImageUrl);
       />
       <slot />
     </main>
-    <PostFooter {fileName} {nextPost} {prevPost} {tags} />
+    <PostFooter {fileName} {nextPost} {prevPost} {tags} {slug} />
     <Footer />
   </body>
 </html>
