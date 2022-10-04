@@ -14,14 +14,19 @@ const ReactionButton = ({ reaction, count, setReactions, slug }) => {
 
   const sendReaction = async (e) => {
     e.preventDefault();
+    
+    // disable buttons
+    setIsClicked(true)
+    
     const response = await fetch(
       `/api/kv-reaction?slug=${slug}&reaction=${reaction}`,
       { method: 'POST' }
     );
     const data = await response.json();
     setReactions(data);
-    // disable future clicks
-    // setIsClicked(true);
+
+    // re-enable buttons
+    setIsClicked(false);
   };
 
   return (
