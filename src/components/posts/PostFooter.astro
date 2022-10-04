@@ -7,14 +7,16 @@ const { fileName, nextPost, prevPost, slug } = Astro.props;
 ---
 
 <section class="container divider--top">
-  <article>
-    <Reactions slug={slug} client:visible />
-  </article>
+
   <article class="meta">
-    <p>source:
+    <p>
       <PostEditCard fileName={`posts${fileName}`} />
     </p>
   </article>
+  <article>
+    <Reactions slug={slug} client:visible />
+  </article>
+  <PostComments />
   <article class="otherPosts">
     {prevPost && (
     <a href={`/posts/${prevPost.frontmatter.slug}`} class="otherPosts__link">
@@ -29,7 +31,6 @@ const { fileName, nextPost, prevPost, slug } = Astro.props;
     </a>
     )}
   </article>
-  <PostComments />
 </section>
 
 <style lang="scss">
