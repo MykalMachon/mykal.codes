@@ -20,7 +20,6 @@ const Reactions = ({ slug }) => {
   return (
     <section>
       <h3>Reactions</h3>
-      <p>Here's what people are thinking about this post</p>
       {reactions === null ? (
         <p>fetching reactions...</p>
       ) : (
