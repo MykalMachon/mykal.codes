@@ -373,3 +373,48 @@ pre {
 .main-content label {
   line-height: var(--font-lineheight-4);
 }
+
+/* reactions */
+ul.reactions__list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: var(--size-3);
+  padding: 0;
+}
+
+ul.reactions__list button {
+  color: var(--ink-2);
+  background: var(--paper-2);
+  border: 1px solid var(--acc-1);
+  border-radius: var(--radius-1);
+  padding: var(--size-1) var(--size-2);
+  display: flex;
+  gap: var(--size-1);
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+ul.reactions__list button span.emoji {
+  transform: scale(0.9);
+  transition: transform 0.3s var(--ease-elastic-5);
+}
+
+ul.reactions__list button:hover {
+  background: var(--paper-3);
+  cursor: pointer;
+}
+
+ul.reactions__list button:hover span.emoji {
+  transform: rotate(10deg) scale(1.05);
+}
+
+ul.reactions__list button:disabled {
+  filter: grayscale(1);
+  cursor: wait;
+}
+
+ul.reactions__list button:hover:disabled span.emoji {
+  transform: scale(0.9);
+}

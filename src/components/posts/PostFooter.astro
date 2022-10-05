@@ -1,31 +1,49 @@
 ---
-import PostEditCard from "./PostEditCard.astro";
-import PostComments from "./PostComments.astro";
+import PostEditCard from './PostEditCard.astro';
+import PostComments from './PostComments.astro';
+import Reactions from '../reactions/Reactions';
 
-const { fileName, nextPost, prevPost, tags } = Astro.props;
+const { fileName, nextPost, prevPost, slug } = Astro.props;
 ---
 
 <section class="container divider--top">
   <article class="meta">
-    <p>source:
+    <p>
       <PostEditCard fileName={`posts${fileName}`} />
     </p>
   </article>
-  <article class="otherPosts">
-    {prevPost && (
-    <a href={`/posts/${prevPost.frontmatter.slug}`} class="otherPosts__link">
-      <small><span>&#171;</span> previous post</small>
-      <p>{prevPost.frontmatter.title}</p>
-    </a>
-    )}
-    {nextPost && (
-    <a href={`/posts/${nextPost.frontmatter.slug}`} class="otherPosts__link">
-      <small>next post <span>&#187;</span></small>
-      <p>{nextPost.frontmatter.title}</p>
-    </a>
-    )}
+  <article>
+    <Reactions slug={slug} client:idle />
   </article>
   <PostComments />
+  <article class="otherPosts">
+    {
+      prevPost && (
+        <a
+          href={`/posts/${prevPost.frontmatter.slug}`}
+          class="otherPosts__link"
+        >
+          <small>
+            <span>&#171;</span> previous post
+          </small>
+          <p>{prevPost.frontmatter.title}</p>
+        </a>
+      )
+    }
+    {
+      nextPost && (
+        <a
+          href={`/posts/${nextPost.frontmatter.slug}`}
+          class="otherPosts__link"
+        >
+          <small>
+            next post <span>&#187;</span>
+          </small>
+          <p>{nextPost.frontmatter.title}</p>
+        </a>
+      )
+    }
+  </article>
 </section>
 
 <style lang="scss">
@@ -57,7 +75,7 @@ const { fileName, nextPost, prevPost, tags } = Astro.props;
       &:hover {
         background: var(--paper-3);
         * {
-          color: var(--acc-3); 
+          color: var(--acc-3);
         }
         p {
           text-decoration: underline;
@@ -84,7 +102,6 @@ const { fileName, nextPost, prevPost, tags } = Astro.props;
         text-align: end;
         border-left: 0px;
       }
-     
     }
   }
 </style>
