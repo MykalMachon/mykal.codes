@@ -4,12 +4,10 @@ import { useState } from 'preact/hooks';
 const emojiMap = {
   like: '👍',
   dislike: '👎',
-  joy: '😂',
-  sad: '😢',
   heart: '💖',
-  jazzy: '🎷',
-  rocket: '🚀',
-  party: '🎉',
+  think: '🤔',
+  tada: '🎉',
+  dev: '🧑‍💻',
 };
 
 const ReactionButton = ({ reaction, count, setReactions, slug }) => {
