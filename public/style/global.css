@@ -378,6 +378,7 @@ pre {
 ul.reactions__list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   list-style: none;
   gap: var(--size-3);
   padding: 0;
