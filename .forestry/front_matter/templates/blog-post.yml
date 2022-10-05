@@ -25,6 +25,7 @@ fields:
   label: draft
   description: 'if checked, this post is a draft and is not visible publicly. '
 pages:
+- src/posts/cauliflower-fried-rice-wraps.md
 - src/posts/on-hydroponic-gardens.md
 - src/posts/optimizing-docker-containers.md
 - src/posts/the-adventures-of-ash.md
