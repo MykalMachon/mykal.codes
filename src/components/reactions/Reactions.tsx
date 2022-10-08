@@ -25,12 +25,14 @@ const Reactions = ({ slug }) => {
       ) : (
         <ul className="reactions__list">
           {Object.entries(reactions).map(([reaction, count]) => (
-            <ReactionButton
-              reaction={reaction}
-              count={count}
-              setReactions={setReactions}
-              slug={slug}
-            />
+            <li>
+              <ReactionButton
+                reaction={reaction}
+                count={count}
+                setReactions={setReactions}
+                slug={slug}
+              />
+            </li>
           ))}
         </ul>
       )}
