@@ -9,7 +9,7 @@ tags:
 draft: false
 
 ---
-I had a friend ask me for a go-to cauliflower rice recipe so here it is. I do feel like this is more of a "base". If there's something that will add a bit of spice🌶️ or variety✨ to your fridge feel free to experiment and throw it in.
+I had a friend ask me for a go-to cauliflower rice recipe so here it is. I do feel like this is more of a "base". If there's something that will add a bit of spice🌶️ or variety✨ in your fridge feel free to experiment and throw it in.
 
 I've only made this recipe, as written out, _once_, but have used cauliflower rice similarly lots before. It's also awesome as a direct rice replacement in most stir-fries and curries if you're into that.
 
