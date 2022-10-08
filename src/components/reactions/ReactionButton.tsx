@@ -35,6 +35,8 @@ const ReactionButton = ({ reaction, count, setReactions, slug }) => {
       className="reaction__list__btn"
       onClick={sendReaction}
       disabled={isClicked}
+      aria-label={`react to this post with the ${reaction} emoji`}
+      title={`react to this post with the ${reaction} emoji`}
     >
       <span className="emoji">{emojiMap[reaction]}</span>
       {count}
