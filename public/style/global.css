@@ -233,7 +233,7 @@ blockquote {
 .site-container {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(250px, 90ch);
+  grid-template-columns: minmax(250px, 95ch);
   justify-content: center;
 }
 
