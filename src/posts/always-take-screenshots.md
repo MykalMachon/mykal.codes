@@ -11,7 +11,7 @@ draft: false
 ---
 I'm in the process of rebuilding [the Tinybox website](https://tinybox.dev). As part of that effort, I'm putting together a bunch of case studies and portfolio pages highlighting previous works. I've been visiting sites I worked on anywhere from 6 months ago to 3 years ago to collect visuals for these pages.
 
-Of the 5 portfolio page drafts I've written up, only 2 of the 5 sites delivered are still similar to how I left them. Bummer. 1 of the companies had shut down, 1 of them changed directions and are no longer doing e-commerce, and 1 of them inspired the twitter rant below:
+Of the 5 portfolio page drafts I've written up, only 2 of the 5 sites delivered are still similar to how I left them. Bummer. 1 of the companies has shut down, 1 of them changed directions, and 1 of them inspired the twitter rant below:
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Imagine this:<br>You build a site. You make sure all the t's are crossed, and i's are dotted. You write guides on how to update products. You record screencasts on how to use the CMS. You did all you could. <br><br>You check out the site again 6 months later and it's absolutely destroyed. <a href="https://t.co/vhFrf5KsT4">pic.twitter.com/vhFrf5KsT4</a></p>— Mykal Machon (@mykalmachon) <a href="https://twitter.com/mykalmachon/status/1580420659007852546?ref_src=twsrc%5Etfw">October 13, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
