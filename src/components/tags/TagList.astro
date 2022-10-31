@@ -4,12 +4,13 @@ export interface Props {
   tags: Array<string>
 }
 const { type = 'button', tags } = Astro.props;
+const sortedTags = tags.sort();
 ---
 
 <>
   {type === 'list' && (
   <span class="taglist">
-    {tags.map((tag:string, idx: number) => (
+    {sortedTags.map((tag:string, idx: number) => (
     <>
       <a href={`/tags/${tag}`}>#{tag}</a>
       {(idx+1) !== tags.length && (<>, </>) }
@@ -20,7 +21,7 @@ const { type = 'button', tags } = Astro.props;
 
   {type === 'button' && (
   <div class="taglist--btn">
-    {tags.map((tag:string, idx: number) => (
+    {sortedTags.map((tag:string, idx: number) => (
     <a class="tag" href={`/tags/${tag}`}>#{tag}</a>
     ))}
   </div>
