@@ -16,7 +16,7 @@ It feels like a good chunk of the previously untouchable "tech giants" that rose
   * IMO this is a dog whistle for racists, homophobes and similar gremlins to come to Twitter in droves and feel safe being terrible humans.
   * Major bummer because Twitter is one of my favourite places to hang out.
 * Meta and its portfolio of social apps are not fun, [and seem to be imploding](https://www.cbsnews.com/news/meta-stock-down-earnings-700-billion-in-lost-value/):
-  * [Spending billions of dollars on R&D in the VR/AR space](https://www.cnbc.com/2022/07/27/meta-reality-labs-lost-2point8-billion-in-q2-2022.html) VR/AR is admittedly pretty interesting to me but feels 10-20 years away many breakthroughs away from validity.
+  * [Spending billions of dollars on R&D in the VR/AR space](https://www.cnbc.com/2022/07/27/meta-reality-labs-lost-2point8-billion-in-q2-2022.html) VR/AR is admittedly pretty interesting to me but feels 10-20 years and many breakthroughs away from validity.
   * Meta's social apps were funding all of this, but thanks to more granular privacy controls on iPhones they're no longer the cash cows they used to be. [this has apparently cost FB \~10 billion a year in sales](https://www.macworld.com/article/611551/facebook-app-tracking-transparency-iphone-quarterly-results.html).
   * Overall most people I know seem "over" Facebook and Instagram. Nothing interesting ever seems to be going on there. 
 * Reddit is still... Reddit. There are a few nice corners here, but they come and go.
