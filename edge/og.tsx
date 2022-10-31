@@ -28,7 +28,7 @@ export default async function handler(req: Request) {
           /> */}
           <p>Mykal Machon - {type || 'Page'}</p>
         </div>
-        <div className="page-content">
+        {/* <div className="page-content">
           <h1>{title || "Mykal Machon's Digital Garden"}</h1>
           <p>{description || "Where I post about whatever I'm doing."}</p>
         </div>
@@ -100,7 +100,7 @@ export default async function handler(req: Request) {
               </div>
             </div>
           )}
-        </div>
+        </div> */}
       </div>
     )
   );
