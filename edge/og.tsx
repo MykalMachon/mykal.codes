@@ -18,8 +18,8 @@ export default async function handler(req: Request) {
 
   return new ImageResponse(
     (
-      <div class="og">
-        <div class="page-header">
+      <div className="og">
+        <div className="page-header">
           <img
             src="https://mykal.codes/favicon.png"
             width="48px"
@@ -28,19 +28,19 @@ export default async function handler(req: Request) {
           />
           <p>Mykal Machon - {type || 'Page'}</p>
         </div>
-        <div class="page-content">
+        <div className="page-content">
           <h1>{title || "Mykal Machon's Digital Garden"}</h1>
           <p>{description || "Where I post about whatever I'm doing."}</p>
         </div>
-        <div class="attributes">
+        <div className="attributes">
           {readTime && (
-            <div class="attr">
-              <span class="icon">
+            <div className="attr">
+              <span className="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="w-6 h-6"
+                  className="w-6 h-6"
                 >
                   <path
                     fill-rule="evenodd"
@@ -49,20 +49,20 @@ export default async function handler(req: Request) {
                   />
                 </svg>
               </span>
-              <div class="">
+              <div className="">
                 <small>Reading Time</small>
                 <p>{readTime}</p>
               </div>
             </div>
           )}
           {pubDate && (
-            <div class="attr">
-              <span class="icon">
+            <div className="attr">
+              <span className="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="w-6 h-6"
+                  className="w-6 h-6"
                 >
                   <path d="M12.75 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM7.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM8.25 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM9.75 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM10.5 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM12.75 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM14.25 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 13.5a.75.75 0 100-1.5.75.75 0 000 1.5z" />
                   <path
@@ -72,20 +72,20 @@ export default async function handler(req: Request) {
                   />
                 </svg>
               </span>
-              <div class="">
+              <div className="">
                 <small>Published on</small>
                 <p>{pubDate}</p>
               </div>
             </div>
           )}
           {primaryTag && (
-            <div class="attr">
-              <span class="icon">
+            <div className="attr">
+              <span className="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="w-6 h-6"
+                  className="w-6 h-6"
                 >
                   <path
                     fill-rule="evenodd"
@@ -94,7 +94,7 @@ export default async function handler(req: Request) {
                   />
                 </svg>
               </span>
-              <div class="">
+              <div className="">
                 <small>Tags</small>
                 <p>{primaryTag}</p>
               </div>
