@@ -21,14 +21,11 @@ export default async function handler(req: Request) {
 
   return new ImageResponse({
     element: (
-      <PageComponent
-        type={type}
-        title={title}
-        description={description}
-        readTime={readTime}
-        pubDate={pubDate}
-        primaryTag={primaryTag}
-      />
+      <div>
+        <header>
+          <p>Mykal Machon - {type || 'Page'}</p>
+        </header>
+      </div>
     ),
   });
 }
