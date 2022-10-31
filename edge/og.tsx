@@ -20,12 +20,12 @@ export default async function handler(req: Request) {
     (
       <div className="og">
         <div className="page-header">
-          <img
+          {/* <img
             src="https://mykal.codes/favicon.png"
             width="48px"
             height="48px"
             alt=""
-          />
+          /> */}
           <p>Mykal Machon - {type || 'Page'}</p>
         </div>
         <div className="page-content">
