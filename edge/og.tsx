@@ -5,29 +5,36 @@ import React from 'https://esm.sh/react@18.2.0';
 import { ImageResponse } from 'https://deno.land/x/og_edge/mod.ts';
 
 export default async function handler(req: Request) {
-  const { searchParams } = new URL(req.url);
+  // const { searchParams } = new URL(req.url);
 
-  // header info
-  const type = searchParams.get('type');
+  // // header info
+  // const type = searchParams.get('type');
 
-  // primary info
-  const title = searchParams.get('title');
-  const description = searchParams.get('desc');
+  // // primary info
+  // const title = searchParams.get('title');
+  // const description = searchParams.get('desc');
 
-  // attributes
-  const readTime = searchParams.get('readTime');
-  const pubDate = searchParams.get('pubDate');
-  const primaryTag = searchParams.get('tag');
+  // // attributes
+  // const readTime = searchParams.get('readTime');
+  // const pubDate = searchParams.get('pubDate');
+  // const primaryTag = searchParams.get('tag');
 
-  return new ImageResponse({
-    element: (
+  return new ImageResponse(
       <div>
         <header>
-          <p>Mykal Machon - {type || 'Page'}</p>
+          <p>Mykal Machon</p>
         </header>
+        <main>
+          <h1>Page Title</h1>
+          <p>This is the page description where more information goes.</p>
+        </main>
+        <footer>
+          <div>Item 1</div>
+          <div>Item 2</div>
+          <div>Item 3</div>
+        </footer>
       </div>
-    ),
-  });
+  );
 }
 
 const PageComponent = ({
