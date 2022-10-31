@@ -42,51 +42,42 @@ const PageComponent = ({
   primaryTag,
 }) => {
   return (
-    <div className="og">
-      <div className="page-header">
-        {/* <img
-            src="https://mykal.codes/favicon.png"
-            width="48px"
-            height="48px"
-            alt=""
-          /> */}
+    <div>
+      <div>
         <p>Mykal Machon - {type || 'Page'}</p>
       </div>
-      <div className="page-content">
+      <div>
         <h1>{title || "Mykal Machon's Digital Garden"}</h1>
         <p>{description || "Where I post about whatever I'm doing."}</p>
       </div>
-      <div className="attributes">
+      <div>
         {readTime && (
-          <div className="attr">
-            <span className="icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </span>
-            <div className="">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <div>
               <small>Reading Time</small>
               <p>{readTime}</p>
             </div>
           </div>
         )}
         {pubDate && (
-          <div className="attr">
-            <span className="icon">
+          <div>
+            <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="w-6 h-6"
               >
                 <path d="M12.75 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM7.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM8.25 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM9.75 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM10.5 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM12.75 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM14.25 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 13.5a.75.75 0 100-1.5.75.75 0 000 1.5z" />
                 <path
@@ -96,20 +87,19 @@ const PageComponent = ({
                 />
               </svg>
             </span>
-            <div className="">
+            <div>
               <small>Published on</small>
               <p>{pubDate}</p>
             </div>
           </div>
         )}
         {primaryTag && (
-          <div className="attr">
-            <span className="icon">
+          <div>
+            <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="w-6 h-6"
               >
                 <path
                   fill-rule="evenodd"
@@ -118,7 +108,7 @@ const PageComponent = ({
                 />
               </svg>
             </span>
-            <div className="">
+            <div>
               <small>Tags</small>
               <p>{primaryTag}</p>
             </div>
