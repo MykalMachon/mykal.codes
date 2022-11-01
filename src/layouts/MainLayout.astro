@@ -10,9 +10,8 @@ const { title, description, content } = Astro.props;
 const pageTitle = title ? title : content.title;
 const pageDescription = description ? description : content.description;
 
-// og image generation
-const ogImageUrl = `https://mykal.codes/api/social-image?title=${title}&description=${description}&type=page`;
-const encodedOgImageUrl = encodeURI(ogImageUrl);
+const ogImageURL = `${Astro.url.origin}/og?title=${title}&desc=${description}&type=Page`;
+const encodedOgImageURL = encodeURI(ogImageURL);
 ---
 
 <html class="" lang="en">
@@ -24,7 +23,7 @@ const encodedOgImageUrl = encodeURI(ogImageUrl);
     <meta property="og:title" content={`${pageTitle} | mykal.codes`} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content="https://mykal.codes" />
-    <meta property="og:image" content="/images/og-page.png" />
+    <meta property="og:image" content={encodedOgImageURL} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 

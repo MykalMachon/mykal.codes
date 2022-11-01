@@ -1,16 +1,16 @@
 [build]
   command = "npm run build"
+  edge_functions="edge"
   publish = "dist"
 
 [dev]
   publish = "dist"
   functions="functions"
+  edge_functions="edge"
 
-# [functions]
-#   external_node_modules = ["chrome-aws-lambda"]
-
-# [functions."social-image"]
-#   included_files = ["functions/social-image/templates/**.html"]
+[[edge_functions]]
+  path = "/og"
+  function = "og"
 
 [[redirects]]
   from = "/api/*"

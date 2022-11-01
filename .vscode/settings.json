@@ -1,3 +1,12 @@
 {
-  "cSpell.words": ["favourite"]
+  "cSpell.words": [
+    "favourite"
+  ],
+  "deno.enable": true,
+  "deno.enablePaths": [
+    "netlify/edge-functions"
+  ],
+  "deno.unstable": true,
+  "deno.importMap": ".netlify/edge-functions-import-map.json",
+  "deno.path": "/home/mykal/.config/netlify/deno-cli/deno"
 }
