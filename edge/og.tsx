@@ -85,6 +85,7 @@ export default async function handler(req: Request) {
                 <p
                   style={{
                     fontSize: '32px',
+
                     fontWeight: 'bold',
                     margin: '0em',
                   }}

@@ -1,5 +1,5 @@
 ---
-title: 'Scheduled Python jobs: Linux v. Windows'
+title: 'Scheduling Python jobs'
 slug: scheduled-python-jobs-on-linux-v-windows
 description: how to run scheduled python jobs on linux and windows
 pubDate: 2022-09-13T23:00:00Z
