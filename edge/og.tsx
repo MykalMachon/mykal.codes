@@ -41,7 +41,7 @@ export default async function handler(req: Request) {
           <p>Mykal Machon - {type || 'Page'}</p>
         </header>
         <main style={{ display: 'flex', flexDirection: 'column' }}>
-          <h1 style={{ fontSize: '64px' }}>
+          <h1 style={{ fontSize: '64px', fontWeight: 'bold' }}>
             {title || "Mykal Machon's Digital Garden"}
           </h1>
           <p style={{ fontSize: '32px' }}>
