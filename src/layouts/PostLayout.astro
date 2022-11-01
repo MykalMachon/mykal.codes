@@ -15,7 +15,7 @@ const formattedDate = new Intl.DateTimeFormat('en-CA')
   .format(date)
   .replaceAll('-', '/');
 
-const ogImageURL = `${Astro.url.origin}/og?title=${title}&desc=${description}&pubDate=${formattedDate}&readTime=${readTime}&type=Blog Post`;
+const ogImageURL = `${Astro.url.origin}/og?title=${title}&desc=${description}&pubDate=${formattedDate}&readTime=${readTime}&tag=${tags[0]}&type=Blog Post`;
 const encodedOgImageURL = encodeURI(ogImageURL);
 ---
 
