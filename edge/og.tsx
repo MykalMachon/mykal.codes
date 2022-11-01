@@ -37,7 +37,7 @@ export default async function handler(req: Request) {
         <header
           style={{ display: 'flex', alignItems: 'center', fontSize: '24px' }}
         >
-          <span style={{ margin: '0 24px 0 0', fontSize: '36px' }}>💾</span>
+          <span style={{ margin: '0 24px 0 0', fontSize: '48px' }}>💾</span>
           <p>Mykal Machon - {type || 'Page'}</p>
         </header>
         <main style={{ display: 'flex', flexDirection: 'column' }}>
@@ -63,12 +63,12 @@ export default async function handler(req: Request) {
                   margin: '0 1em 0 0',
                   background: '#04291e',
                   padding: '1em',
-                  border: '1px solid #087f5b',
+                  border: '2px solid #087f5b',
                   borderRadius: '4px',
                 }}
               >
                 <svg
-                  width={32}
+                  width={48}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="#0ca678"
@@ -81,10 +81,11 @@ export default async function handler(req: Request) {
                 </svg>
               </span>
               <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <small style={{ fontSize: '18px' }}>Read time:</small>
+                <small style={{ fontSize: '24px' }}>Read time:</small>
                 <p
                   style={{
-                    fontSize: '24px',
+                    fontSize: '32px',
+
                     fontWeight: 'bold',
                     margin: '0em',
                   }}
@@ -108,12 +109,12 @@ export default async function handler(req: Request) {
                   margin: '0 1em 0 0',
                   background: '#04291e',
                   padding: '1em',
-                  border: '1px solid #087f5b',
+                  border: '2px solid #087f5b',
                   borderRadius: '4px',
                 }}
               >
                 <svg
-                  width={32}
+                  width={48}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="#0ca678"
@@ -128,10 +129,10 @@ export default async function handler(req: Request) {
                 </svg>
               </span>
               <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <small style={{ fontSize: '18px' }}>Posted on:</small>
+                <small style={{ fontSize: '24px' }}>Posted on:</small>
                 <p
                   style={{
-                    fontSize: '24px',
+                    fontSize: '32px',
                     fontWeight: 'bold',
                     margin: '0em',
                   }}
@@ -155,12 +156,12 @@ export default async function handler(req: Request) {
                   margin: '0 1em 0 0',
                   background: '#04291e',
                   padding: '1em',
-                  border: '1px solid #087f5b',
+                  border: '2px solid #087f5b',
                   borderRadius: '4px',
                 }}
               >
                 <svg
-                  width={32}
+                  width={48}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="#0ca678"
@@ -174,10 +175,10 @@ export default async function handler(req: Request) {
                 </svg>
               </span>
               <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <small style={{ fontSize: '18px' }}>Main tag:</small>
+                <small style={{ fontSize: '24px' }}>Main tag:</small>
                 <p
                   style={{
-                    fontSize: '24px',
+                    fontSize: '32px',
                     fontWeight: 'bold',
                     margin: '0em',
                   }}
