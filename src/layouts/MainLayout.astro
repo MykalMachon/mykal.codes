@@ -10,7 +10,7 @@ const { title, description, content } = Astro.props;
 const pageTitle = title ? title : content.title;
 const pageDescription = description ? description : content.description;
 
-const ogImageURL = `https://mykal.codes/og?title=${title}&desc=${description}&type=Page`;
+const ogImageURL = `${Astro.url.origin}/og?title=${title}&desc=${description}&type=Page`;
 const encodedOgImageURL = encodeURI(ogImageURL);
 ---
 
