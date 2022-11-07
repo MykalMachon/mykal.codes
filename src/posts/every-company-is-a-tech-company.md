@@ -1,35 +1,35 @@
 ---
-title: Every company is a tech company
-slug: every-company-is-a-tech-company
-description: 'Tech is at the core of virtually every business at this point, it''s
-  time we stop pretending it''s not. '
-pubDate: 2022-11-05T02:45:34Z
+title: Why every company is a tech company
+slug: why-every-company-is-a-tech-company
+description: 'Tech is at the core of virtually every business and people would be
+  better off to understand that. '
+pubDate: 2022-11-07T00:30:00Z
 heroImage: ''
 tags:
-- personal
-draft: true
+- business
+draft: false
 
 ---
-As someone who's worked in freelance on and off for years, I've heard quite a few people drop the phrase "we're not a tech company".  
+# 
 
-This is usually hauled out in a pessimistic tone after they're pitched on a new website, a business process that can be automated, an application that could be brought in to save time, or some work to modernize an again piece of tech they've already bought into.  
+As someone who's worked freelance on and off for years, I've heard quite a few people drop the phrase "we're not a tech company".
 
-Every. single. time. I hear this I can't help but cringe. **_Almost every company is a tech company._** Do your users have phones, computers, tablets? do they have an apple watch? then you're a tech company. 
+This is usually said in a pessimistic tone after someone is pitched on a new website, a new business process automation, an application that could be brought in to save time, or some work to modernize an aging piece of tech already in their business.
+
+Every. single. time. I hear this I can't help but cringe. **_Almost every company is a tech company._** 
 
 ## What is a "tech company" anyways?
 
-Is it a company that makes software? I would argue, no. In my brain, a tech company is a company where you use technology (by definition, essentially tools) to do something easier or better as a service.
+In my mind, a tech company is any company where technology is used to make your core business better (i.e. any software-enabled tool) to improve your core business (i.e. selling lattes). With that lens, most companies become tech companies. 
 
-Do you use QuickBooks to manager your companies' books? that's tech, you'd probably be better off having someone on staff who's sort of techy. 
+Do your customers have phones, computers, or tablets? Do you use a digital system to keep track of spending/finances? Does your business have a social presence? then you're a tech company! It's impossible to avoid being a tech company. At the very least, you're using "technology" to communicate with your customers, and if you're not, you're missing out on a whole lot of potential leads and conversions.
 
-* modern consumers are on the internet. that's just how it is. go where the people are
-* modern consumers use social media, you should probably value it and be good at it.
-* in most businesses, your tech should get out of your way. It should be making more time for you to do the work that you really love / keeps your business going. 
+Good technology solutions get out of your way and reduce friction in providing your services to customers. If you sell lattes, good tech makes it really damn easy for you to focus on making good lattes, and not much else. With that in mind, there’s probably at least _some_ benefit to adopting good tech in your company, you just need someone on staff, or contract, who can make help you make that call. 
+
+By that definition, there are definitely “tech” tech companies. Think of the [Microsofts](https://microsoft.com) of the world, the [amazon web services](https://aws.amazon.com/), the [railways](https://railway.app), etc. These companies core services are providing tech, but what do they use to help with that process? tech! web apps that make it easy for developers to provision technology and assets. Tech aiding tech. 
 
 ## What I'm not saying
 
-I'm not saying your local coffee shop should have a technical team on staff to write their own point of sale, website, and delivery system. What I am saying is that that coffee shop would probably be better off with a generally tech-educated person who knows when to reach for tech to simplify solutions.
+I'm not saying your local coffee shop should have a technical team on staff to write their own point of sale, website, and delivery system. **What I am saying is that that coffee shop would probably be better off with a generally tech-educated person around who knows when to reach for tech to simplify their core business.**
 
- Think about how many awesome restaurants you've been to where the POS system is always broken, or where their website is 5 years out of date, or where no one knows about them because they're still marketing on billboards. 
-
-I think if we all thought of tech as a tool (you know, what it is) instead of a big scary risk a lot of businesses, and therefore people, would be better for it. 
+I’m not saying every company should make tech core to their offerings. There are definitely cases where this doesn’t ring true. **What I am saying is that businesses shouldn’t be afraid to evaluate their current processes and look for things that can be improved with tech.** 
