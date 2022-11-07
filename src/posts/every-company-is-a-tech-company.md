@@ -10,8 +10,6 @@ tags:
 draft: false
 
 ---
-# 
-
 As someone who's worked freelance on and off for years, I've heard quite a few people drop the phrase "we're not a tech company".
 
 This is usually said in a pessimistic tone after someone is pitched on a new website, a new business process automation, an application that could be brought in to save time, or some work to modernize an aging piece of tech already in their business.
