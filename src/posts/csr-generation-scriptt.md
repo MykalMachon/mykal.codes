@@ -1,5 +1,5 @@
 ---
-title: CSR generation scriptt
+title: CSR generation script
 slug: csr-generation-script
 description: sometimes the only option is to do SSL manually. This article is for
   those times.
@@ -10,11 +10,11 @@ tags:
 draft: false
 
 ---
-# CSR Generation Script
 Ideally [Let's Encrypt](https://letsencrypt.org/) and [Certbot](https://certbot.eff.org/) will just ✨automagically⚡ generate all your SSL certificates, but if you're working with internal services (basically anything not exposed to the public internet), or legacy systems that are very specific about the CA / root certificate, you'll still need to generate some certificate signing requests (CSRs) and request a certificate the old-school way from someone like [GoDaddy](https://www.godaddy.com/en-ca/web-security/ssl-certificate), [NameCheap](https://www.namecheap.com/security/ssl-certificates/), or [Entrust](https://www.entrust.com/digital-security/certificate-solutions/products/digital-certificates/tls-ssl-certificates).
 
 ## My solution
-`openssl` is great, but I find it really hard to remember the commands to generate the CSR goodies you need. To make things a bit easier I used a CSR generation script in my home folder.   
+
+`openssl` is great, but I find it really hard to remember the commands to generate the CSR goodies you need. To make things a bit easier I used a CSR generation script in my home folder.
 
 ```sh
 # makecsr.sh
@@ -36,7 +36,7 @@ echo "./$1__csr.csr"
 echo "./$1__private.key"
 ```
 
-Then when I need a certificate it's as easy as running this in my terminal. 
+Then when I need a certificate it's as easy as running this in my terminal.
 
 ```bash
 ~/scripts/makecsr.sh app.mykal.codes
@@ -45,4 +45,4 @@ generated a CSR and Private Key for ya!
 ./app.mykal.codes__private.key
 ```
 
-Take those newly generated CSR file off to your certificate authority of choice, and move your private key to the legacy/internal server in preparation for your new SSL certificates. 
+Take those newly generated CSR file off to your certificate authority of choice, and move your private key to the legacy/internal server in preparation for your new SSL certificates.
