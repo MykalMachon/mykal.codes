@@ -19,3 +19,14 @@ const { title, description } = Astro.props;
   title="RSS Feed for mykal.codes"
   href="/rss.xml"
 />
+<!-- UMAMI Analytics -->
+{
+  import.meta.env.MODE === 'production' && (
+    <script
+      async
+      defer
+      data-website-id="9cc92a59-874f-425f-8dc3-ec11fa52a542"
+      src="https://stats.tbx.sh/umami.js"
+    />
+  )
+}
