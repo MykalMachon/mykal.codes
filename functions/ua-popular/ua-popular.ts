@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 import { Handler } from '@netlify/functions';
 
-const uaUrl = process.env.UA_URL || 'https://stats.tbx.sh';
+const uaUrl = process.env.UA_URL;
 
 const getBearer = async (username: string, password: string) => {
   const res = await fetch(`${uaUrl}/api/auth/login`, {
@@ -77,6 +77,9 @@ export const handler: Handler = async (event, context) => {
     // return a list of the top pages from umami analytics
     return {
       statusCode: 200,
+      headers: {
+        'Cache-Control': 'max-age=600, must-revalidate' // set the response to cache for 10 minutes
+      },
       body: JSON.stringify({
         posts: topPosts,
       }),
