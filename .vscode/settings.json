@@ -4,7 +4,8 @@
   ],
   "deno.enable": true,
   "deno.enablePaths": [
-    "netlify/edge-functions"
+    "netlify/edge-functions",
+    "edge"
   ],
   "deno.unstable": true,
   "deno.importMap": ".netlify/edge-functions-import-map.json",
