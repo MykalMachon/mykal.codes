@@ -2,7 +2,7 @@
 import { getCustomQualityUrl } from "../../utils/cloudinary";
 
 const { post, type = "large" } = Astro.props;
-const dateFormatter = Intl.DateTimeFormat('en-GB', { year: 'numeric', month: '2-digit', day: '2-digit' });
+const dateFormatter = Intl.DateTimeFormat('en-GB', { year: 'numeric', month: '2-digit', day: '2-digit', timeZone: 'America/Vancouver' });
 ---
 
 {type === "large" ? (
