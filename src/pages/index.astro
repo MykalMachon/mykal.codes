@@ -7,21 +7,60 @@ import PostList from '../components/posts/PostList.astro';
 
 // Utility imports
 import { getNonDraftPosts, getSortedPosts } from '../utils/posts';
+const allPosts = await Astro.glob('../posts/**/*.md');
 
 // Data Fetching: fetch recent posts
-let allPosts = await Astro.glob('../posts/**/*.md');
-allPosts = getSortedPosts(allPosts);
-allPosts = getNonDraftPosts(allPosts);
-const recentPosts = allPosts.slice(0, 5);
+const sortedPosts = getSortedPosts(allPosts);
+const sortedPublicPosts = getNonDraftPosts(sortedPosts);
+const recentPosts = sortedPublicPosts.slice(0, 5);
+
+// Data Fetching: fetch popular posts
+const apiRes = await fetch(`${import.meta.env.SITE}api/ua-popular`);
+const {posts: apiData} = await apiRes.json();
+
+const topFivePostSlugs = apiData.slice(0,apiData.length >= 5 ? 5 : apiData.length).map(({x}) => x);
+const rawTopFivePosts = topFivePostSlugs.map((postSlug) => allPosts.find((postData) => `/posts/${postData.frontmatter.slug}/` === postSlug ));
+const topFivePosts = rawTopFivePosts.filter((topPost) => topPost) // filters out unfound posts
 ---
 
 <HomeLayout
   title="Home"
   description="Mykal Machon's website, blog, and digital garden."
 >
-  <h2>Recent posts</h2>
-  <PostList posts={recentPosts} type="small" />
-  <p>
-    <a href="/posts/">read older posts</a>
-  </p>
+  <section>
+    <div class="section__header">
+      <h2>Recent posts</h2>
+      <a href="/posts">All Posts »</a>
+    </div>
+    <PostList posts={recentPosts} type="small" />
+  </section>
+  <section>
+    <div class="section__header">
+      <h2>Popular Posts</h2>
+      <a href="https://stats.tbx.sh/share/zExb1nvh/Mykal's%20Website">All stats »</a>
+    </div>
+    <PostList posts={topFivePosts} type="small" />
+  </section>
 </HomeLayout>
+
+<style lang="scss">
+  .section__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      margin: var(--size-6) 0 var(--size-3) 0
+    }
+
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      a {
+        margin: 0 0 var(--size-3) 0;
+      }
+    }
+  }
+</style>
