@@ -118,5 +118,15 @@ const dateFormatter = Intl.DateTimeFormat('en-GB', { year: 'numeric', month: '2-
       font-family: var(--font-mono);
       font-size: var(--font-size-sm);
     }
+
+    @media screen and (max-width: 550px){
+      margin: var(--size-2) 0;
+      p {
+        margin: var(--size-1) 0;
+      }
+      .postcard__date {
+        display: none;
+      }
+    }
   }
 </style>
