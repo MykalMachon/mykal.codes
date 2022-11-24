@@ -11,7 +11,7 @@ const { title, description, pubDate, heroImage, draft, tags, slug } =
   post.frontmatter;
 
 const date = new Date(pubDate);
-const formattedDate = new Intl.DateTimeFormat('en-CA')
+const formattedDate = new Intl.DateTimeFormat('en-CA', {timeZone: 'America/Vancouver'})
   .format(date)
   .replaceAll('-', '/');
 
