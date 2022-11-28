@@ -39,7 +39,7 @@ Thanks to the operating system on the MoonTurtle server, Unraid, Setting up Umam
 
 ### Creating the Umami database
 
-Before I could set up an umami instance I needed to create a database and database user for the umami application to use. Just log into your MySQL DB of choice and...
+Before we can set up an umami instance we need to create a database and database user for the umami application to use. Just log in to your MySQL DB of choice and...
 
 ```sql
 -- create a new database
@@ -55,17 +55,42 @@ GRANT ALL PRIVILEGES ON umami.*
 TO 'umami_admin'@'*' WITH GRANT OPTION;
 ```
 
-Since I already have a MySQL database setup, I just used that. If you need a database, you can [spin one up on Railway ](https://docs.railway.app/develop/services#database-services)with a few clicks, or [set up a docker container](https://hub.docker.com/_/mysql). 
+Since I already have a MySQL database setup, I just used that. If you need a database, you can [spin one up on Railway ](https://docs.railway.app/develop/services#database-services)with a few clicks, or [set up a docker container](https://hub.docker.com/_/mysql).
 
-I typically use [TablePlus](https://tableplus.com/) to connect to my home lab DB's, check them out. 
+I typically use [TablePlus](https://tableplus.com/) to connect to my home lab DB's, check them out.
 
 ### Creating the Umami docker image
 
-Now that we have a database and database user we have all the credentials required to set up a docker image in Unraid.
+Now that we have a database and database user, we have all the credentials required to set up the Umami docker container on our Unraid server:
 
-1.  Go to 
+1. Login to the Unraid Dashboard
+2. Click the "Docker" tab
+3. Click the "Add Container" button below the list of your current containers
+4. Name the repository "umami" or something similar
+5. Use the following link to their docker repository
+   1. ghcr.io/umami-software/umami:mysql-latest
+6. Create some environment variables for the container
+   1. `DATABASE_URL`: a MySQL connection string for the DB
+   2. `DATABASE_TYPE`: this should just be `mysql`
+   3. `HASH_SALT`: the salt used for passwords in the system
+7. Create a port mapping to expose the web port outside the container
+   1. this should map the internal port 3000 -> an external port of your choosing
+8. Fill out all your environment variables
+9. Click save and watch the magic happen
+
+After the docker image has been pulled down from the container registry and the application has (hopefully) started up, we should be able to navigate to your umami instance at `http://<your-unraid-servers-ip>:<port from step 7>.`
+
+The default username and password is admin/umami. Once you're in I would recommend changing that ASAP.
 
 ### Updating NGINX
+
+Now that the app is up and running, let's expose it to the rest of the world. Since I use NGINX Proxy Manager (which is just a web GUI on top of NGINX) adding a new site is pretty dang easy. 
+
+1. Login to your NGINX Proxy Manager site
+2. Create a new "host" and choose a domain name to use
+3. Point the host at the IP / Port of the new umami instance
+4. hit save
+5. tada
 
 ### Adding Umami to the site
 
