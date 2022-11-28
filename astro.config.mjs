@@ -10,6 +10,11 @@ export default defineConfig({
   site: 'https://mykal.codes',
   markdown: {
     drafts: true,
+    shikiConfig: {
+      // https://github.com/shikijs/shiki/blob/main/docs/themes.md
+      theme: 'vitesse-dark',
+      // Enable word wrap to prevent horizontal scrolling
+      wrap: true,
   },
   integrations: [preact(), sitemap(), mdx()],
 });
