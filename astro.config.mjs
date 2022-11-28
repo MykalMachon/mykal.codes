@@ -11,10 +11,9 @@ export default defineConfig({
   markdown: {
     drafts: true,
     shikiConfig: {
-      // https://github.com/shikijs/shiki/blob/main/docs/themes.md
-      theme: 'vitesse-dark',
-      // Enable word wrap to prevent horizontal scrolling
-      wrap: true,
+      theme: 'vitesse-dark', // https://github.com/shikijs/shiki/blob/main/docs/themes.md
+      wrap: true, // Enable word wrap to prevent horizontal scrolling
+    },
   },
   integrations: [preact(), sitemap(), mdx()],
 });
