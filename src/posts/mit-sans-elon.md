@@ -3,12 +3,11 @@ title: MIT, Sans-elon
 slug: mit-sans-selon
 description: The MIT license, but Elon Musk and all of his companies are explicitly
   denied usage.
-pubDate: 2022-11-15T01:00:00Z
+pubDate: 2022-11-15T01:00:00.000+00:00
 heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1668473838/Mykal%20Codes/MIT-SE_1_k6tpdk.png
 tags:
 - open-source
 - self-hosting
-- webdev
 draft: false
 
 ---
