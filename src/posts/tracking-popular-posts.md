@@ -3,7 +3,7 @@ title: Tracking popular posts
 slug: tracking-popular-posts
 description: Let's implement a self-hosted web analytics system to track my popular
   posts
-pubDate: 2022-11-26T22:00:00Z
+pubDate: 2022-11-26T22:00:00.000+00:00
 heroImage: ''
 tags:
 - self-hosting
@@ -11,7 +11,7 @@ tags:
 draft: true
 
 ---
-I've been reading a lot of blogs lately, and have noticed a bunch of my favourite sites have a "popular posts" section on their home page. All the work around this post was building up to this
+I've been reading a lot of blogs lately and have noticed a bunch of my favourite sites have a "popular posts" section on their home page. All the work around this post was building up to this
 
 ## The architecture
 
@@ -35,7 +35,7 @@ It's been around 6 months since I've had any sort of analytics on my site and si
 
 ## Setting up Umami Analytics
 
-Thanks to the operating system on the MoonTurtle server, Unraid, Setting up Umami was relatively simple. All I needed to do was set up the docker image for Umami, create a database on my MySQL DB and finally update some config in my NGINX proxy manager application...
+Thanks to the operating system on the MoonTurtle server, Unraid, setting up Umami was relatively simple. All I needed to do was set up the docker image for Umami, create a database on my MySQL DB and finally update some config in my NGINX proxy manager application...
 
 ### Creating the Umami database
 
@@ -84,15 +84,15 @@ The default username and password is admin/umami. Once you're in I would recomme
 
 ### Updating NGINX
 
-Now that the app is up and running, let's expose it to the rest of the world. Since I use NGINX Proxy Manager (which is just a web GUI on top of NGINX) adding a new site is pretty dang easy. 
+Now that the app is up and running, let's expose it to the rest of the world. Since I use NGINX Proxy Manager (which is just a web GUI on top of NGINX) adding a new site is pretty dang easy.
 
-1. Login to your NGINX Proxy Manager site
-2. Create a new "host" and choose a domain name to use
-3. Point the host at the IP / Port of the new umami instance
-4. hit save
-5. tada
+See their docs for more info on how to use NGINX proxy manager to add a site. In my case, all I had to do was put in the subdomain I wanted to use ([stats.tbx.sh](https://stats.tbx.sh)) and select the IP and port of the app reachable from my network. 
+
+I could have used any reverse proxy for this (Caddy, Apache, etc.), NGINX is just what I'm familiar with. 
 
 ### Adding Umami to the site
+
+Adding umami to your site is the last step in actually collecting analytics. 
 
 ## Working with the Umami API
 
