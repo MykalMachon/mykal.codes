@@ -13,7 +13,6 @@ draft: false
 As with most years, the advent of code challenges for day one were pretty simple! Regardless, I had some fun putting together some equally simple solutions.
 
 ```python
-
 from functools import reduce
 
 
