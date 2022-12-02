@@ -1,7 +1,7 @@
 ---
 title: 'AOC 2022: Solution for Day 2'
-slug: My solution for Advent of Code's day 2 challenge
-description: aoc-2022-day-2
+slug: aoc-2022-day-2
+description: My solution for advent-of-code day 2
 pubDate: 2022-12-02T18:00:00Z
 heroImage: ''
 tags:
