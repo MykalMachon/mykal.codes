@@ -12,7 +12,7 @@ draft: false
 ---
 [Today's challenge](https://adventofcode.com/2022/day/2) took a lot more code to solve than [my solution for day 1](https://mykal.codes/posts/aoc-2022-day-1/). There's just a lot of conditional branching going on. As far as I can tell that's sort of inherent to the classic "rock paper scissors" program this is based on, though.
 
-That said, I'm sure there's a "cleverer" way to solve this, with probably less conditional branching code-mess and more maps with pre-build scores. That said, this was the first thing that came to mind when working through the problem organically. It works, it's mostly readable, so it's what I'm sticking with 😎
+That said, I'm sure there's a "cleverer" way to solve this, with probably less conditional branching code-mess and more maps with pre-defined scores. That said, this was the first thing that came to mind when working through the problem organically. It works, it's mostly readable, so it's what I'm sticking with 😎
 
 ```python
 def get_move_points(move):
