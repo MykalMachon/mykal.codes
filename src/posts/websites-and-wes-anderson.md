@@ -19,3 +19,7 @@ Another similarity is the use of color. Anderson's films often feature bold, vib
 In addition to these visual elements, both Anderson's films and good web design focus on creating a cohesive experience for the viewer or user. In Anderson's films, this often involves carefully crafting the storyline and character arcs to create a sense of unity. In web design, this involves creating a clear hierarchy and structure, using consistent branding, and ensuring that all elements of the site work together to create a seamless experience.
 
 So next time you're watching a Wes Anderson film, take a moment to appreciate the similarities between his visual style and good web design. And if you're a web designer, consider drawing inspiration from Anderson's unique approach to create engaging and effective websites.
+
+> This post was heavily written by ChatGPT 🤯
+>
+> I gave it a pretty detailed prompt for it to get here; but I was really surprised at just how good it was. I'm going to use this as a template to insert some of my more nuanced opinions on the topic. 
