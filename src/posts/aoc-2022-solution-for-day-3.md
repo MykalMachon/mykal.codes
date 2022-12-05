@@ -1,8 +1,8 @@
 ---
-title: AOC 2022 Solution for Day 3
+title: 'AOC 2022: Solution for Day 3'
 slug: aoc-2022-day-3
 description: My solution for advent-of-code day 3
-pubDate: 2022-12-04T08:00:00Z
+pubDate: 2022-12-05T07:35:00Z
 heroImage: ''
 tags:
 - advent-of-code
@@ -12,9 +12,9 @@ draft: false
 ---
 [Today's challenge](https://adventofcode.com/2022/day/3), well uh... wasn't today's challenge 😅
 
-I didn't write any actual code this weekend; instead opting to spend some time resting with family and friends. To be honest, I completely forgot about this challenge until about 10:30 pm today (2022/12/04). 
+I didn't write any actual code this weekend; instead opting to spend some time resting with family and friends. To be honest, I completely forgot about this challenge until about 10:30 pm today.
 
-So, with around an hour and a half left in the day, I took a shot at part one of Advent of Code's day 3 challenge. Check out my solution below:
+So, with around an hour left in the day, I took a shot at part one of Advent of Code's day 3 challenge. Check out my solution below:
 
 ```python
 """
@@ -86,4 +86,4 @@ if __name__ == "__main__":
     print(f"Sum of priorities is: {sum_of_priorities} ")
 ```
 
-Maybe I'll go back to finish part 2 a little later as it doesn't seem to challenging. 
+Maybe I'll go back to finish part 2 a little later as it doesn't seem too challenging.
