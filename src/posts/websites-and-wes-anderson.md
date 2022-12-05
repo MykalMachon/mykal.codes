@@ -1,6 +1,6 @@
 ---
 title: Websites and Wes Anderson
-slug: website-and-wes-anderson
+slug: websites-and-wes-anderson
 description: maybe Wes Anderson films and websites have more in common than you'd
   think.
 pubDate: 2022-12-05T08:00:00Z
