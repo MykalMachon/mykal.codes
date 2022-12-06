@@ -1,5 +1,5 @@
 ---
-title: 'AOC 2022: Solution for Day 5'
+title: 'AOC 2022: Solution for Day 6'
 slug: aoc-2022-day-6
 description: My solution for advent-of-code day 6
 pubDate: 2022-12-06T20:45:00Z
