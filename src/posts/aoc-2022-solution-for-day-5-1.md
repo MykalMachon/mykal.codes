@@ -13,7 +13,7 @@ draft: false
 Advent of Code, day 6, is done! This was another quick one.
 
 ```python
-	"""
+    """
     Advent of code day 6:
     not writing a set of steps for this one because I 
     already got it in my head 😎 
