@@ -10,7 +10,7 @@ tags:
 draft: false
 
 ---
-Advent of Code day 6 is done! This was another quick one. 
+Advent of Code, day 6, is done! This was another quick one.
 
 ```python
     Advent of code day 6:
