@@ -12,7 +12,7 @@ draft: false
 ---
 [Advent of Code challenge #5](https://adventofcode.com/2022/day/5) is all done, and I'm officially caught up! 
 
-The "hard-part" of this challenge for me was the ingestion of data into usable structures. The actual task of moving the things around was trivial. These are my-least favorite kind of advent of code challenges because it feels a bit like [artificial difficulty in video games](https://videogaming.fandom.com/wiki/Artificial_Difficulty). 
+The "hard-part" of this challenge for me was the just making the data usable. The actual task of moving the things around based on steps was pretty quick to implement. These are my-least favorite kind of advent of code challenges because it feels a bit like [artificial difficulty in video games](https://videogaming.fandom.com/wiki/Artificial_Difficulty). 
 
 The functionality that "solved" the challenge was 31 loc, but the ingest functionality took 33 loc. Half the work was just getting the information I needed into a usable data structure. _why not just provide things in a useable format from the jump?_ Maybe I'm missing the point and the ingest is supposed to be a fun part of the challenge and just doesn't vibe with me. 
 
