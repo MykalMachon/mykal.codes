@@ -16,17 +16,19 @@ draft: false
 
 At around 11:00 pm tonight I started a NextCloud update on my home lab. I thought "eh this will be fine!". It was not fine. My update bricked itself and the container crashed right after deleting all the old program files. (aka "Step 9" according to "nextcloud-update.log"). 
 
-    2022-12-12T23:38:54-0800 [info] startStep("9")
-    2022-12-12T23:38:54-0800 [info] deleteOldFiles()
-    2022-12-12T23:39:20-0800 [info] config sample exists
-    2022-12-12T23:39:20-0800 [info] themes README exists
-    2022-12-12T23:40:07-0800 [info] end of deleteOldFiles()
-    2022-12-12T23:40:07-0800 [info] endStep("9")
-    2022-12-12T23:40:36-0800 [info] request to updater
-    2022-12-12T23:40:36-0800 [info] currentStep()
-    2022-12-12T23:40:36-0800 [info] Step 9 is in state "end".
-    2022-12-12T23:40:36-0800 [info] show HTML page
-    2022-12-12T23:40:36-0800 [info] current version: 24.0.6 build time: 
+```
+2022-12-12T23:38:54-0800 [info] startStep("9")
+2022-12-12T23:38:54-0800 [info] deleteOldFiles()
+2022-12-12T23:39:20-0800 [info] config sample exists
+2022-12-12T23:39:20-0800 [info] themes README exists
+2022-12-12T23:40:07-0800 [info] end of deleteOldFiles()
+2022-12-12T23:40:07-0800 [info] endStep("9")
+2022-12-12T23:40:36-0800 [info] request to updater
+2022-12-12T23:40:36-0800 [info] currentStep()
+2022-12-12T23:40:36-0800 [info] Step 9 is in state "end".
+2022-12-12T23:40:36-0800 [info] show HTML page
+2022-12-12T23:40:36-0800 [info] current version: 24.0.6 build time: 
+```
 
 As I'm writing this it's 12:15 am and I _just_ fixed things.
 
@@ -46,5 +48,7 @@ The CLI updater is really easy to use, but since I have the [LinuxServer/NextClo
 
 To kick off the CLI Updater after a failed update, just run the following command from the container's bash console. 
 
-    # for some reason, the container makes everything owned by abc
-    sudo -u abc php /config/www/nextcloud/updater/updater.phar
+```bash
+# for some reason, the container makes everything owned by abc
+sudo -u abc php /config/www/nextcloud/updater/updater.phar
+```
