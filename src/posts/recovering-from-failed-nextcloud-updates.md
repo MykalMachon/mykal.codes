@@ -32,13 +32,13 @@ At around 11:00 pm tonight I started a NextCloud update on my home lab. I though
 
 As I'm writing this it's 12:15 am and I _just_ fixed things.
 
- I've had this happen 3-4 times now, and every time I have to rediscover the solution. Instead of doing that again in 3-4 months, I figured I'd write it down this time. 
+I've had this happen 3-4 times now, and every time I have to rediscover the solution. Instead of doing that again in 3-4 months, I figured I'd write it down here.
 
 ## The CLI updater
 
 [NextCloud has a built-in CLI tool for updating](https://docs.nextcloud.com/server/latest/admin_manual/maintenance/update.html#using-the-command-line-based-updater) that you can initialize at any time via PHP. if your update bricks itself, chances are you can restart the upgrade process by re-running that upgrade script. This has been my saving grace literally every time I've had an update process stall out or crash altogether. 
 
-The script seems remarkably good at recovering whatever half-baked state your installation is in. That said, the solution is surprisingly simple. **Use the CLI updater, not the crash-prone web-based updater.** 
+The script seems remarkably good at recovering from whatever half-baked state your installation is in. That said, the solution is surprisingly simple. **Use the CLI updater, not the crash-prone web-based updater.** 
 
 I'm sure that the CLI-based updater and the Web-based updater use the same code behind the scenes but when the web app becomes unresponsive or unreachable there literally isn't a way to kick the restart process. the CLI will always be there. 
 
@@ -52,3 +52,5 @@ To kick off the CLI Updater after a failed update, just run the following comman
 # for some reason, the container makes everything owned by abc
 sudo -u abc php /config/www/nextcloud/updater/updater.phar
 ```
+
+Once you type that in you'll see some prompts confirming that "hey you were at step  x, do you want us to resume from there?" or something to that effect. hit a quick `y + enter` and you're on your way!  
