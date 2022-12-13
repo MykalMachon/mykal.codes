@@ -38,6 +38,7 @@ pages:
 - src/posts/mit-sans-elon.md
 - src/posts/on-hydroponic-gardens.md
 - src/posts/optimizing-docker-containers.md
+- src/posts/recovering-from-failed-nextcloud-updates.md
 - src/posts/the-adventures-of-ash.md
 - src/posts/the-incoming-internet-switch-up.md
 - src/posts/tracking-popular-posts.md
