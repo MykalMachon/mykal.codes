@@ -14,7 +14,7 @@ draft: false
 >
 > In all honesty, I'm mostly writing this for my future self 😅
 
-At around 11:00 pm tonight I started a NextCloud update on my home lab. I thought "eh this will be fine!". It was not fine. My update bricked itself and the container crashed right after deleting all the old program files. (aka "Step 9" according to "nextcloud-update.log"). 
+At around 11:00 pm tonight I started a NextCloud update on my home lab. I thought "ehh, this will be fine!". It was not fine. The update bricked itself and the container crashed right after deleting all the old program files. (aka "Step 9" according to "nextcloud-update.log"). 
 
 ```
 2022-12-12T23:38:54-0800 [info] startStep("9")
