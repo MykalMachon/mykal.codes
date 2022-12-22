@@ -14,7 +14,18 @@ The Mykal.Codes website, where I post about whatever I want.
 
 ## Stack
 
-The site is built with [Astro](https://astro.build), and while it could technically be hosted anywhere, I use [Netlify](https://netlify.com) because of their CI, Functions, and Forms features.
+- SSG: [Astro](https://astro.build)
+  - Blog content is all markdown
+  - Most pages are either MDX or [Astro](https://astro.build) files
+  - Analytics are collected and displayed via [Umami](https://umami.is)
+- Hosting: [Netlify](https://netlify.com)
+  - Functions for "serverless" functions
+  - Edge for OG image generation
+  - Forms for handling contact forms
+- CMS [IndieKit](https://getindiekit.com):
+  - This is a WIP
+  - This is a Micropub service that writes into /src/content/
+  - This also posts to Twitter and to Mastodon via syndication
 
 ## Contributing
 
