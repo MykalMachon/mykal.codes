@@ -1,12 +1,12 @@
 [build]
   command = "npm run build"
-  edge_functions="edge"
+  edge_functions="server/edge"
   publish = "dist"
 
 [dev]
   publish = "dist"
-  functions="functions"
-  edge_functions="edge"
+  functions="server/functions"
+  edge_functions="server/edge"
 
 [[edge_functions]]
   path = "/og"
