@@ -15,12 +15,12 @@ const sortedPublicPosts = getNonDraftPosts(sortedPosts);
 const recentPosts = sortedPublicPosts.slice(0, 5);
 
 // Data Fetching: fetch popular posts
-// const apiRes = await fetch(`${import.meta.env.SITE}api/ua-popular`);
-// const {posts: apiData} = await apiRes.json();
+const apiRes = await fetch(`${import.meta.env.SITE}api/ua-popular`);
+const {posts: apiData} = await apiRes.json();
 
-// const topFivePostSlugs = apiData.slice(0,apiData.length >= 5 ? 5 : apiData.length).map(({x}) => x);
-// const rawTopFivePosts = topFivePostSlugs.map((postSlug) => allPosts.find((postData) => `/posts/${postData.frontmatter.slug}/` === postSlug ));
-// const topFivePosts = rawTopFivePosts.filter((topPost) => topPost) // filters out unfound posts
+const topFivePostSlugs = apiData.slice(0,apiData.length >= 5 ? 5 : apiData.length).map(({x}) => x);
+const rawTopFivePosts = topFivePostSlugs.map((postSlug) => allPosts.find((postData) => `/posts/${postData.frontmatter.slug}/` === postSlug ));
+const topFivePosts = rawTopFivePosts.filter((topPost) => topPost) // filters out unfound posts
 ---
 
 <HomeLayout
@@ -34,13 +34,13 @@ const recentPosts = sortedPublicPosts.slice(0, 5);
     </div>
     <PostList posts={recentPosts} type="small" />
   </section>
-  <!-- <section>
+  <section>
     <div class="section__header">
       <h2>Popular Posts</h2>
       <a href="https://stats.tbx.sh/share/zExb1nvh/Mykal's%20Website">All stats »</a>
     </div>
     <PostList posts={topFivePosts} type="small" />
-  </section> -->
+  </section>
 </HomeLayout>
 
 <style lang="scss">
