@@ -5,8 +5,8 @@ import preact from '@astrojs/preact';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  srcDir: './src',
-  publicDir: './public',
+  srcDir: './www/src',
+  publicDir: './www/public',
   site: 'https://mykal.codes',
   markdown: {
     drafts: true,
