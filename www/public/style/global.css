@@ -64,7 +64,7 @@ html {
   --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 
   /* COLORS TO BE USED IN UI */
-  --paper-1: var(--color-light-1);
+  /* --paper-1: var(--color-light-1);
   --paper-2: var(--color-light-2);
   --paper-3: var(--color-light-3);
 
@@ -74,10 +74,10 @@ html {
 
   --acc-1: var(--color-acc-1);
   --acc-2: var(--color-acc-2);
-  --acc-3: var(--color-acc-3);
+  --acc-3: var(--color-acc-3); */
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --paper-1: #191918;
     --paper-2: #04291e;
@@ -91,6 +91,34 @@ html {
     --acc-2: var(--teal-8);
     --acc-3: var(--teal-7);
   }
+} */
+
+body[data-theme='dark'] {
+  --paper-1: #191918;
+  --paper-2: #04291e;
+  --paper-3: #063b2b;
+
+  --ink-1: var(--gray-2);
+  --ink-2: var(--gray-3);
+  --ink-3: var(--gray-4);
+
+  --acc-1: var(--teal-9);
+  --acc-2: var(--teal-8);
+  --acc-3: var(--teal-7);
+}
+
+body[data-theme='light'] {
+  --paper-1: var(--color-light-1);
+  --paper-2: var(--color-light-2);
+  --paper-3: var(--color-light-3);
+
+  --ink-1: var(--color-dark-1);
+  --ink-2: var(--color-dark-2);
+  --ink-3: var(--color-dark-3);
+
+  --acc-1: var(--color-acc-1);
+  --acc-2: var(--color-acc-2);
+  --acc-3: var(--color-acc-3);
 }
 
 /* Basic Resets */
@@ -199,24 +227,40 @@ a:focus {
 
 button {
   padding: var(--size-3) var(--size-5);
-  background: var(--acc-1);
-  color: var(--paper-2);
+  background: var(--paper-2);
+  border: 1px solid var(--acc-1);
+  color: var(--ink-1);
   font-family: var(--font-body);
   font-size: var(--font-size-base);
-  border-radius: var(--radius-2);
-  border: none;
-  transition: all 0.3s var(--ease-3);
+  border-radius: var(--radius-1);
+  transition: background 0.2s var(--ease-2), color 0.2s var(--ease-2);
+  color: var(--ink-2);
 }
 
 button:hover {
-  background: var(--acc-2);
+  background: var(--paper-3);
   cursor: pointer;
 }
 
 button:disabled {
-  background: var(--paper-3);
-  color: var(--acc-2);
+  background: var(--paper-1);
+  color: var(--ink-1);
+  border: 1px solid var(--acc-1);
 }
+
+button:focus,
+button:active {
+  border-color: var(--acc-2);
+  outline-style: solid;
+  outline-color: var(--paper-3);
+  outline-width: 2px;
+  outline-offset: 2px;
+}
+
+button.small {
+  padding: var(--size-2) var(--size-3) ;
+}
+
 
 a svg {
   stroke: var(--acc-3);
