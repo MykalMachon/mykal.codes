@@ -8,6 +8,9 @@
   functions="server/functions"
   edge_functions="server/edge"
 
+[functions]
+  directory = "server/functions"
+
 [[edge_functions]]
   path = "/og"
   function = "og"
