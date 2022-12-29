@@ -20,15 +20,15 @@ I used this app pretty heavily; as a kid interested in art, animation, and video
 
 last night, I brought this up with a friend who also remembered the site and we talked about it a bit.
 
-This morning she sent over [a site that archived all of the original flipnotes on the app](https://archive.sudomemo.net/).   
+This morning she sent over [a site that archived all of the original flipnotes on the app](https://archive.sudomemo.net/).  
 Up until today, I had assumed that most of these flipnotes were lost to the sands of time and bitrot. In reviewing the popular flipnotes.
 
 ## Quality and relevancy today
 
-I was, for some reason, surprised at how undeniably cringe so many of these flipnotes were (see [example](https://flipnot.es/MY2918D)), but given I was using the app in middle school, which was smack-dab in the middle of my "awkward phase" that checks out. Despite the cringe, there's still lots of very high-quality animation to be found.  
+I was, for some reason, surprised at how undeniably cringe so many of these flipnotes were (see [example](https://flipnot.es/MY2918D)), but given I was using the app in middle school, which was smack-dab in the middle of my "awkward phase" that checks out. Despite the cringe, there's still lots of very high-quality animation to be found.
 
-It's also surprising how so much of the content on there _feels a lot like what exists on TikTok today._ People could remix popular flipnotes by slightly editing the animation, or reusing the sound to make their own animations. "Music Videos" aka "MV" were also very popular, and feel a lot like fan cams or dance videos you'd find on TikTok today.   
+It's also surprising how so much of the content on there _feels a lot like what exists on TikTok today._ People could remix popular flipnotes by slightly editing the animation, or reusing the sound to make their own animations. "Music Videos" aka "MV" were also very popular, and feel a lot like fan cams or dance videos you'd find on TikTok today.
 
-## Efforts to keep flipnote alive
+## Efforts to keep Flipnote alive
 
-After spending some time reading through [the archive's history page](https://archive.sudomemo.net/history/)
+After spending some time reading through [the archive's history page](https://archive.sudomemo.net/history/) I found a link to a seemingly semi-active forum where people still make flipnotes to this day! 
