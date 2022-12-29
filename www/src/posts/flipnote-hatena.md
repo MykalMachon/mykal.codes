@@ -3,7 +3,7 @@ title: Flipnote Hatena
 slug: flipnote-hatena
 description: A friend of mine shared a Flipnote Hatena archive site that brought back
   a lot of memories.
-pubDate: 2022-12-29T08:00:00Z
+pubDate: 2022-12-29T08:00:00.000+00:00
 heroImage: ''
 tags:
 - personal
@@ -16,7 +16,7 @@ Flipnote Hatena is a now-defunct social media platform based on sharing digital 
 
 I used this app pretty heavily; as a kid interested in art, animation, and video games who just happened to own a DS, this was a very fun overlap of interests. I created a bunch of little animations and drawings based on events in my life. The most notable in my memory is a small animation depicting me in the passenger seat while my uncle was pulled over for speeding; I remember thinking this was hilarious as a kid. I also viewed the "popular flipnotes" in the app almost daily, I remember there being lots of [stick fights](https://www.sudomemo.net/watch/CBEEA0_0A95B9C620081_000), [music videos](https://archive.sudomemo.net/watch/mg3io13c0czbyyvl24kwn2udpnac) with animated characters, [spooky loops](https://flipnot.es/5UL8E13), and other weird miscellaneous animations:
 
-<iframe src="[https://archive.sudomemo.net/watch/embed/mw21bqmammy40dtweuatavgl1jbc](https://archive.sudomemo.net/watch/embed/mw21bqmammy40dtweuatavgl1jbc "https://archive.sudomemo.net/watch/embed/mw21bqmammy40dtweuatavgl1jbc")" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+<iframe src="https://archive.sudomemo.net/watch/embed/mw21bqmammy40dtweuatavgl1jbc" scrolling="no" frameborder="0" height="429" width="512"></iframe>
 
 last night, I brought this up with a friend who also remembered the site and we talked about it a bit.
 
@@ -31,4 +31,4 @@ It's also surprising how so much of the content on there _feels a lot like what 
 
 ## Efforts to keep Flipnote alive
 
-After spending some time reading through [the archive's history page](https://archive.sudomemo.net/history/) I found a link to a seemingly semi-active forum where people still make flipnotes to this day! 
+After spending some time reading through [the archive's history page](https://archive.sudomemo.net/history/) I found a link to a seemingly semi-active forum where people still make flipnotes to this day! There's also a GitHub with regular updates where people are reverse-engineering the Flipnote system to create an open-source and maintainable way to keep making flipnotes without the DS.
