@@ -463,3 +463,10 @@ ul.reactions__list button:disabled {
 ul.reactions__list button:hover:disabled span.emoji {
   transform: scale(0.9);
 }
+
+/* misc */
+
+iframe {
+  width: 100%;
+  height: auto;
+}
