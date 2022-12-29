@@ -24,3 +24,5 @@ fields:
   type: boolean
   label: draft
   description: 'if checked, this post is a draft and is not visible publicly. '
+pages:
+- www/src/posts/flipnote-hatena.md
