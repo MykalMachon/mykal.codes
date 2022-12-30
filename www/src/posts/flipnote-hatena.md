@@ -32,7 +32,7 @@ Maybe what I did with my spare time as a kid isn't that different than what my l
 
 ## Efforts to keep Flipnote alive
 
-After spending some time reading through [the archive's history page](https://archive.sudomemo.net/history/) I found a link to a seemingly semi-active forum where people seemingly still make flipnotes today called "[Sudomemo](https://www.sudomemo.net/?utm_source=flipnotearchive)"
+After spending some time reading through [the archive's history page](https://archive.sudomemo.net/history/) I found a link to a seemingly semi-active forum where people upload new or lost flipnotes today called "[Sudomemo](https://www.sudomemo.net/?utm_source=flipnotearchive)"
 
 There's also a [GitHub organization](https://github.com/Flipnote-Collective) where fans have reverse-engineered a number of the Flipnote Studio systems to create an open-source and maintainable way to edit and interpret Flipnote files without a DS.
 
