@@ -7,7 +7,7 @@ pubDate: 2022-12-29T08:00:00.000+00:00
 heroImage: ''
 tags:
 - personal
-draft: true
+draft: false
 
 ---
 Flipnote Hatena is a now-defunct online platform based on sharing digital "Flipnotes". These were drawn in an app called "[Flipnote Studio](https://en.wikipedia.org/wiki/Flipnote_Studio)" released on both the DS and 3DS. Here's an example of an early Flipnote created by one of the devs:
