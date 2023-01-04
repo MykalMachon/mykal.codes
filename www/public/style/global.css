@@ -201,9 +201,15 @@ ul ul {
   margin: 0;
 }
 
+/* misc */
+
 img {
   width: 100%;
   height: auto;
+}
+
+iframe {
+  width: 100%;
 }
 
 img.loading::after {
@@ -464,8 +470,3 @@ ul.reactions__list button:hover:disabled span.emoji {
   transform: scale(0.9);
 }
 
-/* misc */
-
-iframe {
-  width: 100%;
-}
