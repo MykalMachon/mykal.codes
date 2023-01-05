@@ -3,14 +3,16 @@ title: Braving the snow for bagels
 slug: braving-the-snow-for-bagels
 description: I asked Chat GPT-3 to write a short fantasy story about me braving the
   snow to get bagels.
-pubDate: 2022-12-20T17:05:00Z
+pubDate: 2022-12-20T17:05:00.000+00:00
 heroImage: ''
 tags:
 - ai
 - personal
-draft: false
+draft: true
 
 ---
+> Hey! I reverted this post back to a draft. I wasn't super happy with it in general just thought it was a fun note. In the future this type of content will probably exist elsewhere on my website. 
+
 We got quite a bit of snow last night and are effectively grounded at our apartment. Obviously, the biggest issue with this is that I have no way to get to my favourite local coffee shop for my weekly coffee + bagel treat.
 
 I was joking with Kiya that it would be an epic adventure to walk there and she joked that I should [ask an AI](https://chat.openai.com/chat) to write that story for me, so I did. The results made me laugh so I thought I would share.
