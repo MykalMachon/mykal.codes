@@ -4,6 +4,7 @@ slug: "new-job-at-ufv"
 description: "Moving from web developer, to systems analyst"
 pubDate: "2021-05-10"
 heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/new-job-at-ufv.jpg"
+draft: false
 tags: ["personal"]
 ---
 

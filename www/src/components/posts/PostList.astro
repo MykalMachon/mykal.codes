@@ -5,7 +5,7 @@ const { posts, type = 'large', showYears = false } = Astro.props;
 
 // get a map where the key is the year, and the value is all posts for that year
 const postYearMap = posts.reduce((postList, currPost) => {
-  const postYear = new Date(currPost.frontmatter.pubDate).getFullYear();
+  const postYear = new Date(currPost.data.pubDate).getFullYear();
   const newPostList = postList;
   newPostList[postYear] = [...(postList[postYear] || []), currPost];
   return newPostList;
@@ -23,7 +23,26 @@ const postYearArr = Object.keys(postYearMap)
 ---
 
 <div data-pagefind-ignore="all">
-  <>
-    {posts.map((p) => <PostCard type={type} post={p} />)}
-  </>
+  {
+    showYears ? (
+      <>
+        {postYearArr.map((postYear) => (
+          <>
+            <h2>{postYear.year}</h2>
+            <div>
+              {postYear.posts.map((p) => (
+                <PostCard type={type} post={p} />
+              ))}
+            </div>
+          </>
+        ))}
+      </>
+    ) : (
+      <>
+        {posts.map((p) => (
+          <PostCard type={type} post={p} />
+        ))}
+      </>
+    )
+  }
 </div>

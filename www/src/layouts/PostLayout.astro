@@ -6,9 +6,9 @@ import MainHead from '../components/MainHead.astro';
 import PostHeader from '../components/posts/PostHeader.astro';
 import PostFooter from '../components/posts/PostFooter.astro';
 
-const { post, nextPost, prevPost, fileName, readTime } = Astro.props;
+const { post, fileName, readTime } = Astro.props;
 const { title, description, pubDate, heroImage, draft, tags, slug } =
-  post.frontmatter;
+  post.data;
 
 const date = new Date(pubDate);
 const formattedDate = new Intl.DateTimeFormat('en-CA', {timeZone: 'America/Vancouver'})
@@ -60,7 +60,7 @@ const encodedOgImageURL = encodeURI(ogImageURL);
       />
       <slot />
     </main>
-    <PostFooter {fileName} {nextPost} {prevPost} {tags} {slug} />
+    <PostFooter {fileName} {tags} {slug} />
     <Footer />
   </body>
 </html>

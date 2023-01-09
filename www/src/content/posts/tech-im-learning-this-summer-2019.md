@@ -3,6 +3,7 @@ title: "Tech I'm learning this summer"
 slug: 'tech-im-learning-this-summer-2019'
 description: 'The tech that I want to learn in the summer of 2019'
 pubDate: '2019-05-13'
+draft: false
 tags:
   - 'personal'
   - 'javascript'

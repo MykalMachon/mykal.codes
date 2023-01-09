@@ -57,7 +57,7 @@ const photos = await getCollection('photos');
           {
             sortedPosts.map((post) => (
               <li>
-                <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+                <a href={`/posts/${post.data.slug}`}>{post.data.title}</a>
                 <time datetime={post.data.pubDate.toISOString()}>
                   {post.data.pubDate.toDateString()}
                 </time>

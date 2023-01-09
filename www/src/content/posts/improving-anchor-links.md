@@ -5,6 +5,7 @@ slug: 'improving-anchor-links'
 pubDate: '2022-06-24'
 heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1656107583/Mykal%20Codes/rick-rothenberg-Nqx3SaMp4kQ-unsplash.jpg
 tags: ['webdev']
+draft: false
 ---
 
 This post outlines a few tricks that I've been re-discovering over and over again. To save time, I thought I would do a quick write-up documenting them so I know where to look next time I need them.

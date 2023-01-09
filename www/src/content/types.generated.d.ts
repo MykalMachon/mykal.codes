@@ -68,6 +68,13 @@ declare module 'astro:content' {
 },
 },
 "posts": {
+"2022-2023.md": {
+  id: "2022-2023.md",
+  slug: "2022-2023",
+  body: string,
+  collection: "posts",
+  data: any
+},
 "aeropress-latte.md": {
   id: "aeropress-latte.md",
   slug: "aeropress-latte",
@@ -169,6 +176,13 @@ declare module 'astro:content' {
 "every-company-is-a-tech-company.md": {
   id: "every-company-is-a-tech-company.md",
   slug: "every-company-is-a-tech-company",
+  body: string,
+  collection: "posts",
+  data: any
+},
+"flipnote-hatena.md": {
+  id: "flipnote-hatena.md",
+  slug: "flipnote-hatena",
   body: string,
   collection: "posts",
   data: any

@@ -5,6 +5,7 @@ description: "A quick guide on system monitoring with Telegraf, and Influx DB."
 pubDate: "2022-07-21"
 heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1658642824/Mykal%20Codes/making-systems-monitoring-easy.jpg"
 tags: ["self-hosting", "docker"]
+draft: false
 ---
 
 I've been looking into how to be more pro-active about monitoring [my HomeLab](http://mykal.codes/uses#-servers--hardware) lately. With that in mind, I went on a bit of a monitoring dive and setup some basic tools on my raspberry pi's. I wanted to keep track of what I did, so why not write it up in a blog post.

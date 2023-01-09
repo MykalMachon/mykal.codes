@@ -8,16 +8,16 @@ heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%
 tags:
 - recipes
 - coffee
-
+draft: false
 ---
 ## Legend
 
 - [Legend](#legend)
-- [Coffee Beans](#coffee-beans)
+- [Coffee Beans ](#coffee-beans)
   - [Where I Get My Beans](#where-i-get-my-beans)
   - [How I Grind My Beans](#how-i-grind-my-beans)
 - [Brewing Methods](#brewing-methods)
-  - [Pour Over](#pour-over)
+  - [Pour Over ](#pour-over)
     - [Equipment](#equipment)
     - [Brew Instructions](#brew-instructions)
   - [AeroPress](#aeropress)
