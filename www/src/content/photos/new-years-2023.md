@@ -2,6 +2,7 @@
 title: "New Years 2023"
 slug: "new-years-2023"
 pubDate: "2023-01-01"
+location: "Chilliwack, BC, Canada"
 photos: 
   - url: 'https://res.cloudinary.com/mykalcodes/image/upload/v1672719710/Mykal%20Codes/happy-new-years_bgqmwk.jpg'
     alt: 'My wife and I'

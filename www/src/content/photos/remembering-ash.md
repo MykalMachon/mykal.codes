@@ -2,6 +2,7 @@
 title: "Remembering Ash"
 slug: "remembering-ash"
 pubDate: "2022-08-01"
+location: "Home"
 photos: 
   - url: 'https://res.cloudinary.com/mykalcodes/image/upload/v1659384366/Mykal%20Codes/ash-in-hammock_egnu25.jpg'
     alt: 'A brown and black spotted bengal cat sitting in a cat tree. He stares up at the camera.'

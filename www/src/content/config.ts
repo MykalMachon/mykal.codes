@@ -41,6 +41,7 @@ const photos = defineCollection({
     title: z.string(),
     slug: z.string(),
     pubDate: z.string().datetime(),
+    location: z.optional(z.string()),
     photos: z.array(z.object({
       url: z.string().url(),
       alt: z.string()
