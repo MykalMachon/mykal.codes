@@ -1,110 +1,52 @@
-<nav role="navigation" class="container">
-  <h2 class="title">Mykal Machon</h2>
-  <ul>
-    <li><a class="home" href="/">Home</a></li>
-    <li><a href="/posts">Posts</a></li>
-    <li><a href="/about-me">About</a></li>
-    <li class="btn align-end">
-      <a href="/search" title="Search for pages and posts">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather 
-              feather-search"
-        >
-          <circle cx="11" cy="11" r="8"> </circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"> </line>
-        </svg>
+<header>
+  <nav role="navigation">
+    <div class="nav__logo">
+      <a href="/">
+        <img src="/favicon.png" alt="mykal's logo">
       </a>
-    </li>
-    <li class="btn align-end">
-      <a href="/rss.xml" title="Subscribe to my RSS feed">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather feather-rss"
-        >
-          <path d="M4 11a9 9 0 0 1 9 9"> </path>
-          <path d="M4 4a16 16 0 0 1 16 16"> </path>
-          <circle cx="5" cy="19" r="1"> </circle>
-        </svg>
-      </a>
-    </li>
-  </ul>
-  <span class="border"></span>
-</nav>
+    </div>
+    <div class="nav__menu">
+      <ul>
+        <li><a href="/garden">Garden</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/now">Now</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
 <style lang="scss">
-  span.border {
-    display: block;
-    border-bottom: 1px solid var(--ink-1);
+  header {
     width: 100%;
   }
-
-  h1.title {
-    font-size: var(--font-size-xl);
-    line-height: 1em;
-    margin: var(--size-8) 0 var(--size-3) 0;
-  }
-
-  ul {
-    list-style: none;
+  
+  nav {
+    width: 100%;
+    padding: var(--size-3) var(--size-5);
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: var(--size-1);
-    padding: 0;
-    margin: var(--size-3) 0 0 calc(-1 * var(--size-3));
-    width: 100%;
-    padding: 0 0 var(--size-3) 0;
   }
 
-  @media screen and (max-width: 600px) {
-    div.navigation__bar {
-      display: flex;
-      justify-content: flex-start;
+  .nav__menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    li {
+      margin: 0 var(--size-3);
     }
   }
 
-  ul a {
-    text-decoration: none;
-    padding: var(--size-2) var(--size-3);
-    border-radius: var(--radius-2);
+  .nav__menu--mobile {
+    display: none;
   }
 
-  ul a:hover {
-    background: var(--paper-2);
-    text-decoration: underline;
-  }
-
-  .align-end {
-    justify-self: flex-end;
-  }
-
-  li.btn {
-    display: grid;
-    place-items: center;
-    margin: 0;
-    a {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: var(--size-1);
+  .nav__logo img {
+    width: 32px;
+    height: auto;
+    transition: all 0.3s var(--ease-elastic-5);
+    &:hover {
+      transform: rotate(5deg);
     }
   }
 </style>

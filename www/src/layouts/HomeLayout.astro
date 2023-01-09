@@ -5,12 +5,6 @@ import Footer from '../components/layout/Footer.astro';
 import MainHead from '../components/MainHead.astro';
 
 const { title, description } = Astro.props;
-
-// TODO: get rid of this template, there's 0 reason for it.
-
-// og image generation
-// const ogImageUrl = `https://mykal.codes/api/social-image?title=${title}&type=page`;
-// const encodedOgImageUrl = encodeURI(ogImageUrl);
 ---
 
 <html class="" lang="en">
@@ -29,34 +23,26 @@ const { title, description } = Astro.props;
 
   <body class="site-container">
     <Navigation />
-    <section class="container">
-      <h1 class="homepage__hero">
-        Hi, I'm Mykal. <br />
-        This is my website!
-      </h1>
-      <p>
-        I work as a Systems Analyst at <a href="https://ufv.ca">UFV</a>, run a <a
-          href="https://tinybox.dev">software consulting business</a
-        >, and work on a bunch of <a href="https://github.com/MykalMachon"
-          >open source</a
-        > stuff in my spare time.
-      </p>
-    </section>
-    <main class="container" data-pagefind-body>
+    <main>
       <slot />
     </main>
-    <Footer />
   </body>
 </html>
 
-<style lang="scss">
-  .homepage__hero {
-    padding: var(--size-5) 0;
-    font-weight: bold;
-    font-size: var(--font-size-xl);
-    line-height: 1.25em;
-    border-bottom: 1px solid var(--ink-1);
-    margin: 0;
-    // margin-bottom: var(--size-3);
+<style>
+  section {
+    padding: var(--size-3) var(--size-5);
+  }
+  .leading-text {
+    font-family: var(--font-lead);
+    font-size: var(--font-size-md);
+    font-weight: normal;
+  }
+  main {
+    width: 100%;
+    max-width: 1000px;
+  }
+  article.hero__content {
+    max-width: 80ch;
   }
 </style>

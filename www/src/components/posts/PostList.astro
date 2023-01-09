@@ -23,26 +23,7 @@ const postYearArr = Object.keys(postYearMap)
 ---
 
 <div data-pagefind-ignore="all">
-  {
-    showYears ? (
-      <>
-        {postYearArr.map((postYear) => (
-          <>
-            <h2>{postYear.year}</h2>
-            <div>
-              {postYear.posts.map((p) => (
-                <PostCard type={type} post={p} />
-              ))}
-            </div>
-          </>
-        ))}
-      </>
-    ) : (
-      <>
-        {posts.map((p) => (
-          <PostCard type={type} post={p} />
-        ))}
-      </>
-    )
-  }
+  <>
+    {posts.map((p) => <PostCard type={type} post={p} />)}
+  </>
 </div>

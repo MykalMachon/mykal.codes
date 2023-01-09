@@ -7,12 +7,6 @@ const dateFormatter = Intl.DateTimeFormat('en-GB', { year: 'numeric', month: '2-
 
 {type === "large" ? (
 <article class="postcard">
-  <div class="postcard__photo">
-    <a href={`/posts/${post.frontmatter.slug}`}>
-      <img src={getCustomQualityUrl(post.frontmatter.heroImage, 202)} alt={`decorative photo for
-        ${post.frontmatter.title} post`} loading="lazy" width="202" height="166" />
-    </a>
-  </div>
   <div class="postcard__content">
     <small class="postcard__content__date">{dateFormatter.format(new Date(post.frontmatter.pubDate))}</small>
     <h3> <a href={`/posts/${post.frontmatter.slug}`}>{post.frontmatter.title}</a></h3>
