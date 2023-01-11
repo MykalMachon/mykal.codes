@@ -16,8 +16,10 @@ const { title, description } = Astro.props;
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
+  rel="preload"
   href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
-  rel="stylesheet"
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
 />
 <!-- Styles -->
 <link rel="stylesheet" href="/style/global.css" />
