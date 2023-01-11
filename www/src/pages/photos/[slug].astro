@@ -17,8 +17,6 @@ const { photo } = Astro.props;
 const { Content } = await photo.render();
 ---
 
-<main>
-  <PhotoLayout photo={photo}>
-    <Content />
-  </PhotoLayout>
-</main>
+<PhotoLayout photo={photo}>
+  <Content />
+</PhotoLayout>
