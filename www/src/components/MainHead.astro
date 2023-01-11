@@ -8,7 +8,7 @@ const { title, description } = Astro.props;
 ---
 
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{title} | mykal.codes</title>
 <meta name="description" content={description} />
 <link rel="icon" type="image/png" href="/favicon.png" />
@@ -16,10 +16,8 @@ const { title, description } = Astro.props;
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
-  rel="preload"
   href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
-  as="style"
-  onload="this.onload=null;this.rel='stylesheet'"
+  rel="stylesheet"
 />
 <!-- Styles -->
 <link rel="stylesheet" href="/style/global.css" />
@@ -42,3 +40,18 @@ const { title, description } = Astro.props;
     />
   )
 }
+
+<!-- lazy loading -->
+<script>
+  // image dynamic loading
+  const loadingImages = document.querySelectorAll('img.loading');
+  loadingImages.forEach((loadingImageEl) => {
+    // @ts-ignore
+    const hqImageUrl = loadingImageEl.dataset.lazy;
+    // @ts-ignore
+    if (hqImageUrl) loadingImageEl.src = hqImageUrl;
+    loadingImageEl.addEventListener('load', () => {
+      loadingImageEl.classList.remove('loading');
+    });
+  });
+</script>

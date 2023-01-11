@@ -49,8 +49,6 @@ const dateTime = dateFormatted.split(',')[1].trim();
   const bodyEl = document.querySelector('body');
   const themeBtnEls = document.querySelectorAll('button.btn-theme[data-theme]');
 
-  console.log(themeBtnEls);
-
   let selectedTheme = localStorage.getItem('theme');
 
   const handleThemeBtnClick = (btnEl) => {
