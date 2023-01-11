@@ -186,11 +186,18 @@ img {
   transform: translate3d(0,0,0); /* stops overflow */
 }
 
+main .lazy-wrapper {
+  border-radius: var(--radius-2);
+}
+
 img.lazy {
   filter: blur(0px);
-  
   transition: transform 0.3s var(--ease-elastic-3),
     filter 0.5s var(--ease-elastic-3);
+}
+
+main img.lazy {
+  border-radius: var(--radius-2);
 }
 
 img.lazy.loading {

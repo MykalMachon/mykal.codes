@@ -21,18 +21,7 @@ const encodedOgImageURL = encodeURI(ogImageURL);
 
 <html class="" lang="en">
   <head>
-    <MainHead {title} {description} />
-    <script>
-      // image dynamic loading
-      const loadingImages = document.querySelectorAll('img.loading');
-      loadingImages.forEach((loadingImageEl) => {
-        // @ts-ignore
-        const hqImageUrl = loadingImageEl.dataset.lazy;
-        // @ts-ignore
-        if (hqImageUrl) loadingImageEl.src = hqImageUrl;
-        loadingImageEl.classList.remove('loading');
-      });
-    </script>
+    <MainHead title={title} description={description} />
 
     <!-- OG Image Stuff -->
     <meta property="og:title" content={`${title} | mykal.codes`} />
