@@ -349,6 +349,15 @@ declare module 'astro:content' {
   data: any
 },
 },
+"reviews": {
+"blade-runner-2049.md": {
+  id: "blade-runner-2049.md",
+  slug: "blade-runner-2049",
+  body: string,
+  collection: "reviews",
+  data: any
+},
+},
 
 	};
 

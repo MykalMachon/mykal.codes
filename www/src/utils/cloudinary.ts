@@ -1,3 +1,6 @@
+import imagemin from "imagemin";
+import imageminJpegtran from "imagemin-jpegtran";
+
 const isCloudinaryUrl = (cloudinaryUrl) => {
   return cloudinaryUrl.includes("res.cloudinary.com");
 };
@@ -48,6 +51,19 @@ export const getHighQualityUrl = (cloudinaryUrl) => {
   const { baseUrl, imageUrl } = decomposedCloudinaryUrl;
   return `${baseUrl}c_scale,f_auto,w_1200${imageUrl}`;
 };
+
+
+
+export async function getBase64ImageUrl(imageUrl: string) {
+  // fetch image and convert it to base64
+  const response = await fetch(imageUrl);
+  const buffer = await response.arrayBuffer();
+	const minified = await imagemin.buffer(Buffer.from(buffer), {
+    plugins: [imageminJpegtran()],
+  });
+  const base64 = Buffer.from(minified).toString("base64")
+  return `data:image/jpeg;base64,${base64}`;
+}
 
 // const test = () => {
 //   const hq =
