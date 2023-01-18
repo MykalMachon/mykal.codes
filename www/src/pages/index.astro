@@ -9,6 +9,8 @@ import PostList from '../components/posts/PostList.astro';
 import { getCollection } from 'astro:content';
 import { getSortedPosts } from '../utils/posts';
 import { getBase64ImageUrl, getCustomQualityUrl } from '../utils/cloudinary';
+import Footer from '../components/layout/Footer.astro';
+import MainLayout from '../layouts/MainLayout.astro';
 
 // Data Fetching: fetch blog posts
 const posts = await getCollection('posts', ({ data }) => {
@@ -28,10 +30,7 @@ const photos = await getCollection('photos');
 const links = await getCollection('links');
 ---
 
-<HomeLayout
-  title="Home"
-  description="Mykal Machon's website, blog, and digital garden."
->
+<MainLayout title="Home" description="Mykal's home page">
   <section class="container--large">
     <article class="hero__content">
       <h1>Hey, I'm Mykal Machon</h1>
@@ -47,7 +46,7 @@ const links = await getCollection('links');
     </article>
   </section>
 
-  <section class="home__layout">
+  <section class="home__layout container--large">
     <div class="content__lists">
       <article class="content__posts">
         <div class="content__header">
@@ -116,9 +115,7 @@ const links = await getCollection('links');
       </article>
       <article class="content__media">
         <div class="content__header">
-          <h3>
-            Links
-          </h3>
+          <h3>Links</h3>
           <p class="leading">things I find interesting.</p>
         </div>
         <ul class="content__items content__items__list">
@@ -133,7 +130,7 @@ const links = await getCollection('links');
       </article>
     </div>
   </section>
-</HomeLayout>
+</MainLayout>
 
 <style lang="scss">
   .section__header {
@@ -163,6 +160,7 @@ const links = await getCollection('links');
     font-family: var(--font-lead);
     font-size: var(--font-size-md);
     font-weight: normal;
+    line-height: 1.35;
   }
   main {
     width: 100%;
