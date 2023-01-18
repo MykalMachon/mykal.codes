@@ -28,6 +28,7 @@ const posts = defineCollection({
     pubDate: z.string().datetime(),
     editDate: z.optional(z.string().datetime()),
     heroImage: z.optional(z.string().url()),
+    stage: z.enum(["seed", "budding", "sapling", "old growth"]),
     draft: z.boolean(),
     tags: z.array(z.string())
   }
@@ -50,7 +51,7 @@ const photos = defineCollection({
   }
 })
 
-const reviews = defineCollection({
+const links = defineCollection({
   slug: ({ id, defaultString, data, body }) => {
     return data.slug || defaultString
   },
@@ -58,11 +59,7 @@ const reviews = defineCollection({
     title: z.string(),
     slug: z.string(),
     pubDate: z.string().datetime(),
-    editDate: z.optional(z.string().datetime()),
-    heroImage: z.optional(z.string().url()),
-    rating: z.number().min(1).max(10),
-    draft: z.boolean(),
-    tags: z.array(z.string())
+    url: z.string()
   }
 })
 
@@ -70,5 +67,5 @@ export const collections = {
   notes,
   posts,
   photos,
-  reviews,
+  links,
 }

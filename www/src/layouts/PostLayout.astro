@@ -38,18 +38,8 @@ const encodedOgImageURL = encodeURI(ogImageURL);
   <body class="site-container">
     <Navigation />
     <main class="container" data-pagefind-body>
-      <PostHeader
-        {title}
-        {description}
-        {heroImage}
-        {pubDate}
-        {readTime}
-        {draft}
-        {tags}
-      />
       <slot />
     </main>
-    <PostFooter {fileName} {tags} {slug} />
     <Footer />
   </body>
 </html>

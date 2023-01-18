@@ -42,7 +42,16 @@ declare module 'astro:content' {
 	};
 
 	const entryMap: {
-		"notes": {
+		"links": {
+"mykal-social.md": {
+  id: "mykal-social.md",
+  slug: "mykal-social",
+  body: string,
+  collection: "links",
+  data: any
+},
+},
+"notes": {
 "digital-gardens.md": {
   id: "digital-gardens.md",
   slug: "digital-gardens",
@@ -346,15 +355,6 @@ declare module 'astro:content' {
   slug: "why-i-love-self-hosting",
   body: string,
   collection: "posts",
-  data: any
-},
-},
-"reviews": {
-"blade-runner-2049.md": {
-  id: "blade-runner-2049.md",
-  slug: "blade-runner-2049",
-  body: string,
-  collection: "reviews",
   data: any
 },
 },

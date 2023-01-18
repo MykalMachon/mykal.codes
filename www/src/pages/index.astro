@@ -10,21 +10,22 @@ import { getCollection } from 'astro:content';
 import { getSortedPosts } from '../utils/posts';
 import { getBase64ImageUrl, getCustomQualityUrl } from '../utils/cloudinary';
 
-const numPostsPerList = 3;
-
 // Data Fetching: fetch blog posts
 const posts = await getCollection('posts', ({ data }) => {
   return data.draft === false;
 });
-const sortedPosts = getSortedPosts(posts).slice(0, numPostsPerList);
+const sortedPosts = getSortedPosts(posts).slice(0, 5);
 
 // Data fetching: fetch notes
 const notes = await getCollection('notes', ({ data }) => {
   return data.draft === false;
 });
 
-// Date fetching: fetch posts
+// Data fetching: fetch photos
 const photos = await getCollection('photos');
+
+// Data fetching: fetch links
+const links = await getCollection('links');
 ---
 
 <HomeLayout
@@ -115,15 +116,20 @@ const photos = await getCollection('photos');
       </article>
       <article class="content__media">
         <div class="content__header">
-          <h3>Reviews</h3>
-          <p class="leading">Reviews of various media</p>
+          <h3>
+            Links
+          </h3>
+          <p class="leading">things I find interesting.</p>
         </div>
-        <div class="content__items content__items__list">
-          <article>
-            <strong>Severance</strong>
-            <p>Some of the best sci-fi I've seen in a long time.</p>
-          </article>
-        </div>
+        <ul class="content__items content__items__list">
+          {
+            links.map((link) => (
+              <li>
+                <a href={`/links/${link.data.slug}`}>{link.data.title}</a>
+              </li>
+            ))
+          }
+        </ul>
       </article>
     </div>
   </section>
