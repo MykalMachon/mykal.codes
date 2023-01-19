@@ -1,14 +1,15 @@
 ---
 import MainHead from '../components/MainHead.astro';
-import Navigation from '../components/layout/Navigation.astro';
-import Attributes from '../components/layout/Attributes.astro';
-import { getBase64ImageUrl, getCustomQualityUrl } from '../utils/cloudinary';
 
-const { photo } = Astro.props;
+import Attributes from '../components/layout/Attributes.astro';
+import Navigation from '../components/layout/Navigation.astro';
+import Footer from '../components/layout/Footer.astro';
+
+const { data } = Astro.props;
 
 // if the page is markdown, use the content title instead of the provided props
-const pageTitle = photo.data.title;
-const pageDescription = photo.data.location;
+const pageTitle = data.title;
+const pageDescription = data.description || '';
 
 const ogImageURL = `${Astro.url.origin}/og?title=${pageTitle}&desc=${pageDescription}&type=Page`;
 const encodedOgImageURL = encodeURI(ogImageURL);
@@ -34,29 +35,16 @@ const encodedOgImageURL = encodeURI(ogImageURL);
     <Navigation />
     <main class="container" data-pagefind-body>
       <header>
-        <h1>{photo.data.title}</h1>
-        <Attributes data={photo.data} />
+        {data.url ? (
+          <h1>🔗<a href={data.url}>{data.title}</a></h1>
+        ) : (
+          <h1>{data.title}</h1>
+        )}
+        
+        <Attributes data={data} />
       </header>
-      <section class="photos">
-        {
-          photo.data.photos.map(async ({ url, alt }) => {
-            const lqImage = getCustomQualityUrl(url, 24);
-            const b64image = await getBase64ImageUrl(lqImage);
-            const hqImage = getCustomQualityUrl(url, 600);
-            return (
-              <div class="lazy-wrapper">
-                <img
-                  class="lazy loading"
-                  src={b64image}
-                  alt={alt}
-                  data-lazy={hqImage}
-                />
-              </div>
-            );
-          })
-        }
-      </section>
       <slot />
     </main>
+    <Footer />
   </body>
 </html>

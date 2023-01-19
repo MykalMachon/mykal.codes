@@ -33,7 +33,9 @@ const encodedOgImageURL = encodeURI(ogImageURL);
 
   <body class="site-container">
     <Navigation />
-    <slot />
+    <main data-pagefind>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>

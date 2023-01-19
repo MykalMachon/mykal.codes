@@ -1,8 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import Attributes from '../../components/layout/Attributes.astro';
-import Navigation from '../../components/layout/Navigation.astro';
-import MainHead from '../../components/MainHead.astro';
+import ContentLayout from '../../layouts/ContentLayout.astro';
 
 export async function getStaticPaths({}) {
   let allLinks = await getCollection('links');
@@ -19,24 +17,6 @@ const { link } = Astro.props;
 const { Content } = await link.render();
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <MainHead
-      title={link.data.title}
-      description={`a link I thought was useful titled ${link.data.title}`}
-    />
-  </head>
-  <body class="site-container">
-    <Navigation />
-    <main class="container" data-pagefind-body>
-      <header>
-        <h1>🔗<a href={link.data.url}>{link.data.title}</a></h1>
-        <Attributes data={link.data} />
-      </header>
-      <section class="content">
-        <Content />  
-      </section>
-    </main> 
-  </body>
-</html>
+<ContentLayout data={link.data}>
+  <Content />
+</ContentLayout>

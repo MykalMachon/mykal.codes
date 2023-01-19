@@ -1,7 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
+
 import readingTime from 'reading-time';
-import PostLayout from '../../layouts/PostLayout.astro';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+
 import { getSortedPosts } from '../../utils/posts';
 
 export async function getStaticPaths({}) {
@@ -19,13 +21,10 @@ export async function getStaticPaths({}) {
 }
 
 const { post } = Astro.props;
-const {Content } = await post.render();
+const { Content } = await post.render();
+const rt = readingTime(post.body).text
 ---
 
-<PostLayout
-  fileName={post.id}
-  readTime={readingTime(post.body).text}
-  {post}
->
+<ContentLayout data={{...post.data, readingTime: rt}}>
   <Content />
-</PostLayout>
+</ContentLayout>

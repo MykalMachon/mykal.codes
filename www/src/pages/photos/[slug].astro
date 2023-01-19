@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
-import PhotoLayout from '../../layouts/PhotoLayout.astro';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import { getBase64ImageUrl, getCustomQualityUrl } from '../../utils/cloudinary';
+
 
 export async function getStaticPaths({}) {
   let allPhotos = await getCollection('photos');
@@ -17,6 +19,25 @@ const { photo } = Astro.props;
 const { Content } = await photo.render();
 ---
 
-<PhotoLayout photo={photo}>
+<ContentLayout data={photo.data}>
+  <section class="photos">
+    {
+      photo.data.photos.map(async ({ url, alt }) => {
+        const lqImage = getCustomQualityUrl(url, 24);
+        const b64image = await getBase64ImageUrl(lqImage);
+        const hqImage = getCustomQualityUrl(url, 600);
+        return (
+          <div class="lazy-wrapper">
+            <img
+              class="lazy loading"
+              src={b64image}
+              alt={alt}
+              data-lazy={hqImage}
+            />
+          </div>
+        );
+      })
+    }
+  </section>
   <Content />
-</PhotoLayout>
+</ContentLayout>

@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Attributes from '../../components/layout/Attributes.astro';
 import Navigation from '../../components/layout/Navigation.astro';
 import MainHead from '../../components/MainHead.astro';
+import ContentLayout from '../../layouts/ContentLayout.astro';
 
 export async function getStaticPaths({}) {
   let allnotes = await getCollection('notes');
@@ -19,24 +20,6 @@ const { note } = Astro.props;
 const { Content } = await note.render();
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <MainHead
-      title={note.data.title}
-      description={note.data.description}
-    />
-  </head>
-  <body class="site-container">
-    <Navigation />
-    <main class="container" data-pagefind-body>
-      <header>
-        <h1>{note.data.title}</h1>
-        <Attributes data={note.data} />
-      </header>
-      <section class="content">
-        <Content />  
-      </section>
-    </main> 
-  </body>
-</html>
+<ContentLayout data={note.data}>
+  <Content />  
+</ContentLayout>
