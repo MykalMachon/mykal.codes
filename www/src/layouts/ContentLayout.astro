@@ -40,7 +40,7 @@ const encodedOgImageURL = encodeURI(ogImageURL);
         ) : (
           <h1>{data.title}</h1>
         )}
-        
+        <p class="leading">{data.description}</p>
         <Attributes data={data} />
       </header>
       <slot />

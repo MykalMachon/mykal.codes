@@ -2,7 +2,7 @@
 title: 'Preparing for Battlesnake'
 slug: 'preparing-for-battlesnake'
 description: 'Lets review my goals for this years Battlesnake competition.'
-pubDate: '2019-02-18'
+pubDate: 2019-02-18
 heroImage: 'https://res.cloudinary.com/mykalcodes/image/upload/v1662994978/Mykal%20Codes/battlesnake-2019.png'
 draft: false
 tags:

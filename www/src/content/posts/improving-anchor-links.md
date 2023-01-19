@@ -2,7 +2,7 @@
 title: 'Improving Anchor Links'
 description: 'This post outlines a few little tricks you can use with your anchor links'
 slug: 'improving-anchor-links'
-pubDate: '2022-06-24'
+pubDate: 2022-06-24
 heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1656107583/Mykal%20Codes/rick-rothenberg-Nqx3SaMp4kQ-unsplash.jpg
 tags: ['webdev']
 draft: false
