@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 
 import readingTime from 'reading-time';
+import AuthorCard from '../../components/AuthorCard.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 
 import { getSortedPosts } from '../../utils/posts';
@@ -25,6 +26,7 @@ const { Content } = await post.render();
 const rt = readingTime(post.body).text
 ---
 
-<ContentLayout data={{...post.data, readingTime: rt}}>
+<ContentLayout data={{...post.data, readTime: rt}}>
   <Content />
+  <AuthorCard />
 </ContentLayout>

@@ -279,6 +279,23 @@ blockquote {
   padding: 0 var(--size-3);
 }
 
+/* content */
+
+.content :is(img, iframe),
+.slightly-wide {
+  position: relative;
+  width: calc(100% + 6vw);
+  left: -3vw;
+}
+
+@media screen and (max-width: 1000px) {
+  .content :is(img,  iframe),
+  .slightly-wide {
+    width: 100%;
+    left: 0;
+  }
+}
+
 /* forms */
 .form-control {
   display: flex;
@@ -321,4 +338,11 @@ button:active {
 
 button.small {
   padding: var(--size-2) var(--size-3);
+}
+
+/* syntax highlighting */
+pre {
+  padding: var(--size-3);
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-2);
 }

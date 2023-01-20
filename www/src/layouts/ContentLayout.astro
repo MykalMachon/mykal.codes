@@ -5,6 +5,7 @@ import Attributes from '../components/layout/Attributes.astro';
 import Navigation from '../components/layout/Navigation.astro';
 import Footer from '../components/layout/Footer.astro';
 
+
 const { data } = Astro.props;
 
 // if the page is markdown, use the content title instead of the provided props
@@ -33,7 +34,7 @@ const encodedOgImageURL = encodeURI(ogImageURL);
 
   <body class="site-container">
     <Navigation />
-    <main class="container" data-pagefind-body>
+    <main class="container content" data-pagefind-body>
       <header>
         {data.url ? (
           <h1>🔗<a href={data.url}>{data.title}</a></h1>
@@ -42,6 +43,7 @@ const encodedOgImageURL = encodeURI(ogImageURL);
         )}
         <p class="leading">{data.description}</p>
         <Attributes data={data} />
+        {data.heroImage && (<img src={data.heroImage} alt="" />)}
       </header>
       <slot />
     </main>

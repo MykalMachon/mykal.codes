@@ -1,5 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
+import readingTime from 'reading-time';
+import AuthorCard from '../../components/AuthorCard.astro';
 import Attributes from '../../components/layout/Attributes.astro';
 import Navigation from '../../components/layout/Navigation.astro';
 import MainHead from '../../components/MainHead.astro';
@@ -18,8 +20,10 @@ export async function getStaticPaths({}) {
 
 const { note } = Astro.props;
 const { Content } = await note.render();
+const rt = readingTime(note.body).text;
 ---
 
-<ContentLayout data={note.data}>
-  <Content />  
+<ContentLayout data={{ ...note.data, readTime: rt }}>
+  <Content />
+  <AuthorCard />
 </ContentLayout>

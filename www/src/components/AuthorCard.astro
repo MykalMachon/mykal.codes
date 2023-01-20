@@ -1,0 +1,45 @@
+---
+type AttributeData = {
+  title: string;
+  slug?: string;
+  pubDate?: Date;
+  draft?: true;
+  editDate?: string;
+  description?: string;
+  readTime?: string;
+  heroImage?: string;
+  stage?: string;
+  tags?: String[];
+  location?: string;
+  photos?: any[];
+  url?: string;
+};
+
+export interface Props {
+  data?: AttributeData;
+}
+---
+
+<section class="">
+  <h2>About me</h2>
+  <p>
+    <strong>I'm Mykal Machon</strong>, I work as a Systems Analyst in higher
+    education, and as a freelance web developer. If you appreciated this post,
+    you can share it, or <a href="https://www.buymeacoffee.com/mykalcodes">buy me a coffee</a>.
+  </p>
+  <p>If you'd like tto reply to this post, you can <a href="mailto:hello@mykal.codes">send me an email</a>, or find me on Mastodon.</p>
+</section>
+
+<style lang="scss">
+  section {
+    padding: var(--size-3);
+    margin: var(--size-8) 0;
+    border: 1px solid var(--paper-3);
+    border-radius: var(--radius-2);
+    background: var(--paper-2);
+    box-shadow: var(--shadow-2);
+  }
+  h2 {
+    margin: var(--size-3) 0;
+  }
+</style>
