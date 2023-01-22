@@ -2,13 +2,18 @@
   <nav role="navigation">
     <div class="nav__logo">
       <a href="/">
-        <img src="/favicon.png" alt="mykal's logo">
+        <img src="/favicon.png" alt="mykal's logo" />
+        <span>Mykal Machon</span>
       </a>
     </div>
     <div class="nav__menu">
       <ul>
         <li><a href="/posts">Posts</a></li>
+        <li><a href="/notes">Notes</a></li>
+        <li><a href="/photos">Photos</a></li>
+        <li><a href="/links">Links</a></li>
         <li><a href="/about-me">About</a></li>
+        <li><a href="/search">Search</a></li>
       </ul>
     </div>
   </nav>
@@ -23,14 +28,13 @@
     border-bottom: 1px solid var(--paper-3);
     z-index: var(--layer-5);
   }
-  
+
   nav {
     width: 100%;
     padding: var(--size-3) var(--size-5);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
   }
 
   .nav__menu ul {
@@ -50,5 +54,23 @@
     &:hover {
       transform: rotate(5deg);
     }
+  }
+  .nav__logo {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    a {
+      color: var(--ink-3);
+
+    }
+  }
+
+  a {
+    padding: var(--size-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--size-3);
+    text-decoration: none;
+    border-radius: var(--radius-2);
   }
 </style>

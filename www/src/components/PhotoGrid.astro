@@ -1,0 +1,65 @@
+---
+type PhotoType = {
+  slug: string;
+  url: string;
+  alt: string;
+};
+
+type GalleryType = 'grid' | 'list';
+
+export interface Props {
+  photos: PhotoType[];
+  layout: GalleryType;
+}
+
+import { getCustomQualityUrl, getBase64ImageUrl } from '../utils/cloudinary';
+
+const { photos, layout } = Astro.props;
+---
+
+<div data-layout={layout}>
+  {
+    photos.map(async ({ slug, url, alt }) => {
+      const hqImage = getCustomQualityUrl(url, 600);
+      const lqImage = getCustomQualityUrl(url, 24);
+      const b64image = await getBase64ImageUrl(lqImage);
+
+      return (
+        <a class="lazy-wrapper" href={`/photos/${slug}`}>
+          <img
+            class="lazy loading"
+            src={b64image}
+            alt={alt}
+            title={alt}
+            data-lazy={hqImage}
+            loading="lazy"
+          />
+        </a>
+      );
+    })
+  }
+</div>
+
+<style lang="scss">
+  [data-layout='grid'] {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    @media screen and (max-width: 1000px) { 
+      grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    }
+    gap: var(--size-3);
+    img {
+      object-fit: cover;
+      aspect-ratio: 1/1;
+    }
+  }
+  [data-layout='list'] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-3);
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>

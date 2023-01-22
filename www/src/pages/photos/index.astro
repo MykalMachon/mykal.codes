@@ -1,0 +1,56 @@
+---
+// Layout Import
+import MainLayout from "../../layouts/MainLayout.astro";
+// Component Imports
+import PostList from "../../components/posts/PostList.astro";
+import TagList from "../../components/tags/TagList.astro";
+import { getSortedPosts } from "../../utils/posts";
+import { getAllTags } from "../../utils/tags";
+import { getCollection } from "astro:content";
+
+// Data Fetching: List all Markdown posts in the repo.
+const allPhotos = await getCollection('photos')
+let sortedPhotos = getSortedPosts(allPhotos);
+
+// get all tags from posts
+const tags = getAllTags(allPhotos);
+---
+
+<MainLayout
+  title="Posts"
+  description="This is an archive of all the posts on my blog. I typically write about web development, coffee, devops, tech, and my personal life."
+>
+  <section class="divider">
+    <h1>Photos</h1>
+    <p>
+      This is an archive of the photos I wanted to share out! 
+    </p>
+    <p>
+      If you'd these photos, you can <a href="/feeds/photos.xml">subscribe to new photos via RSS </a>
+    </p>
+  </section>
+  {
+    sortedPhotos.map((photo) => (
+      <article>
+        <p><time datetime={photo.data.pubDate}>{photo.data.pubDate.toDateString()}</time></p>
+        <p><a href={`/photos/${photo.data.slug}`}>{photo.data.title}</a> - {photo.data.photos.length} {photo.data.photos.length == 1 ? "photo" : "photos" }</p>
+      </article>
+    ))
+  }
+</MainLayout>
+
+<style lang="scss">
+  article {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: var(--size-3);
+    padding: var(--size-3) 0;
+    border-top: 1px solid var(--paper-3);
+    &:last-of-type {
+      border-bottom: 1px solid var(--paper-3);
+    }
+    @media screen and (max-width: 800px) {
+      grid-template-columns: auto 1fr;
+    }
+  }
+</style>

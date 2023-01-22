@@ -61,6 +61,13 @@ declare module 'astro:content' {
 },
 },
 "photos": {
+"good-cappuccinos.md": {
+  id: "good-cappuccinos.md",
+  slug: "good-cappuccinos",
+  body: string,
+  collection: "photos",
+  data: any
+},
 "new-years-2023.md": {
   id: "new-years-2023.md",
   slug: "new-years-2023",

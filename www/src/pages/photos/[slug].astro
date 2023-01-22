@@ -25,7 +25,7 @@ const { Content } = await photo.render();
       photo.data.photos.map(async ({ url, alt }) => {
         const lqImage = getCustomQualityUrl(url, 24);
         const b64image = await getBase64ImageUrl(lqImage);
-        const hqImage = getCustomQualityUrl(url, 600);
+        const hqImage = getCustomQualityUrl(url, 800);
         return (
           <div class="lazy-wrapper">
             <img

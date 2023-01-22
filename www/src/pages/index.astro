@@ -1,50 +1,150 @@
 ---
-// Layout Import
-import HomeLayout from '../layouts/HomeLayout.astro';
-
-// Component Imports
-import PostList from '../components/posts/PostList.astro';
-
 // Utility imports
 import { getCollection } from 'astro:content';
 import { getSortedPosts } from '../utils/posts';
 import MainLayout from '../layouts/MainLayout.astro';
+import PhotoGrid from '../components/PhotoGrid.astro';
 
 // Data Fetching: fetch blog posts
 const posts = await getCollection('posts', ({ data }) => {
   return data.draft === false;
 });
-const sortedPosts = getSortedPosts(posts).slice(0, 5);
+const sortedPosts = getSortedPosts(posts).slice(
+  0,
+  posts.length > 3 ? 3 : posts.length
+);
 
 // Data fetching: fetch notes
 const notes = await getCollection('notes', ({ data }) => {
   return data.draft === false;
 });
+const sortedNotes = getSortedPosts(notes).slice(
+  0,
+  notes.length > 3 ? 3 : notes.length
+);
 
 // Data fetching: fetch photos
 const photos = await getCollection('photos');
+const sortedPhotos = getSortedPosts(photos).slice(
+  0,
+  photos.length > 3 ? 3 : photos.length
+);
 
 // Data fetching: fetch links
 const links = await getCollection('links');
+const sortedLinks = getSortedPosts(links).slice(
+  0,
+  links.length > 3 ? 3 : links.length
+);
 ---
 
 <MainLayout title="Home" description="Mykal's home page">
   <section class="container--large">
-    <article class="hero__content">
-      <h1>Hey, I'm Mykal Machon</h1>
-      <p class="leading">
-        I'm a software developer and systems analyst. I share a bunch of stuff
-        about my personal life and thoughts on this site.
-      </p>
-      <p>
-        The site is an open work in progress and is available for review on <a
-          href="https://github.com/MykalMachon/mykal.codes">GitHub</a
-        >.
-      </p>
-    </article>
+    <h1>Hey, I'm Mykal Machon</h1>
+    <p class="leading">
+      I'm a software developer and systems analyst. I share a bunch of stuff
+      about my personal life and thoughts on this site.
+    </p>
+    <p>
+      The site is an open work in progress and is available for review on <a
+        href="https://github.com/MykalMachon/mykal.codes">GitHub</a
+      >.
+    </p>
   </section>
+  <div class="container--large grid">
+    <section>
+      <h2>Blog Posts</h2>
+      <p>More intentional things I've written.</p>
+      <div class="list seperator">
+        {
+          sortedPosts.map((post) => (
+            <article>
+              <p>
+                <a href={`/posts/${post.data.slug}`}>{post.data.title}</a>
+              </p>
+              <p>{post.data.description}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+    <section>
+      <h2>Notes</h2>
+      <p>Short notes that explore ideas I have.</p>
+      <div class="list seperator">
+        {
+          sortedNotes.map((note) => (
+            <article>
+              <p>
+                <a href={`/notes/${note.data.slug}`}>{note.data.title}</a>
+              </p>
+              <p>{note.data.description}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+    <section>
+      <h2>Photos</h2>
+      <p>People, places, and things that I love.</p>
+      <div class="seperator" style="padding-top: var(--size-3);">
+        <PhotoGrid
+        layout="grid"
+        photos={sortedPhotos.map((photo) => {
+          return {
+            slug: photo.data.slug,
+            url: photo.data.photos[0].url,
+            alt: photo.data.photos[0].alt,
+          };
+        })}
+      />
+      </div>
+    </section>
+    <section>
+      <h2>Links</h2>
+      <p>also known as bookmarks.</p>
+      <div class="list seperator">
+        {
+          sortedLinks.map((link) => (
+            <article>
+              <p>
+                <a href={`/links/${link.data.slug}`}>{link.data.title}</a>
+              </p>
+              <p>
+                <time datetime={link.data.pubDate.toDateString()}>
+                  {link.data.pubDate.toDateString()}
+                </time>
+              </p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </div>
 </MainLayout>
 
 <style lang="scss">
-  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--size-4);
+    margin-bottom: var(--size-6);
+    @media screen and (max-width: 1000px) {
+      grid-template-columns: 1fr;
+      h2 {
+        margin-top: var(--size-3);
+      }
+    }
+  }
+  .list {
+    article {
+      margin: var(--size-4) 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  .seperator {
+    border-top: 1px solid var(--paper-3);
+  }
 </style>
