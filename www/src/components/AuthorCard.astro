@@ -23,11 +23,14 @@ export interface Props {
 <section class="">
   <h2>About me</h2>
   <p>
-    <strong>I'm Mykal Machon</strong>, I work as a Systems Analyst in higher
-    education, and as a freelance web developer. If you appreciated this post,
+    <strong>I'm Mykal Machon</strong>, I'm a web developer, homelab owner, coffee nerd, and  If you appreciated this post,
     you can share it, or <a href="https://www.buymeacoffee.com/mykalcodes">buy me a coffee</a>.
   </p>
-  <p>If you'd like tto reply to this post, you can <a href="mailto:hello@mykal.codes">send me an email</a>, or find me on Mastodon.</p>
+  <ul>
+    <li data-emoji="☕"><a href="https://www.buymeacoffee.com/mykalcodes">Buy me a coffee</a></li>
+    <li data-emoji="📬"><a href="mailto:hellp@mykal.codes">Reply via Email</a> or <a href="https://indieweb.social/@mykalmachon">Mastodon</a></li>
+    <li data-emoji="👋"><a href="/about-me">Read more about me</a></li>
+  </ul>
 </section>
 
 <style lang="scss">
@@ -41,5 +44,15 @@ export interface Props {
   }
   h2 {
     margin: var(--size-3) 0;
+  }
+  li[data-emoji] {
+    padding-left: var(--size-4);
+  }
+  li[data-emoji]::marker {
+    content: attr(data-emoji );
+  }
+  a:hover {
+    background: var(--paper-3);
+    color: var(--acc-4);
   }
 </style>

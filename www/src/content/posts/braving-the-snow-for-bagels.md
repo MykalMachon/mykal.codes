@@ -1,10 +1,10 @@
 ---
 title: Braving the snow for bagels
-slug: braving-the-snow-for-bagels
+customSlug: braving-the-snow-for-bagels
+type: 'post'
 description: I asked Chat GPT-3 to write a short fantasy story about me braving the
   snow to get bagels.
 pubDate: 2022-12-20T17:05:00.000+00:00
-heroImage: ''
 tags:
 - ai
 - personal

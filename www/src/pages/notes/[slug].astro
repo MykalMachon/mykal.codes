@@ -8,11 +8,13 @@ import MainHead from '../../components/MainHead.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 
 export async function getStaticPaths({}) {
-  let allnotes = await getCollection('notes');
+  let allnotes = await getCollection('posts', ({ data }) => {
+    return data.draft === false && data.type == 'note';
+  });
 
   return allnotes.map((note) => {
     return {
-      params: { slug: note.data.slug },
+      params: { slug: note.slug },
       props: { note },
     };
   });

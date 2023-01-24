@@ -9,13 +9,13 @@ import { getSortedPosts } from '../../utils/posts';
 
 export async function getStaticPaths({}) {
   let allPosts = await getCollection('posts', ({ data }) => {
-    return data.draft === false;
+    return data.draft === false && data.type == 'post';
   });
   let allSortedPosts = getSortedPosts(allPosts);
 
   return allSortedPosts.map((post, idx) => {
     return {
-      params: { slug: post.data.slug },
+      params: { slug: post.slug },
       props: { post },
     };
   });

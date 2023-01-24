@@ -1,6 +1,7 @@
 ---
 title: Recovering from failed Nextcloud updates
-slug: "recover-failed-nextcloud-update"
+customSlug: "recover-failed-nextcloud-update"
+type: 'post'
 description: I've found that my nextcloud updates fail ~1/3 of the time. These steps
   usually save me.
 pubDate: 2022-12-13T08:15:00Z

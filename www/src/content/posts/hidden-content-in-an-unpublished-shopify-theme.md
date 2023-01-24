@@ -1,6 +1,7 @@
 ---
 title: 'Previewing hidden content in an unpublished Shopify theme'
-slug: 'hidden-content-in-an-unpublished-shopify-theme'
+customSlug: 'hidden-content-in-an-unpublished-shopify-theme'
+type: 'post'
 description: 'When you want to preview a hidden product/post on a hidden theme things get tricky.'
 pubDate: 2020-07-08
 draft: false

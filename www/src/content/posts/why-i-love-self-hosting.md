@@ -1,6 +1,7 @@
 ---
 title: Why I Love Self-Hosting
-slug: why-i-love-self-hosting
+customSlug: why-i-love-self-hosting
+type: 'post'
 description: A writeup on why I love self-hosting complete with drawbacks.
 pubDate: 2022-07-04
 heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1661799178/Mykal%20Codes/DALL_E_2022-08-29_11.51.07_-_an_expressive_oil_painting_of_a_computer_in_the_middle_of_a_clearing_in_the_woods_bl6kem.png

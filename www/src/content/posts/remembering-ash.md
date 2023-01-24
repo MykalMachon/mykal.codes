@@ -1,6 +1,8 @@
 ---
 title: "Remembering Ash"
-slug: "remembering-ash"
+customSlug: "remembering-ash"
+type: 'photo'
+draft: false
 pubDate: 2022-08-01
 location: "Home"
 photos: 

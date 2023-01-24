@@ -1,7 +1,8 @@
 ---
 title: 'Good Cappuccinos'
-slug: 'good-cappuccinos'
 pubDate: 2023-01-21
+type: 'photo'
+draft: false
 location: 'Abbotsford, BC'
 photos:
   - url: 'https://res.cloudinary.com/mykalcodes/image/upload/v1674427593/Mykal%20Codes/PXL_20230104_190332875.PORTRAIT.jpg'

@@ -1,6 +1,6 @@
 export const getNonDraftPosts = (posts: Array<any>) => {
   const nonDraftPosts = posts.filter((post) => {
-    return !post.frontmatter?.draft || post.frontmatter?.draft == false;
+    return post.data.draft || post.data.draft == false;
   });
   return nonDraftPosts;
 };

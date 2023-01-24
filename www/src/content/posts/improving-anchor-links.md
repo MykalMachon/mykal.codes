@@ -1,7 +1,8 @@
 ---
 title: 'Improving Anchor Links'
 description: 'This post outlines a few little tricks you can use with your anchor links'
-slug: 'improving-anchor-links'
+type: 'post'
+customSlug: 'improving-anchor-links'
 pubDate: 2022-06-24
 heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1656107583/Mykal%20Codes/rick-rothenberg-Nqx3SaMp4kQ-unsplash.jpg
 tags: ['webdev']
@@ -37,7 +38,7 @@ Shoutout to the [d-d-d-discord](https://www.patreon.com/shoptalkshow) for this l
 
 If you want to use these links on a site that has a sticky header element at the top of the viewport, you'll probably notice things won't go to plan. Typically these links are hidden underneath the sticky header.
 
-<p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="RwQXYrj" data-user="mykalmachon" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<p class="codepen" data-height="300" data-default-tab="result" data-customSlug-hash="RwQXYrj" data-user="mykalmachon" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/mykalmachon/pen/RwQXYrj">
   Anchor Link: Margin Example (Broken)</a> by Mykal Machon (<a href="https://codepen.io/mykalmachon">@mykalmachon</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -49,7 +50,7 @@ Do you see how the heading with the unique ID is below the sticky header?
 There are a few CSS rules we can throw in to add some space between the top of the viewport, and the associated element.
 See an example of this fixed here:
 
-<p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="YzemOGr" data-user="mykalmachon" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<p class="codepen" data-height="300" data-default-tab="result" data-customSlug-hash="YzemOGr" data-user="mykalmachon" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/mykalmachon/pen/YzemOGr">
   Anchor Link: Margin Example (Broken)</a> by Mykal Machon (<a href="https://codepen.io/mykalmachon">@mykalmachon</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>

@@ -1,6 +1,7 @@
 ---
 title: "Telegraf and InfluxDB for server monitoring"
-slug: "telegraf-and-influxdb-for-server-monitoring"
+type: 'post'
+customSlug: "telegraf-and-influxdb-for-server-monitoring"
 description: "A quick guide on system monitoring with Telegraf, and Influx DB."
 pubDate: 2022-07-21
 heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1658642824/Mykal%20Codes/making-systems-monitoring-easy.jpg"

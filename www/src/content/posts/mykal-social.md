@@ -1,7 +1,9 @@
 ---
 title: 'mykal.social'
-slug: 'mykal-social'
+customSlug: 'mykal-social'
+type: 'link'
 pubDate: 2022-01-15
+draft: false
 url: https://mykal.social
 ---
 

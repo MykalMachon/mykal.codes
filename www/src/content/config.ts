@@ -1,71 +1,29 @@
 import { z, defineCollection } from 'astro:content';
 
-const notes = defineCollection({
-  slug: ({ id, defaultString, data, body }) => {
-    return data.slug || defaultString
-  },
-  schema: {
-    title: z.string(),
-    slug: z.string(),
-    description: z.optional(z.string()),
-    pubDate: z.string().datetime(),
-    editDate: z.optional(z.string().datetime()),
-    heroImage: z.optional(z.string().url()),
-    stage: z.enum(["seed", "budding", "sapling", "old growth"]),
-    draft: z.boolean(),
-    tags: z.array(z.string())
-  }
-})
-
 const posts = defineCollection({
-  slug: ({ id, defaultString, data, body }) => {
-    return data.slug || defaultString
+  slug: ({ defaultSlug, data }) => {
+    return data.customSlug || defaultSlug
   },
-  schema: {
+  schema: z.object({
     title: z.string(),
-    slug: z.string(),
-    description: z.optional(z.string()),
-    pubDate: z.string().datetime(),
-    editDate: z.optional(z.string().datetime()),
-    heroImage: z.optional(z.string().url()),
-    stage: z.enum(["seed", "budding", "sapling", "old growth"]),
+    pubDate: z.date(),
+    type: z.enum(['post', 'photo', 'note', 'link']),
     draft: z.boolean(),
-    tags: z.array(z.string())
-  }
-})
-
-const photos = defineCollection({
-  slug: ({ id, defaultString, data, body }) => {
-    return data.slug || defaultString
-  },
-  schema: {
-    title: z.string(),
-    slug: z.string(),
-    pubDate: z.string().datetime(),
+    editDate: z.optional(z.date()),
+    tags: z.optional(z.array(z.string())),
+    stage: z.optional(z.enum(["seed", "budding", "sapling", "old growth"])),
+    customSlug: z.optional(z.string()),
+    description: z.optional(z.string()),
+    heroImage: z.optional(z.string()),
     location: z.optional(z.string()),
-    photos: z.array(z.object({
+    photos: z.optional(z.array(z.object({
       url: z.string().url(),
       alt: z.string()
-    })),
-    tags: z.array(z.string())
-  }
-})
-
-const links = defineCollection({
-  slug: ({ id, defaultString, data, body }) => {
-    return data.slug || defaultString
-  },
-  schema: {
-    title: z.string(),
-    slug: z.string(),
-    pubDate: z.string().datetime(),
-    url: z.string()
-  }
+    }))),
+    url: z.optional(z.string())
+  })
 })
 
 export const collections = {
-  notes,
   posts,
-  photos,
-  links,
 }

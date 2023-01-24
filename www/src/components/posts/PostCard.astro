@@ -9,14 +9,14 @@ const dateFormatter = Intl.DateTimeFormat('en-GB', { year: 'numeric', month: '2-
 <article class="postcard">
   <div class="postcard__content">
     <small class="postcard__content__date">{dateFormatter.format(new Date(post.data.pubDate))}</small>
-    <h3> <a href={`/posts/${post.data.slug}`}>{post.data.title}</a></h3>
+    <h3> <a href={`/posts/${post.slug}`}>{post.data.title}</a></h3>
     <p>{post.frontmatter.description}</p>
   </div>
 </article>
 ) : (
 <article class="postcard--small">
   <p>
-    <a href={`/posts/${post.data.slug}`}>
+    <a href={`/posts/${post.slug}`}>
       <span class="postcard__title">{post.data.title}</span>
       <span class="postcard__line"></span>
       <span class="postcard__date">{dateFormatter.format(new Date(post.data.pubDate))}</span>

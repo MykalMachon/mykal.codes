@@ -1,6 +1,7 @@
 ---
 title: 'AOC 2022: Solution for Day 1'
-slug: aoc-2022-day-1
+customSlug: aoc-2022-day-1
+type: 'post'
 description: My solution for Advent of Code 2022 Day 1
 pubDate: 2022-12-01T18:10:00Z
 heroImage: ''

@@ -1,9 +1,9 @@
 ---
 title: 'AOC 2022: Solution for Day 3'
-slug: aoc-2022-day-3
+customSlug: aoc-2022-day-3
+type: 'post'
 description: My solution for advent-of-code day 3
 pubDate: 2022-12-05T07:35:00Z
-heroImage: ''
 tags:
 - advent-of-code
 - python

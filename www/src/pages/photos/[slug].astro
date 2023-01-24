@@ -1,15 +1,18 @@
 ---
 import { getCollection } from 'astro:content';
+import AuthorCard from '../../components/AuthorCard.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import { getBase64ImageUrl, getCustomQualityUrl } from '../../utils/cloudinary';
 
 
 export async function getStaticPaths({}) {
-  let allPhotos = await getCollection('photos');
+  let allPhotos = await getCollection('posts', ({ data }) => {
+    return data.draft === false && data.type == 'photo';
+  });
 
   return allPhotos.map((photo, idx) => {
     return {
-      params: { slug: photo.data.slug },
+      params: { slug: photo.slug },
       props: { photo },
     };
   });
@@ -40,4 +43,5 @@ const { Content } = await photo.render();
     }
   </section>
   <Content />
+  <AuthorCard />
 </ContentLayout>

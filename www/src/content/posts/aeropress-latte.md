@@ -1,6 +1,7 @@
 ---
 title: My AeroPress Latte
-slug: aeropress-latte
+customSlug: aeropress-latte
+type: 'post'
 description: An AeroPress Latte recipe for the AeroPress GO!
 pubDate: 2022-07-15
 heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1657920874/Mykal%20Codes/aeropress-latte.jpg

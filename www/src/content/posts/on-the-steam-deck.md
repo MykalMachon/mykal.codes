@@ -1,8 +1,9 @@
 ---
 title: On the Steam Deck
-slug: steam-deck
+customSlug: steam-deck
 description: My initial thoughts on the steam deck after a few weeks with it
 pubDate: 2022-09-28T16:00:00.000+00:00
+type: 'post'
 heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1664378725/Mykal%20Codes/PXL_20220916_232229322_mncvkb.jpg
 tags:
 - personal

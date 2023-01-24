@@ -1,9 +1,10 @@
 ---
 title: Notes on optimizing docker images
-slug: notes-on-optimizing-docker-images
+customSlug: notes-on-optimizing-docker-images
 description: 'docker images are relatively easy to get up and going, but can often
   be heavily optimized. '
 pubDate: 2022-07-25T23:00:00.000+00:00
+type: 'post'
 heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1656430048/Mykal%20Codes/better-docker-containers.webp
 tags:
 - devops

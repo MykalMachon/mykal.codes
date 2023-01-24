@@ -2,18 +2,22 @@
 // Layout Import
 import MainLayout from "../../layouts/MainLayout.astro";
 // Component Imports
-import PostList from "../../components/posts/PostList.astro";
-import TagList from "../../components/tags/TagList.astro";
 import { getSortedPosts } from "../../utils/posts";
-import { getAllTags } from "../../utils/tags";
 import { getCollection } from "astro:content";
+import PhotoGrid from "../../components/PhotoGrid.astro";
 
 // Data Fetching: List all Markdown posts in the repo.
-const allPhotos = await getCollection('photos')
-let sortedPhotos = getSortedPosts(allPhotos);
-
-// get all tags from posts
-const tags = getAllTags(allPhotos);
+const allPhotos = await getCollection('posts', ({data}) => {
+  return data.draft == false && data.type == 'photo'
+})
+const sortedPhotos = getSortedPosts(allPhotos);
+const photoGridPhotos = sortedPhotos.map((photo) => {
+  return {
+    slug: photo.slug,
+    url: photo.data.photos[0].url,
+    alt: photo.data.photos[0].alt
+  }
+})
 ---
 
 <MainLayout
@@ -29,14 +33,9 @@ const tags = getAllTags(allPhotos);
       If you'd these photos, you can <a href="/feeds/photos.xml">subscribe to new photos via RSS </a>
     </p>
   </section>
-  {
-    sortedPhotos.map((photo) => (
-      <article>
-        <p><time datetime={photo.data.pubDate}>{photo.data.pubDate.toDateString()}</time></p>
-        <p><a href={`/photos/${photo.data.slug}`}>{photo.data.title}</a> - {photo.data.photos.length} {photo.data.photos.length == 1 ? "photo" : "photos" }</p>
-      </article>
-    ))
-  }
+  <section>
+    <PhotoGrid photos={photoGridPhotos} layout='grid' />
+  </section>
 </MainLayout>
 
 <style lang="scss">

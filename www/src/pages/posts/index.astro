@@ -10,7 +10,7 @@ import { getCollection } from "astro:content";
 
 // Data Fetching: List all Markdown posts in the repo.
 const allPosts = await getCollection('posts', ({data}) => {
-  return data.draft === false;
+  return data.draft === false && data.type == 'post';
 })
 
 // sort all the posts

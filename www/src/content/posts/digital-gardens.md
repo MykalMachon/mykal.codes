@@ -1,6 +1,7 @@
 ---
 title: 'Digital Gardens'
-slug: 'digital-gardens'
+customSlug: 'digital-gardens'
+type: 'note'
 description: 'my thoughts on building digital gardens'
 pubDate: 2022-01-01
 editDate: 2022-01-01

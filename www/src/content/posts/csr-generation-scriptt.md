@@ -1,6 +1,7 @@
 ---
 title: CSR generation script
-slug: csr-generation-script
+customSlug: csr-generation-script
+type: 'post'
 description: sometimes the only option is to do SSL manually. This article is for
   those times.
 pubDate: 2022-11-10T00:00:00Z
