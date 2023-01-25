@@ -23,12 +23,20 @@ export interface Props {
 <section class="">
   <h2>About me</h2>
   <p>
-    <strong>I'm Mykal Machon</strong>, I'm a web developer, homelab owner, coffee nerd, and  If you appreciated this post,
-    you can share it, or <a href="https://www.buymeacoffee.com/mykalcodes">buy me a coffee</a>.
+    <strong>I'm Mykal Machon</strong>, I'm a web developer / coffee nerd from
+    British Columbia, Canada. I'm currently working at the University of the
+    Fraser Valley as a Systems Analyst.
   </p>
+  <p>Thanks for reading through this post! if you liked it, you can:</p>
   <ul>
-    <li data-emoji="☕"><a href="https://www.buymeacoffee.com/mykalcodes">Buy me a coffee</a></li>
-    <li data-emoji="📬"><a href="mailto:hellp@mykal.codes">Reply via Email</a> or <a href="https://indieweb.social/@mykalmachon">Mastodon</a></li>
+    <li data-emoji="☕">
+      <a href="https://www.buymeacoffee.com/mykalcodes">Buy me a coffee</a>
+    </li>
+    <li data-emoji="📬">
+      <a href="mailto:hello@mykal.codes">Reply via Email</a> or <a
+        href="https://indieweb.social/@mykalmachon">Mastodon</a
+      >
+    </li>
     <li data-emoji="👋"><a href="/about-me">Read more about me</a></li>
   </ul>
 </section>
@@ -49,7 +57,7 @@ export interface Props {
     padding-left: var(--size-4);
   }
   li[data-emoji]::marker {
-    content: attr(data-emoji );
+    content: attr(data-emoji);
   }
   a:hover {
     background: var(--paper-3);
