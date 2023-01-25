@@ -13,7 +13,7 @@ const compileHTMLForRSS = async (post) => {
       out on <a href="https://indieweb.social/@mykalmachon">Mastodon</a>.
     </p>
     <p>
-      <a href="https://${import.meta.env.SITE}/${post.data.type}s/${post.slug}">
+      <a href="${import.meta.env.SITE}/${post.data.type}s/${post.slug}">
         Read the full post on the site
       </a>
     </p>
