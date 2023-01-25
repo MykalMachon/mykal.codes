@@ -25,4 +25,16 @@
   from = "/rss.xml"
   to = "/feeds/main.xml"
   status = 301
-  force = false
+  force = true
+
+[[redirects]]
+  from = "/posts"
+  to = "/garden/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/*"
+  to = "/garden/posts/:splat"
+  status = 301
+  force = true

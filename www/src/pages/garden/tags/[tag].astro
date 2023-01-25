@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
-import PostList from '../../components/posts/PostList.astro';
-import ContentLayout from '../../layouts/ContentLayout.astro';
-import { getSortedPosts } from '../../utils/posts';
-import { getAllTags, getPostsByTags } from '../../utils/tags';
+import PostList from '../../../components/posts/PostList.astro';
+import ContentLayout from '../../../layouts/ContentLayout.astro';
+import { getSortedPosts } from '../../../utils/posts';
+import { getAllTags, getPostsByTags } from '../../../utils/tags';
 
 export async function getStaticPaths({}) {
   const allPosts = await getCollection('posts');

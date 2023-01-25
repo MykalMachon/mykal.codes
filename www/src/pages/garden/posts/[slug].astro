@@ -2,10 +2,10 @@
 import { getCollection } from 'astro:content';
 
 import readingTime from 'reading-time';
-import AuthorCard from '../../components/AuthorCard.astro';
-import ContentLayout from '../../layouts/ContentLayout.astro';
+import AuthorCard from '../../../components/AuthorCard.astro';
+import ContentLayout from '../../../layouts/ContentLayout.astro';
 
-import { getSortedPosts } from '../../utils/posts';
+import { getSortedPosts } from '../../../utils/posts';
 
 export async function getStaticPaths({}) {
   let allPosts = await getCollection('posts', ({ data }) => {

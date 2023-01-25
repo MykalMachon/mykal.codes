@@ -1,11 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
 import readingTime from 'reading-time';
-import AuthorCard from '../../components/AuthorCard.astro';
-import Attributes from '../../components/layout/Attributes.astro';
-import Navigation from '../../components/layout/Navigation.astro';
-import MainHead from '../../components/MainHead.astro';
-import ContentLayout from '../../layouts/ContentLayout.astro';
+import AuthorCard from '../../../components/AuthorCard.astro';
+import Attributes from '../../../components/layout/Attributes.astro';
+import Navigation from '../../../components/layout/Navigation.astro';
+import MainHead from '../../../components/MainHead.astro';
+import ContentLayout from '../../../layouts/ContentLayout.astro';
 
 export async function getStaticPaths({}) {
   let allnotes = await getCollection('posts', ({ data }) => {

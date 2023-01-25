@@ -12,7 +12,7 @@ const sortedTags = tags.sort();
   <span class="taglist">
     {sortedTags.map((tag:string, idx: number) => (
     <>
-      <a href={`/tags/${tag}`}>#{tag}</a>
+      <a href={`/garden/tags/${tag}`}>#{tag}</a>
       {(idx+1) !== tags.length && (<>, </>) }
     </>
     ))}
@@ -22,7 +22,7 @@ const sortedTags = tags.sort();
   {type === 'button' && (
   <div class="taglist--btn">
     {sortedTags.map((tag:string, idx: number) => (
-    <a class="tag" href={`/tags/${tag}`}>#{tag}</a>
+    <a class="tag" href={`/garden/tags/${tag}`}>#{tag}</a>
     ))}
   </div>
   )}

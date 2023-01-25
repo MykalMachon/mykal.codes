@@ -1,0 +1,53 @@
+---
+// Layout Import
+import MainLayout from '../../../layouts/MainLayout.astro';
+// Component Imports
+import PostList from '../../../components/posts/PostList.astro';
+import { getSortedPosts } from '../../../utils/posts';
+import { getCollection } from 'astro:content';
+
+// Data Fetching: List all Markdown posts in the repo.
+const allLinks = await getCollection('posts', ({data}) => {
+  return data.draft == false && data.type == 'link'
+});
+const sortedLinks = getSortedPosts(allLinks);
+---
+
+<MainLayout
+  title="Posts"
+  description="This is an archive of all the posts on my blog. I typically write about web development, coffee, devops, tech, and my personal life."
+>
+  <section class="divider">
+    <h1>Links</h1>
+    <p>
+      These are also commonly refered to as bookmarks. If I find something really cool I'll share a link to it here.
+    </p>
+    <p>
+      If you'd like, you can also
+      <a href="/feeds/links.xml">subscribe to these notes via RSS</a>
+    </p>
+  </section>
+  <div>
+    {
+      sortedLinks.map((link) => (
+        <article>
+          <p><time datetime={link.data.pubDate}>{link.data.pubDate.toDateString()}</time></p>
+          <p><a href={`/links/${link.slug}`}>{link.data.title}</a></p>
+        </article>
+      ))
+    }
+  </div>
+</MainLayout>
+
+<style lang="scss">
+  article {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: var(--size-3);
+    padding: var(--size-3) 0;
+    border-top: 1px solid var(--paper-3);
+    &:last-of-type {
+      border-bottom: 1px solid var(--paper-3);
+    }
+  }
+</style>

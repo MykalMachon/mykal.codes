@@ -1,10 +1,10 @@
 ---
 // Layout Import
-import MainLayout from "../../layouts/MainLayout.astro";
+import MainLayout from "../../../layouts/MainLayout.astro";
 // Component Imports
-import { getSortedPosts } from "../../utils/posts";
+import { getSortedPosts } from "../../../utils/posts";
 import { getCollection } from "astro:content";
-import PhotoGrid from "../../components/PhotoGrid.astro";
+import PhotoGrid from "../../../components/PhotoGrid.astro";
 
 // Data Fetching: List all Markdown posts in the repo.
 const allPhotos = await getCollection('posts', ({data}) => {
@@ -13,7 +13,7 @@ const allPhotos = await getCollection('posts', ({data}) => {
 const sortedPhotos = getSortedPosts(allPhotos);
 const photoGridPhotos = sortedPhotos.map((photo) => {
   return {
-    slug: photo.slug,
+    slug: `/garden/photos/${photo.slug}`,
     url: photo.data.photos[0].url,
     alt: photo.data.photos[0].alt
   }

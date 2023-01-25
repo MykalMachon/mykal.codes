@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
-import AuthorCard from '../../components/AuthorCard.astro';
-import ContentLayout from '../../layouts/ContentLayout.astro';
+import AuthorCard from '../../../components/AuthorCard.astro';
+import ContentLayout from '../../../layouts/ContentLayout.astro';
 
 export async function getStaticPaths({}) {
   let allLinks = await getCollection('posts', ({ data }) => {

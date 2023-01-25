@@ -37,14 +37,14 @@ const sortedPhotos = sortAndFilterPosts(sortedAllPosts, 'photo', 3);
   </section>
   <div class="container--large grid">
     <section>
-      <h2>Blog Posts</h2>
+      <h2><a href="/garden/posts">Blog Posts</a></h2>
       <p>More intentional things I've written.</p>
       <div class="list seperator">
         {
           sortedPosts.map((post) => (
             <article>
               <p>
-                <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+                <a href={`/garden/posts/${post.slug}`}>{post.data.title}</a>
               </p>
               <p>{post.data.description}</p>
             </article>
@@ -53,14 +53,14 @@ const sortedPhotos = sortAndFilterPosts(sortedAllPosts, 'photo', 3);
       </div>
     </section>
     <section>
-      <h2>Notes</h2>
+      <h2><a href="/garden/notes/">Notes</a></h2>
       <p>Short notes that explore ideas I have.</p>
       <div class="list seperator">
         {
           sortedNotes.map((note) => (
             <article>
               <p>
-                <a href={`/notes/${note.slug}`}>{note.data.title}</a>
+                <a href={`/garden/notes/${note.slug}`}>{note.data.title}</a>
               </p>
               <p>{note.data.description}</p>
             </article>
@@ -69,14 +69,14 @@ const sortedPhotos = sortAndFilterPosts(sortedAllPosts, 'photo', 3);
       </div>
     </section>
     <section>
-      <h2>Photos</h2>
+      <h2><a href="/garden/photos/">Photos</a></h2>
       <p>People, places, and things that I love.</p>
       <div class="seperator" style="padding-top: var(--size-3);">
         <PhotoGrid
           layout="grid"
           photos={sortedPhotos.map((photo) => {
             return {
-              slug: photo.slug,
+              slug: `/garden/photos/${photo.slug}`,
               url: photo.data.photos[0].url,
               alt: photo.data.photos[0].alt,
             };
@@ -85,14 +85,14 @@ const sortedPhotos = sortAndFilterPosts(sortedAllPosts, 'photo', 3);
       </div>
     </section>
     <section>
-      <h2>Links</h2>
+      <h2><a href="/garden/links">Links</a></h2>
       <p>also known as bookmarks.</p>
       <div class="list seperator">
         {
           sortedLinks.map((link) => (
             <article>
               <p>
-                <a href={`/links/${link.slug}`}>{link.data.title}</a>
+                <a href={`/garden/links/${link.slug}`}>{link.data.title}</a>
               </p>
               <p>
                 <time datetime={link.data.pubDate.toDateString()}>

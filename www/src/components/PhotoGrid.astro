@@ -25,7 +25,7 @@ const { photos, layout } = Astro.props;
       const b64image = await getBase64ImageUrl(lqImage);
 
       return (
-        <a class="lazy-wrapper" href={`/photos/${slug}`}>
+        <a class="lazy-wrapper" href={slug}>
           <img
             class="lazy loading"
             src={b64image}
