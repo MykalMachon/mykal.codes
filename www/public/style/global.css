@@ -16,7 +16,6 @@ html {
   }
 }
 
-
 :target {
   animation: var(--animation-blink);
   animation-timing-function: var(--ease-3);
@@ -192,8 +191,6 @@ ul ul {
 
 /* layouts and compositions */
 
-
-
 /* images and i-frames */
 
 img {
@@ -289,7 +286,7 @@ blockquote {
 }
 
 @media screen and (max-width: 1000px) {
-  .content :is(img,  iframe),
+  .content :is(img, iframe),
   .slightly-wide {
     width: 100%;
     left: 0;
@@ -302,6 +299,15 @@ blockquote {
   flex-direction: column;
   gap: var(--size-2);
   margin-bottom: var(--size-3);
+}
+
+input,
+select,
+textarea {
+  padding: var(--size-2);
+  border-radius: var(--radius-2);
+  border: 1px solid var(--acc-1);
+  background: var(--paper-2);
 }
 
 button {
