@@ -41,17 +41,16 @@ const dateFormatter = Intl.DateTimeFormat('en-CA', {
       </li>
       <li>
         <a rel="me" href="/feeds" title="RSS">
-          <RSS fill="var(--acc-1)" />
+          <RSS stroke="var(--acc-1)" />
         </a>
       </li>
     </ul>
   </nav>
-  <small
-    >statically built and deployed <time
-      datetime={dateFormatter.format(currentDate)}
-    >
-      {dateFormatter.format(currentDate)}</time
-    >
+  <small>
+    statically built on 
+    <span class="time">{currentDate.toLocaleDateString()}</span> 
+    at 
+    <span class="time">{currentDate.toLocaleTimeString()}</span>
   </small>
 </footer>
 
@@ -114,6 +113,7 @@ const dateFormatter = Intl.DateTimeFormat('en-CA', {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: var(--size-3) var(--size-3);
     @media screen and (max-width: 800px){
       flex-direction: column;
@@ -143,10 +143,13 @@ const dateFormatter = Intl.DateTimeFormat('en-CA', {
         place-items: center;
       }
     }
-    small {
-      display: flex;
-      align-items: center;
+    span.time {
       gap: var(--size-1);
+      font-family: monospace;
+      padding: var(--size-1);
+      background: var(--paper-1);
+      white-space: nowrap;
+      border-radius: var(--radius-1);
     }
   }
 </style>

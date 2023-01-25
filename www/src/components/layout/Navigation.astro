@@ -1,3 +1,9 @@
+---
+import RSS from "../icons/RSS.astro";
+import Search from "../icons/Search.astro";
+
+---
+
 <header>
   <nav role="navigation">
     <div class="nav__logo">
@@ -13,7 +19,17 @@
         <li><a href="/photos">Photos</a></li>
         <li><a href="/links">Links</a></li>
         <li><a href="/about-me">About</a></li>
-        <li><a href="/search">Search</a></li>
+        <li>
+          <a href="/search"
+            >
+            <Search fill="rgba(0,0,0,0)" stroke="var(--acc-1)" />
+          </a>
+        </li>
+        <li>
+          <a href="/feeds">
+            <RSS fill="rgba(0,0,0,0)" stroke="var(--acc-1)" />
+          </a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -27,6 +43,9 @@
     background: var(--paper-1);
     border-bottom: 1px solid var(--paper-3);
     z-index: var(--layer-5);
+    @media screen and (max-width: 850px) {
+      position: static;
+    }
   }
 
   nav {
@@ -35,15 +54,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 850px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-row: auto auto;
+      justify-content: start;
+    }
   }
 
   .nav__menu ul {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     list-style: none;
     margin: 0;
+    padding: 0;
     li {
       margin: 0 var(--size-3);
+    }
+    @media screen and (max-width: 850px) {
+      li {
+        margin: 0 0;
+      }
     }
   }
 
@@ -60,7 +93,6 @@
     font-size: var(--font-size-base);
     a {
       color: var(--ink-3);
-
     }
   }
 
@@ -72,5 +104,9 @@
     gap: var(--size-3);
     text-decoration: none;
     border-radius: var(--radius-2);
+    @media screen and (max-width: 850px) {
+      display: inline-flex;
+      justify-content: flex-start;
+    }
   }
 </style>
