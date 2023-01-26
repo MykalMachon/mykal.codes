@@ -51,11 +51,12 @@ import Search from "../icons/Search.astro";
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 425px) {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-row: auto auto;
       justify-content: start;
+      padding: var(--size-2) var(--size-3);
     }
   }
 
@@ -78,8 +79,8 @@ import Search from "../icons/Search.astro";
   }
 
   .nav__logo img {
-    width: 32px;
-    height: auto;
+    width: clamp(24px, 3vw, 28px);
+    height: clamp(24px, 3vw, 28px);
     transition: all 0.3s var(--ease-elastic-5);
     &:hover {
       transform: rotate(5deg);
