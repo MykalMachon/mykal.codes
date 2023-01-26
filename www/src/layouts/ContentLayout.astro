@@ -1,0 +1,61 @@
+---
+import MainHead from '../components/MainHead.astro';
+
+import Attributes from '../components/layout/Attributes.astro';
+import Navigation from '../components/layout/Navigation.astro';
+import Footer from '../components/layout/Footer.astro';
+
+const { data } = Astro.props;
+
+// if the page is markdown, use the content title instead of the provided props
+const pageTitle = data.title;
+const pageDescription = data.description || '';
+
+const ogImageURL = `${Astro.url.origin}/og?title=${pageTitle}&desc=${pageDescription}&type=Page`;
+const encodedOgImageURL = encodeURI(ogImageURL);
+---
+
+<html class="" lang="en">
+  <head>
+    <MainHead title={pageTitle} description={pageDescription} />
+
+    <!-- OG Image Stuff -->
+    <meta property="og:title" content={`${pageTitle} | mykal.codes`} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content="https://mykal.codes" />
+    <meta property="og:image" content={encodedOgImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter specific OG -->
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+
+  <body class="site-container">
+    <Navigation />
+    <main class="container content" data-pagefind-body>
+      <section>
+        {
+          data.url ? (
+            <h1 data-pagefind-meta="title">
+              🔗<a href={data.url}>{data.title}</a>
+            </h1>
+          ) : (
+            <h1 data-pagefind-meta="title">{data.title}</h1>
+          )
+        }
+        <p class="leading">{data.description}</p>
+        <Attributes data={data} />
+        {data.heroImage && <img src={data.heroImage} alt="" />}
+      </section>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  main {
+    margin-bottom: var(--size-5);
+  }
+</style>

@@ -1,110 +1,110 @@
-<nav role="navigation" class="container">
-  <h2 class="title">Mykal Machon</h2>
-  <ul>
-    <li><a class="home" href="/">Home</a></li>
-    <li><a href="/posts">Posts</a></li>
-    <li><a href="/about-me">About</a></li>
-    <li class="btn align-end">
-      <a href="/search" title="Search for pages and posts">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather 
-              feather-search"
-        >
-          <circle cx="11" cy="11" r="8"> </circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"> </line>
-        </svg>
+---
+import RSS from "../icons/RSS.astro";
+import Search from "../icons/Search.astro";
+
+---
+
+<header>
+  <nav role="navigation">
+    <div class="nav__logo">
+      <a href="/">
+        <img src="/favicon.png" alt="mykal's logo" />
+        <span>Mykal Machon</span>
       </a>
-    </li>
-    <li class="btn align-end">
-      <a href="/rss.xml" title="Subscribe to my RSS feed">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather feather-rss"
-        >
-          <path d="M4 11a9 9 0 0 1 9 9"> </path>
-          <path d="M4 4a16 16 0 0 1 16 16"> </path>
-          <circle cx="5" cy="19" r="1"> </circle>
-        </svg>
-      </a>
-    </li>
-  </ul>
-  <span class="border"></span>
-</nav>
+    </div>
+    <div class="nav__menu">
+      <ul>
+        <li><a href="/garden">Garden</a></li>
+        <li><a href="/about-me">About</a></li>
+        <li>
+          <a href="/search"
+            >
+            <Search fill="rgba(0,0,0,0)" stroke="var(--acc-1)" />
+          </a>
+        </li>
+        <li>
+          <a href="/feeds">
+            <RSS fill="rgba(0,0,0,0)" stroke="var(--acc-1)" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
 <style lang="scss">
-  span.border {
-    display: block;
-    border-bottom: 1px solid var(--ink-1);
+  header {
     width: 100%;
-  }
-
-  h1.title {
-    font-size: var(--font-size-xl);
-    line-height: 1em;
-    margin: var(--size-8) 0 var(--size-3) 0;
-  }
-
-  ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: var(--size-1);
-    padding: 0;
-    margin: var(--size-3) 0 0 calc(-1 * var(--size-3));
-    width: 100%;
-    padding: 0 0 var(--size-3) 0;
-  }
-
-  @media screen and (max-width: 600px) {
-    div.navigation__bar {
-      display: flex;
-      justify-content: flex-start;
+    position: sticky;
+    top: 0;
+    background: var(--paper-1);
+    border-bottom: 1px solid var(--paper-3);
+    z-index: var(--layer-5);
+    @media screen and (max-width: 850px) {
+      position: static;
     }
   }
 
-  ul a {
-    text-decoration: none;
-    padding: var(--size-2) var(--size-3);
-    border-radius: var(--radius-2);
+  nav {
+    width: 100%;
+    padding: var(--size-3) var(--size-5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 425px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-row: auto auto;
+      justify-content: start;
+      padding: var(--size-2) var(--size-3);
+    }
   }
 
-  ul a:hover {
-    background: var(--paper-2);
-    text-decoration: underline;
-  }
-
-  .align-end {
-    justify-self: flex-end;
-  }
-
-  li.btn {
-    display: grid;
-    place-items: center;
+  .nav__menu ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
     margin: 0;
+    padding: 0;
+    li {
+      margin: 0 var(--size-3);
+    }
+    @media screen and (max-width: 850px) {
+      li {
+        margin: 0 0;
+      }
+    }
+  }
+
+  .nav__logo img {
+    width: clamp(24px, 3vw, 28px);
+    height: clamp(24px, 3vw, 28px);
+    transition: all 0.3s var(--ease-elastic-5);
+    &:hover {
+      transform: rotate(5deg);
+    }
+  }
+  .nav__logo {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
     a {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: var(--size-1);
+      color: var(--ink-3);
+    }
+  }
+
+  a {
+    padding: var(--size-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--size-3);
+    text-decoration: none;
+    border-radius: var(--radius-2);
+    @media screen and (max-width: 850px) {
+      display: inline-flex;
+      justify-content: flex-start;
     }
   }
 </style>

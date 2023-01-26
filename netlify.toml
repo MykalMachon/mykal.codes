@@ -20,3 +20,21 @@
   to = "/.netlify/functions/:splat"
   status = 200
   force = true # ENSURE WE ALWAYS REDIRECT
+
+[[redirects]]
+  from = "/rss.xml"
+  to = "/feeds/main.xml"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts"
+  to = "/garden/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/posts/*"
+  to = "/garden/posts/:splat"
+  status = 301
+  force = true
