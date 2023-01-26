@@ -1,68 +1,134 @@
 ---
-// Layout Import
-import HomeLayout from '../layouts/HomeLayout.astro';
-
-// Component Imports
-import PostList from '../components/posts/PostList.astro';
-
 // Utility imports
-import { getNonDraftPosts, getSortedPosts } from '../utils/posts';
-const allPosts = await Astro.glob('../posts/**/*.md');
+import { getCollection } from 'astro:content';
+import { getSortedPosts } from '../utils/posts';
+import MainLayout from '../layouts/MainLayout.astro';
+import PhotoGrid from '../components/PhotoGrid.astro';
 
-const numPostsPerList = 3;
+// Data Fetching: fetch blog posts
+const allPosts = await getCollection('posts', ({ data }) => {
+  return data.draft === false;
+});
+const sortedAllPosts = getSortedPosts(allPosts);
 
-// Data Fetching: fetch recent posts
-const sortedPosts = getSortedPosts(allPosts);
-const sortedPublicPosts = getNonDraftPosts(sortedPosts);
-const recentPosts = sortedPublicPosts.slice(0, numPostsPerList);
+const sortAndFilterPosts = (posts, postType: string, numPosts: number) => {
+  return posts
+    .filter((post) => post.data.type == postType)
+    .slice(0, posts.length >= numPosts ? numPosts : posts.length);
+};
 
-// Data Fetching: fetch popular posts
-const apiRes = await fetch(`${import.meta.env.SITE}api/ua-popular`);
-const {posts: apiData} = await apiRes.json();
-
-const topFivePostSlugs = apiData.slice(0,apiData.length >= numPostsPerList ? numPostsPerList : apiData.length).map(({x}) => x);
-const rawTopFivePosts = topFivePostSlugs.map((postSlug) => allPosts.find((postData) => `/posts/${postData.frontmatter.slug}/` === postSlug ));
-const topFivePosts = rawTopFivePosts.filter((topPost) => topPost) // filters out unfound posts
+const sortedNotes = sortAndFilterPosts(sortedAllPosts, 'note', 3);
+const sortedPosts = sortAndFilterPosts(sortedAllPosts, 'post', 3);
+const sortedLinks = sortAndFilterPosts(sortedAllPosts, 'link', 3);
+const sortedPhotos = sortAndFilterPosts(sortedAllPosts, 'photo', 3);
 ---
 
-<HomeLayout
-  title="Home"
-  description="Mykal Machon's website, blog, and digital garden."
->
-  <section>
-    <div class="section__header">
-      <h2>Recent posts</h2>
-      <a href="/posts">All Posts »</a>
-    </div>
-    <PostList posts={recentPosts} type="small" />
+<MainLayout title="Home" description="Mykal's home page">
+  <section class="container--large">
+    <h1>Hey, I'm Mykal Machon</h1>
+    <p class="leading">
+      Welcome to my personal website! I share posts, notes, photos, and more
+      here. Have fun exploring.
+    </p>
+    <p>
+      The site is a constant work-in-progress, you can check it out on 
+      <a href="https://github.com/MykalMachon/mykal.codes"> GitHub</a>.
+    </p>
   </section>
-  <section>
-    <div class="section__header">
-      <h2>Popular Posts</h2>
-      <a href="https://stats.tbx.sh/share/zExb1nvh/Mykal's%20Website">All stats »</a>
-    </div>
-    <PostList posts={topFivePosts} type="small" />
-  </section>
-</HomeLayout>
+  <div class="container--large grid">
+    <section>
+      <h2><a href="/garden/posts">Blog Posts</a></h2>
+      <p>More intentional things I've written.</p>
+      <div class="list seperator">
+        {
+          sortedPosts.map((post) => (
+            <article>
+              <p>
+                <a href={`/garden/posts/${post.slug}`}>{post.data.title}</a>
+              </p>
+              <p>{post.data.description}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+    <section>
+      <h2><a href="/garden/notes/">Notes</a></h2>
+      <p>Short notes that explore ideas I have.</p>
+      <div class="list seperator">
+        {
+          sortedNotes.map((note) => (
+            <article>
+              <p>
+                <a href={`/garden/notes/${note.slug}`}>{note.data.title}</a>
+              </p>
+              <p>{note.data.description}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+    <section>
+      <h2><a href="/garden/photos/">Photos</a></h2>
+      <p>People, places, and things that I love.</p>
+      <div class="seperator" style="padding-top: var(--size-3);">
+        <PhotoGrid
+          layout="grid"
+          photos={sortedPhotos.map((photo) => {
+            return {
+              slug: `/garden/photos/${photo.slug}`,
+              url: photo.data.photos[0].url,
+              alt: photo.data.photos[0].alt,
+            };
+          })}
+        />
+      </div>
+    </section>
+    <section>
+      <h2><a href="/garden/links">Links</a></h2>
+      <p>also known as bookmarks.</p>
+      <div class="list seperator">
+        {
+          sortedLinks.map((link) => (
+            <article>
+              <p>
+                <a href={`/garden/links/${link.slug}`}>{link.data.title}</a>
+              </p>
+              <p>
+                <time datetime={link.data.pubDate.toDateString()}>
+                  {link.data.pubDate.toDateString()}
+                </time>
+              </p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</MainLayout>
 
 <style lang="scss">
-  .section__header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    a {
-      margin: var(--size-6) 0 var(--size-3) 0
-    }
-
-    @media screen and (max-width: 650px) {
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      a {
-        margin: 0 0 var(--size-3) 0;
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--size-4);
+    margin-bottom: var(--size-6);
+    @media screen and (max-width: 1000px) {
+      grid-template-columns: 1fr;
+      h2 {
+        margin-top: var(--size-3);
       }
     }
+  }
+  .list {
+    article {
+      margin: var(--size-4) 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  .seperator {
+    border-top: 1px solid var(--paper-3);
   }
 </style>

@@ -1,0 +1,55 @@
+---
+// Layout Import
+import MainLayout from "../../../layouts/MainLayout.astro";
+// Component Imports
+import { getSortedPosts } from "../../../utils/posts";
+import { getCollection } from "astro:content";
+import PhotoGrid from "../../../components/PhotoGrid.astro";
+
+// Data Fetching: List all Markdown posts in the repo.
+const allPhotos = await getCollection('posts', ({data}) => {
+  return data.draft == false && data.type == 'photo'
+})
+const sortedPhotos = getSortedPosts(allPhotos);
+const photoGridPhotos = sortedPhotos.map((photo) => {
+  return {
+    slug: `/garden/photos/${photo.slug}`,
+    url: photo.data.photos[0].url,
+    alt: photo.data.photos[0].alt
+  }
+})
+---
+
+<MainLayout
+  title="Posts"
+  description="This is an archive of all the posts on my blog. I typically write about web development, coffee, devops, tech, and my personal life."
+>
+  <section class="divider">
+    <h1>Photos</h1>
+    <p>
+      This is an archive of some of my favourite photos. 
+    </p>
+    <p>
+      If you like them, you can <a href="/feeds/photos.xml">subscribe to new photos via RSS </a>
+    </p>
+  </section>
+  <section>
+    <PhotoGrid photos={photoGridPhotos} layout='grid' />
+  </section>
+</MainLayout>
+
+<style lang="scss">
+  article {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: var(--size-3);
+    padding: var(--size-3) 0;
+    border-top: 1px solid var(--paper-3);
+    &:last-of-type {
+      border-bottom: 1px solid var(--paper-3);
+    }
+    @media screen and (max-width: 800px) {
+      grid-template-columns: auto 1fr;
+    }
+  }
+</style>

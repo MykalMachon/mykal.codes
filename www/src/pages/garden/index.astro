@@ -1,0 +1,44 @@
+---
+// Layout Import
+import MainLayout from "../../layouts/MainLayout.astro";
+// Component Imports
+import PostList from "../../components/posts/PostList.astro";
+import { getSortedPosts } from "../../utils/posts";
+import { getCollection } from "astro:content";
+
+// Data Fetching: List all Markdown posts in the repo.
+const allPosts = await getCollection('posts', ({data}) => {
+  return data.draft === false
+})
+
+// sort all the posts
+let sortedPosts = getSortedPosts(allPosts);
+
+// get all tags from posts
+---
+
+<MainLayout
+  title="Garden 🏡"
+  description="This is an archive of all the posts in the garden. I typically write about web development, coffee, devops, tech, and my personal life."
+>
+  <section class="divider">
+    <h1>Garden 🏡</h1>
+    <p>
+      This is an archive of all the posts in my digital garden. 
+      This page gives a chronological overview of my posts, but you can dig into post types as well.
+      If you'd like, you can also <a href="/feeds">subscribe to some of the topics via RSS.</a>. 
+    </p>
+    <h2>What I'm growin'</h2>
+    <p>
+      To keep that digital garden analogy going, I'm growing a few varieties of content on this site. 
+      You can browse by each type below: 
+    </p>
+    <ul>
+      <li><a href="/garden/posts">Posts</a>: your traditional blog posts.</li>
+      <li><a href="/garden/notes">Notes</a>: blog posts in the making, or not. Actively worked on.</li>
+      <li><a href="/garden/photos">Photos</a>: Pictures of the people places and things I like.</li>
+      <li><a href="/garden/links">Links</a>: AKA bookmarks. Links to useful or interesting places.</li>
+    </ul>
+  </section>
+  <PostList posts={sortedPosts} showYears={true} type="small" />
+</MainLayout>

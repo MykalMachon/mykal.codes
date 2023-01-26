@@ -1,132 +1,40 @@
 ---
-import { getCustomQualityUrl } from "../../utils/cloudinary";
-
-const { post, type = "large" } = Astro.props;
-const dateFormatter = Intl.DateTimeFormat('en-GB', { year: 'numeric', month: '2-digit', day: '2-digit', timeZone: 'America/Vancouver' });
+const { post, showType = true } = Astro.props;
 ---
 
-{type === "large" ? (
-<article class="postcard">
-  <div class="postcard__photo">
-    <a href={`/posts/${post.frontmatter.slug}`}>
-      <img src={getCustomQualityUrl(post.frontmatter.heroImage, 202)} alt={`decorative photo for
-        ${post.frontmatter.title} post`} loading="lazy" width="202" height="166" />
-    </a>
+<article>
+  <div class="post__meta">
+    <p>{post.data.pubDate.toDateString()}</p>
+    {showType && <p class="secondary">{post.data.type}</p>}
   </div>
-  <div class="postcard__content">
-    <small class="postcard__content__date">{dateFormatter.format(new Date(post.frontmatter.pubDate))}</small>
-    <h3> <a href={`/posts/${post.frontmatter.slug}`}>{post.frontmatter.title}</a></h3>
-    <p>{post.frontmatter.description}</p>
+  <div class="post__title">
+    <p><a href={`/garden/${post.data.type}s/${post.slug}`}>{post.data.title}</a></p>
   </div>
 </article>
-) : (
-<article class="postcard--small">
-  <p>
-    <a href={`/posts/${post.frontmatter.slug}`}>
-      <span class="postcard__title">{post.frontmatter.title}</span>
-      <span class="postcard__line"></span>
-      <span class="postcard__date">{dateFormatter.format(new Date(post.frontmatter.pubDate))}</span>
-    </a>
-  </p>
-</article>
-)}
-
 
 <style lang="scss">
-  article.postcard {
-    margin: 0px 0px var(--size-3) 0px;
+  article {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 4fr;
     gap: var(--size-3);
-
-    .postcard__photo {
-      img {
-        border-radius: var(--size-2);
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .postcard__content {
-      h3 {
-        font-size: var(--font-size-md);
-        margin: var(--size-2) 0;
-      }
-
-      .postcard__content__date {
-        
-        color: var(--font-color-ink-2);
-      }
-
-      p {
-        margin: var(--size-2) 0;
-      }
-    }
-
-    @media screen and (max-width: 80ch) {
-      display: grid;
-      gap: var(--size-1);
-      margin: 0 0 var(--size-5) 0;
-      grid-template-columns: 1fr;
-
-      .postcard__photo {
-        img {
-          display: none;
-          object-fit: cover;
-        }
-      }
-    }
-  }
-
-  article.postcard--small {
-    margin: var(--size-3) 0px var(--size-3) 0px;
-
-    a {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: var(--size-3);
-      text-decoration: none;
-      border-radius: var(--radius-1);
-      &:hover{
-        .postcard__title {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    .postcard__title {
-      text-decoration: underline;
-    }
-
-    .postcard__line {
-      width: 100%;
-      position: relative;
-      &:after{
-        content: "";
-        position: absolute;
-        top: calc(50%);
-        width: 100%;
-        left: 0;
-        border-bottom: 1px dashed var(--ink-1);
-      }
-    }
-
-    .postcard__date {
-      color: var(--font-color-ink-2);
-      font-family: var(--font-mono);
+    border-top: 1px solid var(--paper-3);
+    align-items: center;
+    div.post__meta p {
+      font-family: monospace;
       font-size: var(--font-size-sm);
+      margin: var(--size-3) 0 var(--size-3) 0;
+      &:nth-of-type(2n) {
+        color: var(--ink-1);
+        font-style: italic;
+        margin: 0 0 var(--size-3) 0;
+      }
     }
-
-    @media screen and (max-width: 550px){
-      margin: var(--size-2) 0;
-      p {
-        margin: var(--size-1) 0;
-      }
-      .postcard__date {
-        display: none;
-      }
+    &:last-of-type {
+      border-bottom: 1px solid var(--paper-3);
+    }
+    @media screen and (max-width: 850px){
+      grid-template-columns: auto 1fr;
     }
   }
+
 </style>

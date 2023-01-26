@@ -33,9 +33,15 @@ const encodedOgImageURL = encodeURI(ogImageURL);
 
   <body class="site-container">
     <Navigation />
-    <main class="container main-content" data-pagefind-body>
+    <main class="container--large" data-pagefind>
       <slot />
     </main>
     <Footer />
   </body>
 </html>
+
+<style>
+  main {
+    margin-bottom: var(--size-6);
+  }
+</style>

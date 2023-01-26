@@ -1,0 +1,47 @@
+---
+import { getCollection } from 'astro:content';
+import AuthorCard from '../../../components/AuthorCard.astro';
+import ContentLayout from '../../../layouts/ContentLayout.astro';
+import { getBase64ImageUrl, getCustomQualityUrl } from '../../../utils/cloudinary';
+
+
+export async function getStaticPaths({}) {
+  let allPhotos = await getCollection('posts', ({ data }) => {
+    return data.draft === false && data.type == 'photo';
+  });
+
+  return allPhotos.map((photo, idx) => {
+    return {
+      params: { slug: photo.slug },
+      props: { photo },
+    };
+  });
+}
+
+const { photo } = Astro.props;
+const { Content } = await photo.render();
+---
+
+<ContentLayout data={photo.data}>
+  <section class="photos">
+    {
+      photo.data.photos.map(async ({ url, alt }) => {
+        const lqImage = getCustomQualityUrl(url, 24);
+        const b64image = await getBase64ImageUrl(lqImage);
+        const hqImage = getCustomQualityUrl(url, 800);
+        return (
+          <div class="lazy-wrapper">
+            <img
+              class="lazy loading"
+              src={b64image}
+              alt={alt}
+              data-lazy={hqImage}
+            />
+          </div>
+        );
+      })
+    }
+  </section>
+  <Content />
+  <AuthorCard />
+</ContentLayout>

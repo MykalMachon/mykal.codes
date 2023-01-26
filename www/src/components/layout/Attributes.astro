@@ -1,0 +1,144 @@
+---
+type AttributeData = {
+  title: string;
+  slug?: string;
+  pubDate?: Date;
+  draft?: true;
+  editDate?: string;
+  description?: string;
+  readTime?: string;
+  heroImage?: string;
+  stage?: string;
+  tags?: String[];
+  location?: string;
+  photos?: any[];
+  url?: string;
+};
+
+export interface Props {
+  data: AttributeData;
+}
+
+const { data } = Astro.props;
+---
+
+<section class="attributes">
+  {
+    data.pubDate && (
+      <div class="attribute" title="published on">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
+          />
+        </svg>
+
+        <time datetime={data.pubDate.toDateString()}>
+          {data.pubDate.toDateString()}
+        </time>
+      </div>
+    )
+  }
+  {
+    data.readTime && (
+      <div class="attribute" title="reading time">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+          />
+        </svg>
+
+        <span>{data.readTime}</span>
+      </div>
+    )
+  }
+  {
+    data.location && (
+      <div class="attribute" title="located at">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+          />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+          />
+        </svg>
+        <span>{data.location}</span>
+      </div>
+    )
+  }
+  {
+    data.photos && (
+      <div class="attribute" title="number of photos">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+          />
+        </svg>
+
+        <span>
+          {data.photos.length} {data.photos.length > 1 ? 'photos' : 'photo'}
+        </span>
+      </div>
+    )
+  }
+</section>
+
+<style lang="scss">
+  .attributes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-2);
+    margin: var(--size-5) calc(-1 * var(--size-2));
+  }
+  .attribute {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    color: var(--ink-2);
+    display: flex;
+    align-items: center;
+    gap: var(--size-2);
+    padding: var(--size-1) var(--size-2);
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+</style>
