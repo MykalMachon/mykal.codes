@@ -13,7 +13,7 @@ const compileHTMLForRSS = async (post) => {
       out on <a href="https://indieweb.social/@mykalmachon">Mastodon</a>.
     </p>
     <p>
-      <a href="${import.meta.env.SITE}/${post.data.type}s/${post.slug}">
+      <a href="${import.meta.env.SITE}/garden/${post.data.type}s/${post.slug}">
         Read the full post on the site
       </a>
     </p>
@@ -26,6 +26,6 @@ export const compilePostsForRSS = async (posts: any[]) => {
     title: post.data.title,
     description: await compileHTMLForRSS(post),
     pubDate: post.data.pubDate,
-    link: `${import.meta.env.SITE}/${post.data.type}s/${post.slug}`
+    link: `${import.meta.env.SITE}/garden/${post.data.type}s/${post.slug}`
   }))
 }
