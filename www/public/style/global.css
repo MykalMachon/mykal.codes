@@ -199,7 +199,6 @@ img {
 }
 
 .lazy-wrapper {
-  height: min-content;
   overflow: hidden; /* stops overflow */
   transform: translate3d(0, 0, 0); /* stops overflow */
 }
@@ -210,7 +209,7 @@ main .lazy-wrapper {
 
 img.lazy {
   filter: blur(0px);
-  transform: scale(1);
+  transform: scale(1.0);
   transition: transform 0.6s var(--ease-out-3),
     filter 0.5s var(--ease-elastic-3);
 }
@@ -282,8 +281,7 @@ blockquote {
 /* content */
 
 .content :is(img, iframe),
-.slightly-wide,
-.lazy-wrapper {
+.slightly-wide {
   position: relative;
   width: calc(100% + 6vw);
   left: -3vw;
@@ -291,8 +289,7 @@ blockquote {
 
 @media screen and (max-width: 1000px) {
   .content :is(img, iframe),
-  .slightly-wide,
-  .lazy-wrapper {
+  .slightly-wide {
     width: 100%;
     left: 0;
   }
