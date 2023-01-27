@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import AuthorCard from '../../../components/AuthorCard.astro';
+import WebMentions from '../../../components/webmentions/WebMentions.astro';
 import ContentLayout from '../../../layouts/ContentLayout.astro';
 import { getBase64ImageUrl, getCustomQualityUrl } from '../../../utils/cloudinary';
 
@@ -44,4 +45,5 @@ const { Content } = await photo.render();
   </section>
   <Content />
   <AuthorCard />
+  <WebMentions />
 </ContentLayout>

@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import AuthorCard from '../../../components/AuthorCard.astro';
+import WebMentions from '../../../components/webmentions/WebMentions.astro';
 import ContentLayout from '../../../layouts/ContentLayout.astro';
 
 export async function getStaticPaths({}) {
@@ -23,4 +24,5 @@ const { Content } = await link.render();
 <ContentLayout data={link.data}>
   <Content />
   <AuthorCard />
+  <WebMentions />
 </ContentLayout>
