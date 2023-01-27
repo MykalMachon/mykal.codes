@@ -1,7 +1,7 @@
 ---
 import Details from '../Details.astro';
 
-const url = new URL(Astro.url.pathname, Astro.site) + '/';
+const url = new URL(Astro.url.pathname, Astro.site);
 
 const webMentionsReq = await fetch(
   `https://webmention.io/api/mentions.jf2?target=${url}&token=${process.env.WM_TOKEN}`
@@ -16,7 +16,7 @@ const replies = webMentions.children.filter(
 );
 ---
 
-<section class="webementions">
+<section class="webementions" data-url={url}>
   <h2>Responses</h2>
   <div class="webmentions__likes">
     <Details summary={`This post was liked by ${likes.length} people`}>
