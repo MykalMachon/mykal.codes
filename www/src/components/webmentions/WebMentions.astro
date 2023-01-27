@@ -1,0 +1,112 @@
+---
+import Details from '../Details.astro';
+
+const url = new URL(Astro.url.pathname, Astro.site);
+
+const webMentionsReq = await fetch(
+  `https://webmention.io/api/mentions.jf2?target=${url}&token=${process.env.WM_TOKEN}`
+);
+const webMentions = await webMentionsReq.json();
+
+const likes = webMentions.children.filter(
+  (mention) => mention['wm-property'] == 'like-of'
+);
+const replies = webMentions.children.filter(
+  (mention) => mention['wm-property'] == 'in-reply-to'
+);
+---
+
+<section class="webementions" data-url={url}>
+  <h2>Responses</h2>
+  <div class="webmentions__likes">
+    <Details summary={`This post was liked by ${likes.length} people`}>
+      <div class="people">
+        {
+          likes.map((like) => (
+            <a href={like.author.url}>
+              <img
+                class="avatar"
+                src={like.author.photo}
+                loading="lazy"
+                title={`liked by ${like.author.name}`}
+                alt={`photo of ${like.author.name}`}
+              />
+            </a>
+          ))
+        }
+      </div>
+    </Details>
+  </div>
+  <ul class="webmention__reply">
+    {
+      replies.map((reply) => (
+        <li class="reply">
+          <img
+            class="avatar"
+            src={reply.author.photo}
+            loading="lazy"
+            title={`liked by ${reply.author.name}`}
+            alt={`photo of ${reply.author.name}`}
+          />
+          <div>
+            <strong>
+              <a href={reply.author.url}>{reply.author.name}</a>
+            </strong>
+            <div class="reply__content" set:html={reply.content.html} />
+            <div class="reply__time">
+              <small>
+                <i>
+                  received on{' '}
+                  <time
+                    datetime={new Date(reply['wm-received']).toDateString()}
+                  >
+                    {new Date(reply['wm-received']).toDateString()}
+                  </time>
+                </i>
+              </small>
+            </div>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+  <p>Responses on this site are powered by <a href="https://webmention.io">Webmentions</a>!</p>
+</section>
+
+<style lang="scss">
+  .people {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: var(--size-2);
+    gap: var(--size-1);
+  }
+  img.avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-round);
+    border: 2px solid var(--acc-3);
+    left: 0px;
+  }
+
+  ul.webmention__reply {
+    list-style: none;
+    display: flex;
+    gap: var(--size-3);
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  li.reply {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--size-3);
+  }
+
+  small {
+    font-size: var(--font-size-sm);
+    color: var(--ink-1);
+  }
+</style>

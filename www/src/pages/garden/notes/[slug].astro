@@ -5,6 +5,7 @@ import AuthorCard from '../../../components/AuthorCard.astro';
 import Attributes from '../../../components/layout/Attributes.astro';
 import Navigation from '../../../components/layout/Navigation.astro';
 import MainHead from '../../../components/MainHead.astro';
+import WebMentions from '../../../components/webmentions/WebMentions.astro';
 import ContentLayout from '../../../layouts/ContentLayout.astro';
 
 export async function getStaticPaths({}) {
@@ -28,4 +29,5 @@ const rt = readingTime(note.body).text;
 <ContentLayout data={{ ...note.data, readTime: rt }}>
   <Content />
   <AuthorCard />
+  <WebMentions />
 </ContentLayout>

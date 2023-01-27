@@ -354,3 +354,11 @@ pre {
   font-size: var(--font-size-sm);
   border-radius: var(--radius-2);
 }
+
+.reply__content p:first-of-type {
+  margin-top: 0;
+}
+
+.reply__content p:last-of-type {
+  margin-bottom: 0;
+}
