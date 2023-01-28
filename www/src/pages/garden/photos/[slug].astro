@@ -8,7 +8,7 @@ import { getBase64ImageUrl, getCustomQualityUrl } from '../../../utils/cloudinar
 
 export async function getStaticPaths({}) {
   let allPhotos = await getCollection('posts', ({ data }) => {
-    return data.draft === false && data.type == 'photo';
+    return data.type == 'photo';
   });
 
   return allPhotos.map((photo, idx) => {

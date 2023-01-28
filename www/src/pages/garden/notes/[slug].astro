@@ -10,7 +10,7 @@ import ContentLayout from '../../../layouts/ContentLayout.astro';
 
 export async function getStaticPaths({}) {
   let allnotes = await getCollection('posts', ({ data }) => {
-    return data.draft === false && data.type == 'note';
+    return data.type == 'note';
   });
 
   return allnotes.map((note) => {

@@ -6,7 +6,7 @@ import ContentLayout from '../../../layouts/ContentLayout.astro';
 
 export async function getStaticPaths({}) {
   let allLinks = await getCollection('posts', ({ data }) => {
-    return data.draft == false && data.type == 'link';
+    return data.type == 'link';
   });
 
   return allLinks.map((link) => {
