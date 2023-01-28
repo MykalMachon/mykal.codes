@@ -252,6 +252,13 @@ declare module 'astro:content' {
   collection: "posts",
   data: InferEntrySchema<"posts">
 },
+"peanut-bowl-recipe.md": {
+  id: "peanut-bowl-recipe.md",
+  slug: "peanut-bowl-recipe",
+  body: string,
+  collection: "posts",
+  data: InferEntrySchema<"posts">
+},
 "pioneers-settlers-and-city-planners.md": {
   id: "pioneers-settlers-and-city-planners.md",
   slug: "pioneers-settlers-and-city-planners",
