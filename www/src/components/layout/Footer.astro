@@ -57,54 +57,54 @@ const dateFormatter = Intl.DateTimeFormat('en-CA', {
 
 <!-- Theme picker code -->
 <script type="text/javascript">
-  const bodyEl = document.querySelector('body');
-  const themeBtnEls = document.querySelectorAll('button.btn-theme[data-theme]');
+  // const bodyEl = document.querySelector('body');
+  // const themeBtnEls = document.querySelectorAll('button.btn-theme[data-theme]');
 
-  let selectedTheme = localStorage.getItem('theme');
+  // let selectedTheme = localStorage.getItem('theme');
 
-  try {
-    const handleThemeBtnClick = (btnEl) => {
-      // get theme and set it
-      const theme = btnEl.dataset.theme;
-      selectedTheme = theme;
-      bodyEl.dataset.theme = theme;
-      localStorage.setItem('theme', theme);
+  // try {
+  //   const handleThemeBtnClick = (btnEl) => {
+  //     // get theme and set it
+  //     const theme = btnEl.dataset.theme;
+  //     selectedTheme = theme;
+  //     bodyEl.dataset.theme = theme;
+  //     localStorage.setItem('theme', theme);
 
-      // update all buttons
-      themeBtnEls.forEach((btnEl) => btnEl.setAttribute('aria-pressed', false));
+  //     // update all buttons
+  //     themeBtnEls.forEach((btnEl) => btnEl.setAttribute('aria-pressed', false));
 
-      // update current button
-      btnEl.setAttribute('aria-pressed', 'true');
-    };
+  //     // update current button
+  //     btnEl.setAttribute('aria-pressed', 'true');
+  //   };
 
-    if (selectedTheme == null) {
-      if (
-        window.matchMedia &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches
-      ) {
-        localStorage.setItem('theme', 'dark');
-        selectedTheme = 'dark';
-      } else {
-        localStorage.setItem('theme', 'light');
-        selectedTheme = 'light';
-      }
-    }
+  //   if (selectedTheme == null) {
+  //     if (
+  //       window.matchMedia &&
+  //       window.matchMedia('(prefers-color-scheme: dark)').matches
+  //     ) {
+  //       localStorage.setItem('theme', 'dark');
+  //       selectedTheme = 'dark';
+  //     } else {
+  //       localStorage.setItem('theme', 'light');
+  //       selectedTheme = 'light';
+  //     }
+  //   }
 
-    // set the selected theme based on selectedTheme
-    const themeBtn = document.querySelector(
-      `button.btn-theme[data-theme=${selectedTheme}]`
-    );
-    handleThemeBtnClick(themeBtn);
+  //   // set the selected theme based on selectedTheme
+  //   const themeBtn = document.querySelector(
+  //     `button.btn-theme[data-theme=${selectedTheme}]`
+  //   );
+  //   handleThemeBtnClick(themeBtn);
 
-    themeBtnEls.forEach((btnEl) => {
-      btnEl.addEventListener('click', (e) => {
-        e.preventDefault();
-        handleThemeBtnClick(btnEl);
-      });
-    });
-  } catch (err) {
-    bodyEl.dataset.theme = 'dark';
-  }
+  //   themeBtnEls.forEach((btnEl) => {
+  //     btnEl.addEventListener('click', (e) => {
+  //       e.preventDefault();
+  //       handleThemeBtnClick(btnEl);
+  //     });
+  //   });
+  // } catch (err) {
+  //   bodyEl.dataset.theme = 'dark';
+  // }
 </script>
 
 <style lang="scss">

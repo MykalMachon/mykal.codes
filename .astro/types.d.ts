@@ -252,6 +252,13 @@ declare module 'astro:content' {
   collection: "posts",
   data: InferEntrySchema<"posts">
 },
+"peanut-bowl-recipe.md": {
+  id: "peanut-bowl-recipe.md",
+  slug: "peanut-bowl-recipe",
+  body: string,
+  collection: "posts",
+  data: InferEntrySchema<"posts">
+},
 "pioneers-settlers-and-city-planners.md": {
   id: "pioneers-settlers-and-city-planners.md",
   slug: "pioneers-settlers-and-city-planners",
@@ -297,6 +304,13 @@ declare module 'astro:content' {
 "shopify-as-json.md": {
   id: "shopify-as-json.md",
   slug: "shopify-as-json",
+  body: string,
+  collection: "posts",
+  data: InferEntrySchema<"posts">
+},
+"starting-a-garden.md": {
+  id: "starting-a-garden.md",
+  slug: "starting-a-garden",
   body: string,
   collection: "posts",
   data: InferEntrySchema<"posts">

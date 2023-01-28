@@ -31,8 +31,9 @@ const encodedOgImageURL = encodeURI(ogImageURL);
     <meta name="twitter:card" content="summary_large_image" />
   </head>
 
-  <body class="site-container">
+  <body class="site-container" data-theme="dark">
     <Navigation />
+
     <main class="container content" data-pagefind-body>
       <section>
         {
@@ -48,14 +49,45 @@ const encodedOgImageURL = encodeURI(ogImageURL);
         <Attributes data={data} />
         {data.heroImage && <img src={data.heroImage} alt="" />}
       </section>
+      {
+        data.draft && (
+          <section class="draft" data-pagefind-ignore>
+            <h2>HEY! This is a DRAFT!</h2>
+            <p class="leading">You sneaky little guy, how did you find this?</p>
+            <p>
+              Well now that you're here... you can read whatevers here if you
+              want, just don't share it around please.
+            </p>
+            <p>Thanks!</p>
+          </section>
+        )
+      }
       <slot />
     </main>
     <Footer />
+    <style lang="scss">
+      main {
+        margin-bottom: var(--size-5);
+      }
+      section.draft {
+        position: relative;
+        margin: var(--size-8) 0;
+        transform: rotate(4deg);
+        border-radius: var(--radius-3);
+        border: 8px double var(--red-12);
+        padding: var(--size-3);
+        background: var(--red-8);
+        h2,
+        p {
+          z-index: 2;
+        }
+        h2 {
+          margin-top: 0;
+        }
+        p:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    </style>
   </body>
 </html>
-
-<style>
-  main {
-    margin-bottom: var(--size-5);
-  }
-</style>

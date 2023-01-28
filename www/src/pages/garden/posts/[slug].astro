@@ -10,7 +10,7 @@ import { getSortedPosts } from '../../../utils/posts';
 
 export async function getStaticPaths({}) {
   let allPosts = await getCollection('posts', ({ data }) => {
-    return data.draft === false && data.type == 'post';
+    return data.type == 'post';
   });
   let allSortedPosts = getSortedPosts(allPosts);
 
