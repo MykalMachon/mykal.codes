@@ -40,7 +40,7 @@ _She also calls her site a digital garden... what a coincidence!_
 
 I've kept the site architecturally simple by design. There aren't a lot of super-complex features. The post likes and comments I had on here before were great, but were examples of features that had heavy vendor lock-in and just kind of felt "heavy".
 
-**This site could realistically live on a 11 year old computer in a basement, but tools like Netlify goodies on top without weighing things down.**
+**This site could realistically live on a 11 year old computer in a basement, but tools like Netlify add goodies on top without weighing things down.**
 
 in 5-10 years, I don't want to lose a bunch of photos, ideas, and little pieces of my personal history because a billion-dollar baby blew up my website. This site is all `.astro` files, markdown, and open-source packages with a little progressively enhanced sugar on top.
 
