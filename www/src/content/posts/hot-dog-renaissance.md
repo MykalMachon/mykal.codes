@@ -35,7 +35,7 @@ The "II" at the end of the painting's name implies that there is at least a "I" 
 Given I couldn't find any other information about the painting, I figured I'd share a picture and a little writeup of my personal history with the painting here.
 It's a great painting that I think deserves it's own little spot on the internet even if it's just for me and some friends.
 
-edit: [a crunchy n' crusy scan of the photo exists on the SELIYEMETAXWTEXW art gallery wesbite](https://sag.ufvsoca.ca/sag/1994/05/15/chris-woods/). 
+edit: [a crunchy n' crusty scan of the photo exists on the SELIYEMETAXWTEXW art gallery wesbite](https://sag.ufvsoca.ca/sag/1994/05/15/chris-woods/). 
 
 ## Thanks Chris
 
