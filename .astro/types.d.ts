@@ -44,9 +44,13 @@ declare module 'astro:content' {
 	): E extends ValidEntrySlug<C>
 		? Promise<CollectionEntry<C>>
 		: Promise<CollectionEntry<C> | undefined>;
+	export function getCollection<C extends keyof typeof entryMap, E extends CollectionEntry<C>>(
+		collection: C,
+		filter?: (entry: CollectionEntry<C>) => entry is E
+	): Promise<E[]>;
 	export function getCollection<C extends keyof typeof entryMap>(
 		collection: C,
-		filter?: (data: CollectionEntry<C>) => boolean
+		filter?: (entry: CollectionEntry<C>) => unknown
 	): Promise<CollectionEntry<C>[]>;
 
 	type InferEntrySchema<C extends keyof typeof entryMap> = import('astro/zod').infer<
@@ -199,6 +203,13 @@ declare module 'astro:content' {
 "hidden-content-in-an-unpublished-shopify-theme.md": {
   id: "hidden-content-in-an-unpublished-shopify-theme.md",
   slug: "hidden-content-in-an-unpublished-shopify-theme",
+  body: string,
+  collection: "posts",
+  data: InferEntrySchema<"posts">
+},
+"hot-dog-renaissance.md": {
+  id: "hot-dog-renaissance.md",
+  slug: "hot-dog-renaissance",
   body: string,
   collection: "posts",
   data: InferEntrySchema<"posts">
