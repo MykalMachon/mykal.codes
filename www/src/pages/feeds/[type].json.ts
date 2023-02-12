@@ -1,13 +1,10 @@
 import MarkdownIt from 'markdown-it';
 import { getCollection } from "astro:content";
-import { getSortedPosts } from "../../utils/posts";
 
+import { getSortedPosts } from "../../utils/posts";
 import { postTypes } from '../../utils/posts';
 
-const md = new MarkdownIt({
-  html: true,
-  breaks: true,
-});
+const parser = new MarkdownIt();
 
 const getPostData = async (type: string = '') => {
   const allPosts = await getCollection('posts', ({ data }) =>
@@ -15,7 +12,7 @@ const getPostData = async (type: string = '') => {
       ? true
       : data.type == type.slice(0, type.length - 1)
   );
-  const postsWithHtml = allPosts.map((post) => ({ html: md.render(post.body).replace(/\n/g, ''), ...post }))
+  const postsWithHtml = allPosts.map((post) => ({ html: parser.render(post.body).replace(/\n/g, ''), ...post }))
   return getSortedPosts(postsWithHtml);
 }
 
@@ -32,3 +29,4 @@ export const get = async ({ params, request }) => {
     body: JSON.stringify(postData)
   }
 }
+
