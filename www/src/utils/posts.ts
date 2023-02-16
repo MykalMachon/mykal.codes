@@ -1,3 +1,5 @@
+export const postTypes = ['links', 'notes', 'photos', 'posts']
+
 export const getNonDraftPosts = (posts: Array<any>) => {
   const nonDraftPosts = posts.filter((post) => {
     return post.data.draft || post.data.draft == false;
