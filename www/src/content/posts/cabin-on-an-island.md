@@ -6,11 +6,11 @@ pubDate: 2023-02-22
 location: 'an Island'
 photos:
   - url: 'https://res.cloudinary.com/mykalcodes/image/upload/v1677125240/Mykal%20Codes/PXL_20230218_211945534.jpg'
-    alt: 'A large oil-on-canvas painting of a blonde man seemingly kneeling in pain with hotdogs in his hands. He is located in what appears to be a convenience store'
+    alt: 'A landscape showing the ocean, blocked from view by some trees. taken from a wooden balcony overlooking the ocean.'
   - url: 'https://res.cloudinary.com/mykalcodes/image/upload/v1677125240/Mykal%20Codes/PXL_20230220_200449938.jpg'
-    alt: 'A large oil-on-canvas painting of a blonde man seemingly kneeling in pain with hotdogs in his hands. He is located in what appears to be a convenience store'
+    alt: 'A landscape from within a reading nook. The ocean and other islands are visible from the reading nook. A tree blocks the way.'
   - url: 'https://res.cloudinary.com/mykalcodes/image/upload/v1677125240/Mykal%20Codes/PXL_20230220_221250627.jpg'
-    alt: 'A large oil-on-canvas painting of a blonde man seemingly kneeling in pain with hotdogs in his hands. He is located in what appears to be a convenience store'
+    alt: 'A landscape of a stony beach, with beach + trees on the left side, and ocean on the right side. Other islands are visible in the background.'
 tags:
   - 'personal'
 ---
