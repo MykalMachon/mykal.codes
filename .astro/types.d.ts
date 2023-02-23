@@ -144,6 +144,13 @@ declare module 'astro:content' {
   collection: "posts",
   data: InferEntrySchema<"posts">
 },
+"cabin-on-an-island.md": {
+  id: "cabin-on-an-island.md",
+  slug: "cabin-on-an-island",
+  body: string,
+  collection: "posts",
+  data: InferEntrySchema<"posts">
+},
 "cauliflower-fried-rice-wraps.md": {
   id: "cauliflower-fried-rice-wraps.md",
   slug: "cauliflower-fried-rice-wraps",
