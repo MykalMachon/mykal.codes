@@ -9,9 +9,9 @@ tags:
   - enterprise
 ---
 
-I love containers. I think they're cool. They enable automated deploys, self-repairing systems, and give us a direct programmatic "source of truth" interface for our infrastructure. All of which can be _huge_ in an organization with a significant number of server-based applications, jobs, daemons, and systems.
+I love containers. _I think they're cool_. They enable automated deploys, self-repairing systems, and a direct programmatic "source of truth" interface for infrastructure. All of which can be a _huge_ asset in an organization with a significant number of server-based applications, jobs, daemons, and systems.
 
-Despite all of those benefits, I've noticed there seems to be a bit of a feedback loop that prevents containers from reaching wide-spread adoption at work and in enterprise infrastructure. I've been calling this the "enterprise-vendor feedback loop" in my head. Here's an example of what I mean:
+**Despite all the benefits, and our teams success with containers in certain contexts[^1], I've noticed there seems to be a bit of a feedback loop that prevents containers from reaching wide-spread adoption at work.** I've attributed this to something I've been calling the "enterprise-vendor feedback loop". Here's an example of what I mean:
 
 - Enterprise wants to move forward with container technology (Docker, K8s, etc.)
 - Niche enterprise vendors don't offer a solution compatible with container technology
@@ -25,11 +25,11 @@ Now imagine the same thing from the vendor's perspective
 - Vendor doesn't have enough buy-in from customers to move forward with containers.
 - Vendor's technological growth stagnates.
 
-This feedback loop seems to keep both enterprise companies and enterprise vendors in a glacial state of continuous improvement. Neither organization will make a substantial change in underlying technology until there is an absolute need for the change because the challenge of moving forward without vendor buy-in is often above either organization's pain threshold for change.
+This feedback loop seems to keep both enterprise companies and enterprise vendors in a glacial state of continuous improvement. Neither organization will make a substantial change in underlying technology until there is an absolute need for the change. The challenge of moving forward without buy-in from the other group is often above either organization's pain threshold for change.
 
 ## Why not just containerize vendor applications?
 
-I've thought about this quite a bit as well. In theory an org could containerize vendor applications as they're onboarded. Just write up a Docker file or a Docker compose file for each new application during the onboarding process!
+I've thought about just containerizing vendor applications quite a bit as well. In theory an org could containerize vendor applications as they're on-boarded. Just write up a Docker file + a Docker compose file for each new application during the onboarding process!
 
 While that might be fine initially, there are some maintenance risks in doing so:
 
@@ -48,3 +48,5 @@ This applies to more than just containerization technology though. That feedback
 ## Anyone have any ideas?
 
 Maybe I'm missing an obvious solution here, but would be open to any ideas you have around how we can get out of this continuous improvement rut. It may just be that things are moving slower than I'd like and that's the way of the world...
+
+[^1]: We containerize most of our in-house developed applications at this point, as well as almost all of the open-source software that we use. Deploys and updates become as easy as `docker-compose up`. Most open source software also has publicly available containers like [redis](https://hub.docker.com/_/redis), [uptime kuma](https://hub.docker.com/r/louislam/uptime-kuma), etc.
