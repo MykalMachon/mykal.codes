@@ -1,17 +1,17 @@
 ---
-title: Containers & The Enterprise-Vendor Feedback Loop
+title: Containers and The Enterprise-Vendor Feedback Loop
 type: 'post'
-description: Enterprise and enterprise-vendor's both improve at a glacial pace; why?
+description: Enterprise and Enterprise Vendor's both improve at a glacial pace; why?
 pubDate: 2023-03-07
-draft: true
+draft: false
 tags:
   - docker
   - enterprise
 ---
 
-I love containers. _I think they're cool_. They enable automated deploys, self-repairing systems, and a direct programmatic "source of truth" interface for infrastructure. All of which can be a _huge_ asset in an organization with a significant number of server-based applications, jobs, daemons, and systems.
+I love containers. _I think they're cool_. Like any tech they have their issues[^1], but when done right enable automated deploys, self-repairing systems, and a direct programmatic "source of truth" interface for infrastructure. All of which can be a _huge_ asset in an organization with a significant number of server-based applications, jobs, daemons, and systems.
 
-**Despite all the benefits, and our teams success with containers in certain contexts[^1], I've noticed there seems to be a bit of a feedback loop that prevents containers from reaching wide-spread adoption at work.** I've attributed this to something I've been calling the "enterprise-vendor feedback loop". Here's an example of what I mean:
+**Despite all the benefits, and our teams success with containers in certain contexts[^2], I've noticed there seems to be a bit of a feedback loop that prevents containers from reaching wide-spread adoption at work.** I've attributed this to something I've been calling the "enterprise-vendor feedback loop". Here's an example of what I mean:
 
 - Enterprise wants to move forward with container technology (Docker, K8s, etc.)
 - Niche enterprise vendors don't offer a solution compatible with container technology
@@ -49,4 +49,6 @@ This applies to more than just containerization technology though. That feedback
 
 Maybe I'm missing an obvious solution here, but would be open to any ideas you have around how we can get out of this continuous improvement rut. It may just be that things are moving slower than I'd like and that's the way of the world...
 
-[^1]: We containerize most of our in-house developed applications at this point, as well as almost all of the open-source software that we use. Deploys and updates become as easy as `docker-compose up`. Most open source software also has publicly available containers like [redis](https://hub.docker.com/_/redis), [uptime kuma](https://hub.docker.com/r/louislam/uptime-kuma), etc.
+[^1]: Containers are hard to do right. I've spent the better part of the last 3 years learning about them and still feel like I'm just scratching the surface. I've got the dockerfile and docker-compose.yml workflow down, and love how they make deploying in the cloud easy across platforms. That said, after setting up a [K3s envrionment](https://k3s.io/) with some raspberry pi 4's in my office I was absolutely lost. In trying to make a system that can account for every usecase, containers and container orchestration tools end up very complicated™.
+
+[^2]: We containerize most of our in-house developed applications at this point, as well as almost all of the open-source software that we use. Deploys and updates become as easy as `docker-compose up`. Most open source software also has publicly available containers like [redis](https://hub.docker.com/_/redis), [uptime kuma](https://hub.docker.com/r/louislam/uptime-kuma), etc.
