@@ -3,7 +3,7 @@ title: "Autosave on the Web"
 customSlug: "autosave-on-the-web"
 type: 'post'
 description: "Using native browser APIs to autosave HTML forms"
-pubDate: 2022-02-15
+pubDate: "2022-02-15"
 heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1655763097/Mykal%20Codes/autosave-on-the-web.webp"
 tags: ["webdev"]
 draft: false

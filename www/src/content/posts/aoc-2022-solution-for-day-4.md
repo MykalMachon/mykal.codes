@@ -3,7 +3,7 @@ title: 'AOC 2022: Solution for Day 4'
 customSlug: aoc-2022-day-4
 type: 'post'
 description: My solution for advent-of-code day 4
-pubDate: 2022-12-05T16:06:00Z
+pubDate: "2022-12-05T16:06:00Z"
 tags:
 - advent-of-code
 - python

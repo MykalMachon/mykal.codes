@@ -3,7 +3,7 @@ title: "Remembering Ash"
 customSlug: "remembering-ash"
 type: 'photo'
 draft: false
-pubDate: 2022-08-01
+pubDate: "2022-08-01"
 location: "Home"
 photos: 
   - url: 'https://res.cloudinary.com/mykalcodes/image/upload/v1659384366/Mykal%20Codes/ash-in-hammock_egnu25.jpg'

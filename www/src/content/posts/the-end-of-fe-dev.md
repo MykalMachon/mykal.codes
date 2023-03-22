@@ -1,9 +1,9 @@
 ---
 title: The End of Front-End Development
 description: A great blog post that sums up how I feel about GPT models.
-customSlug: ''
 type: link
-pubDate: 2023-03-21T22:00
+pubDate: "2023-03-21T22:00"
+draft: false
 tags:
 - ai
 url: https://www.joshwcomeau.com/blog/the-end-of-frontend-development/

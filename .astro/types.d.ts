@@ -364,6 +364,13 @@ declare module 'astro:content' {
   collection: "posts",
   data: InferEntrySchema<"posts">
 },
+"the-end-of-fe-dev.md": {
+  id: "the-end-of-fe-dev.md",
+  slug: "the-end-of-fe-dev",
+  body: string,
+  collection: "posts",
+  data: InferEntrySchema<"posts">
+},
 "the-incoming-internet-switch-up.md": {
   id: "the-incoming-internet-switch-up.md",
   slug: "the-incoming-internet-switch-up",

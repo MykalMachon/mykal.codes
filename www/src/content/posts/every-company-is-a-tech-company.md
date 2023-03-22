@@ -4,7 +4,7 @@ customSlug: why-every-company-is-a-tech-company
 type: 'post'
 description: 'Tech is at the core of virtually every business and people would be
   better off to understand that. '
-pubDate: 2022-11-07T00:30:00Z
+pubDate: "2022-11-07T00:30:00Z"
 heroImage: ''
 tags:
 - business

@@ -2,7 +2,7 @@
 title: 'Hot Dog Renaissance'
 type: 'photo'
 draft: false
-pubDate: 2023-02-04
+pubDate: "2023-02-04"
 location: 'University of the Fraser Valley'
 photos:
   - url: 'https://res.cloudinary.com/mykalcodes/image/upload/v1675549095/Mykal%20Codes/PXL_20230203_205337133.MP.jpg'

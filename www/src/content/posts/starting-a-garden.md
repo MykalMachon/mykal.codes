@@ -2,7 +2,7 @@
 title: 'Starting a Garden 🍅'
 type: 'post'
 description: "I redid my site again; this post goes over why, and what's changed this time around."
-pubDate: 2023-01-30
+pubDate: "2023-01-30"
 draft: false
 tags: ['update', 'meta']
 ---

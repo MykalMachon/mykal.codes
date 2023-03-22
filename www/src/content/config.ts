@@ -6,10 +6,10 @@ const posts = defineCollection({
   },
   schema: z.object({
     title: z.string(),
-    pubDate: z.date(),
+    pubDate: z.string().transform((val) => new Date(val)),
     type: z.enum(['post', 'photo', 'note', 'link']),
     draft: z.boolean(),
-    editDate: z.optional(z.date()),
+    editDate: z.optional(z.string().transform((val) => new Date(val))),
     tags: z.optional(z.array(z.string())),
     stage: z.optional(z.enum(["seed", "budding", "sapling", "old growth"])),
     customSlug: z.optional(z.string()),

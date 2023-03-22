@@ -4,7 +4,7 @@ customSlug: websites-and-wes-anderson
 type: 'post'
 description: maybe Wes Anderson films and websites have more in common than you'd
   think.
-pubDate: 2022-12-05T08:00:00Z
+pubDate: "2022-12-05T08:00:00Z"
 heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1670266652/Mykal%20Codes/The_Grand_Budapest_Hotel_Ralph_Fiennes_r9b7ek.jpg
 tags:
 - webdev

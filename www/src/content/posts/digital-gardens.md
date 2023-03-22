@@ -3,8 +3,8 @@ title: 'Digital Gardens'
 customSlug: 'digital-gardens'
 type: 'note'
 description: 'my thoughts on building digital gardens'
-pubDate: 2022-01-01
-editDate: 2022-01-01
+pubDate: "2022-01-01"
+editDate: "2022-01-01"
 stage: 'seed'
 draft: false
 tags:
