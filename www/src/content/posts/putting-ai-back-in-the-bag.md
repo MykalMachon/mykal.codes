@@ -1,7 +1,7 @@
 ---
 title: Putting AI back in the bag
 description: Humans suck at putting things down when they feel like there's potential
-  there. AI is a great example.
+  for good or profit. AI is a great example.
 customSlug: ''
 type: note
 pubDate: '2023-03-26 11:30:00'
