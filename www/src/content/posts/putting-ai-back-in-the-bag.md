@@ -14,7 +14,7 @@ stage: seed
 
 I wrote a very "stream-of-conciousness" thread on AI and how we probably can't put it back in pandoras box on Mastodon. You can read it as a primer below:
 
-<iframe src="[https://indieweb.social/@mykalmachon/110090905453454176/embed](https://indieweb.social/@mykalmachon/110090905453454176/embed)" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script src="[https://indieweb.social/embed.js](https://indieweb.social/embed.js)" async="async"></script>
+<iframe src="https://indieweb.social/@mykalmachon/110090905453454176/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script src="https://indieweb.social/embed.js" async="async"></script>
 
 I wanted to elaborate a bit in a longer format where I didn't have to worry about splitting up my posts.
 
