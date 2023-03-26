@@ -5,6 +5,7 @@ description: Humans suck at putting things down when they feel like there's pote
 customSlug: ''
 type: note
 pubDate: '2023-03-26 11:30:00'
+draft: false
 tags:
 - ai
 - thoughts
