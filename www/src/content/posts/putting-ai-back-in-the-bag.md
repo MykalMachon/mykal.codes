@@ -20,7 +20,7 @@ I wanted to elaborate a bit in a longer format where I didn't have to worry abou
 
 ## Generative AI as a power for good
 
-I would like to believe that the people are working on Generative AI aren't doing it out of malice. It's very easy to see there are huge possibilities for _good_ to come from generative AI.
+I don't believe that the people working on generative AI aren't doing it out of malice. It's very easy to see there are huge possibilities for _good_ to come from it.
 
 Here's a few things I can think of off the top of my head:
 
@@ -41,7 +41,7 @@ Here's a few things I can think of off the top of my head:
 
 ## Generative AI as a power for evil
 
-While these are great, when you look at the list of unarguable terrible things AI can do without the proper guard rails, it kind of looses it's sheen.
+While these are great, when you look at the list of unarguably terrible things AI can do without proper guard rails, they lose their sheen.
 
 Here's a few of the things I've been thinking about recently:
 
