@@ -4,6 +4,7 @@ description: One of my favourite YouTube channels.
 customSlug: ''
 type: link
 pubDate: 2023-03-28 9:00
+draft: false
 tags:
 - personal
 url: https://www.youtube.com/@kurzgesagt
