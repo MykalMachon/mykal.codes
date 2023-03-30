@@ -38,3 +38,9 @@
   to = "/garden/posts/:splat"
   status = 301
   force = true
+
+[[headers]]
+  # allow other apps to call the pagefine API
+  for = "/_pagefind/pagefind.js"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
