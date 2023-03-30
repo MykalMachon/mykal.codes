@@ -41,6 +41,6 @@
 
 [[headers]]
   # allow other apps to call the pagefine API
-  for = "/_pagefind/pagefind.js"
+  for = "/_pagefind/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
