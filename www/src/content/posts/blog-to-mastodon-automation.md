@@ -1,7 +1,6 @@
 ---
 title: Blog to Mastodon automation
-description: I used pipedream to automatically cross-post my content out to Mastodon
-  Mastodon.
+description: I used pipedream to automatically cross-post my content out to Mastodon.
 type: note
 pubDate: '2023-04-06'
 tags:
