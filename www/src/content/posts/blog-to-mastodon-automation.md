@@ -2,7 +2,6 @@
 title: Blog to Mastodon automation
 description: I used pipedream to make a cross-posting bot that shares my posts on
   Mastodon.
-customSlug: ''
 type: note
 pubDate: '2023-04-06'
 tags:
