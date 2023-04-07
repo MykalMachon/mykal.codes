@@ -8,7 +8,7 @@ tags:
 - webdev
 - devops
 - javascript
-draft: 'false'
+draft: false
 ---
 
 I built a little job that monitors my RSS feed, and posts all new entries to my Mastodon account. So whenever I make a post here, it should get automatically syndicated out to Mastodon.
