@@ -1,6 +1,6 @@
 ---
 title: Blog to Mastodon automation
-description: I used pipedream to make a cross-posting bot that shares my posts on
+description: I used pipedream to automatically cross-post my content out to Mastodon
   Mastodon.
 type: note
 pubDate: '2023-04-06'
@@ -11,29 +11,27 @@ tags:
 draft: false
 ---
 
-I built a little job that monitors my RSS feed, and posts all new entries to my Mastodon account. So whenever I make a post here, it should get automatically syndicated out to Mastodon.
+I just built a little "job" or "process" that monitors this site's RSS feed, and posts all new entries to my Mastodon account. So when I make a post here, it automatically gets syndicated out to Mastodon! 
 
-Typically, I would build this all out from scratch (in the name of learning, of course!) and spend a whole afternoon on it, maybe even two or three afternoons if I'm being honest with myself. This time, I wanted to try using a tool I heard about awhile ago in the Shop Talk show discord, [Pipedream](https://pipedream.com/).
+Typically, I would build this all out from scratch (in the name of learning, of course!) and spend a whole afternoon on it, maybe even two or three afternoons if I'm being honest with myself. This time, I wanted to take it easy on myself, and try using a tool I heard about awhile ago in the Shop Talk show discord, [Pipedream](https://pipedream.com/).
 
 ## What's Pipedream
 
-Pipedream is an integration platform, that seems to be targeting developers. Think of Zapier with all of it's pre-built third-party connections (Facebook, Twitter, SendGrid, Postgres, etc, etc) and it's easy drag and drop interface. Now imagine that _again_ with a developer slant, and the ability to add in Node.js/Python/Go "middleware" between your integration steps to massage data, proper error logging, etc, etc, etc. That's basically what Pipedream is from what I can tell.
+Pipedream is an integration platform, that seems to be targeting the developer crowd. Think of Zapier with all of it's pre-built third-party connections (Facebook, Twitter, SendGrid, Postgres...) and it's easy drag and drop interface. Now imagine that _again_ with a developer slant, and the ability to add in Node.js/Python/Go "middleware", proper error logging, and more developer goodies. That's pipdeream! 
 
-I've been sold this type of tool a lot before, and was honestly pretty skeptical at first but after messing around with it for awhile, it seems pretty solid if I'm being honest. If it sounds like something that might interest you, I'd recommend giving it 20-30 minutes of your time, it's pretty easy to get going with.
+I've been sold this type of tool a lot before and was honestly pretty skeptical at first. That said, after messing around with it for awhile, it seems pretty solid for your basic workflows and jobs.
 
 ## How does the integration work.
 
-The integration is actually pretty simple:
-
-I created a new "Workflow" and selected the "RSS" trigger. A workflow basically maps to a job, and a trigger is what, well, "triggers" that job to run. Then I configured the "RSS" trigger to listen for new items on this sites main RSS feed.
+All things considered, it's a pretty simple process. I created a new "Workflow" in pipdeream and selected the "RSS" trigger. A "workflow" in pipedream maps to a job or process, and a trigger is what, well, "triggers" that job to run. I choose the "RSS" trigger, and pointed it at my RSS feed so it can to listen for new items and trigger the workflow when it detects them. 
 
 ![photo of the pipedream UI; editing the RSS trigger as described above.](https://res.cloudinary.com/mykalcodes/image/upload/v1680844778/iaw9nfadjoih1qmkvqai.png)
 
-Then I added a "Node.js" step, that reads in the RSS data for the new item, and determines the post "type" based on the URL , and returns that "type" so I can use it later in my post.
+Then I added a "Node.js" step: this reads in some data from new item that triggered the workflow, and determines the post "type" based on the URL. It then returns that "type" so I can use it later in my post.
 
 ![photo of the pipedream UI; editing the node processing step as described above.](https://res.cloudinary.com/mykalcodes/image/upload/v1680844852/u99ekzavlnkdxui6xief.png)
 
-I then added a "Mastodon" step that handles authenticating into my mastodon instance as me, and sending the "toot" for me.
+Finally you've got a "Mastodon" step that handles authenticating into my Mastodon instance, and sending the "toot" for me.
 
 ![pipedream UI for managing the mastodon step for posting. ](https://res.cloudinary.com/mykalcodes/image/upload/v1680845138/z16rleff7tffdtvdgxcp.png)
 
