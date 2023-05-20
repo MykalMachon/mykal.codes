@@ -186,6 +186,13 @@ declare module 'astro:content' {
   collection: "posts",
   data: InferEntrySchema<"posts">
 },
+"erosion-of-ownership.md": {
+  id: "erosion-of-ownership.md",
+  slug: "erosion-of-ownership",
+  body: string,
+  collection: "posts",
+  data: InferEntrySchema<"posts">
+},
 "every-company-is-a-tech-company.md": {
   id: "every-company-is-a-tech-company.md",
   slug: "every-company-is-a-tech-company",
