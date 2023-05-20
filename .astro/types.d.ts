@@ -347,6 +347,13 @@ declare module 'astro:content' {
   collection: "posts",
   data: InferEntrySchema<"posts">
 },
+"systems-analyst-II-at-UFV.md": {
+  id: "systems-analyst-II-at-UFV.md",
+  slug: "systems-analyst-ii-at-ufv",
+  body: string,
+  collection: "posts",
+  data: InferEntrySchema<"posts">
+},
 "tech-im-learning-this-summer-2019.md": {
   id: "tech-im-learning-this-summer-2019.md",
   slug: "tech-im-learning-this-summer-2019",
