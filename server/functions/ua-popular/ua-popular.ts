@@ -55,7 +55,7 @@ const getTopPages = async (token: string) => {
   const data = await <Promise<Metric[]>>res.json();
   
   // create a regex to identify post pages
-  const postRegex = new RegExp(/^\/posts\/[a-z]{1,}/);
+  const postRegex = new RegExp(/^\/garden\/[a-z]{1,}/);
   
   // filter down to only contain post pages
   const topPosts = data.filter(({x}) => postRegex.test(x))
