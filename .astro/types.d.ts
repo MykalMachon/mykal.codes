@@ -44,9 +44,13 @@ declare module 'astro:content' {
 	): E extends ValidEntrySlug<C>
 		? Promise<CollectionEntry<C>>
 		: Promise<CollectionEntry<C> | undefined>;
+	export function getCollection<C extends keyof typeof entryMap, E extends CollectionEntry<C>>(
+		collection: C,
+		filter?: (entry: CollectionEntry<C>) => entry is E
+	): Promise<E[]>;
 	export function getCollection<C extends keyof typeof entryMap>(
 		collection: C,
-		filter?: (data: CollectionEntry<C>) => boolean
+		filter?: (entry: CollectionEntry<C>) => unknown
 	): Promise<CollectionEntry<C>[]>;
 
 	type InferEntrySchema<C extends keyof typeof entryMap> = import('astro/zod').infer<
@@ -129,6 +133,13 @@ declare module 'astro:content' {
 "autosave-forms.md": {
   id: "autosave-forms.md",
   slug: "autosave-forms",
+  body: string,
+  collection: "posts",
+  data: InferEntrySchema<"posts">
+},
+"blog-to-mastodon-automation.md": {
+  id: "blog-to-mastodon-automation.md",
+  slug: "blog-to-mastodon-automation",
   body: string,
   collection: "posts",
   data: InferEntrySchema<"posts">
@@ -217,6 +228,13 @@ declare module 'astro:content' {
   collection: "posts",
   data: InferEntrySchema<"posts">
 },
+"google-collab.md": {
+  id: "google-collab.md",
+  slug: "google-collab",
+  body: string,
+  collection: "posts",
+  data: InferEntrySchema<"posts">
+},
 "hidden-content-in-an-unpublished-shopify-theme.md": {
   id: "hidden-content-in-an-unpublished-shopify-theme.md",
   slug: "hidden-content-in-an-unpublished-shopify-theme",
@@ -234,6 +252,20 @@ declare module 'astro:content' {
 "improving-anchor-links.md": {
   id: "improving-anchor-links.md",
   slug: "improving-anchor-links",
+  body: string,
+  collection: "posts",
+  data: InferEntrySchema<"posts">
+},
+"kurzgesagt.md": {
+  id: "kurzgesagt.md",
+  slug: "kurzgesagt",
+  body: string,
+  collection: "posts",
+  data: InferEntrySchema<"posts">
+},
+"markdown-images-are-an-antipattern.md": {
+  id: "markdown-images-are-an-antipattern.md",
+  slug: "markdown-images-are-an-antipattern",
   body: string,
   collection: "posts",
   data: InferEntrySchema<"posts">
@@ -297,6 +329,13 @@ declare module 'astro:content' {
 "preparing-for-battlesnake.md": {
   id: "preparing-for-battlesnake.md",
   slug: "preparing-for-battlesnake",
+  body: string,
+  collection: "posts",
+  data: InferEntrySchema<"posts">
+},
+"putting-ai-back-in-the-bag.md": {
+  id: "putting-ai-back-in-the-bag.md",
+  slug: "putting-ai-back-in-the-bag",
   body: string,
   collection: "posts",
   data: InferEntrySchema<"posts">
