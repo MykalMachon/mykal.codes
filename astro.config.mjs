@@ -11,9 +11,6 @@ export default defineConfig({
   build: {
 		inlineStylesheets: "auto",
 	},
-  experimental: {
-    contentCollections: true,
-  },
   markdown: {
     drafts: true,
     shikiConfig: {
