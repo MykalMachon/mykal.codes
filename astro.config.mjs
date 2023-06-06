@@ -8,6 +8,9 @@ export default defineConfig({
   srcDir: './www/src',
   publicDir: './www/public',
   site: 'https://mykal.codes',
+  build: {
+		inlineStylesheets: "auto",
+	},
   experimental: {
     contentCollections: true,
   },
