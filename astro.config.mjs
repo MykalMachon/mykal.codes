@@ -8,9 +8,9 @@ export default defineConfig({
   srcDir: './www/src',
   publicDir: './www/public',
   site: 'https://mykal.codes',
-  experimental: {
-    contentCollections: true,
-  },
+  build: {
+		inlineStylesheets: "auto",
+	},
   markdown: {
     drafts: true,
     shikiConfig: {
