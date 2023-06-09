@@ -2,7 +2,7 @@
 title: npkill 
 description: easily delete all your old node_modules folders 
 type: link
-pubdate: "2023-06-09 9:30" 
+pubDate: "2023-06-09 9:30" 
 draft: false
 tags: 
 - node
