@@ -20,16 +20,16 @@ export default async function handler(req: Request) {
           height: '100vh',
           width: '100%',
           background:
-            'radial-gradient(circle at 50% -100%,#7e8282,#50514f,#252521)',
-          padding: '2em',
+            'radial-gradient(circle at 50% -250%, rgb(80, 81, 79), rgb(18, 18, 16), rgb(37, 37, 33))',
+          padding: '32px',
         }}
       >
         <header
           style={{
             display: 'flex',
-            gap: '1em',
+            gap: '16px',
             alignItems: 'center',
-            fontSize: '2em',
+            fontSize: '32px',
           }}
         >
           <img
@@ -44,7 +44,7 @@ export default async function handler(req: Request) {
         <main style={{ display: 'flex', flexDirection: 'column' }}>
           <h1
             style={{
-              fontSize: '4.5em',
+              fontSize: '72px',
               textOverflow: 'ellipsis',
               fontWeight: 'bold',
             }}
@@ -53,7 +53,7 @@ export default async function handler(req: Request) {
           </h1>
           <p
             style={{
-              fontSize: '3em',
+              fontSize: '48px',
               maxWidth: '100%',
               whiteSpace: 'nowrap',
               overflow: 'hidden',
