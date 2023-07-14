@@ -20,14 +20,13 @@ export default async function handler(req: Request) {
           height: '100vh',
           width: '100%',
           background:
-            'radial-gradient(circle at 50% -250%, rgb(80, 81, 79), rgb(18, 18, 16), rgb(37, 37, 33))',
+            'radial-gradient(circle at 600px 1250px, rgb(80, 81, 79), rgb(18, 18, 16), rgb(37, 37, 33))',
           padding: '32px',
         }}
       >
         <header
           style={{
             display: 'flex',
-            gap: '16px',
             alignItems: 'center',
             fontSize: '32px',
           }}
@@ -35,11 +34,10 @@ export default async function handler(req: Request) {
           <img
             style={{ borderRadius: '100%' }}
             src="https://avatars.githubusercontent.com/u/7844994?v=4"
-            width="64px"
-            height="64px"
+            width="92px"
+            height="92px"
           />
-          <p>Mykal Machon</p>
-          <p>https://mykal.codes/</p>
+          <p style={{margin: '0px 16px 0px 16px'}}>Mykal Machon</p>
         </header>
         <main style={{ display: 'flex', flexDirection: 'column' }}>
           <h1
