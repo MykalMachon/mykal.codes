@@ -1,18 +1,15 @@
-// @ts-ignore
 import React from 'https://esm.sh/react@18.2.0';
-
-// @ts-ignore
 import { ImageResponse } from 'https://deno.land/x/og_edge/mod.ts';
 
 export default async function handler(req: Request) {
   const { searchParams } = new URL(req.url);
 
   // primary info
-  const title = searchParams.get('title');
-  const description = searchParams.get('desc');
+  const title = searchParams.get('title') as string | null;
+  const description = searchParams.get('desc') as string | null;
 
-  return await new ImageResponse(
-    (
+  const OGImageComponent = () => {
+    return (
       <div
         style={{
           display: 'flex',
@@ -32,7 +29,6 @@ export default async function handler(req: Request) {
             display: 'flex',
             gap: '1em',
             alignItems: 'center',
-            justifyContent: 'space-between',
             fontSize: '2em',
           }}
         >
@@ -42,18 +38,8 @@ export default async function handler(req: Request) {
             width="64px"
             height="64px"
           />
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              fontSize: '2em',
-              gap:
-            }}
-          >
-            <p>Mykal Machon</p>
-            <p>https://mykal.codes/</p>
-          </div>
+          <p>Mykal Machon</p>
+          <p>https://mykal.codes/</p>
         </header>
         <main style={{ display: 'flex', flexDirection: 'column' }}>
           <h1
@@ -63,7 +49,7 @@ export default async function handler(req: Request) {
               fontWeight: 'bold',
             }}
           >
-            {title | "Mykal Machon's Digital Garden"}
+            {title ? title : "Mykal Machon's Digital Garden"}
           </h1>
           <p
             style={{
@@ -74,10 +60,16 @@ export default async function handler(req: Request) {
               textOverflow: 'ellipsis',
             }}
           >
-            {description | 'A collection of my thoughts and ideas.'}
+            {description ? description : 'A collection of my thoughts and ideas.'}
           </p>
         </main>
       </div>
+    )
+  }
+
+  return await new ImageResponse(
+    (
+      <OGImageComponent />
     )
   );
 }
