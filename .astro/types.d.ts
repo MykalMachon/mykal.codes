@@ -263,6 +263,13 @@ declare module 'astro:content' {
   collection: "posts",
   data: InferEntrySchema<"posts">
 },
+"markdown-images-are-an-antipattern.md": {
+  id: "markdown-images-are-an-antipattern.md",
+  slug: "markdown-images-are-an-antipattern",
+  body: string,
+  collection: "posts",
+  data: InferEntrySchema<"posts">
+},
 "mit-sans-elon.md": {
   id: "mit-sans-elon.md",
   slug: "mit-sans-elon",
