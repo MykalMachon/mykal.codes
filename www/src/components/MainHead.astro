@@ -39,6 +39,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   import.meta.env.MODE === 'production' && (
     <script
       async
+      defer
       src="https://stats.tbx.sh/script.js"
       data-website-id="9cc92a59-874f-425f-8dc3-ec11fa52a542"
     />

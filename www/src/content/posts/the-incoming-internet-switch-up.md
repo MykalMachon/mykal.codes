@@ -3,7 +3,7 @@ title: The incoming internet switch-up
 type: 'post'
 customSlug: internet-switch-up
 description: Things are changing fast and all at once on the internet.
-pubDate: 2022-10-30T07:00:00Z
+pubDate: "2022-10-30T07:00:00Z"
 heroImage: ''
 tags:
 - personal

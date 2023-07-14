@@ -2,19 +2,17 @@
 title: 'Spicy Peanut Bowl 🥜'
 type: 'note'
 description: 'A recipe for one of my favourite feel-good meals.'
-pubDate: 2023-01-28
+pubDate: "2023-01-28"
 draft: false
 tags: ['recipe']
 ---
 
-This is one of my favourite comfort food meals. It's heavily inspired by a [HelloFresh](https://hellofresh.ca/) box we got ~2 years ago, but I've made some improvements since then. Commonly served after a hard day at work or when fighting off the cold; spice tends to clear out my sinuses.
+I've had a few friends ask for this recipe so thought I'd write it up on the blog. Commonly served after a hard day at work or when fighting off the cold; spice tends to clear out my sinuses.
 
 - 🧑‍❤️‍👩 Typically serves 2 people
 - ⏲️ Takes around 25-30 minutes to prepare
 
 _I don't have exact measurements for a lot of things so you'll have to do some experimenting; I've been sort of keen to the "put sh\*t in a pot" method of cooking lately._
-
-By the way, if you want a free HelloFresh box [we've accumulated a bunch of free boxes for friends, take one!](https://www.hellofresh.ca/pages/resolution?c=FIH-QA1IJKXJDZQH&utm_campaign=clipboard&utm_couponvalue=170&utm_invitername=Mykal&utm_medium=referral&utm_source=raf-share&discount_comm_id=1d7ed056-9e72-42f5-a0e0-d5dd12d17fc3)
 
 ## Ingredients
 
@@ -118,3 +116,9 @@ Split things out into 2 bowls and add the following toppings:
 - Cilantro (optional, personally _not_ preferred).
 
 Enjoy 🌶️
+
+## P.S
+
+The recipe is heavily inspired by a [HelloFresh](https://hellofresh.ca/) box we got ~2 years ago, but I've made some improvements since then. If you want a free HelloFresh box [I've accumulated a bunch of free boxes for friends, take one!](https://www.hellofresh.ca/pages/resolution?c=FIH-QA1IJKXJDZQH&utm_campaign=clipboard&utm_couponvalue=170&utm_invitername=Mykal&utm_medium=referral&utm_source=raf-share&discount_comm_id=1d7ed056-9e72-42f5-a0e0-d5dd12d17fc3).
+
+_Disclaimer, I get a $15 kickback if you sign up for more after your free box._
