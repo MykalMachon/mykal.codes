@@ -4,6 +4,8 @@ export interface Props {
   description: string;
 }
 
+import { ViewTransitions } from 'astro:transitions';
+
 const { title, description } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -53,14 +55,20 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <!-- lazy loading -->
 <script>
   // image dynamic loading
-  const loadingImages = document.querySelectorAll('img.loading');
-  loadingImages.forEach((loadingImageEl) => {
-    // @ts-ignore
-    const hqImageUrl = loadingImageEl.dataset.lazy;
-    // @ts-ignore
-    if (hqImageUrl) loadingImageEl.src = hqImageUrl;
-    loadingImageEl.addEventListener('load', () => {
-      loadingImageEl.classList.remove('loading');
+  const loadImages = () => {
+    const loadingImages = document.querySelectorAll('img.loading');
+    loadingImages.forEach((loadingImageEl) => {
+      // @ts-ignore
+      const hqImageUrl = loadingImageEl.dataset.lazy;
+      // @ts-ignore
+      if (hqImageUrl) loadingImageEl.src = hqImageUrl;
+      loadingImageEl.addEventListener('load', () => {
+        loadingImageEl.classList.remove('loading');
+      });
     });
-  });
+  };
+
+  document.addEventListener('DOMContentLoaded', () => loadImages())
 </script>
+
+<ViewTransitions />
