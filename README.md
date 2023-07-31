@@ -22,10 +22,6 @@ The Mykal.Codes website, where I post about whatever I want.
   - Functions for "serverless" functions
   - Edge for OG image generation
   - Forms for handling contact forms
-- CMS [IndieKit](https://getindiekit.com):
-  - This is a WIP
-  - This is a Micropub service that writes into /src/content/
-  - This also posts to Twitter and to Mastodon via syndication
 
 ## Contributing
 
