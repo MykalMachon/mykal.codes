@@ -28,6 +28,8 @@ const { photos, layout } = Astro.props;
         <a class="lazy-wrapper" href={slug}>
           <img
             class="lazy loading"
+            transition:name={`image-${slug.split('/').slice(-1)}`}
+            transition:persist
             src={b64image}
             alt={alt}
             title={alt}

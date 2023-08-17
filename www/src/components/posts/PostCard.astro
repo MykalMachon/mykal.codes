@@ -8,7 +8,10 @@ const { post, showType = true } = Astro.props;
     {showType && <p class="secondary">{post.data.type}</p>}
   </div>
   <div class="post__title">
-    <p><a href={`/garden/${post.data.type}s/${post.slug}`}>{post.data.title}</a></p>
+    <p transition:name={`post-${post.slug.split('/').slice(-1)}`}
+      transition:persist>
+        <a href={`/garden/${post.data.type}s/${post.slug}`}>{post.data.title}</a>
+    </p>
   </div>
 </article>
 

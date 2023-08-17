@@ -54,7 +54,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 <!-- lazy loading -->
 <script>
-  // image dynamic loading
+
   const loadImages = () => {
     const loadingImages = document.querySelectorAll('img.loading');
     loadingImages.forEach((loadingImageEl) => {
@@ -69,6 +69,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   };
 
   document.addEventListener('DOMContentLoaded', () => loadImages())
+  document.addEventListener('astro:load', () => {loadImages(); console.log('test')});
 </script>
 
 <ViewTransitions />
