@@ -9,14 +9,17 @@ export default defineConfig({
   publicDir: './www/public',
   site: 'https://mykal.codes',
   build: {
-		inlineStylesheets: "auto",
-	},
+    inlineStylesheets: "auto",
+  },
   markdown: {
     drafts: true,
     shikiConfig: {
       theme: 'vitesse-dark', // https://github.com/shikijs/shiki/blob/main/docs/themes.md
       wrap: false, // Enable word wrap to prevent horizontal scrolling
     },
+  },
+  experimental: {
+    viewTransitions: true
   },
   integrations: [preact(), sitemap(), mdx()],
 });

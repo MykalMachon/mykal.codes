@@ -19,6 +19,7 @@ export async function getStaticPaths({}) {
   });
 }
 
+const { slug } = Astro.params;
 const { photo } = Astro.props;
 const { Content } = await photo.render();
 ---
@@ -26,11 +27,25 @@ const { Content } = await photo.render();
 <ContentLayout data={photo.data}>
   <section class="photos">
     {
-      photo.data.photos.map(async ({ url, alt }) => {
+      photo.data.photos.map(async ({ url, alt }, idx) => {
         const lqImage = getCustomQualityUrl(url, 24);
         const b64image = await getBase64ImageUrl(lqImage);
         const hqImage = getCustomQualityUrl(url, 800);
-        return (
+        if(idx == 0 ){
+          return (
+          <div class="lazy-wrapper">
+            <img
+              class="lazy loading"
+              transition:persist
+              transition:name={`image-${slug}`}
+              src={b64image}
+              alt={alt}
+              data-lazy={hqImage}
+            />
+          </div>
+        );
+        } else {
+          return (
           <div class="lazy-wrapper">
             <img
               class="lazy loading"
@@ -40,6 +55,8 @@ const { Content } = await photo.render();
             />
           </div>
         );
+        }
+
       })
     }
   </section>

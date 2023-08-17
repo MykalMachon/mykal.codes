@@ -1,5 +1,6 @@
 ---
 import PostCard from './PostCard.astro';
+import { slide } from 'astro:transitions';
 
 const { posts, type = 'large', showYears = false, urlPrefix="/posts/" } = Astro.props;
 
