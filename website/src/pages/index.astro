@@ -1,0 +1,94 @@
+---
+import Layout from '@components/layout/Layout.astro';
+import PostList from '@components/posts/PostList.astro';
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('posts');
+const recentPosts = allPosts
+  .sort((a, b) => {
+    // @ts-ignore
+    return new Date(b.data.pubDate) - new Date(a.data.pubDate);
+  })
+  .slice(0, 8);
+---
+
+<Layout title="Home" description="The home page of Mykal Machon!" type="home">
+  <header class="container">
+    <div class="image">
+      <Image
+        width="500"
+        height="500"
+        src="https://avatars.githubusercontent.com/u/7844994"
+        alt="Mykal Machon"
+        format={'avif'}
+      />
+    </div>
+    <div class="content">
+      <h1>Mykal Machon</h1>
+      <p>
+        Welcome to my personal website! I share posts, notes, photos, and more
+        here. Have fun exploring.
+      </p>
+    </div>
+  </header>
+  <main>
+    <h2>Recent posts</h2>
+    <p>
+      I write about whatever I'm intersted in, which tends to include
+      programming, web development, tech, and other nerdy stuff.
+    </p>
+    <PostList posts={recentPosts} />
+  </main>
+</Layout>
+
+<style>
+  header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: var(--size-6);
+    border-bottom: 1px solid var(--gray-3);
+    padding-bottom: calc(var(--size-3) + var(--size-2));
+  }
+
+  header img {
+    border-radius: var(--radius-2);
+  }
+
+  @media screen and (max-width: 60ch) {
+    header {
+      grid-template-columns: 1fr;
+      gap: var(--size-3);
+      padding: 0;
+    }
+
+    header h1 {
+      margin-top: 0;
+    }
+
+    header img {
+      max-width: 33vw;
+      min-width: 98px;
+    }
+  }
+
+  ul {
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    display: inline-block;
+  }
+
+  ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+</style>

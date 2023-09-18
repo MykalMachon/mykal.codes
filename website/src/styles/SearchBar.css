@@ -1,0 +1,56 @@
+
+dialog.searchBar {
+  border: none !important;
+  background: rgba(0,0,0,0);
+  max-width: 100vw;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+dialog.searchBar::backdrop {
+  background: rgba(0,0,0,0.2);
+}
+
+dialog.searchBar .searchBar__container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--size-3) calc(var(--size-3) + 16px);
+  padding-top: var(--size-12);
+}
+
+dialog.searchBar input[type="text"] {
+  width: 100%;
+  padding: var(--size-3) var(--size-2);
+  outline: 3px solid var(--teal-9);
+  border: 1px solid var(--gray-6);
+  border-radius: var(--radius-2);
+  outline-offset: 1px;
+  pointer-events: all;
+}
+
+dialog.searchBar .searchBar__top {
+  background: white;
+  max-width: 80ch;
+  width: 100%;
+  border-radius: calc(var(--radius-2) + var(--radius-2)) ;
+  padding: var(--size-3);
+}
+
+dialog.searchBar .searchBar__top p {
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 100ch) {
+  dialog.searchBar .searchBar__container {
+    padding-top: 5vh;
+  }
+
+  dialog.searchBar input[type="text"] {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,145 @@
+---
+import Layout from '@components/layout/Layout.astro';
+import PostTOC from '@components/posts/PostTOC.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths({}) {
+  let allPosts = await getCollection('posts');
+
+  return allPosts.map((post) => {
+    return {
+      params: { slug: post.slug },
+      props: { post },
+    };
+  });
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await post.render();
+---
+
+<Layout title={post.data.title} description={post.data.description}>
+  <div class="post-layout">
+    <header>
+      <h1>{post.data.title}</h1>
+      <p>{post.data.description}</p>
+    </header>
+    <main>
+      <Content />
+    </main>
+    <aside>
+      {
+        post.data.tags && post.data.tags.length != 0 ? (
+          <section class="post-tags">
+            <h2>Tags</h2>
+            <ul>
+              {post.data.tags.map((tag) => (
+                <li>
+                  <a href={`/tags/${tag}`}>#{tag}</a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null
+      }
+      {
+        headings.length != 0 ? (
+          <section class="post-toc">
+            <h2>Table of contents</h2>
+            <PostTOC toc={headings} />
+          </section>
+        ) : null
+      }
+    </aside>
+  </div>
+</Layout>
+
+<style>
+  .post-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(60ch, 2fr) 1fr;
+    gap: var(--size-4);
+  }
+
+  header {
+    grid-column: 1 / -1;
+    border-bottom: 1px solid var(--gray-5);
+  }
+
+  main {
+  }
+
+  aside {
+    position: sticky;
+    top: 0;
+    height: fit-content;
+  }
+
+  aside section h2 {
+    font-size: var(--font-size-base);
+    margin: 0;
+    padding: var(--size-4) 0;
+    margin-bottom: var(--size-4);
+    border-bottom: 1px solid var(--gray-5);
+  }
+
+  .post-tags ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: var(--size-3);
+  }
+
+  .post-tags ul li {
+    padding: var(--size-1);
+    background: var(--gray-3);
+    border-radius: var(--radius-2);
+  }
+
+  .post-tags ul li a {
+    font-size: var(--font-size-sm);
+  }
+
+  @media screen and (max-width: 950px) {
+    header {
+      grid-area: header;
+    }
+    main {
+      grid-area: main;
+    }
+    aside {
+      grid-area: aside;
+    }
+
+    aside {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--size-4);
+    }
+
+    aside section h2 {
+      padding: var(--size-4) 0;
+      padding-top: 0;
+    }
+
+    .post-tags ul li a {
+      font-size: var(--font-size-base);
+    }
+
+    .post-layout {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        'header'
+        'aside'
+        'main';
+    }
+    aside {
+      position: relative;
+      top: auto;
+      height: auto;
+    }
+  }
+</style>

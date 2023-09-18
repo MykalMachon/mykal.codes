@@ -1,0 +1,66 @@
+---
+export interface Props {
+  variant: 'home' | 'page' | 'post';
+}
+
+const { variant } = Astro.props;
+---
+
+<nav>
+  <div class="container">
+    <p class="brandmark">
+      {variant != 'home' && <a href="/">Mykal Machon</a>}
+    </p>
+    <ul>
+      <li>
+        <a href="/posts"> Posts</a>
+      </li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Work</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  p.brandmark {
+    margin: 0;
+    padding: var(--size-2) var(--size-2) var(--size-2) 0;
+    font-family: var(--font-heading);
+    font-weight: bold;
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-bottom: 1px solid var(--gray-6);
+
+  }
+
+  nav div.container {
+    width: 100%;
+    padding: var(--size-2) var(--size-3) ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    gap: var(--size-2);
+  }
+
+  nav ul li {
+    padding: var(--size-2);
+  }
+  
+</style>

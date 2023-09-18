@@ -1,0 +1,28 @@
+---
+import MainHead from './MainHead.astro';
+import SearchBar from '@components/search/SearchBar';
+import Navigation from './Navigation.astro';
+export interface Props {
+  title: string;
+  description: string;
+  type?: 'home' | 'page' | 'post';
+}
+
+const { title, description, type = 'page' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <MainHead title={title} description={description} />
+  </head>
+  <body>
+    <SearchBar client:idle />
+    <Navigation variant={type} />
+    <div class="wrapper">
+      <div class={`container container--${type}`}>
+        <slot />
+      </div>
+    </div>
+  </body>
+</html>

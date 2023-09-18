@@ -1,7 +1,4 @@
-// YOUR_BASE_DIRECTORY/netlify/functions/test-scheduled-function.ts
-
 import { Handler, HandlerEvent, HandlerContext, schedule } from "@netlify/functions";
-import fetch from 'node-fetch';
 
 const myHandler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
   console.log(`Started at ${new Date()}`)

@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    scroll-behavior: unset;
+    transition: none;
+  }
+}
+
+body {
+  background: var(--gray-1);
+}
+
+/* themes */
+
+:root{
+   /* FONT FAMILY */
+   --font-heading: 'Lora', ui-serif, Georgia, Cambria, 'Times New Roman', Times,
+   serif;
+ --font-lead: 'Lora', ui-serif, Georgia, Cambria, 'Times New Roman', Times,
+   serif;
+ --font-body: 'Source Sans Pro', ui-sans-serif, system-ui, -apple-system,
+   BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+   sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+   'Noto Color Emoji';
+ --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+   'Liberation Mono', 'Courier New', monospace;
+
+ /* FONT SIZES */
+ --font-size-sm: clamp(0.8rem, 0.59vw + 0.65rem, 1.13rem);
+ --font-size-base: clamp(1rem, 0.91vw + 0.77rem, 1.3rem);
+ --font-size-md: clamp(1.25rem, 1.36vw + 0.91rem, 2rem);
+ --font-size-lg: clamp(1.56rem, 2.01vw + 1.06rem, 2.67rem);
+ --font-size-xl: clamp(1.95rem, 2.91vw + 1.23rem, 3.55rem);
+ --font-size-xxl: clamp(2.44rem, 4.17vw + 1.4rem, 4.74rem);
+ --font-size-xxxl: clamp(3.05rem, 5.93vw + 1.57rem, 6.31rem);
+
+ /* COMMON SIZES */
+ --max-width: clamp(60ch, 100%, 110ch);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--font-size-xl);
+}
+
+h2 {
+  font-size: var(--font-size-lg);
+}
+
+h3 {
+  font-size: var(--font-size-md);
+}
+
+p, li, a {
+  font-family: var(--font-body);
+  line-height: 1.5;
+  font-size: var(--font-size-base);
+}
+
+p {
+  margin: var(--size-4) 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base)
+}
+
+/* basic layout  */
+
+.wrapper {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.container {
+  max-width: var(--max-width);
+  padding: var(--size-3);
+  width: 100%;
+}
+
+/* code cleanup */
+pre {
+  padding: var(--size-2);
+  border-radius: var(--radius-2);
+}
+
+pre, code {
+  font-family: var(--font-mono);
+}
