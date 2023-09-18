@@ -3,6 +3,7 @@ import Layout from '@components/layout/Layout.astro';
 import PostList from '@components/posts/PostList.astro';
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
+export const prerender = true;
 
 const allPosts = await getCollection('posts');
 const recentPosts = allPosts
