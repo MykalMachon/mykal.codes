@@ -1,22 +1,11 @@
 [build]
   base = "/website"
   command = "npm run build"
-  edge_functions="../server/edge"
   publish = "dist"
 
 [dev]
   base = "/webiste"
   publish = "dist"
-  functions="../server/functions"
-  edge_functions="../server/edge"
-
-[functions]
-  directory = "../server/functions"
-
-[[edge_functions]]
-  path = "/og"
-  function = "og"
-
 
 # CONTEXTS 
 [context.production]
