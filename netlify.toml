@@ -17,6 +17,25 @@
   path = "/og"
   function = "og"
 
+
+# CONTEXTS 
+[context.production]
+  NODE_VERSION = "20.7.0"
+
+[context.branch-deploy.environment]
+  NODE_ENV = "development"
+  NODE_VERSION = "20.7.0"
+
+[context.deploy-preview.environment]
+  NODE_ENV = "development"
+  NODE_VERSION = "20.7.0"
+
+[context.dev.environment]
+  NODE_ENV = "development"
+  NODE_VERSION = "20.7.0"
+
+# REDIRECTS AND HEADERS
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
