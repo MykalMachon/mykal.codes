@@ -71,9 +71,11 @@ p {
   margin: var(--size-4) 0;
 }
 
-img {
+img, iframe, video {
   width: 100%;
   height: auto;
+  border-radius: var(--radius-2);
+  margin: var(--size-4) 0;
 }
 
 input, textarea, select {

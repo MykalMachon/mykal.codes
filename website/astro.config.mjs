@@ -8,8 +8,13 @@ import netlify from "@astrojs/netlify/functions";
 export default defineConfig({
   site: 'https://mykal.codes',
   image: {
-    domains: ['avatars.githubusercontent.com']
+    domains: [
+      'avatars.githubusercontent.com',
+      'res.cloudinary.com',
+      'mykal.codes'
+    ],
   },
+  compressHTML: true,
   build: {
     inlineStylesheets: "auto"
   },
