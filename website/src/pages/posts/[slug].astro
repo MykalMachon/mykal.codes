@@ -18,10 +18,12 @@ export async function getStaticPaths({}) {
 
 const { post } = Astro.props;
 const { Content, headings } = await post.render();
+
+const hasSplitLayout = headings.length != 0;
 ---
 
 <Layout title={post.data.title} description={post.data.description}>
-  <div class="post-layout">
+  <div class={`post-layout ${hasSplitLayout ? 'post-layout--split' : ''}`}>
     <header data-pagefind-body>
       <h1>{post.data.title}</h1>
       <p class="byline">{post.data.description}</p>
@@ -81,8 +83,12 @@ const { Content, headings } = await post.render();
   .post-layout {
     width: 100%;
     display: grid;
-    grid-template-columns: minmax(60ch, 2fr) 1fr;
+    grid-template-columns: 1fr;
     gap: var(--size-4);
+  }
+
+  .post-layout.post-layout--split {
+    grid-template-columns: minmax(60ch, 2fr) 1fr;
   }
 
   header {
@@ -99,7 +105,6 @@ const { Content, headings } = await post.render();
   header section.post-tags {
     margin-top: var(--size-6);
   }
-
 
   header .byline {
     font-family: var(--font-heading);
