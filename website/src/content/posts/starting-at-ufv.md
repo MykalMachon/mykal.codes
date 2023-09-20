@@ -4,7 +4,7 @@ type: 'post'
 customSlug: "new-job-at-ufv"
 description: "Moving from web developer, to systems analyst"
 pubDate: "2021-05-10"
-heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/new-job-at-ufv.jpg"
+heroImage: '../../assets/posts/starting-at-ufv.avif'
 draft: false
 tags: ["personal"]
 ---

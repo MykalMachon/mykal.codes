@@ -4,9 +4,8 @@ customSlug: "whats-your-goto-web-stack"
 type: 'post'
 description: "An exercise in exploring the stack I'm currently comfy with."
 pubDate: "2022-05-16"
-heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/goto-web-stack.webp"
+heroImage: "../../assets/posts/whats-your-goto-web-stack.avif"
 draft: false
-
 tags: ["webdev"]
 ---
 

@@ -4,7 +4,7 @@ description: 'This post outlines a few little tricks you can use with your ancho
 type: 'post'
 customSlug: 'improving-anchor-links'
 pubDate: "2022-06-24"
-heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1656107583/Mykal%20Codes/rick-rothenberg-Nqx3SaMp4kQ-unsplash.jpg
+heroImage: '../../assets/posts/improving-anchor-links.avif'
 tags: ['webdev']
 draft: false
 ---

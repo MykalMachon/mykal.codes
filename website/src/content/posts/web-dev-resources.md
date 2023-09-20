@@ -4,7 +4,7 @@ customSlug: web-dev-resources
 type: 'post'
 description: What I used, and am still using, to learn web dev
 pubDate: "2021-08-26"
-heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/web-dev-resources.webp
+heroImage: '../../assets/posts/web-dev-resources.avif'
 draft: false
 
 tags:

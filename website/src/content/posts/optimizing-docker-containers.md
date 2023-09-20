@@ -5,7 +5,7 @@ description: 'docker images are relatively easy to get up and going, but can oft
   be heavily optimized. '
 pubDate: "2022-07-25T23:00:00.000+00:00"
 type: 'post'
-heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1656430048/Mykal%20Codes/better-docker-containers.webp
+heroImage: '../../assets/posts/optimizing-docker-containers.avif'
 tags:
 - devops
 - docker

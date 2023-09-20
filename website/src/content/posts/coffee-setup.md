@@ -5,25 +5,12 @@ type: 'post'
 description: I've gotten into Coffee lately (cliché, I know) and wanted to summarize
   my coffee setup.
 pubDate: "2022-05-10"
-heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1655762856/Mykal%20Codes/coffee-setup.webp
+heroImage: '../../assets/posts/coffee-setup.avif'
 tags:
 - recipes
 - coffee
 draft: false
 ---
-## Legend
-
-- [Legend](#legend)
-- [Coffee Beans ](#coffee-beans)
-  - [Where I Get My Beans](#where-i-get-my-beans)
-  - [How I Grind My Beans](#how-i-grind-my-beans)
-- [Brewing Methods](#brewing-methods)
-  - [Pour Over ](#pour-over)
-    - [Equipment](#equipment)
-    - [Brew Instructions](#brew-instructions)
-  - [AeroPress](#aeropress)
-    - [Equipment](#equipment-1)
-    - [Brew Instructions](#brew-instructions-1)
 
 I've really gotten into Coffee lately (cliché, I know) and I wanted to summarize my setup in a post.
 

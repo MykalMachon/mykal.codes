@@ -3,7 +3,7 @@ title: 'Systems Analyst II at UFV'
 type: 'post'
 description: 'Moving on up as a Systems Analsyt 🎉'
 pubDate: "2023-05-21 01:38"
-heroImage: 'https://res.cloudinary.com/mykalcodes/image/upload/v1684569348/Mykal%20Codes/systems-analyst-ii-at-ufv.jpg'
+heroImage: '../../assets/posts/systems-analyst-II-at-UFV.avif'
 draft: false
 tags: ['personal']
 ---

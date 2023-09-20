@@ -1,16 +1,15 @@
 ---
 title: My AeroPress Latte
-customSlug: aeropress-latte
 type: 'post'
 description: An AeroPress Latte recipe for the AeroPress GO!
 pubDate: "2022-07-15"
-heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1657920874/Mykal%20Codes/aeropress-latte.jpg
+heroImage: '../../assets/posts/aeropress-latte.avif'
 tags:
 - recipes
 - coffee
 draft: false
+---P
 
----
 A week or so ago I was scrolling around on twitter and came across [a tweet mentioning an "AeroPress Latte"](https://twitter.com/TheCodePixi/status/1545476517202894851). I _love_ lattes, but only really have the equipment for pour over or immersion brew coffee at home... or so I thought!
 
 After 20-30 minutes of Googling and watching Youtube videos on AeroPress lattes, I was overjoyed to find that they are indeed a thing. You can't actually make espresso with the AeroPress, but you can make a _pseudo espresso_ (concentrated coffee) by using more ground coffee, less water, and a shorter brew time. The rest is just steamed milk + any other goodies you like in your latte.

@@ -5,7 +5,7 @@ description: The MIT license, but Elon Musk and all of his companies are explici
   denied usage.
 pubDate: "2022-11-15T01:00:00.000+00:00"
 type: 'post'
-heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1668473838/Mykal%20Codes/MIT-SE_1_k6tpdk.png
+heroImage: '../../assets/posts/mit-sans-elon.avif'
 tags:
 - open-source
 - self-hosting

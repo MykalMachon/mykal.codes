@@ -5,7 +5,6 @@ customSlug: tracking-popular-posts
 description: Let's implement a self-hosted web analytics system to track my popular
   posts
 pubDate: "2022-11-26T22:00:00.000+00:00"
-heroImage: ''
 tags:
 - self-hosting
 - webdev

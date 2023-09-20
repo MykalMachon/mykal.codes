@@ -5,7 +5,7 @@ type: 'post'
 description: A friend of mine shared a Flipnote Hatena archive site that sent me down
   a rabbit hole.
 pubDate: "2022-12-29T08:00:00.000+00:00"
-heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1672761093/Mykal%20Codes/H2x1_FlipnoteStudio_image1600w_mpmcbp.jpg
+heroImage: '../../assets/posts/flipnote-hatena.avif'
 tags:
 - personal
 draft: false

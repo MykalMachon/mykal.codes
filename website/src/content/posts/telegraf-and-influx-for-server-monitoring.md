@@ -4,7 +4,7 @@ type: 'post'
 customSlug: "telegraf-and-influxdb-for-server-monitoring"
 description: "A quick guide on system monitoring with Telegraf, and Influx DB."
 pubDate: "2022-07-21"
-heroImage: "https://res.cloudinary.com/mykalcodes/image/upload/v1658642824/Mykal%20Codes/making-systems-monitoring-easy.jpg"
+heroImage: '../../assets/posts/telegraf-and-influx-for-server-monitoring.avif'
 tags: ["self-hosting", "docker"]
 draft: false
 ---

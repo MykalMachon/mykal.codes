@@ -4,7 +4,7 @@ customSlug: on-hydroponic-gardens
 description: "I'm going to try growing some herbs and veggies inside with hydroponics. "
 pubDate: "2022-08-24T07:00:00Z"
 type: 'post'
-heroImage: https://res.cloudinary.com/mykalcodes/image/upload/v1661442343/Mykal%20Codes/click-grow.jpg
+heroImage: '../../assets/posts/on-hydroponic-gardens.avif'
 tags:
   - personal
 draft: false
