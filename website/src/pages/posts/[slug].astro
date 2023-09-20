@@ -18,35 +18,11 @@ export async function getStaticPaths({}) {
 
 const { post } = Astro.props;
 const { Content, headings } = await post.render();
-
-// if a header image exists, download it to be processed.
-let heroImage: ImageMetadata | null = null;
-if (post.data.heroImage) {
-  heroImage = {
-    src: post.data.heroImage,
-    format: 'jpg',
-    width: 1000,
-    height: 800,
-  };
-}
 ---
 
 <Layout title={post.data.title} description={post.data.description}>
   <div class="post-layout">
-    <header>
-      {
-        post.data.tags && post.data.tags.length != 0 ? (
-          <section class="post-tags">
-            <ul>
-              {post.data.tags.map((tag: string) => (
-                <li>
-                  <a href={`/tags/${tag}`}>#{tag}</a>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ) : null
-      }
+    <header data-pagefind-body>
       <h1>{post.data.title}</h1>
       <p class="byline">{post.data.description}</p>
       {
@@ -60,9 +36,9 @@ if (post.data.heroImage) {
       }
 
       {
-        heroImage ? (
+        post.data.heroImage ? (
           <ResponsiveImage
-            src={heroImage}
+            src={post.data.heroImage}
             alt=""
             sizes={[400, 700, 900]}
             format="avif"
@@ -70,7 +46,7 @@ if (post.data.heroImage) {
         ) : null
       }
     </header>
-    <main>
+    <main data-pagefind-body>
       <Content />
     </main>
     <aside>
@@ -83,6 +59,21 @@ if (post.data.heroImage) {
         ) : null
       }
     </aside>
+    <footer>
+      {
+        post.data.tags && post.data.tags.length != 0 ? (
+          <section class="post-tags">
+            <ul>
+              {post.data.tags.map((tag: string) => (
+                <li>
+                  <a href={`/tags/${tag}`}>#{tag}</a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null
+      }
+    </footer>
   </div>
 </Layout>
 
@@ -99,13 +90,16 @@ if (post.data.heroImage) {
     border-bottom: 1px solid var(--gray-5);
   }
 
+  footer {
+    grid-column: 1 / -1;
+    padding: var(--size-4) 0;
+    border-top: 1px solid var(--gray-5);
+  }
+
   header section.post-tags {
     margin-top: var(--size-6);
   }
 
-  header h1 {
-    margin-top: var(--size-1);
-  }
 
   header .byline {
     font-family: var(--font-heading);

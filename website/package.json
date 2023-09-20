@@ -5,14 +5,15 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && pagefind --source \"dist\"",
+    "build": "astro build && pagefind --site \"dist\"",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "info": "astro info"
   },
   "dependencies": {
     "@astrojs/netlify": "^3.0.1",
     "@netlify/functions": "^2.0.2",
-    "astro": "^3.0.13",
+    "astro": "^3.1.1",
     "canvas-confetti": "^1.6.0",
     "open-props": "^1.5.15",
     "preact": "^10.17.1"
