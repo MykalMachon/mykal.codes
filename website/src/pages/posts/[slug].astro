@@ -57,7 +57,7 @@ const hasSplitLayout = headings.length != 0;
     <footer>
       {
         post.data.tags && post.data.tags.length != 0 ? (
-          <section class="post-tags">
+          <section id="tags" class="post-tags">
             <ul>
               {post.data.tags.map((tag: string) => (
                 <li>

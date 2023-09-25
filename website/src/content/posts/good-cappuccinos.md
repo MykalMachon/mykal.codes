@@ -4,12 +4,11 @@ pubDate: "2023-01-21"
 type: 'photo'
 draft: false
 location: 'Abbotsford, BC'
-photos:
-  - url: 'https://res.cloudinary.com/mykalcodes/image/upload/v1674427593/Mykal%20Codes/PXL_20230104_190332875.PORTRAIT.jpg'
-    alt: 'A picture of a solid looking cappuccino sitting on wooden slatted table outside.'
 tags:
   - 'coffee'
 ---
+
+![A picture of a beautiful cappuccino with leaf-like latte art sitting on wooden slatted table outside](../../assets/posts/good-cappuccinos.jpg)
 
 I was gifted an espresso machine over the weekend. I've been enjoying experimenting with it and have already seen pretty significant progress.  *That said, I've still got a long way to go.*
 

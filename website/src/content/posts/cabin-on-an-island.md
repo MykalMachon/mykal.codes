@@ -15,6 +15,10 @@ tags:
   - 'personal'
 ---
 
+![A landscape showing the ocean, blocked from view by some trees. taken from a wooden balcony overlooking the ocean.](../../assets/posts/coai-1.jpg)
+![A landscape from within a reading nook. The ocean and other islands are visible from the reading nook. A tree blocks the way.](../../assets/posts/coai-2.jpg)
+![A landscape of a stony beach, with beach + trees on the left side, and ocean on the right side. Other islands are visible in the background.](../../assets/posts/coai-3.jpg)
+
 I spent this past weekend at a cabin on an island. It was great.
 I wrote around 2000 words about this cabin on an island, and how it gave me some much needed perspective on life.
 

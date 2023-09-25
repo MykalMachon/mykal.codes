@@ -10,8 +10,6 @@ interface Props {
 }
 
 const { post } = Astro.props;
-
-// reading time
 const rt = readingTime(post.body).text;
 ---
 
@@ -43,6 +41,12 @@ const rt = readingTime(post.body).text;
       </div>
     )
   }
+  {post.data.tags && (
+    <a href="#tags" class="post-attributes__item">
+      <Icon name="ion:pricetag-outline" />
+      <span>{post.data.tags.length} tags</span>
+    </a>
+  )}
 </div>
 
 <style>
@@ -61,11 +65,14 @@ const rt = readingTime(post.body).text;
     flex-direction: row;
     gap: var(--size-3);
     padding: var(--size-3) 0;
+    flex-wrap: wrap;
   }
 
   .post-attributes__item {
     display: flex;
     gap: var(--size-2);
     align-items: center;
+    text-decoration: none;
+    color: var(--gray-9);
   }
 </style>
