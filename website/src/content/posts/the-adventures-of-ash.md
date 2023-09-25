@@ -7,6 +7,7 @@ pubDate: "2022-08-02T00:00:00.000+00:00"
 heroImage: '../../assets/posts/the-adventures-of-ash.avif'
 tags:
   - personal
+  - cats
 draft: false
 ---
 

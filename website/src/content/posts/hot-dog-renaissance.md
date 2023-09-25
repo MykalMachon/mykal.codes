@@ -4,12 +4,11 @@ type: 'photo'
 draft: false
 pubDate: "2023-02-04"
 location: 'University of the Fraser Valley'
-photos:
-  - url: 'https://res.cloudinary.com/mykalcodes/image/upload/v1675549095/Mykal%20Codes/PXL_20230203_205337133.MP.jpg'
-    alt: 'a painting by Chris Woods titled "The Realm of Convenience II". It depicts a blonde man on his knees with hotdogs in his hands being consoled by another blonde woman with ketchup in her hand. Theyre located in a convenience store. '
 tags:
   - 'personal'
 ---
+
+![a painting by Chris Woods titled "The Realm of Convenience II". It depicts a blonde man on his knees with hotdogs in his hands being consoled by another blonde woman with ketchup in her hand. They're located in a convenience store.](../../assets/posts/hdr.jpg)
 
 The painting above is titled "The Realm of Convenience II" and was painted by [Chris Woods](https://www.instagram.com/chris_woods_emporer/) in 1990.
 It's maintained by and on display in the UFV Permanent Art Collection[^1]
