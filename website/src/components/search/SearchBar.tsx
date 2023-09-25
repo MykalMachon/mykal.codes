@@ -1,6 +1,9 @@
 import '@styles/SearchBar.css';
-import { h } from 'preact';
-import { useEffect, useState, useRef } from "preact/hooks";
+import { useEffect, useState, useRef } from "react";
+import { useDebounce } from 'usehooks-ts'
+
+// import this to allow searching of pages
+
 
 type SearchState = {
   query: string;
@@ -18,32 +21,35 @@ const initialState: SearchState = {
   active: false,
 };
 
-// utilities
-const debounce = (func: Function, timeout = 300) => {
-  let timer: any;
-  return (...args: any[]) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      func.apply(this, args);
-    }, timeout);
-  };
-}
-
 const SearchBar = () => {
   const inputContainerRef = useRef<HTMLDialogElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const [state, setState] = useState<SearchState>(initialState);
+  const [pagefind, setPagefind] = useState<any>(null);
+
+  const debounceState = useDebounce<SearchState>(state, 500);
 
   const handleInputChange = (event: any) => {
     const query = event.target.value;
-    if (query.trim() == '') return;
-    // TODO: search for query and debounce
     setState(prevState => ({ ...prevState, query, loading: true, message: '' }));
   };
 
+  const searchSite = async () => {
+    setState(prevState => ({ ...prevState, loading: true }));
+    try {
+      const search = await pagefind.search(debounceState.query);
+      const results = await Promise.all(search.results.map((res: Response) => res.data()))
+      setState(prevState => ({ ...prevState, results, loading: false }));
+    } catch (err) {
+      console.error(`Error searching site: ${err}`);
+      setState(prevState => ({ ...prevState, loading: false, message: 'Error searching site' }));
+    }
+  }
 
   useEffect(() => {
+    const pagefindModule = import('https://mykal.codes/_pagefind/pagefind.js?url');
+    pagefindModule.then((module) => setPagefind(module));
     // setup
     const ctrlKListener = document.addEventListener('keydown', (event) => {
       if (event.ctrlKey && event.key === 'k') {
@@ -86,6 +92,12 @@ const SearchBar = () => {
     }
   }, [state.active])
 
+  useEffect(() => {
+    if (debounceState.query.trim() == '') return;
+    console.log('fetching results for', debounceState.query);
+    searchSite();
+  }, [debounceState.query])
+
   return (
     <dialog className="searchBar" ref={inputContainerRef}>
       <div className="searchBar__container">
@@ -99,6 +111,14 @@ const SearchBar = () => {
             ref={inputRef}
           />
           <p>You can press ctrl+k or esc to close the search dialog.</p>
+        </div>
+        <div className="searchBar__results">
+          {state.results.map((result, index) => (
+            <a href={result.url} className="searchBar__result" key={index}>
+              <p className="searchBar__result__title">{result.meta.title}</p>
+              <p dangerouslySetInnerHTML={{ __html: result.excerpt }} />
+            </a>
+          ))}
         </div>
       </div>
     </dialog>

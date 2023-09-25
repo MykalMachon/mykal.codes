@@ -1,6 +1,7 @@
 ---
 import Layout from '@components/layout/Layout.astro';
 import ResponsiveImage from '@components/layout/ResponsiveImage.astro';
+import PostAttributes from '@components/posts/PostAttributes.astro';
 import PostTOC from '@components/posts/PostTOC.astro';
 import { getCollection } from 'astro:content';
 
@@ -27,15 +28,7 @@ const hasSplitLayout = headings.length != 0;
     <header data-pagefind-body>
       <h1>{post.data.title}</h1>
       <p class="byline">{post.data.description}</p>
-      {
-        post.data.pubDate ? (
-          <p class="">
-            <time datetime={post.data.pubDate}>
-              {post.data.pubDate.toDateString()}
-            </time>
-          </p>
-        ) : null
-      }
+      <PostAttributes post={post} />
 
       {
         post.data.heroImage ? (

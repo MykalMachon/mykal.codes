@@ -1,15 +1,16 @@
-
 dialog.searchBar {
+  top: 0;
   border: none !important;
-  background: rgba(0,0,0,0);
+  background: rgba(0, 0, 0, 0);
   max-width: 100vw;
   width: 100vw;
+  height: 120vh;
   margin: 0;
   padding: 0;
 }
 
 dialog.searchBar::backdrop {
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 dialog.searchBar .searchBar__container {
@@ -18,12 +19,13 @@ dialog.searchBar .searchBar__container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--size-3);
   justify-content: flex-start;
   padding: var(--size-3) calc(var(--size-3) + 16px);
   padding-top: var(--size-12);
 }
 
-dialog.searchBar input[type="text"] {
+dialog.searchBar input[type='text'] {
   width: 100%;
   padding: var(--size-3) var(--size-2);
   outline: 3px solid var(--teal-9);
@@ -34,11 +36,44 @@ dialog.searchBar input[type="text"] {
 }
 
 dialog.searchBar .searchBar__top {
+  position: sticky;
+  top: var(--size-3);
+  box-shadow: var(--shadow-2);
   background: white;
   max-width: 80ch;
   width: 100%;
-  border-radius: calc(var(--radius-2) + var(--radius-2)) ;
+  border-radius: calc(var(--radius-2) + var(--radius-2));
   padding: var(--size-3);
+}
+
+dialog.searchBar .searchBar__results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-3);
+  max-width: 80ch;
+  width: 100%;
+}
+
+dialog.searchBar a.searchBar__result {
+  text-decoration: none;
+  color: var(--gray-9);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+  padding: var(--size-3);
+  background: white;
+  border-radius: calc(var(--radius-2) + var(--radius-2));
+  box-shadow: var(--shadow-1);
+  cursor: pointer;
+}
+
+dialog.searchBar .searchBar__result p {
+  margin: 0;
+}
+
+dialog.searchBar .searchBar__result .searchBar__result__title {
+  color: var(--gray-12);
+  font-weight: bold;
 }
 
 dialog.searchBar .searchBar__top p {
@@ -50,7 +85,7 @@ dialog.searchBar .searchBar__top p {
     padding-top: 5vh;
   }
 
-  dialog.searchBar input[type="text"] {
+  dialog.searchBar input[type='text'] {
     max-width: 100%;
   }
 }

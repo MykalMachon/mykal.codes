@@ -1,8 +1,71 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import readingTime from 'reading-time';
+
+// pull icons from here https://icones.js.org/collection/ion
+import { Icon } from 'astro-icon';
+
 interface Props {
   post: CollectionEntry<'posts'>;
 }
 
 const { post } = Astro.props;
+
+// reading time
+const rt = readingTime(post.body).text;
 ---
+
+<!-- THIS IS -->
+<div class="post-attributes">
+  {
+    post.data.pubDate && (
+      <div class="post-attributes__item">
+        <Icon name="ion:calendar-outline" />
+        <time datetime={post.data.pubDate}>
+          {post.data.pubDate.toDateString()}
+        </time>
+      </div>
+    )
+  }
+  {
+    post.data.type != 'photo' && (
+      <div class="post-attributes__item">
+        <Icon name="ion:time-outline" />
+        <span>{rt}</span>
+      </div>
+    )
+  }
+  {
+    post.data.location && (
+      <div class="post-attributes__item">
+        <Icon name="ion:location-outline" />
+        <span>{post.data.location}</span>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  * {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .post-attributes {
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-3);
+    padding: var(--size-3) 0;
+  }
+
+  .post-attributes__item {
+    display: flex;
+    gap: var(--size-2);
+    align-items: center;
+  }
+</style>
