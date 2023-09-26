@@ -11,12 +11,12 @@
     "info": "astro info"
   },
   "dependencies": {
+    "@uidotdev/usehooks": "^2.3.1",
     "astro": "^3.1.1",
     "astro-icon": "^0.8.1",
     "open-props": "^1.5.15",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "usehooks-ts": "^2.9.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@astrojs/netlify": "^3.0.1",

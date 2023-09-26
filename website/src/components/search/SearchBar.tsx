@@ -1,6 +1,6 @@
 import '@styles/SearchBar.css';
 import { useEffect, useState, useRef } from "react";
-import { useDebounce } from 'usehooks-ts'
+import { useDebounce } from '@uidotdev/usehooks'
 
 // import this to allow searching of pages
 
