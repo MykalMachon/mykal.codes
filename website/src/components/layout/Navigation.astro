@@ -29,6 +29,10 @@ const { variant } = Astro.props;
     font-weight: bold;
   }
 
+  p.brandmark a {
+    color: var(--ink-1);
+  }
+
   nav {
     display: flex;
     width: 100%;
@@ -36,8 +40,8 @@ const { variant } = Astro.props;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: white;
-    border-bottom: 1px solid var(--gray-6);
+    background: var(--paper-1);
+    border-bottom: 1px solid var(--accent-1);
 
   }
 

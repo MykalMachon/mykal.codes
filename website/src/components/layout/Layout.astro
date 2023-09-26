@@ -2,6 +2,7 @@
 import MainHead from './MainHead.astro';
 import SearchBar from '@components/search/SearchBar';
 import Navigation from './Navigation.astro';
+import Footer from './Footer.astro';
 export interface Props {
   title: string;
   description: string;
@@ -23,6 +24,7 @@ const { title, description, type = 'page' } = Astro.props;
       <div class={`container container--${type}`}>
         <slot />
       </div>
+      <Footer />
     </div>
   </body>
 </html>

@@ -5,6 +5,8 @@ import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 export const prerender = true;
 
+import me from '../assets/me.jpg'
+
 const allPosts = await getCollection('posts');
 const recentPosts = allPosts
   .sort((a, b) => {
@@ -20,7 +22,7 @@ const recentPosts = allPosts
       <Image
         width="500"
         height="500"
-        src="https://avatars.githubusercontent.com/u/7844994"
+        src={me}
         alt="Mykal Machon"
         format={'avif'}
       />
@@ -49,12 +51,18 @@ const recentPosts = allPosts
     grid-template-columns: 1fr 2fr;
     align-items: center;
     gap: var(--size-6);
-    border-bottom: 1px solid var(--gray-3);
+    border-bottom: 1px solid var(--paper-3);
     padding-bottom: calc(var(--size-3) + var(--size-2));
   }
 
   header img {
     border-radius: var(--radius-2);
+    border: 1px solid var(--accent-1);
+    box-shadow: 
+      var(--shadow-2),
+      0 1px 3px 0 var(--accent-2), 0 1px 2px -1px var(--accent-4);
+    aspect-ratio: 3/4;
+    object-fit: cover;
   }
 
   @media screen and (max-width: 60ch) {
@@ -69,8 +77,8 @@ const recentPosts = allPosts
     }
 
     header img {
-      max-width: 33vw;
-      min-width: 98px;
+      max-width: 65vw;
+      aspect-ratio: 3.5/4;
     }
   }
 

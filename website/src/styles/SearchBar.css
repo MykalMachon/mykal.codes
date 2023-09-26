@@ -29,7 +29,7 @@ dialog.searchBar input[type='text'] {
   width: 100%;
   padding: var(--size-3) var(--size-2);
   outline: 3px solid var(--teal-9);
-  border: 1px solid var(--gray-6);
+  border: 1px solid var(--ink-4);
   border-radius: var(--radius-2);
   outline-offset: 1px;
   pointer-events: all;
@@ -56,7 +56,7 @@ dialog.searchBar .searchBar__results {
 
 dialog.searchBar a.searchBar__result {
   text-decoration: none;
-  color: var(--gray-9);
+  color: var(--ink-3);
   display: flex;
   flex-direction: column;
   gap: var(--size-2);
@@ -72,7 +72,7 @@ dialog.searchBar .searchBar__result p {
 }
 
 dialog.searchBar .searchBar__result .searchBar__result__title {
-  color: var(--gray-12);
+  color: var(--ink-1);
   font-weight: bold;
 }
 

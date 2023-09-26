@@ -48,8 +48,12 @@ const hasSplitLayout = headings.length != 0;
       {
         headings.length != 0 ? (
           <section class="post-toc">
-            <h2>Table of contents</h2>
-            <PostTOC toc={headings} />
+            <details>
+              <summary>
+                Table of contents
+              </summary>
+              <PostTOC toc={headings} />
+            </details>
           </section>
         ) : null
       }
@@ -86,13 +90,13 @@ const hasSplitLayout = headings.length != 0;
 
   header {
     grid-column: 1 / -1;
-    border-bottom: 1px solid var(--gray-5);
+    border-bottom: 1px solid var(--paper-4);
   }
 
   footer {
     grid-column: 1 / -1;
     padding: var(--size-4) 0;
-    border-top: 1px solid var(--gray-5);
+    border-top: 1px solid var(--paper-4);
   }
 
   header section.post-tags {
@@ -102,12 +106,12 @@ const hasSplitLayout = headings.length != 0;
   header .byline {
     font-family: var(--font-heading);
     font-size: var(--font-size-md);
-    color: var(--gray-8);
+    color: var(--ink-3);
   }
 
   aside {
     position: sticky;
-    top: 0;
+    top: var(--size-3);
     height: fit-content;
   }
 
@@ -116,7 +120,7 @@ const hasSplitLayout = headings.length != 0;
     margin: 0;
     padding: var(--size-4) 0;
     margin-bottom: var(--size-4);
-    border-bottom: 1px solid var(--gray-5);
+    border-bottom: 1px solid var(--paper-4);
   }
 
   .post-tags ul {
@@ -130,12 +134,13 @@ const hasSplitLayout = headings.length != 0;
 
   .post-tags ul li {
     padding: var(--size-1);
-    background: var(--gray-3);
+    background: var(--paper-3);
     border-radius: var(--radius-2);
   }
 
   .post-tags ul li a {
     font-size: var(--font-size-sm);
+    color: var(--accent-2);
   }
 
   @media screen and (max-width: 950px) {
