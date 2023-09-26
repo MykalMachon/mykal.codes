@@ -19,7 +19,7 @@ const rt = readingTime(post.body).text;
     post.data.pubDate && (
       <div class="post-attributes__item">
         <Icon name="ion:calendar-outline" />
-        <time datetime={post.data.pubDate}>
+        <time datetime={post.data.pubDate.toDateString()}>
           {post.data.pubDate.toDateString()}
         </time>
       </div>
@@ -41,12 +41,14 @@ const rt = readingTime(post.body).text;
       </div>
     )
   }
-  {post.data.tags && (
-    <a href="#tags" class="post-attributes__item">
-      <Icon name="ion:pricetag-outline" />
-      <span>{post.data.tags.length} tags</span>
-    </a>
-  )}
+  {
+    post.data.tags && (
+      <a href="#tags" class="post-attributes__item">
+        <Icon name="ion:pricetag-outline" />
+        <span>{post.data.tags.length} tags</span>
+      </a>
+    )
+  }
 </div>
 
 <style>
