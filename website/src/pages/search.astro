@@ -29,7 +29,7 @@ export const prerender = true;
       document.addEventListener('DOMContentLoaded', () => loadSearch());
       document.addEventListener('astro:page-load', () => {
         loadSearch()
-      }, { once: true });
+      });
     </script>
   </section>
   <div class="search"></div>
