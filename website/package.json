@@ -14,8 +14,6 @@
     "@uidotdev/usehooks": "^2.3.1",
     "astro": "^3.1.1",
     "astro-icon": "^0.8.1",
-    "astro-og-canvas": "^0.2.1",
-    "canvaskit-wasm": "^0.38.2",
     "markdown-it": "^13.0.2",
     "open-props": "^1.5.15",
     "react": "^18.2.0",
