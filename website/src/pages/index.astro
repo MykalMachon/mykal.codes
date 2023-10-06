@@ -5,7 +5,7 @@ import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 export const prerender = true;
 
-import me from '../assets/me.jpg'
+import me from '../assets/me.jpg';
 
 const allPosts = await getCollection('posts');
 const recentPosts = allPosts
@@ -13,7 +13,7 @@ const recentPosts = allPosts
     // @ts-ignore
     return new Date(b.data.pubDate) - new Date(a.data.pubDate);
   })
-  .slice(0, 8);
+  .slice(0, 7);
 ---
 
 <Layout title="Home" description="The home page of Mykal Machon!" type="home">
@@ -36,12 +36,31 @@ const recentPosts = allPosts
     </div>
   </header>
   <main>
-    <h2>Recent posts</h2>
-    <p>
-      I write about whatever I'm intersted in, which tends to include
-      programming, web development, tech, and other nerdy stuff.
-    </p>
-    <PostList posts={recentPosts} showArchiveLink={true} />
+    <section>
+      <h2>Latest post</h2>
+      <div class="post-callout">
+        <h3><strong>{recentPosts[0].data.title}</strong></h3>
+        <p>
+          <i
+            >{recentPosts[0].data.type} - {
+              recentPosts[0].data.pubDate.toDateString()
+            }</i>
+        </p>
+        <p>{recentPosts[0].data.description}</p>
+        <p><a href={`/posts/${recentPosts[0].slug}`}>Read more</a></p>
+      </div>
+    </section>
+    <section>
+      <h2>Other posts</h2>
+      <p>
+        I write about whatever I'm intersted in, which tends to include
+        programming, web development, tech, and other nerdy stuff.
+      </p>
+      <PostList
+        posts={recentPosts.slice(1, recentPosts.length)}
+        showArchiveLink={true}
+      />
+    </section>
   </main>
 </Layout>
 
@@ -52,17 +71,56 @@ const recentPosts = allPosts
     align-items: center;
     gap: var(--size-6);
     border-bottom: 1px solid var(--paper-3);
-    padding-bottom: calc(var(--size-3) + var(--size-2));
+    padding: calc(var(--size-3) + var(--size-2)) var(--size-3);
   }
 
   header img {
     border-radius: var(--radius-2);
     border: 1px solid var(--accent-1);
-    box-shadow: 
+    box-shadow:
       var(--shadow-2),
-      0 1px 3px 0 var(--accent-2), 0 1px 2px -1px var(--accent-4);
+      0 1px 3px 0 var(--accent-2),
+      0 1px 2px -1px var(--accent-4);
     aspect-ratio: 3/4;
     object-fit: cover;
+    margin: 0px;
+  }
+
+  .post-callout {
+    position: relative;
+    border: 1px solid var(--paper-3);
+    border-radius: var(--radius-2);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-2);
+    padding: var(--size-3);
+    transition:
+      border-color 0.2s ease-out,
+      transform 0.3s var(--ease-out-3), 
+      box-shadow 0.2s ease-out;
+  }
+
+  .post-callout:hover,
+  .post-callout:focus-within {
+    border-color: var(--accent-1);
+    transform: scale(1.02);
+    box-shadow:
+      var(--shadow-2),
+      0 1px 3px 0 var(--accent-2),
+      0 1px 2px -1px var(--accent-4);
+  }
+
+  .post-callout:hover a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .post-callout > * {
+    margin: 0;
   }
 
   @media screen and (max-width: 60ch) {
