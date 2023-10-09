@@ -57,20 +57,20 @@
 /* query selector for dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-  --paper-1: var(--gray-12);
-  --paper-2: var(--gray-11);
-  --paper-3: var(--gray-9);
-  --paper-4: var(--gray-8);
+    --paper-1: var(--gray-12);
+    --paper-2: var(--gray-11);
+    --paper-3: var(--gray-9);
+    --paper-4: var(--gray-8);
 
-  --ink-1: var(--gray-1);
-  --ink-2: var(--gray-3); 
-  --ink-3: var(--gray-4);
-  --ink-4: var(--gray-5);
+    --ink-1: var(--gray-1);
+    --ink-2: var(--gray-3);
+    --ink-3: var(--gray-4);
+    --ink-4: var(--gray-5);
 
-  --accent-1: var(--indigo-6);
-  --accent-2: var(--indigo-5);
-  --accent-3: var(--indigo-4);
-  --accent-4: var(--indigo-3);
+    --accent-1: var(--indigo-6);
+    --accent-2: var(--indigo-5);
+    --accent-3: var(--indigo-4);
+    --accent-4: var(--indigo-3);
   }
 }
 
@@ -104,7 +104,7 @@ h3 {
 }
 
 p,
-li{
+li {
   font-family: var(--font-body);
   line-height: 1.5;
   color: var(--ink-2);
@@ -116,7 +116,7 @@ p {
   color: var(--ink-2);
 }
 
-a { 
+a {
   color: var(--accent-1);
   text-decoration: none;
 }
@@ -206,7 +206,7 @@ details summary {
       opacity: 1;
     }
   }
-  
+
   &:focus {
     outline: none;
   }
@@ -216,7 +216,7 @@ details summary {
   }
 
   &:after {
-    content: "";
+    content: '';
     transform: rotate(0deg);
     position: absolute;
     right: 0;
@@ -225,7 +225,13 @@ details summary {
     height: 1.25em;
     transition: all 0.3s var(--ease-4);
     opacity: 0.5;
-    background-image: url("https://assets.codepen.io/1490503/chevron-small.svg");
+    background-image: url('https://assets.codepen.io/1490503/chevron-small.svg');
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  details summary::after {
+    filter: invert(1);
   }
 }
 

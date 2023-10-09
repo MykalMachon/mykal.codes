@@ -66,18 +66,36 @@ const recentPosts = allPosts
 
 <style>
   header {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
     gap: var(--size-6);
     border-bottom: 1px solid var(--paper-3);
     padding: calc(var(--size-3) + var(--size-2)) var(--size-3);
+    z-index: 1;
+    padding: var(--size-3);
+  }
+
+  header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
 
     background-position-y: -9px;
     background-size: 100px 100px;
     background-image: url(/bg-grid.png);
     -webkit-mask-image: linear-gradient(to bottom,transparent,10%,white,90%,transparent);
+  }
 
+  @media (prefers-color-scheme: light) {
+    header::after {
+      filter: invert(1);
+    }
   }
 
   header img {
@@ -131,9 +149,9 @@ const recentPosts = allPosts
 
   @media screen and (max-width: 60ch) {
     header {
+      padding: var(--size-5) var(--size-3);
       grid-template-columns: 1fr;
       gap: var(--size-3);
-      padding: 0;
     }
 
     header h1 {
@@ -141,7 +159,7 @@ const recentPosts = allPosts
     }
 
     header img {
-      max-width: 65vw;
+      max-width: 30vw;
       aspect-ratio: 3.5/4;
     }
   }

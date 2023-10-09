@@ -1,4 +1,6 @@
---- 
+---
+import Icon from 'astro-icon';
+
 const year = new Date().getFullYear();
 ---
 
@@ -8,11 +10,12 @@ const year = new Date().getFullYear();
       <li><a href="/">Home</a></li>
       <li><a href="/posts">Posts</a></li>
       <li><a href="/about">About</a></li>
-      <li><a href="/work">Work</a></li>
+      <li><a href="/feeds"> Feeds</a></li>
     </ul>
     <ul class="links__offsite">
       <li><a href="https://twitter.com/MykalMachon">Twitter</a></li>
       <li><a href="https://github.com/MykalMachon">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/mykalmachon/">Linkedin</a></li>
     </ul>
   </section>
   <section class="bottom">
@@ -22,7 +25,7 @@ const year = new Date().getFullYear();
 </footer>
 
 <style>
-  footer { 
+  footer {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -45,7 +48,7 @@ const year = new Date().getFullYear();
     padding: 0;
   }
 
-  section ul li a { 
+  section ul li a {
     font-size: var(--font-size-sm);
     text-decoration: none;
   }
