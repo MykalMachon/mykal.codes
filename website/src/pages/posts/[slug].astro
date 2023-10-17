@@ -26,7 +26,15 @@ const hasSplitLayout = headings.length != 0;
 <Layout title={post.data.title} description={post.data.description}>
   <div class={`post-layout ${hasSplitLayout ? 'post-layout--split' : ''}`}>
     <header data-pagefind-body>
-      <h1>{post.data.title}</h1>
+      {
+        post.data.type == 'link' ? (
+          <h1>
+            <a href={post.data.url}>{post.data.title}</a> 🔗
+          </h1>
+        ) : (
+          <h1>{post.data.title}</h1>
+        )
+      }
       <p class="byline">{post.data.description}</p>
       <PostAttributes post={post} />
 
@@ -49,9 +57,7 @@ const hasSplitLayout = headings.length != 0;
         headings.length != 0 ? (
           <section class="post-toc">
             <details>
-              <summary>
-                Table of contents
-              </summary>
+              <summary>Table of contents</summary>
               <PostTOC toc={headings} />
             </details>
           </section>
@@ -169,7 +175,8 @@ const hasSplitLayout = headings.length != 0;
       font-size: var(--font-size-base);
     }
 
-    .post-layout, .post-layout.post-layout--split {
+    .post-layout,
+    .post-layout.post-layout--split {
       grid-template-columns: 1fr;
       grid-template-areas:
         'header'

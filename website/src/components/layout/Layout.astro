@@ -26,5 +26,9 @@ const { title, description, type = 'page' } = Astro.props;
       </div>
       <Footer />
     </div>
-  </body>
+  </body><style>
+    body > .wrapper > div:first-child {
+      margin-bottom: var(--size-6);
+    }
+  </style>
 </html>

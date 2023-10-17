@@ -35,7 +35,7 @@
   --font-size-xxxl: clamp(3.05rem, 5.93vw + 1.57rem, 6.31rem);
 
   /* COMMON SIZES */
-  --max-width: clamp(50ch, 100%, 110ch);
+  --max-width: clamp(50ch, 100%, 115ch);
 
   /* THEME COLORS */
   --paper-1: white;
@@ -104,7 +104,8 @@ h3 {
 }
 
 p,
-li {
+li,
+details summary {
   font-family: var(--font-body);
   line-height: 1.5;
   color: var(--ink-2);

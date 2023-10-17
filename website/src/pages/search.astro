@@ -15,7 +15,6 @@ export const prerender = true;
     <div id="search"></div>
     <script>
       const loadSearch = () => {
-        console.log('load search')
         try{
           new PagefindUI({ element: '#search', showImage: false });
         } catch {
@@ -29,7 +28,7 @@ export const prerender = true;
       document.addEventListener('DOMContentLoaded', () => loadSearch());
       document.addEventListener('astro:page-load', () => {
         loadSearch()
-      });
+      }, {once: true});
     </script>
   </section>
   <div class="search"></div>
