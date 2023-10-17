@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import PostCard from './PostCard.astro';
+
+export interface Props {
+  posts: Array<CollectionEntry<'posts'>>;
+  showArchiveLink?: boolean;
+}
+
+const { posts, showArchiveLink = false } = Astro.props;
+---
+
+<section class="posts">
+  {posts.map((post) => <PostCard post={post} />)}
+  {
+    showArchiveLink ? (
+      <p>
+        If you're looking for something else, you can{' '}
+        <a href="/posts/">see older posts.</a>
+      </p>
+    ) : null
+  }
+</section>

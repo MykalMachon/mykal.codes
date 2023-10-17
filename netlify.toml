@@ -1,19 +1,29 @@
 [build]
+  base = "/website"
   command = "npm run build"
-  edge_functions="server/edge"
   publish = "dist"
 
 [dev]
+  base = "/webiste"
   publish = "dist"
-  functions="server/functions"
-  edge_functions="server/edge"
 
-[functions]
-  directory = "server/functions"
+# CONTEXTS 
+[context.production]
+  NODE_VERSION = "20.7.0"
 
-[[edge_functions]]
-  path = "/og"
-  function = "og"
+[context.branch-deploy.environment]
+  NODE_ENV = "development"
+  NODE_VERSION = "20.7.0"
+
+[context.deploy-preview.environment]
+  NODE_ENV = "development"
+  NODE_VERSION = "20.7.0"
+
+[context.dev.environment]
+  NODE_ENV = "development"
+  NODE_VERSION = "20.7.0"
+
+# REDIRECTS AND HEADERS
 
 [[redirects]]
   from = "/api/*"
@@ -34,13 +44,42 @@
   force = true
 
 [[redirects]]
-  from = "/posts/*"
-  to = "/garden/posts/:splat"
+  from = "/garden/posts/*"
+  to = "/posts/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/garden/links/*"
+  to = "/posts/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/garden/photos/*"
+  to = "/posts/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/garden/notes/*"
+  to = "/posts/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/garden/tags/*"
+  to = "/tags/:splat"
   status = 301
   force = true
 
 [[headers]]
   # allow other apps to call the pagefine API
   for = "/_pagefind/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/feeds/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"

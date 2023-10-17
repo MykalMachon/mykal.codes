@@ -1,0 +1,35 @@
+---
+import Layout from '@components/layout/Layout.astro';
+export const prerender = true;
+---
+
+<Layout title="Search" description="Look through my site">
+  <h1>Search</h1>
+  <p>Search through my site</p>
+  <section>
+    <link href="/_pagefind/pagefind-ui.css" rel="stylesheet" />
+    <script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+    <div id="search-loading">
+      <p>Search is loading...</p>
+    </div>
+    <div id="search"></div>
+    <script>
+      const loadSearch = () => {
+        try{
+          new PagefindUI({ element: '#search', showImage: false });
+        } catch {
+          document.getElementById('search-loading').style.display = 'none';
+          document.getElementById('search').innerHTML = '<p>Search is not available at this time...</p>';
+        } finally {
+          document.getElementById('search-loading').style.display = 'none';
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => loadSearch());
+      document.addEventListener('astro:page-load', () => {
+        loadSearch()
+      }, {once: true});
+    </script>
+  </section>
+  <div class="search"></div>
+</Layout>

@@ -1,0 +1,14 @@
+---
+import Layout from '@components/layout/Layout.astro';
+export const prerender = true;
+---
+
+<Layout title="Subscribe via Feeds" description="My RSS and JSON feeds">
+  <h1>Subscribe via Feeds</h1>
+  <p class="byline">You can subscribe to this blog using JSON or RSS feeds</p>
+  <ul>
+    <li><a href="/feeds/posts.xml">Subscribe via RSS</a>: just copy-paste this link into your RSS reader of choice and all my new posts will show up in your reader.</li>
+    <li><a href="/feeds/posts.json">Subscribe vis JSON</a>: you can also use this endpoint to easily reference my posts programmatically. Just <code>fetch()</code> the page.</li>
+  </ul>
+  <p>If you have an idea on how I can make these feeds better, <a href="mailto:hello@mykal.codes">reach out!</a></p>
+</Layout>

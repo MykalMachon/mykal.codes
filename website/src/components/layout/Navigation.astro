@@ -1,0 +1,80 @@
+---
+import { Icon } from 'astro-icon';
+export interface Props {
+  variant: 'home' | 'page' | 'post';
+}
+
+const { variant } = Astro.props;
+---
+
+<nav>
+  <div class="container">
+    <p class="brandmark">
+      {variant != 'home' && <a href="/">Mykal Machon</a>}
+    </p>
+    <ul>
+      <li>
+        <a href="/posts"> Posts</a>
+      </li>
+      <li><a href="/about-me">About</a></li>
+      <li>
+        <a href="/search">
+          <Icon name="mdi:search" size="24" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  p.brandmark {
+    margin: 0;
+    padding: var(--size-2) var(--size-2) var(--size-2) 0;
+    font-family: var(--font-heading);
+    font-weight: bold;
+  }
+
+  p.brandmark a {
+    color: var(--ink-1);
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav div.container {
+    width: 100%;
+    padding: var(--size-2) var(--size-3);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid var(--paper-3);
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    gap: var(--size-2);
+  }
+
+  nav ul li {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--size-2);
+  }
+
+  nav ul li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
