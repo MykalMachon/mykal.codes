@@ -5,7 +5,7 @@ import MarkdownIt from 'markdown-it'
 const parser = new MarkdownIt();
 
 const getPostData = async (site: string) => {
-  const allPosts = await getCollection('posts');
+  const allPosts = await getCollection('posts', ({ data }) => data.draft !== true);
   return allPosts.map((post) => ({
     id: post.slug,
     url: `${site}posts/${post.slug}`,
