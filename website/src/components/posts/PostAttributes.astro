@@ -49,6 +49,14 @@ const rt = readingTime(post.body).text;
       </a>
     )
   }
+  {
+    post.data.draft && (
+      <div class="post-attributes__item">
+        <Icon name="ion:construct-outline" />
+        <span>Draft post: WIP</span>
+      </div>
+    )
+  }
 </div>
 
 <style>
