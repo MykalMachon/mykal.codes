@@ -5,12 +5,13 @@ import PostList from '@components/posts/PostList.astro';
 
 export const prerender = true;
 
-const allPosts = await getCollection('posts');
+const allPosts = await getCollection('posts', ({ data }) => {
+  return data.draft !== true;
+});
 allPosts.sort((a, b) => {
   // @ts-ignore
   return new Date(b.data.pubDate) - new Date(a.data.pubDate);
 });
-
 ---
 
 <Layout

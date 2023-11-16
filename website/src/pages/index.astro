@@ -7,7 +7,9 @@ export const prerender = true;
 
 import me from '../assets/me.jpg';
 
-const allPosts = await getCollection('posts');
+const allPosts = await getCollection('posts', ({ data }) => {
+  return data.draft !== true;
+});
 const recentPosts = allPosts
   .sort((a, b) => {
     // @ts-ignore

@@ -35,7 +35,7 @@
   --font-size-xxxl: clamp(3.05rem, 5.93vw + 1.57rem, 6.31rem);
 
   /* COMMON SIZES */
-  --max-width: clamp(50ch, 100%, 115ch);
+  --max-width: clamp(50ch, 100%, 1100px);
 
   /* THEME COLORS */
   --paper-1: white;
