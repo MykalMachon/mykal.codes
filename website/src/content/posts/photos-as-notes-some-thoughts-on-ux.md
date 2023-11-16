@@ -5,7 +5,7 @@ pubDate: "2023-11-15"
 draft: false
 tags:
   - ux
-  - dev
+  - webdev
   - personal
 location: A grocery store
 type: post
