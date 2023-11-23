@@ -18,8 +18,8 @@ That said, I'm by no means an expert. This talk served as a good all-around intr
 
 Watching the talk brings me back to interesting lectures from excited profs back during my CompSci program. if you're into that, or just want to learn about how LLMs work, I would recommend giving it a watch!  
 
-[^1]: [chat.mykal.codes](https://github.com/chat.mykal.codes): chat with my blog via an AI chatbot
+[^1]: [chat.mykal.codes](https://github.com/mykalmachon/chat.mykal.codes): chat with my blog via an AI chatbot.
 
-[^2]: [open-copilot](https://github.com/mykalmachon/open-copilot): GitHub Copilot built with open-source tools (very, very, very new)
+[^2]: [open-copilot](https://github.com/mykalmachon/open-copilot): GitHub Copilot built with open-source tools (very, very, very new).
 
 [^3]: [Ollama](https://ollama.ai): a simple interface to hosting and interfacing with open-source LLMs locally.
