@@ -13,7 +13,7 @@ const getAdditionalHTML = (post: CollectionEntry<'posts'>) => {
       out on <a href="https://indieweb.social/@mykalmachon">Mastodon</a>.
     </p>
     <p>
-      <a href="${import.meta.env.SITE}posts/${post.slug}">
+      <a href="${import.meta.env.SITE}/posts/${post.slug}">
         Read the full post on the site
       </a>
     </p>
