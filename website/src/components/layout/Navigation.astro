@@ -23,8 +23,9 @@ const { variant } = Astro.props;
       </li>
       <li><a href="/about-me">About</a></li>
       <li>
-        <a href="/search">
+        <a href="/search" aria-label="Search" title="Search">
           <Icon name="mdi:search" size="24" />
+          <span class="sr-only">Search</span>
         </a>
       </li>
     </ul>
