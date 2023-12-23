@@ -258,3 +258,25 @@ details[open] summary:after {
   white-space: nowrap;
   border: 0;
 }
+
+/* pagefind stuff */
+
+input.pagefind-ui__search-input {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  background: var(--paper-2);
+  color: var(--ink-1);
+}
+
+input.pagefind-ui__search-input:focus {
+  outline: 3px solid var(--accent-3);
+  outline-offset: 2px;
+}
+
+.pagefind-ui {
+  --pagefind-ui-primary: var(--ink-1);
+  --pagefind-ui-text: var(--ink-2);
+  --pagefind-ui-background: var(--paper-2);
+  --pagefind-ui-border: var(--paper-4);
+  --pagefind-ui-tag: var(--paper-1);
+}
