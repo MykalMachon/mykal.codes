@@ -38,12 +38,6 @@
   force = true
 
 [[redirects]]
-  from = "/posts"
-  to = "/garden/"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/garden/posts/*"
   to = "/posts/:splat"
   status = 301
@@ -74,8 +68,7 @@
   force = true
 
 [[headers]]
-  # allow other apps to call the pagefine API
-  for = "/_pagefind/*"
+  for = "/pagefind/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
 
