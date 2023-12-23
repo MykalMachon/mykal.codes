@@ -140,6 +140,13 @@ textarea,
 select {
   font-family: var(--font-body);
   font-size: var(--font-size-base);
+  background: var(--paper-2);
+  color: var(--ink-1);
+}
+
+:is(input, textarea, select):focus {
+  outline: 3px solid var(--accent-3);
+  outline-offset: 2px;
 }
 
 /* basic layout  */

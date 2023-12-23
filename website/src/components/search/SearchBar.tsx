@@ -4,7 +4,6 @@ import { useDebounce } from '@uidotdev/usehooks'
 
 // import this to allow searching of pages
 
-
 type SearchState = {
   query: string;
   results: Array<any>; // TODO: make this more specific
