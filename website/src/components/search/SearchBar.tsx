@@ -48,7 +48,7 @@ const SearchBar = () => {
   }
 
   useEffect(() => {
-    const pagefindModule = import('https://mykal.codes/_pagefind/pagefind.js?url');
+    const pagefindModule = import('https://mykal.codes/pagefind/pagefind.js?url');
     pagefindModule.then((module) => setPagefind(module));
     // setup
     const ctrlKListener = document.addEventListener('keydown', (event) => {
