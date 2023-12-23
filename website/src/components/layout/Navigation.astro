@@ -10,7 +10,7 @@ const { variant } = Astro.props;
 ---
 
 <div class="snowfall">
-  <SnowFallHeader client:only="react" />
+  <SnowFallHeader client:only="react" transition:persist />
 </div>
 <nav>
   <div class="container">
