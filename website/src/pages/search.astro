@@ -31,7 +31,7 @@ export const prerender = true;
       }
 
       document.addEventListener('DOMContentLoaded', () => loadSearch());
-      document.addEventListener('astro:page-load', () => loadSearch());
+      document.addEventListener('astro:after-swap', () => loadSearch());
     </script>
   </section>
   <div class="search"></div>
