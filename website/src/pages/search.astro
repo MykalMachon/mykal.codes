@@ -15,8 +15,13 @@ export const prerender = true;
     <div id="search"></div>
     <script>
       const loadSearch = () => {
+        const pagefindUiEl = document.querySelector('.pagefind-ui')
+        // If the search is already loaded, don't load it again
+        if (pagefindUiEl) return;
+
+        // load the search
         try{
-          new PagefindUI({ element: '#search', showImage: false });
+          new PagefindUI({ element: '#search', showImage: true });
         } catch {
           document.getElementById('search-loading').style.display = 'none';
           document.getElementById('search').innerHTML = '<p>Search is not available at this time...</p>';
