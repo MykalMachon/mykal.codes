@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@components/layout/Layout.astro';
+import PostList from '@components/posts/PostList.astro';
+
+export const prerender = true;
+
+const allPosts = await getCollection('posts', ({ data }) => {
+  return data.draft !== true;
+});
+allPosts.sort((a, b) => {
+  // @ts-ignore
+  return new Date(b.data.pubDate) - new Date(a.data.pubDate);
+});
+---
+
+<Layout
+  title="Posts"
+  description="All of the posts, links, photos, and notes from my site listed in order"
+>
+  <h1>Posts</h1>
+  <PostList posts={allPosts} />
+</Layout>
