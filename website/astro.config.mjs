@@ -3,6 +3,8 @@ import sitemap from '@astrojs/sitemap';
 import netlify from "@astrojs/netlify/functions";
 import react from "@astrojs/react";
 
+import node from "@astrojs/node";
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://mykal.codes',
@@ -23,5 +25,7 @@ export default defineConfig({
   },
   integrations: [sitemap(), react()],
   output: "server",
-  adapter: netlify()
+  adapter: node({
+    mode: "standalone"
+  })
 });
