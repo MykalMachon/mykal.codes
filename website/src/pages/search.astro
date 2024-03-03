@@ -1,11 +1,15 @@
 ---
 import Layout from '@components/layout/Layout.astro';
-import MiniSearch, { type SearchResult } from 'minisearch';
+import MiniSearch from 'minisearch';
+import SearchForm from '../components/search/SearchForm.astro';
+import SearchResult from '../components/search/SearchResult.astro';
 
 let query: null | string = null;
 let errors: Array<string> = [];
 let results;
 let searchTime: number = 0;
+
+const site = import.meta.env.DEV ? 'http://localhost:4321/' : Astro.site;
 
 // GET requests to search with params
 if (Astro.request.method == 'GET'){
@@ -15,7 +19,7 @@ if (Astro.request.method == 'GET'){
   if(query){
     try{
       // fetch the list of posts 
-      const postsRes = await fetch(`${Astro.site}/feeds/posts.json`);
+      const postsRes = await fetch(`${site}/feeds/posts.json`);
       if (!postsRes.ok){
         throw new Error('Could not fetch posts')
       }
@@ -56,33 +60,28 @@ if (Astro.request.method == 'GET'){
 
 <Layout title="Search" description="Look through my site">
   <h1>Search</h1>
-  <p>Search through my site</p>
-  <section>
-    <form>
-      <input type="search" name="query" id="query" value={query}>
-      <button type="submit">Search</button>
-    </form>
-  </section>
+  <SearchForm query={query} />
 
-  <!-- errors -->
   {errors && <section>
     {errors.map((err) => (
       <p class="error">{err}</p>
     ))}  
   </section>}
 
-  <!-- results -->
   <section>
     {results && <div class="results">
       {results.length == 0 && <p>no results for {query}...</p>}
       {results.length > 0 && <p class="result-count">Found {results.length} results in {searchTime} seconds for "{query}"</p>}
       {results.map((result) => (
-        <article>
-          <p><strong>{result.title}</strong></p>
-          <p>{result.description}</p>
-          <p><a href={result.url}>Read post</a></p>
-        </article>
+       <SearchResult result={result} />
       ))}  
     </div>}
   </section>
 </Layout>
+
+<style>
+  .results {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+</style>
