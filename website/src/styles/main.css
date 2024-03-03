@@ -167,15 +167,23 @@ select {
 }
 
 /* code cleanup */
-pre {
+pre.astro-code {
   padding: var(--size-2);
   border-radius: var(--radius-2);
   color: var(--ink-1);
+  width: 100%;
 }
 
 pre,
 code {
   font-family: var(--font-mono);
+}
+
+@media screen and (max-width: 1200px){
+  pre.astro-code {
+    overflow-x: scroll !important;
+    max-width: calc(100vw - (var(--size-4) * 2))
+  }
 }
 
 /* details */
