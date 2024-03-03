@@ -142,15 +142,36 @@ select {
   font-size: var(--font-size-base);
   background: var(--paper-2);
   color: var(--ink-1);
+  border: 1px solid var(--paper-3);
+  border-radius: var(--radius-2);
+  padding: var(--size-2);
 }
 
-:is(input, textarea, select):focus {
-  outline: 3px solid var(--accent-3);
+:is(input, textarea, select, button, input[type="submit"]):focus {
+  outline-style: solid;
+  outline-color: var(--accent-4);
+  outline-width: 2px;
   outline-offset: 2px;
 }
 
-/* basic layout  */
+button, input[type="submit"] {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  background: var(--paper-2);
+  color: var(--ink-1);
+  border: 1px solid var(--paper-3);
+  border-radius: var(--radius-2);
+  padding: var(--size-2) var(--size-4);
+}
 
+:is(button, input[type="submit"]):hover, 
+:is(button, input[type="submit"]):focus {
+  background: var(--accent-1);
+  color: var(--ink-1);
+  cursor: pointer;
+}
+
+/* basic layout  */
 .wrapper {
   max-width: 100%;
   width: 100%;
@@ -167,15 +188,23 @@ select {
 }
 
 /* code cleanup */
-pre {
+pre.astro-code {
   padding: var(--size-2);
   border-radius: var(--radius-2);
   color: var(--ink-1);
+  width: 100%;
 }
 
 pre,
 code {
   font-family: var(--font-mono);
+}
+
+@media screen and (max-width: 1200px){
+  pre.astro-code {
+    overflow-x: scroll !important;
+    max-width: calc(100vw - (var(--size-4) * 2))
+  }
 }
 
 /* details */

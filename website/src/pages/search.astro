@@ -1,38 +1,87 @@
 ---
 import Layout from '@components/layout/Layout.astro';
-export const prerender = true;
+import MiniSearch from 'minisearch';
+import SearchForm from '../components/search/SearchForm.astro';
+import SearchResult from '../components/search/SearchResult.astro';
+
+let query: null | string = null;
+let errors: Array<string> = [];
+let results;
+let searchTime: number = 0;
+
+const site = import.meta.env.DEV ? 'http://localhost:4321/' : Astro.site;
+
+// GET requests to search with params
+if (Astro.request.method == 'GET'){
+  const startTime = new Date();
+  const url = new URL(Astro.request.url)
+  query = url.searchParams.get('query');
+  if(query){
+    try{
+      // fetch the list of posts 
+      const postsRes = await fetch(`${site}/feeds/posts.json`);
+      if (!postsRes.ok){
+        throw new Error('Could not fetch posts')
+      }
+      // parse the list of posts as JSON 
+      const postData = await postsRes.json();
+
+      // format json data into flat objects 
+      const flatPostData = postData.map((post: any) => ({
+        id: post.id,
+        url: post.url,
+        title: post.meta.title,
+        date: post.meta.pubDate,
+        tags: post.meta.tags,
+        description: post.meta.description,
+        text: post.content.md
+      }))
+
+      // load data into search index 
+      const miniSearch = new MiniSearch({
+        fields: ['title', 'tags', 'description', 'text'],
+        storeFields: ['title', 'tags', 'description', 'date', 'url']
+      })
+
+      await miniSearch.addAllAsync(flatPostData);
+
+      results = miniSearch.search(query);
+
+    } catch(err){
+      if(err instanceof Error){
+        errors.push(err.toString());
+      }
+    }
+  }
+  const endTime = new Date(); 
+  searchTime = (endTime.getTime() - startTime.getTime()) / 1000;
+}
 ---
 
 <Layout title="Search" description="Look through my site">
   <h1>Search</h1>
-  <p>Search through my site</p>
+  <SearchForm query={query} />
+
+  {errors && <section>
+    {errors.map((err) => (
+      <p class="error">{err}</p>
+    ))}  
+  </section>}
+
   <section>
-    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
-    <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
-    <div id="search-loading">
-      <p>Search is loading...</p>
-    </div>
-    <div id="search"></div>
-    <script>
-      const loadSearch = () => {
-        const pagefindUiEl = document.querySelector('.pagefind-ui')
-        // If the search is already loaded, don't load it again
-        if (pagefindUiEl) return;
-
-        // load the search
-        try{
-          new PagefindUI({ element: '#search', showImage: true });
-        } catch {
-          document.getElementById('search-loading').style.display = 'none';
-          document.getElementById('search').innerHTML = '<p>Search is not available at this time...</p>';
-        } finally {
-          document.getElementById('search-loading').style.display = 'none';
-        }
-      }
-
-      document.addEventListener('DOMContentLoaded', () => loadSearch());
-      document.addEventListener('astro:after-swap', () => loadSearch());
-    </script>
+    {results && <div class="results">
+      {results.length == 0 && <p>no results for {query}...</p>}
+      {results.length > 0 && <p class="result-count">Found {results.length} results in {searchTime} seconds for "{query}"</p>}
+      {results.map((result) => (
+       <SearchResult result={result} />
+      ))}  
+    </div>}
   </section>
-  <div class="search"></div>
 </Layout>
+
+<style>
+  .results {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+</style>

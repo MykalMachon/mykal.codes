@@ -1,6 +1,5 @@
 ---
 import MainHead from './MainHead.astro';
-import SearchBar from '@components/search/SearchBar';
 import Navigation from './Navigation.astro';
 import Footer from './Footer.astro';
 export interface Props {
@@ -18,7 +17,6 @@ const { title, description, type = 'page' } = Astro.props;
     <MainHead title={title} description={description} />
   </head>
   <body>
-    <SearchBar client:idle />
     <Navigation variant={type} />
     <div class="wrapper">
       <div class={`container container--${type}`}>
