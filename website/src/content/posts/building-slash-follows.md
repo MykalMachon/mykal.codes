@@ -7,10 +7,10 @@ tags:
 - webdev
 - javascript
 - RSS
-draft: true
+draft: false
 ---
 
-I built out a `/follows` page that lists all the RSS feeds I'm subscribed too. Thankfully, Astro and Commafeed made this very easy to build out.
+[I built out a `/follows` page that lists all the RSS feeds I'm subscribed too](/follows). Thankfully, Astro and Commafeed made this very easy to build out.
 All I needed to do was: 
 1. figure out how to programmatically pull out the blogs I follow from commafeed (my feed reader) 
 2. pull the blogs I follow but into an Astro page and create a basic template to display it.  
@@ -180,4 +180,194 @@ const cleanSiteUrl = (url: string) => {
 <!-- some other markup -->
 ```
 
+### Adding favicons 
+
+Now that I had some data on the page, I realized it would probably be nice to have each blog's favicon besides the name. Thankfully, the fever API exposes an endpoint to fetch all the favicons as well. 
+
+In testing, it looks like the favicon endpoint returns all the favicons in a raw base64 string and takes around 5-6 seconds to return a response (yikes). With that in mind I 
+
+- rewrote some of our data fetching to run in parallel.
+  - This should speed things up cause it'll fetch both the feed and favicons at the same time instead of one after the other. 
+- set the page up to use astro's prerendering feature. 
+  - the page is built into a static files on the site's release instead of being server-rendered on each request. 
+  - The main downside with this approach is that the data on the page will often be stale as it only pulls in new data on site build. My follows don't change much though so I'm okay with that.
+- build out some types so I stop getting implicit any errors 
+
+```astro
+---
+// this makes it so it only builds this page once
+export const prerender = true
+
+// imports go here 
+// types for the fever data
+type FeedResponse = {
+  api_version: number;
+  auth: 0 | 1;
+  last_refreshed_on_time: number;
+  feeds: Feed[];
+  feed_groups: [
+    {
+      group_id: number;
+      feeds: string;
+    },
+  ];
+};
+
+type FaviconResponse = {
+  api_version: number;
+  auth: 0 | 1;
+  last_refreshed_on_time: number;
+  favicons: Favicon[];
+};
+
+type Feed = {
+  id: number;
+  favicon_id: number;
+  title: string;
+  url: string;
+  site_url: string;
+  is_spark: number;
+  last_updated_on_time: number;
+};
+
+type Favicon = {
+  id: number;
+  data: string;
+};
+
+// auth hash creation goes here 
+
+// get feeds api
+let feedData: FeedResponse | null = null;
+let faviconData: FaviconResponse | null = null;
+
+try {
+  const feedRes = fetch(`${apiUrl}?api_key=${authHash}&feeds`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  });
+  const faviconRes = fetch(`${apiUrl}?api_key=${authHash}&favicons`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  });
+  
+  const results = await Promise.allSettled([feedRes, faviconRes]);
+  
+  if(results[0].status === 'rejected' || results[1].status === 'rejected') {
+    throw new Error('failed to fetch feeds');
+  }
+
+  feedData = await results[0].value.json();
+  faviconData = await results[1].value.json();
+} catch (err) {
+  console.error('failed to fetch feeds')
+  console.error(err);
+}
+
+// clean site url function goes here
+---
+
+<Layout title="Follows" description="the blogs I follow">
+  <h1>Follows</h1>
+  <p>
+    This page lists all of the blogs, newsletters, and peeps that I follow
+    across the internet in my RSS feed aggregator. I <a
+      href="/posts/building-slash-follows">wrote a post on how I built this</a
+    > if you're interested.
+  </p>
+  <ul>
+    { feedData != null && faviconData != null && 
+      feedData.feeds.map((feed: Feed) => {
+        return (
+          <li>
+            <img src={faviconData.favicons.find(({id}) => id === feed.favicon_id)?.data} />
+            <a href={cleanSiteUrl(feed.site_url)}>{feed.title}</a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Layout>
+```
+
+With that, we've got the page pre-rendering once per build, got some types in place, and have favicon's beside the feed titles and links.
+
 ### Puttin' some paint on it
+
+Right now the page is super basic. The images are huge, all my follows are just in a big boring list, so let's do some stuff to clean it up: 
+
+- put follows in a 2-column grid layout.  
+- cleanup the layout for each follow.
+  - the image / title should be center aligned 
+  - the images are appropriately sized
+- use a little trick to make the whole area of the li element clickable as of it was an anchor tag 
+  - can do this with a little `a:after` trick in the code below. 
+
+```astro
+---
+// all the build logic and data fetching goes here
+---
+<Layout title="Follows" description="the blogs I follow">
+  <ul>
+    { feedData != null && faviconData != null && 
+      feedData.feeds.map((feed: Feed) => {
+        return (
+          <li>
+            <img src={faviconData.favicons.find(({id}) => id === feed.favicon_id)?.data} />
+            <a href={cleanSiteUrl(feed.site_url)}>{feed.title}</a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Layout>
+
+<style>
+  ul {
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+  li {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--size-2);
+    padding: var(--size-1) var(--size-2);
+    transform-origin: center;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-left: 1px solid var(--paper-3);
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease;
+  }
+  li:hover,
+  li:focus-within {
+    background: var(--paper-3);
+    transform: scale(1.05);
+    border: 1px solid var(--accent-1);
+    z-index: var(--layer-5);
+  }
+  li img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+  li a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+```
+
+With that, [we've got the page all put together](/follows) 🎉

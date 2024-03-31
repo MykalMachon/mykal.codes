@@ -1,6 +1,6 @@
 ---
 // this makes it so it only builds this page once
-export const prerender = true
+export const prerender = true;
 
 import crypto from 'node:crypto';
 import Layout from '@components/layout/Layout.astro';
@@ -64,17 +64,17 @@ try {
       'Content-Type': 'application/x-www-form-urlencoded',
     },
   });
-  
+
   const results = await Promise.allSettled([feedRes, faviconRes]);
-  
-  if(results[0].status === 'rejected' || results[1].status === 'rejected') {
+
+  if (results[0].status === 'rejected' || results[1].status === 'rejected') {
     throw new Error('failed to fetch feeds');
   }
 
   feedData = await results[0].value.json();
   faviconData = await results[1].value.json();
 } catch (err) {
-  console.error('failed to fetch feeds')
+  console.error('failed to fetch feeds');
   console.error(err);
 }
 
@@ -98,15 +98,22 @@ const cleanSiteUrl = (url: string) => {
     > if you're interested.
   </p>
   <ul>
-    { feedData != null && faviconData != null && 
-      feedData.feeds.map((feed: Feed) => {
-        return (
-          <li>
-            <img src={faviconData.favicons.find(({id}) => id === feed.favicon_id)?.data} />
-            <a href={cleanSiteUrl(feed.site_url)}>{feed.title}</a>
-          </li>
-        );
-      })
+    {
+      feedData != null &&
+        faviconData != null &&
+        feedData.feeds.map((feed: Feed) => {
+          return (
+            <li>
+              <img
+                src={
+                  faviconData.favicons.find(({ id }) => id === feed.favicon_id)
+                    ?.data
+                }
+              />
+              <a href={cleanSiteUrl(feed.site_url)}>{feed.title}</a>
+            </li>
+          );
+        })
     }
   </ul>
 </Layout>
@@ -117,6 +124,11 @@ const cleanSiteUrl = (url: string) => {
     list-style-type: none;
     grid-template-columns: 1fr 1fr;
     padding: 0;
+  }
+  @media screen and (max-width: 568px) {
+    ul {
+      grid-template-columns: 1fr;
+    }
   }
   li {
     position: relative;
