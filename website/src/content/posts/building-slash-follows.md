@@ -1,7 +1,7 @@
 ---
 title: Building /follows
 description: A page the highlights who's blogs I'm following
-type: note
+type: post
 pubDate: '2024-03-29'
 tags:
 - webdev
