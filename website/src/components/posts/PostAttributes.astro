@@ -13,7 +13,6 @@ const { post } = Astro.props;
 const rt = readingTime(post.body).text;
 ---
 
-<!-- THIS IS -->
 <div class="post-attributes">
   {
     post.data.pubDate && (
@@ -52,9 +51,34 @@ const rt = readingTime(post.body).text;
 </div>
 
 <style>
-  * {
+  :is(a, span) {
     font-family: var(--font-body);
     font-size: var(--font-size-base);
+  }
+
+  @keyframes scale-attributes {
+    50% {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    100% {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-8px);
+      height: 0;
+      padding: 0;
+    }
+  }
+
+  @supports (animation-timeline: scroll()){
+    @media (prefers-reduced-motion: no-preference) {
+      .post-attributes {
+        animation: scale-attributes both;
+        animation-timeline: scroll();
+        animation-range: 0 110px;
+      }
+    }
   }
 
   svg {
