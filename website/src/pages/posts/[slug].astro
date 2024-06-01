@@ -23,9 +23,9 @@ const { Content, headings } = await post.render();
 const hasSplitLayout = headings.length != 0;
 ---
 
-<Layout title={post.data.title} description={post.data.description}>
+<Layout title={post.data.title} description={post.data.description || ''}>
   <div class={`post-layout ${hasSplitLayout ? 'post-layout--split' : ''}`}>
-    <header data-pagefind-body>
+    <header>
       {
         post.data.type == 'link' ? (
           <h1>
@@ -49,7 +49,7 @@ const hasSplitLayout = headings.length != 0;
         ) : null
       }
     </header>
-    <main data-pagefind-body>
+    <main>
       <Content />
     </main>
     <aside>
@@ -83,6 +83,21 @@ const hasSplitLayout = headings.length != 0;
 </Layout>
 
 <style>
+  @keyframes scale-h1 {
+    to {
+      font-size: var(--font-size-base);
+      margin-top: var(--size-3);
+      margin-bottom: var(--size-1);
+    }
+  }
+
+  @keyframes scale-byline {
+    to {
+      font-size: var(--font-size-sm);
+      margin: var(--size-3) 0;
+    }
+  }
+
   .post-layout {
     width: 100%;
     display: grid;
@@ -96,14 +111,10 @@ const hasSplitLayout = headings.length != 0;
 
   header {
     grid-column: 1 / -1;
+    background: var(--paper-2);
     border-bottom: 1px solid var(--paper-4);
   }
 
-  footer {
-    grid-column: 1 / -1;
-    padding: var(--size-4) 0;
-    border-top: 1px solid var(--paper-4);
-  }
 
   header section.post-tags {
     margin-top: var(--size-6);
@@ -129,6 +140,32 @@ const hasSplitLayout = headings.length != 0;
     border-bottom: 1px solid var(--paper-4);
   }
 
+  @supports (animation-timeline: scroll()){
+    @media (prefers-reduced-motion: no-preference) {
+      header {
+        position: sticky;
+        z-index: 5;
+        top: 0;
+      }
+      
+      header h1 {
+        animation: scale-h1 both;
+        animation-timeline: scroll();
+        animation-range: 0 220px;
+      }
+
+      header p.byline {
+        animation: scale-byline both;
+        animation-timeline: scroll();
+        animation-range: 0 220px;
+      }
+
+      aside {
+        top: calc(var(--size-3) + 98px);
+      }
+    }
+  }
+
   .post-tags ul {
     display: flex;
     flex-wrap: wrap;
@@ -147,6 +184,12 @@ const hasSplitLayout = headings.length != 0;
   .post-tags ul li a {
     font-size: var(--font-size-sm);
     color: var(--accent-2);
+  }
+
+  footer {
+    grid-column: 1 / -1;
+    padding: var(--size-4) 0;
+    border-top: 1px solid var(--paper-4);
   }
 
   @media screen and (max-width: 950px) {
