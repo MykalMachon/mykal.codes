@@ -171,6 +171,21 @@ button, input[type="submit"] {
   cursor: pointer;
 }
 
+blockquote {
+  background: var(--accent-1);
+  border-left: 4px solid var(--accent-3);
+  padding: var(--size-1) var(--size-3);
+}
+
+blockquote * {
+  font-family: var(--font-heading);
+  color: var(--ink-1);
+}
+
+blockquote ul {
+  margin: var(--size-3) 0;
+}
+
 /* basic layout  */
 .wrapper {
   max-width: 100%;
