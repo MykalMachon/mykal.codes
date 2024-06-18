@@ -25,7 +25,7 @@ const hasSplitLayout = headings.length != 0;
 
 <Layout title={post.data.title} description={post.data.description || ''}>
   <div class={`post-layout ${hasSplitLayout ? 'post-layout--split' : ''}`}>
-    <header>
+    <header class="post-header">
       {
         post.data.type == 'link' ? (
           <h1>
@@ -37,7 +37,8 @@ const hasSplitLayout = headings.length != 0;
       }
       <p class="byline">{post.data.description}</p>
       <PostAttributes post={post} />
-
+    </header>
+    <main>
       {
         post.data.heroImage ? (
           <ResponsiveImage
@@ -48,8 +49,6 @@ const hasSplitLayout = headings.length != 0;
           />
         ) : null
       }
-    </header>
-    <main>
       <Content />
     </main>
     <aside>
@@ -114,7 +113,6 @@ const hasSplitLayout = headings.length != 0;
     background: var(--paper-2);
     border-bottom: 1px solid var(--paper-4);
   }
-
 
   header section.post-tags {
     margin-top: var(--size-6);
