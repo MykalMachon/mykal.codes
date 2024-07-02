@@ -5,7 +5,7 @@ import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 export const prerender = true;
 
-import me from '../assets/me.jpg';
+import me from '../assets/me.png';
 
 const allPosts = await getCollection('posts', ({ data }) => {
   return data.draft !== true;
@@ -46,7 +46,8 @@ const recentPosts = allPosts
           <i
             >{recentPosts[0].data.type} - {
               recentPosts[0].data.pubDate.toDateString()
-            }</i>
+            }</i
+          >
         </p>
         <p>{recentPosts[0].data.description}</p>
         <p><a href={`/posts/${recentPosts[0].slug}`}>Read more</a></p>
@@ -79,25 +80,16 @@ const recentPosts = allPosts
     padding: var(--size-3);
   }
 
-  header::after{
-    content: "";
+  header::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     width: 100%;
     z-index: -1;
-
-    background-position-y: -9px;
-    background-size: 100px 100px;
-    background-image: url(/bg-grid.png);
-    -webkit-mask-image: linear-gradient(to bottom,transparent,10%,white,90%,transparent);
-  }
-
-  @media (prefers-color-scheme: light) {
-    header::after {
-      filter: invert(1);
-    }
+    background-size: 345px 132.48px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 345 132.48" width="345" height="132.48" style="opacity: 0.2; filter: grayscale(0.6);"><text x="0em" y="1em" font-size="46" transform="rotate(30 28.75 27.599999999999998)">☕️</text><text x="1.5em" y="2.2em" font-size="46" transform="rotate(30 97.75 82.8)">🥐</text><text x="3em" y="1em" font-size="46" transform="rotate(30 166.75 27.599999999999998)">👨‍💻</text><text x="4.5em" y="2.2em" font-size="46" transform="rotate(30 235.75 82.8)">⌨️</text><text x="6em" y="1em" font-size="46" transform="rotate(30 304.75 27.599999999999998)">📖</text></svg>');
   }
 
   header img {
@@ -122,7 +114,7 @@ const recentPosts = allPosts
     padding: var(--size-3);
     transition:
       border-color 0.2s ease-out,
-      transform 0.3s var(--ease-out-3), 
+      transform 0.3s var(--ease-out-3),
       box-shadow 0.2s ease-out;
   }
 
