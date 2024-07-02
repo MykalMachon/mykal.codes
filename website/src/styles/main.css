@@ -48,29 +48,30 @@
   --ink-3: var(--gray-9);
   --ink-4: var(--gray-7);
 
-  --accent-1: var(--blue-8);
-  --accent-2: var(--blue-7);
-  --accent-3: var(--blue-5);
-  --accent-4: var(--blue-3);
+  --accent-1: var(--green-8);
+  --accent-2: var(--green-7);
+  --accent-3: var(--green-5);
+  --accent-4: var(--green-3);
 }
 
 /* query selector for dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper-1: var(--gray-12);
-    --paper-2: var(--gray-11);
-    --paper-3: var(--gray-9);
-    --paper-4: var(--gray-8);
+    --paper-1: var(--stone-12);
+    --paper-2: var(--stone-11);
+    --paper-3: var(--stone-9);
+    --paper-4: var(--stone-8);
 
-    --ink-1: var(--gray-1);
-    --ink-2: var(--gray-3);
-    --ink-3: var(--gray-4);
-    --ink-4: var(--gray-5);
+    --ink-1: var(--stone-1);
+    --ink-2: var(--stone-3);
+    --ink-3: var(--stone-4);
+    --ink-4: var(--stone-5);
 
-    --accent-1: var(--indigo-6);
-    --accent-2: var(--indigo-5);
-    --accent-3: var(--indigo-4);
-    --accent-4: var(--indigo-3);
+    --accent-0: var(--green-9); 
+    --accent-1: var(--green-6);
+    --accent-2: var(--green-5);
+    --accent-3: var(--green-4);
+    --accent-4: var(--green-3);
   }
 }
 
@@ -172,8 +173,8 @@ button, input[type="submit"] {
 }
 
 blockquote {
-  background: var(--accent-1);
-  border-left: 4px solid var(--accent-3);
+  background: var(--accent-0);
+  border-left: 4px solid var(--accent-1);
   padding: var(--size-1) var(--size-3);
 }
 
