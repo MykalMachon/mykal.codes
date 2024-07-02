@@ -170,24 +170,24 @@ const hasSplitLayout = headings.length != 0;
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: var(--size-3);
+    gap: var(--size-2);
   }
 
   .post-tags ul li {
-    padding: var(--size-1);
-    background: var(--paper-3);
+    padding: 0 var(--size-1);
+    background: var(--paper-2);
+    border: 1px solid var(--paper-4);
     border-radius: var(--radius-2);
   }
 
   .post-tags ul li a {
     font-size: var(--font-size-sm);
-    color: var(--accent-2);
+    color: var(--color-1);
   }
 
   footer {
     grid-column: 1 / -1;
-    padding: var(--size-4) 0;
-    border-top: 1px solid var(--paper-4);
+    /* border-top: 1px solid var(--paper-4); */
   }
 
   @media screen and (max-width: 950px) {
