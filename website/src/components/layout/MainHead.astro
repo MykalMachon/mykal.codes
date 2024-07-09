@@ -9,8 +9,8 @@ import { ViewTransitions } from 'astro:transitions';
 const { title, description } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-// import styles 
-import "open-props/open-props.min.css";
+// import styles
+import 'open-props/open-props.min.css';
 import '@styles/main.css';
 ---
 
@@ -45,6 +45,39 @@ import '@styles/main.css';
       src="https://stats.tbx.sh/script.js"
       data-website-id="9cc92a59-874f-425f-8dc3-ec11fa52a542"
     />
+  )
+}
+<!-- Turnstile Analytics (made by me! hehe) -->
+{
+  import.meta.env.MODE === 'production' && (
+  <script type="text/javascript">
+  const sendPageView = async () => {
+    const response = await fetch('https://turnstile.mykal.codes/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        type: 'view',
+        referrer: document.referrer,
+        hostname: window.location.hostname,
+        screen: `${window.screen.width}x${window.screen.height}`,
+        pageTitle: document.title,
+        pageUrl: window.location.pathname,
+      }),
+    });
+    if (!response.ok) {
+      console.error('Failed to send page view to Turnstile Analytics');
+    }
+    const data = await response.json();
+    if (data.error) {
+      console.error('Failed to send page view to Turnstile Analytics');
+    }
+  };
+
+  // see https://docs.astro.build/en/guides/view-transitions/#astropage-load
+  document.addEventListener('astro:page-load', sendPageView);
+</script>
   )
 }
 <!-- Web mentions -->
