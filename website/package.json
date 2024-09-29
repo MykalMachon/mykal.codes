@@ -11,9 +11,9 @@
     "info": "astro info"
   },
   "dependencies": {
-    "@astrojs/node": "^8.2.5",
+    "@astrojs/node": "^8.3.4",
     "@uidotdev/usehooks": "^2.3.1",
-    "astro": "^4.9.2",
+    "astro": "^4.15.9",
     "astro-icon": "^0.8.1",
     "markdown-it": "^13.0.2",
     "minisearch": "^6.3.0",
@@ -23,10 +23,10 @@
     "react-snowfall": "^1.2.1"
   },
   "devDependencies": {
-    "@astrojs/netlify": "^5.2.1",
-    "@astrojs/react": "^3.4.0",
-    "@astrojs/rss": "^4.0.6",
-    "@astrojs/sitemap": "^3.1.5",
+    "@astrojs/netlify": "^5.5.3",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/rss": "^4.0.7",
+    "@astrojs/sitemap": "^3.1.6",
     "@types/markdown-it": "^13.0.1",
     "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
