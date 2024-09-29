@@ -138,31 +138,6 @@ const hasSplitLayout = headings.length != 0;
     border-bottom: 1px solid var(--paper-4);
   }
 
-  @supports (animation-timeline: scroll()){
-    @media (prefers-reduced-motion: no-preference) {
-      header {
-        position: sticky;
-        z-index: 5;
-        top: 0;
-      }
-      
-      header h1 {
-        animation: scale-h1 both;
-        animation-timeline: scroll();
-        animation-range: 0 140px;
-      }
-
-      header p.byline {
-        animation: scale-byline both;
-        animation-timeline: scroll();
-        animation-range: 0 140px;
-      }
-
-      aside {
-        top: calc(var(--size-3) + 98px);
-      }
-    }
-  }
 
   .post-tags ul {
     display: flex;
