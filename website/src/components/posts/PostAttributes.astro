@@ -71,16 +71,6 @@ const rt = readingTime(post.body).text;
     }
   }
 
-  @supports (animation-timeline: scroll()){
-    @media (prefers-reduced-motion: no-preference) {
-      .post-attributes {
-        animation: scale-attributes both;
-        animation-timeline: scroll();
-        animation-range: 0 110px;
-      }
-    }
-  }
-
   svg {
     width: 24px;
     height: 24px;
