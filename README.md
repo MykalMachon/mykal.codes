@@ -1,21 +1,21 @@
-# Mykal.Codes 💾
+# Mykal.Codes
 
-The Mykal.Codes website, where I post about whatever I want.
-
-## Main Features
-
-- **🏠 Home page:** shows off recent posts
-- **🤔 About page:** gives a brief intro on me and my background
-- **✍🏻 Posts page:** archieve of all my posts sorted by date, and sortable by tag
+The personal website of Mykal Machon; where I post about whatever I want, whenever I want!
 
 ## Stack
 
-- SSG: [Astro](https://astro.build)
-  - Blog content is all markdown
-  - Most pages are either MDX or [Astro](https://astro.build) files
-  - Analytics are collected and displayed via [Umami](https://umami.is)
-- Hosting: [Railway](https://Railway.app)
-  - easy hosting
+### Static Site Generator: [Astro](https://astro.build)
+
+Astro is my favourite way to build content sites. There, I said it! (it was never a secret).
+
+- Blog content is all markdown in `website/src/content/posts/`
+- Web Analytics are homegrown with [a simple go webapp](https://turnstile.mykal.codes/).
+
+### Hosting: [Railway](https://Railway.app)
+
+Railway just builds and ships the dang thing with node! very simple. 
+
+I *was* hosting with Netlify but I hit their free usage limit and railway has usage based billing from zero to whatever you use.
 
 ## Contributing
 
