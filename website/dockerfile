@@ -6,4 +6,6 @@ COPY . .
 
 RUN deno install 
 
+RUN deno task build
+
 CMD ["deno", "run", "-A", "/app/dist/server/entry.mjs"]
