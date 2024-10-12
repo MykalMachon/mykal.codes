@@ -6,4 +6,4 @@ COPY . .
 
 RUN deno install 
 
-CMD ["deno", "run", "-A", "./dist/server/entry.mjs"]
+CMD ["deno", "run", "-A", "/app/dist/server/entry.mjs"]
