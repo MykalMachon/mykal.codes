@@ -1,0 +1,9 @@
+FROM denoland/deno:2.0.0 
+
+WORKDIR /app 
+
+COPY . .
+
+RUN deno install 
+
+CMD ["deno", "run", "-A", "./dist/server/entry.mjs"]
