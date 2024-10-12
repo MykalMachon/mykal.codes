@@ -1,11 +1,14 @@
-FROM denoland/deno:2.0.0 
+FROM node:20.18.0 AS build 
 
-WORKDIR /app 
-
+WORKDIR /app
 COPY . .
 
-RUN deno install 
+RUN npm install
+RUN npm run build
 
-RUN deno task build
+FROM denoland/deno:2.0.0 AS runtime 
+
+WORKDIR /app 
+COPY --from=build /app/dist /app/dist
 
 CMD ["deno", "run", "-A", "/app/dist/server/entry.mjs"]
