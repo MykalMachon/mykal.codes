@@ -4,9 +4,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "start:prod": "node ./dist/server/entry.mjs",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "deno run -A ./dist/server/entry.mjs",
     "format": "deno fmt && prettier --write .",
     "info": "astro info"
   },
