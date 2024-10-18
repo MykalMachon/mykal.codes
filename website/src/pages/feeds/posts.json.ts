@@ -22,6 +22,7 @@ const getPostData = async (site: string) => {
 export const GET = async ({ site }: APIContext) => {
   const postData = await getPostData(site?.toString() || 'https://mykal.codes/');
   return new Response(JSON.stringify(postData), {
+    status: 200,
     headers: {
       'content-type': 'application/json',
       'access-control-allow-origin': '*', // enable other clients to grab the data

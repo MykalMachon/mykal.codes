@@ -1,5 +1,0 @@
----
-// the garden route is gone, redirect to posts
-const { slug } = Astro.params; 
-return Astro.redirect(`/posts?from=${encodeURIComponent(`https://mykal.codes/garden/${slug}`)}`, 301)
----

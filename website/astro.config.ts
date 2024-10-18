@@ -7,6 +7,14 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://mykal.codes',
+  output: "hybrid",
+  integrations: [sitemap(), react()],
+  redirects: {
+    '/garden/[...slug]': '/posts/[...slug]',
+  },
+  adapter: deno({
+    port: parseInt(process.env.PORT || "4321"),
+  }),
   build: {
     inlineStylesheets: "auto"
   },
@@ -16,9 +24,5 @@ export default defineConfig({
       wrap: false
     }
   },
-  integrations: [sitemap(), react()],
-  output: "server",
-  adapter: deno({
-    port: 1234
-  }),
+
 });
