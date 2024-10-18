@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 
-import deno from "@deno/astro-adapter";
 import react from "@astrojs/react";
 import sitemap from '@astrojs/sitemap';
+import node from '@astrojs/node';
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,8 +12,8 @@ export default defineConfig({
   redirects: {
     '/garden/[...slug]': '/posts/[...slug]',
   },
-  adapter: deno({
-    port: parseInt(process.env.PORT || "4321"),
+  adapter: node({
+    mode: 'standalone',
   }),
   build: {
     inlineStylesheets: "auto"
