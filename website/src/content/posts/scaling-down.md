@@ -3,7 +3,7 @@ title: "Scaling Down"
 customSlug: "scaling-down"
 type: 'post'
 description: "Why I'm scaling down my freelancing business, Tinybox"
-pubDate: "2021-05-01"
+pubDate: 2021-05-01
 heroImage: '../../assets/posts/scaling-down.avif'
 draft: false
 tags: ["personal"]

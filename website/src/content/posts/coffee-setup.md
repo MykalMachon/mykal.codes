@@ -4,7 +4,7 @@ customSlug: coffee-setup
 type: 'post'
 description: I've gotten into Coffee lately (cliché, I know) and wanted to summarize
   my coffee setup.
-pubDate: "2022-05-10"
+pubDate: 2022-05-10
 heroImage: '../../assets/posts/coffee-setup.avif'
 tags:
 - recipes

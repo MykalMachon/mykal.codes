@@ -3,7 +3,7 @@ title: "New Job at UFV!"
 type: 'post'
 customSlug: "new-job-at-ufv"
 description: "Moving from web developer, to systems analyst"
-pubDate: "2021-05-10"
+pubDate: 2021-05-10
 heroImage: '../../assets/posts/starting-at-ufv.avif'
 draft: false
 tags: ["personal"]

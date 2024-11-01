@@ -3,7 +3,7 @@ title: 'New Years 2023'
 customSlug: 'new-years-2023'
 type: 'photo'
 draft: false
-pubDate: '2023-01-01'
+pubDate: 2023-01-01
 location: 'Chilliwack, BC, Canada'
 tags:
   - 'personal'

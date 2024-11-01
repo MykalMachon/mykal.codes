@@ -3,7 +3,7 @@ title: MIT, Sans-elon
 customSlug: mit-sans-selon
 description: The MIT license, but Elon Musk and all of his companies are explicitly
   denied usage.
-pubDate: "2022-11-15T01:00:00.000+00:00"
+pubDate: 2022-11-15
 type: 'post'
 heroImage: '../../assets/posts/mit-sans-elon.avif'
 tags:

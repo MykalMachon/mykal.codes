@@ -2,7 +2,7 @@
 title: Intro to Large Language Models
 description: A great intro to LLMs by OpenAI's Andrej Karpathy
 type: link
-pubDate: "2023-11-23 23:00"
+pubDate: 2023-11-23
 draft: false
 tags:
 - webdev

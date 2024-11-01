@@ -4,7 +4,7 @@ customSlug: websites-and-wes-anderson
 type: 'post'
 description: maybe Wes Anderson films and websites have more in common than you'd
   think.
-pubDate: "2022-12-05T08:00:00Z"
+pubDate: 2022-12-05
 heroImage: '../../assets/posts/websites-and-wes-anderson.avif'
 tags:
 - webdev

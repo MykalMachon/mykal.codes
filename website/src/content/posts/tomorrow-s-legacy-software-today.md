@@ -4,7 +4,7 @@ type: 'post'
 customSlug: tomorrows-legacy-software-today
 description: Even if you do everything right, time will make everything legacy software
   eventually.
-pubDate: "2022-09-09T07:00:00.000+00:00"
+pubDate: 2022-09-09
 tags:
 - webdev
 draft: true

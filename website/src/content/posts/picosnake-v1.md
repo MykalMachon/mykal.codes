@@ -1,7 +1,7 @@
 ---
 title: PICO-Snake
 description: A snake clone I put together in PICO-8
-pubDate: "2024-06-01T15:40:00Z"
+pubDate: 2024-06-01
 type: 'post'
 tags:
 - gamedev

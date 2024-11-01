@@ -2,13 +2,13 @@
 title: My AeroPress Latte
 type: 'post'
 description: An AeroPress Latte recipe for the AeroPress GO!
-pubDate: "2022-07-15"
+pubDate: 2022-07-15
 heroImage: '../../assets/posts/aeropress-latte.avif'
 tags:
 - recipes
 - coffee
 draft: false
----P
+---
 
 A week or so ago I was scrolling around on twitter and came across [a tweet mentioning an "AeroPress Latte"](https://twitter.com/TheCodePixi/status/1545476517202894851). I _love_ lattes, but only really have the equipment for pour over or immersion brew coffee at home... or so I thought!
 

@@ -3,7 +3,7 @@ title: "Telegraf and InfluxDB for server monitoring"
 type: 'post'
 customSlug: "telegraf-and-influxdb-for-server-monitoring"
 description: "A quick guide on system monitoring with Telegraf, and Influx DB."
-pubDate: "2022-07-21"
+pubDate: 2022-07-21
 heroImage: '../../assets/posts/telegraf-and-influx-for-server-monitoring.avif'
 tags: ["self-hosting", "docker"]
 draft: false

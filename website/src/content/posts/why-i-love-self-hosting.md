@@ -3,7 +3,7 @@ title: Why I Love Self-Hosting
 customSlug: why-i-love-self-hosting
 type: 'post'
 description: A writeup on why I love self-hosting complete with drawbacks.
-pubDate: "2022-07-04"
+pubDate: 2022-07-04
 heroImage: '../../assets/posts/why-i-love-self-hosting.avif'
 draft: false
 tags:

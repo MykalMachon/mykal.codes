@@ -1,7 +1,7 @@
 ---
 title: Photos as notes; some thoughts on UX
 description: I often use photos as notes even though I have a perfectly fine notes app on my phone. Why?
-pubDate: "2023-11-15"
+pubDate: 2023-11-15
 draft: false
 tags:
   - ux

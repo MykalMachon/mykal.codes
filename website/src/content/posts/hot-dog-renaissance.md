@@ -2,7 +2,7 @@
 title: 'Hot Dog Renaissance'
 type: 'photo'
 draft: false
-pubDate: "2023-02-04"
+pubDate: 2023-02-04
 location: 'University of the Fraser Valley'
 tags:
   - 'personal'

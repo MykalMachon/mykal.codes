@@ -2,7 +2,7 @@
 title: The End of Front-End Development
 description: A great blog post that sums up how I feel about GPT models.
 type: link
-pubDate: "2023-03-21T22:00"
+pubDate: 2023-03-21
 draft: false
 tags:
 - ai

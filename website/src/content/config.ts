@@ -4,7 +4,7 @@ const posts = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
-      pubDate: z.string().transform((val) => new Date(val)),
+      pubDate: z.date(),
       type: z.enum(['post', 'photo', 'note', 'link']),
       draft: z.boolean(),
       tags: z.optional(z.array(z.string())),

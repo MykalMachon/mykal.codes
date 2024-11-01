@@ -3,7 +3,7 @@ title: 'Improving Anchor Links'
 description: 'This post outlines a few little tricks you can use with your anchor links'
 type: 'post'
 customSlug: 'improving-anchor-links'
-pubDate: "2022-06-24"
+pubDate: 2022-06-24
 heroImage: '../../assets/posts/improving-anchor-links.avif'
 tags: ['webdev']
 draft: false

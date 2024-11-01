@@ -3,7 +3,7 @@ title: "What's Your Go-To Web Stack"
 customSlug: "whats-your-goto-web-stack"
 type: 'post'
 description: "An exercise in exploring the stack I'm currently comfy with."
-pubDate: "2022-05-16"
+pubDate: 2022-05-16
 heroImage: "../../assets/posts/whats-your-goto-web-stack.avif"
 draft: false
 tags: ["webdev"]

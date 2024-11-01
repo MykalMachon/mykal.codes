@@ -3,7 +3,7 @@ title: 'AOC 2022: Solution for Day 4'
 customSlug: aoc-2022-day-4
 type: 'post'
 description: My solution for advent-of-code day 4
-pubDate: "2022-12-05T16:06:00Z"
+pubDate: 2022-12-05
 tags:
 - advent-of-code
 - python
@@ -25,7 +25,7 @@ steps for part 1 of today's challenge:
 2. look at each pair and create ranges based on assignments
 3. use sets to find if either set is a subset of the other 
 4.1 if either of the sets are subsets, return True, else False.
-5. return the sum of sets that are subsets of their pair.
+1. return the sum of sets that are subsets of their pair.
 
 steps for part 2 of today's challenge:
 1. use steps 1-2 of the above

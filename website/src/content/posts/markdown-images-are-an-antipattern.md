@@ -2,7 +2,7 @@
 title: Markdown Images are an anti-pattern
 description: Thank you, Dave Rupert.
 type: link
-pubDate: "2023-05-25 20:00"
+pubDate: 2023-05-25
 draft: false
 tags:
 - webdev

@@ -2,7 +2,7 @@
 title: 'Preparing for Battlesnake'
 customSlug: 'preparing-for-battlesnake'
 description: 'Lets review my goals for this years Battlesnake competition.'
-pubDate: "2019-02-18"
+pubDate: 2019-02-18
 type: 'post'
 heroImage: '../../assets/posts/preparing-for-battlesnake.avif'
 draft: false
