@@ -13,7 +13,6 @@ const SnowFallHeader = () => {
   if (showSnow) {
     return (
       <Snowfall color={'#fff'} radius={[0.2, 0.5]} />
-
     )
   }
   else {

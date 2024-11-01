@@ -19,16 +19,7 @@ const recentPosts = allPosts
 ---
 
 <Layout title="Home" description="The home page of Mykal Machon!" type="home">
-  <header class="container">
-    <div class="image">
-      <Image
-        width="500"
-        height="500"
-        src={me}
-        alt="Mykal Machon"
-        format={'webp'}
-      />
-    </div>
+  <header>
     <div class="content">
       <h1>Mykal Machon</h1>
       <p>
@@ -71,38 +62,19 @@ const recentPosts = allPosts
   header {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
+    grid-template-columns: 1fr;
+    align-items: start;
     gap: var(--size-6);
     border-bottom: 1px solid var(--paper-3);
-    padding: calc(var(--size-3) + var(--size-2)) var(--size-3);
     z-index: 1;
-    padding: var(--size-3);
   }
 
-  header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: -1;
-    background-size: 345px 132.48px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 345 132.48" width="345" height="132.48" style="opacity: 0.2; filter: grayscale(0.6);"><text x="0em" y="1em" font-size="46" transform="rotate(30 28.75 27.599999999999998)">☕️</text><text x="1.5em" y="2.2em" font-size="46" transform="rotate(30 97.75 82.8)">🥐</text><text x="3em" y="1em" font-size="46" transform="rotate(30 166.75 27.599999999999998)">👨‍💻</text><text x="4.5em" y="2.2em" font-size="46" transform="rotate(30 235.75 82.8)">⌨️</text><text x="6em" y="1em" font-size="46" transform="rotate(30 304.75 27.599999999999998)">📖</text></svg>');
-  }
-
-  header img {
-    border-radius: var(--radius-2);
-    border: 1px solid var(--accent-1);
-    box-shadow:
-      var(--shadow-2),
-      0 1px 3px 0 var(--accent-2),
-      0 1px 2px -1px var(--accent-4);
-    aspect-ratio: 3/4;
-    object-fit: cover;
-    margin: 0px;
-  }
+  @media screen and (max-width: 1000px) {
+    header {
+      grid-template-columns: 1fr;
+      gap: var(--size-3);
+    }
+  } 
 
   .post-callout {
     position: relative;
