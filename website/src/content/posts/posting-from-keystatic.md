@@ -28,6 +28,4 @@ console.log(`I'm using ${cms} and ${astro} to build my website!`);
 
 everything looks great from within the editor, now the real test is to see how well this gets published out to the site.&#x20;
 
-What does it do for images?
-
-![](file.png)
+What does it do for images? - okay images don't work for now. bummer! we can probably fix that though.&#x20;
