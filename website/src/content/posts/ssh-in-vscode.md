@@ -2,7 +2,7 @@
 title: Using VS Code as an SSH Client
 description: Need to edit files on your server? Just use VS Code.
 type: link
-pubDate: "2024-04-23 20:00"
+pubDate: 2024-04-23
 draft: false
 tags:
 - webdev

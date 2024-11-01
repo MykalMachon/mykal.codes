@@ -2,7 +2,7 @@
 title: 'Spicy Peanut Bowl 🥜'
 type: 'note'
 description: 'A recipe for one of my favourite feel-good meals.'
-pubDate: "2023-01-28"
+pubDate: 2023-01-28
 draft: false
 tags: ['recipe']
 ---

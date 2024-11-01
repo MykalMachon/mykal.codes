@@ -3,7 +3,7 @@ title: "Autosave on the Web"
 customSlug: "autosave-on-the-web"
 type: 'post'
 description: "Using native browser APIs to autosave HTML forms"
-pubDate: "2022-02-15"
+pubDate: 2022-02-15
 heroImage: '../../assets/posts/autosave-forms.avif'
 tags: ["webdev"]
 draft: false

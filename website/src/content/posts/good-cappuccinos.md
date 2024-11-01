@@ -1,6 +1,6 @@
 ---
 title: 'Good Cappuccinos'
-pubDate: "2023-01-21"
+pubDate: 2023-01-21
 type: 'photo'
 draft: false
 location: 'Abbotsford, BC'

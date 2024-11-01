@@ -3,7 +3,7 @@ title: 'AOC 2022: Solution for Day 3'
 customSlug: aoc-2022-day-3
 type: 'post'
 description: My solution for advent-of-code day 3
-pubDate: "2022-12-05T07:35:00Z"
+pubDate: 2022-12-05
 tags:
 - advent-of-code
 - python
@@ -22,8 +22,8 @@ steps for pt. 1 of today's challenge:
 1. break down the rucksacks into two even pieces. 
 2. parse through each of these two even pieces and find a common character
 2.1 this could probably be done with a map of some sort
-3. rank all of these items according to the priority system
-4. sum the ranks fo all of these items
+1. rank all of these items according to the priority system
+2. sum the ranks fo all of these items
 """
 
 from typing import List

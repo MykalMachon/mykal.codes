@@ -2,7 +2,7 @@
 title: 'Cabin on an Island'
 type: 'photo'
 draft: false
-pubDate: "2023-02-22"
+pubDate: 2023-02-22
 location: 'an Island'
 photos:
   - url: 'https://res.cloudinary.com/mykalcodes/image/upload/v1677125240/Mykal%20Codes/PXL_20230218_211945534.jpg'

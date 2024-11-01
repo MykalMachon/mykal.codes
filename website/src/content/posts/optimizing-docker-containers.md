@@ -3,7 +3,7 @@ title: Notes on optimizing docker images
 customSlug: notes-on-optimizing-docker-images
 description: 'docker images are relatively easy to get up and going, but can often
   be heavily optimized. '
-pubDate: "2022-07-25T23:00:00.000+00:00"
+pubDate: 2022-07-25
 type: 'post'
 heroImage: '../../assets/posts/optimizing-docker-containers.avif'
 tags:

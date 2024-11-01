@@ -1,7 +1,7 @@
 ---
 title: 'Google Colab'
 type: 'link'
-pubDate: "2023-04-21"
+pubDate: 2023-04-21
 draft: false
 url: https://colab.research.google.com/notebooks/intro.ipynb
 ---

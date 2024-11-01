@@ -3,7 +3,7 @@ title: Kurzgesagt - In a Nutshell
 description: One of my favourite YouTube channels.
 customSlug: ''
 type: link
-pubDate: "2023-03-28 9:00"
+pubDate: 2023-03-28
 draft: false
 tags:
 - personal

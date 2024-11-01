@@ -2,7 +2,7 @@
 title: 'How to test NGINX configs locally'
 type: 'post'
 description: How I quickly validate NGINX configs locally via the /etc/hosts file.
-pubDate: "2024-10-30T23:00:00Z"
+pubDate: 2024-10-30
 tags:
 - devops
 - webdev

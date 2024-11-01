@@ -1,7 +1,7 @@
 ---
 title: 'The Twelve-Factor App'
 type: 'link'
-pubDate: "2024-08-09"
+pubDate: 2024-08-09
 draft: false
 url: https://12factor.net/
 tags: ['devops']

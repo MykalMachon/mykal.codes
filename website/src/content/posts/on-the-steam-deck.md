@@ -2,7 +2,7 @@
 title: On the Steam Deck
 customSlug: steam-deck
 description: My initial thoughts on the steam deck after a few weeks with it
-pubDate: "2022-09-28T16:00:00.000+00:00"
+pubDate: 2022-09-28
 type: 'post'
 heroImage: '../../assets/posts/on-the-steam-deck.avif'
 tags:

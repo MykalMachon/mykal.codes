@@ -3,7 +3,7 @@ title: "Get any Shopify product as JSON"
 type: 'post'
 customSlug: "shopify-as-json"
 description: "If you ever need to pull Shopify product info, this tip will be a huge help."
-pubDate: "2022-07-19"
+pubDate: 2022-07-19
 heroImage: '../../assets/posts/shopify-as-json.avif'
 draft: false
 tags: ["webdev", "shopify"]

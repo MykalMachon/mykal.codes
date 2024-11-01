@@ -3,7 +3,7 @@ title: "Remembering Ash"
 customSlug: "remembering-ash-photos"
 type: 'photo'
 draft: false
-pubDate: "2022-08-01"
+pubDate: 2022-08-01
 location: "Home"
 tags:
   - 'personal'

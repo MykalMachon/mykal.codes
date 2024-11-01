@@ -4,7 +4,7 @@ customSlug: flipnote-hatena
 type: 'post'
 description: A friend of mine shared a Flipnote Hatena archive site that sent me down
   a rabbit hole.
-pubDate: "2022-12-29T08:00:00.000+00:00"
+pubDate: 2022-12-29
 heroImage: '../../assets/posts/flipnote-hatena.avif'
 tags:
 - personal
