@@ -1,4 +1,6 @@
 ---
+export const prerender = false;
+
 import Layout from '@components/layout/Layout.astro';
 import MiniSearch from 'minisearch';
 import SearchForm from '../components/search/SearchForm.astro';
@@ -16,10 +18,11 @@ if (Astro.request.method == 'GET'){
   const startTime = new Date();
   const url = new URL(Astro.request.url)
   query = url.searchParams.get('query');
+
   if(query){
     try{
       // fetch the list of posts 
-      const postsRes = await fetch(`${site}/feeds/posts.json`);
+      const postsRes = await fetch(`${site}feeds/posts.json`);
       if (!postsRes.ok){
         throw new Error('Could not fetch posts')
       }
