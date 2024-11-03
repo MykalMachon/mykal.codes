@@ -1,5 +1,5 @@
 ---
-pubDate: 2024-11-02
+pubDate: 2024-11-03
 title: Bots on Bluesky
 description: 'Making bots on Bluesky is super easy! '
 type: post
@@ -8,6 +8,7 @@ tags:
   - webdev
   - javascript
   - automation
+location: localhost
 ---
 I've been hanging out over on [Bluesky](https://bsky.app/profile/mykal.codes) the last few weeks. While bumming around on there, I found this library called [@skyware/bot](https://www.npmjs.com/package/@skyware/bot) and was surprised by how *simple* building out bots for the app is.
 
