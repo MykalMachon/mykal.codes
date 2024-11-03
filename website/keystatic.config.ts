@@ -1,17 +1,24 @@
 // keystatic.config.ts
 import { config, fields, collection } from '@keystatic/core';
 
-export default config({
-  storage: {
-    kind: 'github',
-    repo: 'mykalmachon/mykal.codes'
+const postRootPath = import.meta.env.MODE === 'production' ? 'website/src/content' : 'src/content';
+const postImageRootPath = import.meta.env.MODE === 'production' ? 'website/src/assets/posts' : 'src/assets/posts';
 
+export default config({
+  ui: {
+    brand: {
+      name: 'mykal.codes',
+    }
+  },
+  storage: {
+    kind: import.meta.env.MODE === 'production' ? 'github' : 'local',
+    repo: 'mykalmachon/mykal.codes'
   },
   collections: {
     posts: collection({
       label: 'Posts',
       slugField: 'title',
-      path: 'website/src/content/posts/*',
+      path: `${postRootPath}/posts/*`,
       columns: ['pubDate', 'type', 'draft'],
       format: { contentField: 'content' },
       entryLayout: 'content',
@@ -20,7 +27,14 @@ export default config({
         title: fields.slug({ name: { label: 'Title' } }),
         description: fields.text({ label: 'Description' }),
         heroImage: fields.image({ label: 'Hero Image' }),
-        content: fields.mdx({ label: 'Content', extension: 'md' }),
+        content: fields.mdx({
+          label: 'Content', extension: 'md', options: {
+            image: {
+              directory: postImageRootPath,
+              publicPath: `@assets/posts/`
+            }
+          }
+        }),
         type: fields.select({
           label: 'Type',
           options: [
