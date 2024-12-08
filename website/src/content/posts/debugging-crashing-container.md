@@ -1,6 +1,6 @@
 ---
 pubDate: 2024-12-07
-title: Debugging containers that fail to start
+title: Debugging Crashing Containers
 description: Use this little trick to figure out why your containers won't start
 type: post
 draft: false
