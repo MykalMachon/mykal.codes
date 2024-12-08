@@ -1,7 +1,7 @@
 ---
 pubDate: 2024-12-07
-title: Debugging short lived containers
-description: Use this little trick to debug your containerized jobs
+title: Debugging containers that fail to start
+description: Use this little trick to figure out why your containers won't start
 type: post
 draft: true
 tags:
