@@ -3,7 +3,7 @@ pubDate: 2024-12-07
 title: Debugging containers that fail to start
 description: Use this little trick to figure out why your containers won't start
 type: post
-draft: true
+draft: false
 tags:
   - devops
   - docker
