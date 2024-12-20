@@ -2,13 +2,14 @@
 pubDate: 2024-12-20
 title: My first latte leaf
 description: It only took 2 years of casual practice!
-heroImage: heroImage.jpg
 type: photo
 draft: false
 tags:
   - coffee
 location: the coffee bar
 ---
+![](@assets/posts/my-first-latte-leaf/PXL_20241214_232645912.jpg)
+
 It's not perfect, but I think I'm finally starting to get the latte art game down. I had built some bad habits early on that made it very hard for me to get any art down. Here are some adjustments I made in the last month that got me from white blob to leafy-heart-thing:&#x20;
 
 1. Get an automated milk steam wand. I don't know if my old steam wand was just bunk, but I could not get consistent milk out of it.
