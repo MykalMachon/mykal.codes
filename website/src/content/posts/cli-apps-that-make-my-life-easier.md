@@ -3,7 +3,7 @@ pubDate: 2025-03-02
 title: 'Cool Tools: CLI Edition'
 description: cool-tools-cli-edition
 type: post
-draft: true
+draft: false
 tags:
   - cli
   - devops
