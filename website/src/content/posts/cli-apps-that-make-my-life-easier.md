@@ -1,7 +1,7 @@
 ---
 pubDate: 2025-03-02
-title: Cool CLI Apps
-description: some cool command line interface apps I've been using lately
+title: 'Cool Tools: CLI Edition'
+description: cool-tools-cli-edition
 type: post
 draft: true
 tags:
@@ -12,7 +12,7 @@ I've noticed I'm spending more and more time with only a terminal open lately, w
 
 ## What my setup looks like
 
-![](@assets/posts/cool-cli-apps/image.png)
+![](@assets/posts/cli-apps-that-make-my-life-easier/image.png)
 
 I use [zsh](https://www.zsh.org/) as my primary shell with [oh-my-zsh](https://ohmyz.sh/) and a [powerlevel10k](https://github.com/romkatv/powerlevel10k/tree/master) theme with the [Meslo NerdFont](https://github.com/romkatv/powerlevel10k/blob/master/font.md) to add all the fancy icons and ligatures into my command line. I've also been messing around with plugins in zsh but am still pretty new to how that works. All I've really tried is [the zsh autcomplete plugin](https://github.com/marlonrichert/zsh-autocomplete?tab=readme-ov-file#configuration) which has been a nice to have.
 
