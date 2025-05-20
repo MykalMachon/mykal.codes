@@ -58,7 +58,18 @@ foreach ($pkg in $json.cli + $json.gui + $json.fonts) {
 }
 ```
 
-all said and done it's not too bad right? That's definitely cleaner than your typical linux dotfiles installer bash script where you have to add a bunch of custom repos and ppas for newer packages!&#x20;
+Here's an example of the `packages.json` file that contains the buckets and packages you want installed:&#x20;
+
+```json
+{
+  "buckets": ["extras", "nerd-fonts"],
+  "cli": ["git", "nodejs", "lazygit"],
+  "gui": ["vscode", "discord"],
+  "fonts": ["FiraCode-NF"]
+}  
+```
+
+All said and done it's not too bad right? That's definitely cleaner than your typical linux dotfiles installer bash script where you have to add a bunch of custom repos and ppas for newer packages!&#x20;
 
 ## Final thoughts&#x20;
 
