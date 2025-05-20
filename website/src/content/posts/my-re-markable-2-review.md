@@ -17,7 +17,8 @@ I'm a sucker for the whole "digitial minimalism" thing and I've been trying to g
 * Writing on the reMarkable feels like a *better* version of writing on paper in my opinion. It feels extremely satisfying to use.&#x20;
 * The build quality is fantastic. The device feels almost weirdly light for how solid it is; I also really appreciate the rubber feet on the bottom to keep it in place while writing. &#x20;
 * The battery lasts for literal weeks: I've only charged the device twice in the almost 3 weeks of daily use.&#x20;
-* I love reading on the Remarkable; because it's a bigger e-ink display you can very easily read full-sized PDFs which is awesome. EPUB is cool but reading on a smaller screen means diagrams and code usually gets squished or formatted weird; not a problem here.
+* The pen feels great; I got the "Pro" pen that comes with a rubberized grip and a built-in "eraser" and I like it! Feels nice in the hand and is… just a pen! easy.&#x20;
+* I love reading on the Remarkable; because it's a bigger e-ink display you can very easily read full-sized PDFs which is awesome. EPUB on a kindle or kobo is cool but reading on a smaller screen means diagrams and code usually gets squished or formatted weird; not a problem here.
 
 ## The close-to-good
 
