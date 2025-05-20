@@ -24,7 +24,7 @@ I'm a sucker for the whole "digitial minimalism" thing and I've been trying to g
 
 ## The close-to-good
 
-* The cloud sync features feel half finished and are slow&#x20;
+* The cloud sync features feel half finished and are slow to sync.
 * The OCR or "Convert handwriting to text" feature is extremely unreliable
 * The chome extension to send articles to your remarkable, while a great idea, was not very well executed. It strips all the images out of articles and makes code snippets unreadable in my experience. I wish this was *just a little better.* As a developer I know how easy this would probably be to fix and it drives me nuts.
 
