@@ -32,7 +32,7 @@ The big one for me was that I was *constantly* prompted for "A Local Administrat
 
 ## The install script&#x20;
 
-From there, all we had to do was some Powershell scripting to get everything up and running. I'll include a simplified version of my script here and a link to th repo if you want to take a look at the nitty gritty + some other terminal styling I do.&#x20;
+From there, all we had to do was some Powershell scripting to get everything up and running. I'll include a simplified version of my script below, [but here's a link to the repo if you want to take a look at the nitty gritty + some other terminal styling I do](https://github.com/MykalMachon/dotfiles/tree/main/windows).&#x20;
 
 ```powershell
 # Read a list of packages that I want to install via scoop
