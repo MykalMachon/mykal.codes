@@ -8,7 +8,7 @@ tags:
   - review
   - notes
 ---
-I got a reMarkable 2 as a gift from my team at work after coming back from my paternity leave this year and have been using it for the past few months daily for note taking, sketching, and reading. If you haven't heard of a reMarkable before, [check out their product page for a quick summary](https://remarkable.com/store/remarkable-2).
+I got a reMarkable 2 as a gift from my team at work after coming back from my paternity leave this year and have been using it for the past few months daily for note taking, sketching, and reading. If you haven't heard of a reMarkable before, [check out their product page for a quick summary](https://remarkable.com/store/remarkable-2). TLDR: It's an e-ink&#x20;
 
 I'm a sucker for the whole "digitial minimalism" thing and I've been trying to get off the "social internet" as much as possibe lately, especially so since having a kid. With that in mind, this device was always something that interested me.&#x20;
 
@@ -19,6 +19,7 @@ I'm a sucker for the whole "digitial minimalism" thing and I've been trying to g
 * The battery lasts for literal weeks: I've only charged the device twice in the almost 3 weeks of daily use.&#x20;
 * The pen feels great; I got the "Pro" pen that comes with a rubberized grip and a built-in "eraser" and I like it! Feels nice in the hand and is… just a pen! easy.&#x20;
 * I love reading on the Remarkable; because it's a bigger e-ink display you can very easily read full-sized PDFs which is awesome. EPUB on a kindle or kobo is cool but reading on a smaller screen means diagrams and code usually gets squished or formatted weird; not a problem here.
+* Marking up and reviewing PDFs or Word Document's on the device feels great; I have often wished I could just take what's on my screen and write on it a bit, this solves that.&#x20;
 
 ## The close-to-good
 
