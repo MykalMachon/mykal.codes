@@ -8,9 +8,9 @@ tags:
   - review
   - notes
 ---
-I got a reMarkable 2 as a gift from my team at work after coming back from my paternity leave this year and have been using it for the past few months daily for note taking, sketching, and reading. If you haven't heard of a reMarkable before, [check out their product page for a quick summary](https://remarkable.com/store/remarkable-2). TLDR: It's an e-ink&#x20;
+I got a reMarkable 2 as a gift from my team at work after coming back from my paternity leave this year and have been using it for the past few months daily for note taking, sketching, and reading. If you haven't heard of a reMarkable before, [check out their product page for a quick summary](https://remarkable.com/store/remarkable-2). TLDR: It's a large format e-ink note-taking and reading device.  &#x20;
 
-I'm a sucker for the whole "digitial minimalism" thing and I've been trying to get off the "social internet" as much as possibe lately, especially so since having a kid. With that in mind, this device was always something that interested me.&#x20;
+I'm a sucker for the whole "digitial minimalism" thing and I've been trying to get off the social internet as much as possibe lately, especially since having a kid. With that in mind, this device was always something that interested me. I use my kindle all the time but have always wanted something a bit bigger for reading technical books as well.&#x20;
 
 ## The good
 
