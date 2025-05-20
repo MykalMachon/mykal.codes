@@ -20,6 +20,7 @@ I'm a sucker for the whole "digitial minimalism" thing and I've been trying to g
 * The pen feels great; I got the "Pro" pen that comes with a rubberized grip and a built-in "eraser" and I like it! Feels nice in the hand and is… just a pen! easy.&#x20;
 * I love reading on the Remarkable; because it's a bigger e-ink display you can very easily read full-sized PDFs which is awesome. EPUB on a kindle or kobo is cool but reading on a smaller screen means diagrams and code usually gets squished or formatted weird; not a problem here.
 * Marking up and reviewing PDFs or Word Document's on the device feels great; I have often wished I could just take what's on my screen and write on it a bit, this solves that.&#x20;
+* Being able to screenshare while I'm writing is awesome for work from home meetings where I need to brainstorm with people on a shared screen.&#x20;
 
 ## The close-to-good
 
@@ -34,4 +35,11 @@ I'm a sucker for the whole "digitial minimalism" thing and I've been trying to g
 * Selecting and editing text on the device is nearly impossible. It's SO HARD to select or highlight bits of text when you're in text editor mode.
 * To be honest, I'd rather they just completely remove the text editor mode and do OCR on the letters and let me search there, which brings me to my next point.
 * OCR text is not searchable! WTF! this is a digital note taking device that wants you to take handwritten notes, WHY CAN I NOT SEARCH SAID NOTES? I know, I know, just convert them to the text notes… and lose all the nuance and benefit of handwritten notes? nice!
-* I didn't think I would miss having a backlight. I was wrong. I do. Especially now that I have a little kid, reading in a dark room before bed is important and breaking out the book light isn't a great experience.&#x20;
+
+- I didn't think I would miss having a backlight. I was wrong. I do. Especially now that I have a little kid, reading in a dark room before bed is important and breaking out the book light isn't a great experience.
+
+## Conclusions&#x20;
+
+The reMarkable is a pretty solid device that has some very frustrating flaws. I feel like if they put 30% more effort into the software side it would be a near perfect note taking device.&#x20;
+
+I see myself continuing to use it but mostly for taking notes in meetings and brainstorming; I'll probably be sticking to obsidian for my journaling and longer-form note taking until they fix either the text system or if they implement a "written text" search system. &#x20;
