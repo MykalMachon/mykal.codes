@@ -26,11 +26,11 @@ After seeing all scoop has to offer it seemd like a pretty easy choice for autom
 
 ### A runner up: winget
 
-I also found winget, which is an official package manager for windows that's seen more adoption lately. It has a few drawbacks when compared to scoop.&#x20;
+I also found winget, which is an official package manager for windows that's seen more adoption lately. It comes pre-installed with windows, has a direct integration with [the Microsoft Store](https://apps.microsoft.com), and tends to have a larger share of closed-source and GUI applications.  &#x20;
 
-The big one for me was that I was *constantly* prompted for "A Local Administrator" via UAC when installing packages. While I can temporarily escalate into local admin if I need to, the process is annoying and not everyone has that option on a work laptop.
+That said, It has a few drawbacks when compared to scoop. The big one for me was that I was *constantly* prompted for "A Local Administrator" via UAC when installing packages. While I can temporarily escalate into local admin if I need to, the process is annoying and not everyone has that option on a work laptop.
 
-## The install script&#x20;
+## Automating setup with scoop.sh + powershell
 
 From there, all we had to do was some Powershell scripting to get everything up and running. I'll include a simplified version of my script below, [but here's a link to the repo if you want to take a look at the nitty gritty + some other terminal styling I do](https://github.com/MykalMachon/dotfiles/tree/main/windows).&#x20;
 
