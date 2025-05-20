@@ -35,8 +35,8 @@ I'm a sucker for the whole "digitial minimalism" thing and I've been trying to g
 * Selecting and editing text on the device is nearly impossible. It's SO HARD to select or highlight bits of text when you're in text editor mode.
 * To be honest, I'd rather they just completely remove the text editor mode and do OCR on the letters and let me search there, which brings me to my next point.
 * OCR text is not searchable! WTF! this is a digital note taking device that wants you to take handwritten notes, WHY CAN I NOT SEARCH SAID NOTES? I know, I know, just convert them to the text notes… and lose all the nuance and benefit of handwritten notes? nice!
-
-- I didn't think I would miss having a backlight. I was wrong. I do. Especially now that I have a little kid, reading in a dark room before bed is important and breaking out the book light isn't a great experience.
+* I didn't think I would miss having a backlight. I was wrong. I do. Especially now that I have a little kid, reading in a dark room before bed is important and breaking out the book light isn't a great experience.
+* The ecosystem lock-in is very frustrating. There's no good way to get your data off the device and reMarkable doesn't support any third party apps or extensions really. If I could hook this thing up to Obsidian via an integration I would be SOLD HARD. Unfortunately, the device is very locked down.&#x20;
 
 ## Conclusions&#x20;
 
