@@ -10,11 +10,11 @@ tags:
 ---
 I just setup a work laptop and and took the chance to look into what setting up a "dotfiles" for windows would look like. Specifically, what it would take to keep track of apps/tools that I'd need and automate the process of setup on Windows.
 
-I've setup dotfiles on linux machines before, but never windows as I sort of just assumed that package manager just wasn't an option on Windows. I'd used NInite in the past but it's pretty limited on what exactly you can install; there are some common apps but it doesn't include everything I would want out the gate for a work computer.&#x20;
+I've setup dotfiles on linux machines before, but never windows as I sort of just assumed that package manager just wasn't an option on Windows. I'd used NInite in the past but it's pretty limited on what exactly you can install; there are some common apps but it doesn't include everything I would want out-of-the gate for a work computer.&#x20;
 
 ## Scoop: A package manager for windows&#x20;
 
-Searching for "Windows Package Manager" immediately brings up [scoop.sh](https://scoop.sh). I was blown away that this was sort of a solved problem. This is what I decided to go with for my &#x20;
+Searching for "Windows Package Manager" immediately brings up [scoop.sh](https://scoop.sh). This was exactly waht I was looking for and I was blown away it was literally the first thing I found. I had heard of Scoop previously (usually just as an install option in a README.md file) but had never really looked into it. &#x20;
 
 Sccop is pretty cool and has a bunch of sweet features that make it easy to use:&#x20;
 
