@@ -8,7 +8,7 @@ tags:
 ---
 I just read [this article](https://time.com/7295195/ai-chatgpt-google-learning-school/) and the linked [MIT study](https://www.media.mit.edu/publications/your-brain-on-chatgpt/) (TLDR: people "using AI consistently underperformed at neural, linguistic, and behavioral levels" in testing) over my lunch break. It confirmed a thought I've been having quite often lately; we should probably think of AI a lot like we think of candy. *A nice sweet treat every once in a while, but not something that should make up the majority of your diet.*&#x20;
 
-I think this approach is especially important for those of us who's work can easily be augmented or in some cases replaced by existing AI tools: Software Developers, Systems Analysts, Writers, Academics, etc. Eating candy feels really good, but we know why it shouldn't be the majority of our diet. In the same way, having an AI write your code feels very productive, but you arguably loss more than you gain.&#x20;
+I think this approach is especially important for those of us who's work can easily be augmented or in some cases replaced by existing AI tools: Software Developers, Systems Analysts, Writers, Academics, etc. Eating candy feels really good, but we know why it shouldn't be the majority of our diet. In the same way, having an AI write your code feels very productive, but the gains are often shallow, and the losses cut deeper than you might realize.
 
 ## The first hint of my candy addiction
 
@@ -97,4 +97,3 @@ To reference back to the AI is like candy metaphor, I do still think there's a l
 * **Using AI agents to write code with well-defined test in-place**: not all software is easily testable like this, but if I can define solid tests for a feature or set of functions (given this input, produce this output) agents are pretty solid at iteratively building and running against the test suite until they find a working solution.&#x20;
 * **Automating very small changes**: I have had some success with AI agents or "edit mode" in Copilot when you give them a very well-defined issue or bug as well as some test cases to work with. Even then, it seems very hit or miss so far.&#x20;
 * **Code Review:** One use case I have actually really enjoyed is GitHub Copilot's code review features. Whenever I submit a PR for review, Copilot will go over my code and actually submit a code review. That includes finding nitpicks, stylistic issues, or just straight up errors. Sometimes it's off base but I've actually had it catch 3-4 bugs on open PRs so far after only a few weeks.&#x20;
-
