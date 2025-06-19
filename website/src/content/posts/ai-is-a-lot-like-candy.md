@@ -2,7 +2,7 @@
 pubDate: 2025-06-18
 title: AI is a lot like candy
 type: post
-draft: true
+draft: false
 tags:
   - ai
 ---
