@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log/slog"
 	"net/http"
 	"os"
@@ -30,7 +31,7 @@ func redirectHandler(w http.ResponseWriter, r *http.Request) {
 		requestedURL = "https://" + r.Host + requestedURL
 	}
 
-	slog.Info("redirect",
+	slog.Info(fmt.Sprintf("redirecting %s to %s", requestedURL, newURL),
 		"ip", getClientIP(r),
 		"user_agent", r.Header.Get("User-Agent"),
 		"requested_url", requestedURL,
