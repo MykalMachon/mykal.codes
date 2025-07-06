@@ -9,7 +9,7 @@ import keystatic from '@keystatic/astro'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://mykal.codes',
+  site: 'https://mykalmachon.com',
   output: "hybrid",
   integrations: [sitemap(), react(), markdoc(), keystatic()],
   redirects: {
