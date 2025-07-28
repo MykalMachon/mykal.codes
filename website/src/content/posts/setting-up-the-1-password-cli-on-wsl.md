@@ -55,6 +55,8 @@ ID                            NAME
 
 ## Managing SSH keys
 
-You'll also probably want to manage (and import your existing) WSL SSH keys into 1password. Their guide for this is actually great and the only think you'll need to do is follow the guide and manually copy over the private keys for the SSH key you've been using on WSL so far.
+You'll also probably want to manage (and import your existing) WSL SSH keys into 1password. [Their guide for this is actually great](https://developer.1password.com/docs/ssh) and the only thing you'll need to do is manually copy over the private key for the SSH keypair you've been using on WSL so far.
+
+You can even set WSL up to use the SSH key for signing your commits and get that cool little verified badge besides your name in pull reqeusts 😉
 
 From there, it should all work as expected.
