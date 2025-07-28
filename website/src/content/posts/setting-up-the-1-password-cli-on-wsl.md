@@ -19,7 +19,7 @@ It's not an overly complex set of tasks but it took me longer than I'd like to a
 I'm going to assume you have the following already setup on your machine:
 
 * [The 1Password Windows Desktop App](https://1password.com/downloads/windows) is installed and configured on your machine.
-* \[Windows Hello is setup on your machine]\([Configure Windows Hello - Microsoft Support](https://support.microsoft.com/en-us/windows/configure-windows-hello-dae28983-8242-bb2a-d3d1-87c9d265a5f0)) (this is required for unlock via the terminal)
+* [Windows Hello is setup on your machine](https://support.microsoft.com/en-us/windows/configure-windows-hello-dae28983-8242-bb2a-d3d1-87c9d265a5f0) (this is required for unlock via the terminal)
 
 ## Setting up the 1Password CLI
 
