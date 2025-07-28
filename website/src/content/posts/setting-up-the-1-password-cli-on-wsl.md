@@ -1,7 +1,7 @@
 ---
 pubDate: 2025-07-28
 title: Setting up the 1Password CLI on WSL
-description: 1password's CLI is great but their WSL docs aren't.
+description: 1Password's CLI is great but their WSL docs aren't.
 type: post
 draft: false
 tags:
