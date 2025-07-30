@@ -60,3 +60,14 @@ You'll also probably want to manage (and import your existing) WSL SSH keys into
 You can even set WSL up to use the SSH key for signing your commits and get that cool little verified badge besides your name in pull reqeusts 😉
 
 From there, it should all work as expected.
+
+## Getting around `op run` limitations on WSL
+
+When you try and run `op run -- npm run start` (or any op run command) within WSL you'll find that it doesn't execute the latter half of the script within WSL. It executes it withint a Powershell/Windows context. This means that you can't easily use `op run` to easily replace your 1password references at runtime.&#x20;
+
+Thankfully you can get around this by using `op inject`!
+
+On all of your projects, replace your `env.example` with an `env.template` and include the references to the 1password credentials you'd like to replace&#x20;
+
+```bash
+```
