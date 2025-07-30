@@ -70,4 +70,25 @@ Thankfully you can get around this by using `op inject`!
 On all of your projects, replace your `env.example` with an `env.template` and include the references to the 1password credentials you'd like to replace&#x20;
 
 ```bash
+DATABASE_URL="op://app-prod/Database: Primary/Connection String"
+OPENAI_API_KEY="op://app-prod/API Key: OpenAI/API Key"
+SESSION_SECRET="op://app-prod/Misc: Session Secret/Password"
 ```
+
+From there, all you need to do is run the following command 
+
+```bash
+# generate an .env file with your secrets
+op inject -i .env.template -o .env
+
+# run your command that expects .env
+npm run start
+
+# delete the creds
+rm .env
+```
+
+While this is an okay start! I still don't love credentials actually getting written to disk. 
+I expanded on this approach a bit and basically just rewrote `op run` myself to work better on WSL.
+
+[You can check that out and install it if you want.](https://github.com/MykalMachon/oprun.sh/tree/v1.0.0)
