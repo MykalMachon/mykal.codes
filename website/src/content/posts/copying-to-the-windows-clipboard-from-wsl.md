@@ -17,6 +17,6 @@ Anyways, here's a quick example:&#x20;
 cat some_file.txt | clip.exe
 ```
 
-That will copy the content of `some_file.txt` into your windows clipboard. Since it's just pipeing data into the clip.exe program you can literally drop anything into your clipboard. test output? sure! a whole image? sure!&#x20;
+That will copy the content of `some_file.txt` into your windows clipboard. Since it's just piping data into the clip.exe program you can literally drop anything into your clipboard. test output? sure! a whole image? sure!&#x20;
 
 Anyways; I found it useful so thought I would share. &#x20;
