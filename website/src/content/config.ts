@@ -16,8 +16,18 @@ const posts = defineCollection({
         url: z.string().url(),
         alt: z.string()
       }))),
-      url: z.optional(z.string())
+      url: z.optional(z.string().url())
     })
+})
+
+const links = defineCollection({
+	schema: () => {
+		z.object({
+			title: z.string(),
+			description: z.string(),
+			link: z.string().url()
+		})
+	}
 })
 
 export const collections = {

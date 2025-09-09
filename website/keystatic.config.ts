@@ -1,7 +1,7 @@
 // keystatic.config.ts
 import { config, fields, collection } from '@keystatic/core';
 
-const postRootPath = import.meta.env.MODE === 'production' ? 'website/src/content' : 'src/content';
+const contentRootPath = import.meta.env.MODE === 'production' ? 'website/src/content' : 'src/content';
 const postImageRootPath = import.meta.env.MODE === 'production' ? 'website/src/assets/posts' : 'src/assets/posts';
 
 export default config({
@@ -15,10 +15,24 @@ export default config({
     repo: 'mykalmachon/mykal.codes'
   },
   collections: {
+		links: collection({
+			label: 'Links',
+			slugField: 'title',
+			path: `${contentRootPath}/links/*`,
+			columns: ['title', 'url'],
+			format: {contentField: 'description'},
+			schema: {
+				title: fields.slug({ name: { label: 'Title' } }),
+        url: fields.text({ label: 'Link URL' }),
+				description: fields.mdx({
+          label: 'Description', extension: 'md'
+        })
+			}
+		}),
     posts: collection({
       label: 'Posts',
       slugField: 'title',
-      path: `${postRootPath}/posts/*`,
+      path: `${contentRootPath}/posts/*`,
       columns: ['pubDate', 'type', 'draft'],
       format: { contentField: 'content' },
       entryLayout: 'content',
