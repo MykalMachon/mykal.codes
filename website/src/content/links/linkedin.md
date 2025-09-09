@@ -2,4 +2,4 @@
 title: LinkedIn
 url: www.linkedin.com/in/mykalmachon
 ---
-If you're interested in working with me; this is the best place to reach out.
+A convenient collection of my work history, projects, professional reccommendations, and other professional information.
